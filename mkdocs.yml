@@ -1,0 +1,19 @@
+site_name: Study Notes
+theme: readthedocs
+
+# markdown_extensions:
+#   - mdx_truly_sane_lists
+#   - mdx_math:
+#       enable_dollar_delimiter: True  #for use of inline $..$
+
+nav:
+  - Introduction: 'index.md'
+  - Coding:
+    - Code Complete: 'coding/code_complete.md'
+    - CCI: 'coding/cracking_code_interview.md'
+  - Computer Network:
+    - TCP IP详解卷一: 'network/tcp_ip.md'
+  - Psychology:
+    - xxx: 'psychology/xxx.md'
+  - Reading List:
+    - reading list: 'reading_list/reading_list.md'
