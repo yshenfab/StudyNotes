@@ -1,8 +1,14 @@
 # My Study Notes
 
-> Always be curious.
+> ABC: Always Be Curious.
 
 A collection of my study notes.
+
+## Usage
+```sh
+mkdocs serve     # http://127.0.0.1:8000 view changes locally
+mkdocs gh-deploy # deploy github pages
+```
 
 ## Links
 
