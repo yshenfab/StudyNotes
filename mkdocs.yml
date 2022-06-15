@@ -3,12 +3,48 @@ theme: readthedocs
 
 nav:
   - Introduction: 'index.md'
-  - Coding:
-    - Code Complete: 'coding/code_complete.md'
-    - CCI: 'coding/cracking_code_interview.md'
-  - Computer Network:
-    - TCP IP详解卷一: 'network/tcp_ip.md'
-  - Psychology:
-    - xxx: 'psychology/xxx.md'
-  - Reading List:
-    - reading list: 'reading_list/reading_list.md'
+  - Algorithm:
+    - Alg blog: 'algorithm/alg_blog_note.md'
+    - Algorithms (4th Edition): 'algorithm/algorithms_4th_edition.md'
+  - Blockchain:
+    - Blockchain: 'blockchain/blockchain.md'
+  - Deep Learning:
+    - Google ML Crash Course: 'deep_learning/google-machine-learning-crash-course.md'
+    - Python机器学习: 'deep_learning/Python机器学习.md'
+    - Dive into Deep Learning: 'deep_learning/dive_into_deep_learning.md'
+  - Mathematics:
+    - 数学之美: 'mathematics/beauty_of_mathematics.md'
+    - 统计学的世界: 'mathematics/statistics_concepts_and_controversies.md'
+  - Psychology & Mind:
+    - 与众不同的心理学: 'psychology/与众不同的心理学.md'
+    - 决策与判断: 'psychology/决策与判断.md'
+    - 暗时间: 'psychology/暗时间.md'
+    - 你的灯亮着吗: 'psychology/你的灯亮着吗.md'
+    - 沟通的艺术: 'psychology/沟通的艺术.md'
+    - 影响力: 'psychology/影响力.md'
+    - 专注力: 'psychology/专注力.md'
+  - Python:
+    - Effective python: 'python/effective_python.md'
+    - pythonic: 'python/pythonic.md'
+    - py tips: 'python/py_tips.md'
+    - python3: 'python/python3.md'
+    - numpy: 'python/numpy.md'
+  - Research:
+    - 像外行一样思考，像专家一样实践: 'research/像外行一样思考，像专家一样实践.md'
+  - Startup:
+    - How Google Works: 'startup/how_google_works.md'
+    - startup: 'startup/startup.md'
+  - Tools:
+    - vim: 'tools/practical_vim.md'
+    - shell: 'tools/shell.md'
+    - git: 'tools/git.md'
+    - markdown: 'tools/markdown.md'
+    # - makefile (TODO): 'tools/makefile.md'
+  - Other:
+    # - 编码 隐匿在计算机软硬件背后的语言 (TODO): 'other/code.md'
+    - 上帝掷骰子吗？量子物理史话: 'other/history_of_quantum_physics.md'
+    - 高效能人士的7个习惯: 'other/高效能人士的7个习惯.md'
+    - 底层逻辑: 'other/底层逻辑.md'
+    - 高效程序员的45个习惯: 'other/高效程序员的45个习惯.md'
+  - Todo:
+    - TODO: 'todo/todo.md'

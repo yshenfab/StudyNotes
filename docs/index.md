@@ -2,7 +2,7 @@
 
 > ABC: Always Be Curious.
 
-A collection of my study notes.
+A collection of my study notes. 
 
 ## Usage
 ```sh
@@ -11,5 +11,8 @@ mkdocs gh-deploy # deploy github pages
 ```
 
 ## Links
-
 [https://yshenfab.github.io/StudyNotes/](https://yshenfab.github.io/StudyNotes/)
+
+
+## Notice
+I have been using Emacs org-mode to take notes for years, many markdown files are converted from org files. Sooooo, there might be formatting issues...
