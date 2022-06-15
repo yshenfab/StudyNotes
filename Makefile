@@ -1,3 +1,10 @@
+default:
+	git add .
+	git ci -m "update repo"
+	git push origin master
+	mkdocs gh-deploy
+	rm -rf site
+
 push:
 	git push origin master
 
