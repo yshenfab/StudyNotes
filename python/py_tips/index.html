@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>py tips - Study Notes</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "py tips";
+        var mkdocs_page_input_path = "python/py_tips.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Study Notes
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Algorithm</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/alg_blog_note/">Alg blog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorithms_4th_edition/">Algorithms (4th Edition)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Blockchain</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blockchain/blockchain/">Blockchain</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Deep Learning</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/google-machine-learning-crash-course/">Google ML Crash Course</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">Python机器学习</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/dive_into_deep_learning/">Dive into Deep Learning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mathematics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mathematics/beauty_of_mathematics/">数学之美</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mathematics/statistics_concepts_and_controversies/">统计学的世界</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Psychology & Mind</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%B8%8E%E4%BC%97%E4%B8%8D%E5%90%8C%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6/">与众不同的心理学</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E5%86%B3%E7%AD%96%E4%B8%8E%E5%88%A4%E6%96%AD/">决策与判断</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E6%9A%97%E6%97%B6%E9%97%B4/">暗时间</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%BD%A0%E7%9A%84%E7%81%AF%E4%BA%AE%E7%9D%80%E5%90%97/">你的灯亮着吗</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E6%B2%9F%E9%80%9A%E7%9A%84%E8%89%BA%E6%9C%AF/">沟通的艺术</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E5%BD%B1%E5%93%8D%E5%8A%9B/">影响力</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%B8%93%E6%B3%A8%E5%8A%9B/">专注力</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../effective_python/">Effective python</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pythonic/">pythonic</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">py tips</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python3/">python3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../numpy/">numpy</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Research</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/">像外行一样思考，像专家一样实践</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Startup</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../startup/how_google_works/">How Google Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../startup/startup/">startup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">vim</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">git</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">markdown</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/history_of_quantum_physics/">上帝掷骰子吗？量子物理史话</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%847%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效能人士的7个习惯</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91/">底层逻辑</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8445%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效程序员的45个习惯</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Todo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../todo/todo/">TODO</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Study Notes</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Python &raquo;</li><li>py tips</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="table-of-contents">Table of Contents</h1>
+<ol>
+<li><a href="#org4249881">*args and **kwargs</a></li>
+<li><a href="#org554c1ff">Debugging</a></li>
+<li><a href="#org6bab0dd">Generators</a><ol>
+<li><a href="#org88088d4">Iterable</a></li>
+<li><a href="#orgb9fe8a6">Iterator</a></li>
+<li><a href="#orgf080c9b">Iteration</a></li>
+<li><a href="#org492648f">Generators</a></li>
+</ol>
+</li>
+<li><a href="#org781b845">Map, Filter and Reduce</a><ol>
+<li><a href="#orgd0dfe12">Map</a></li>
+<li><a href="#org59ce364">Filter</a></li>
+<li><a href="#org661e6e7">Reduce</a></li>
+</ol>
+</li>
+<li><a href="#orgaf351a2"><strong>set</strong> Data Structure</a></li>
+<li><a href="#orgcd6d2d3">Ternary Operators</a></li>
+<li><a href="#org2f978a2">Decorators</a><ol>
+<li><a href="#org95378f4">Everything in Python is an object</a></li>
+<li><a href="#orgb329dfe">Defining functions within functions</a></li>
+<li><a href="#org863464a">Returning functions from within functions</a></li>
+<li><a href="#org56728cc">Giving a function as an argument to another function</a></li>
+<li><a href="#orgea3e8c1">Writing your first decorator</a><ol>
+<li><a href="#org72d6697">Blueprint</a></li>
+<li><a href="#orgb756967">Use-cases</a></li>
+</ol>
+</li>
+<li><a href="#org7210ebb">Decorators with Arguments</a></li>
+</ol>
+</li>
+<li><a href="#org8f162b6">Global &amp; Return</a><ol>
+<li><a href="#orga3d717c">namedtuple</a></li>
+</ol>
+</li>
+<li><a href="#org3ad7a9d">Mutation</a></li>
+<li><a href="#org4ecfe01">_<sub>slots</sub>__ Magic</a></li>
+<li><a href="#org8d405eb">Virtual Environment</a></li>
+<li><a href="#org0238805">Collections</a><ol>
+<li><a href="#org2c88ef2">defaultdict</a></li>
+<li><a href="#orgef8ff1f">OrderedDict</a></li>
+<li><a href="#org657312e">counter</a></li>
+<li><a href="#org328c0c2">deque</a></li>
+<li><a href="#org539d71c">namedtuple</a></li>
+<li><a href="#orgdc89a59">enum.Enum</a></li>
+</ol>
+</li>
+<li><a href="#org8a6ec65">Enumerate</a></li>
+<li><a href="#orgd8c8003">Object introspection</a><ol>
+<li><a href="#org92b2dd6">dir</a></li>
+<li><a href="#org0562517">type and id</a></li>
+<li><a href="#org04faf03">inspect module</a></li>
+</ol>
+</li>
+<li><a href="#org8338f88">Comprehensions</a><ol>
+<li><a href="#orgf7f2b28">list comprehensions</a></li>
+<li><a href="#org7c8cc8e">dict comprehensions</a></li>
+<li><a href="#orgd35f7ad">set comprehensions</a></li>
+<li><a href="#orgc027d98">generator comprehensions</a></li>
+</ol>
+</li>
+<li><a href="#org6f4d80d">Exceptions</a><ol>
+<li><a href="#org7364953">try/except</a></li>
+<li><a href="#org738a53a">Handling multiple exceptions</a><ol>
+<li><a href="#org0cc9b59">method 1</a></li>
+<li><a href="#orgf9e2086">method 2</a></li>
+<li><a href="#org045e79f">method 3 (This can be helpful when you have no idea about the exceptions which may be thrown by your program.)</a></li>
+</ol>
+</li>
+<li><a href="#orgf7a7d53">finally</a></li>
+<li><a href="#orga1a8ad5">try/else</a></li>
+</ol>
+</li>
+<li><a href="#orgafe052a">Classes</a><ol>
+<li><a href="#orgfb362e9">Instance &amp; Class variables</a></li>
+<li><a href="#orgdce7028">New style classes (Python 3 only has new-style classes)</a></li>
+<li><a href="#orgd3cb5c8">Magic Methods</a><ol>
+<li><a href="#orge6f99e0">_<sub>init</sub>__</a></li>
+<li><a href="#org852b9c6">_<sub>getitem</sub>__</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="#org0321bd7">Lambdas</a></li>
+<li><a href="#orgb67f240">One-Liners</a><ol>
+<li><a href="#org060c857">Simple Web Server</a></li>
+<li><a href="#org9ec55c1">Pretty Printing</a></li>
+<li><a href="#orgbc9db6d">Profiling a script</a></li>
+<li><a href="#orgf322479">CSV to json</a></li>
+<li><a href="#orgf816c15">List Flattening</a></li>
+<li><a href="#org8519c56">One-Line Constructors</a></li>
+</ol>
+</li>
+<li><a href="#org69d8863">for/else</a></li>
+<li><a href="#orgd81e36d">Python C extensions</a><ol>
+<li><a href="#org44afe6d">CTypes</a></li>
+<li><a href="#orgbd5edff">SWIG</a></li>
+<li><a href="#org4a44412">Python/C API</a></li>
+</ol>
+</li>
+<li><a href="#orgec2e17b"><strong>open</strong> Function</a></li>
+<li><a href="#orgb775cf8">Targeting Python 2+3</a><ol>
+<li><a href="#org815834d">future imports</a></li>
+<li><a href="#orga98d233">dealing with module renaming</a></li>
+<li><a href="#org2f4e65c">obsolete python2 builtins</a></li>
+<li><a href="#org58a4ba8">external standard-library backports</a></li>
+</ol>
+</li>
+<li><a href="#orge096ff0">Coroutines</a></li>
+<li><a href="#org259f4a9">Function caching</a></li>
+<li><a href="#org979ac9e">Context Managers</a><ol>
+<li><a href="#org202c83f">Implementing a Context Manager as a Class</a></li>
+<li><a href="#org023ea78">Handling Exceptions</a></li>
+<li><a href="#org862d226">Implementing a Context Manager as a Generator</a></li>
+</ol>
+</li>
+</ol>
+<p><a href="http://book.pythontips.com/en/latest/index.html">http://book.pythontips.com/en/latest/index.html</a></p>
+<p><a id="org4249881"></a></p>
+<h1 id="args-and-kwargs">*args and **kwargs</h1>
+<ul>
+<li>*args: non-keyworded
+    **kwargs: allow you to pass keyworded variable length of arguments to a function</li>
+</ul>
+<p><a id="org554c1ff"></a></p>
+<h1 id="debugging">Debugging</h1>
+<ul>
+<li>python debugger (pdb)</li>
+<li>running from command line:
+    python -m pdb my<sub>script.py</sub></li>
+<li>
+<p>running from inside a script: (using pdb.set<sub>trace</sub>() to set break points)
+    import pdb
+    def make<sub>bread</sub>():
+        pdb.set<sub>trace</sub>()
+        return "I don't have time"</p>
+<p>print(make<sub>bread</sub>())
+-   commands:
+c: continue execution
+w: show context of current line it is executing
+a: print the argument list of current function
+s: execute the current line and stop at the first possible occasion
+n: continue execution until the next line in the current function is reached or it returns</p>
+</li>
+</ul>
+<p><a id="org6bab0dd"></a></p>
+<h1 id="generators">Generators</h1>
+<p>An iterator is an object that enables a programmer to traverse a container, particularly lists.
+However, an iterator performs traversal and gives access to data elements in a container, but does not perform iteration.</p>
+<p><a id="org88088d4"></a></p>
+<h2 id="iterable">Iterable</h2>
+<p>An iterable is any object in Python which has an <span class="underline"><span class="underline">iter</span></span> or a <span class="underline"><span class="underline">getitem</span></span> method defined which returns an iterator or can take indexes.
+In short an iterable is any object which can provide us with an iterator.</p>
+<p><a id="orgb9fe8a6"></a></p>
+<h2 id="iterator">Iterator</h2>
+<p>An iterator is any object in Python which has a next (Python2) or <span class="underline"><span class="underline">next</span></span> method defined.</p>
+<p><a id="orgf080c9b"></a></p>
+<h2 id="iteration">Iteration</h2>
+<p>In simple words it is the process of taking an item from something e.g a list. When we use a loop to loop over something it is called iteration. It is the name given to the process itself.</p>
+<p><a id="org492648f"></a></p>
+<h2 id="generators_1">Generators</h2>
+<p>Generators are iterators, but you can only iterate over them once.
+It’s because they do not store all the values in memory, they generate the values on the fly.
+You use them by iterating over them, either with a ‘for’ loop or by passing them to any function or construct that iterates.
+Most of the time generators are implemented as functions. However, they do not return a value, they <strong>yield</strong> it.
+Generators are best for calculating large sets of results (particularly calculations involving loops themselves) where you don’t want to allocate the memory for all results at the same time.
+Fibonacci example:
+def fibon(n):
+    a = b = 1
+    for i in range(n):
+        yield a
+        a, b = b, a+b</p>
+<p>for x in fibon(1000):
+    print(x)</p>
+<ul>
+<li>next() allows us to access next element of a sequence</li>
+</ul>
+<p><a id="org781b845"></a></p>
+<h1 id="map-filter-and-reduce">Map, Filter and Reduce</h1>
+<p><a id="orgd0dfe12"></a></p>
+<h2 id="map">Map</h2>
+<ul>
+<li>Map applies a function to all the items in an input<sub>list</sub>.
+    map(function<sub>to</sub><sub>apply</sub>, list<sub>of</sub><sub>inputs</sub>)</li>
+<li>exp:
+    items = [1,2,3,4,5]
+    squared = list(map(lambda x: x**2 , items))</li>
+</ul>
+<p><a id="org59ce364"></a></p>
+<h2 id="filter">Filter</h2>
+<ul>
+<li>Filter creates a list of elements for which a function returns true.</li>
+<li>exp:
+    number<sub>list</sub> = range(-5,5)
+    less<sub>than</sub><sub>zero</sub> = list(filter(lambda x: x&lt;0, number<sub>list</sub>))</li>
+</ul>
+<p><a id="org661e6e7"></a></p>
+<h2 id="reduce">Reduce</h2>
+<ul>
+<li>Reduce applies a rolling computation to sequential pairs of values in a list.</li>
+<li>exp:
+    from functools import reduce
+    product = reduce((lambda x,y: x*y), [1,2,3,4]) # 24</li>
+</ul>
+<p><a id="orgaf351a2"></a></p>
+<h1 id="set-data-structure"><strong>set</strong> Data Structure</h1>
+<ul>
+<li>set is similary to list, but it can't contain duplicate values</li>
+<li>exp:
+    valid = set(['yellow', 'red', 'blue', 'green', 'black'])
+    input<sub>set</sub> = set(['red', 'brown'])
+    input<sub>set.intersection</sub>(valid) # set(['red'])
+    input<sub>set.difference</sub>(valid) # set(['brown'])</li>
+</ul>
+<p><a id="orgcd6d2d3"></a></p>
+<h1 id="ternary-operators">Ternary Operators</h1>
+<ul>
+<li>Ternary operators are more commonly known as conditional expressions in Python.</li>
+<li>Blueprint:
+    condition<sub>if</sub><sub>true</sub> if condition else condition<sub>if</sub><sub>false</sub></li>
+<li>exp:
+    condition = True
+    state = "nice" if condition else "not nice"</li>
+<li>ShortHand Ternary
+    True or "Some" # True
+    False or "Some" # 'Some'
+    output = None
+    msg = output or "No data returned" # No data returned</li>
+</ul>
+<p><a id="org2f978a2"></a></p>
+<h1 id="decorators">Decorators</h1>
+<p>Decorators are functions which modify the functionality of other functions.</p>
+<p><a id="org95378f4"></a></p>
+<h2 id="everything-in-python-is-an-object">Everything in Python is an object</h2>
+<p><a id="orgb329dfe"></a></p>
+<h2 id="defining-functions-within-functions">Defining functions within functions</h2>
+<p><a id="org863464a"></a></p>
+<h2 id="returning-functions-from-within-functions">Returning functions from within functions</h2>
+<p><a id="org56728cc"></a></p>
+<h2 id="giving-a-function-as-an-argument-to-another-function">Giving a function as an argument to another function</h2>
+<ul>
+<li>Decorators let you execute code before and after a function.</li>
+<li>
+<p>exp:
+    def hi():
+        return "hi yang!"</p>
+<p>def doSomethingBeforeHi(func):
+    print("doing sth before executing hi()")
+    print(func())</p>
+<p>doSomethingBeforeHi(hi)</p>
+</li>
+</ul>
+<p><a id="orgea3e8c1"></a></p>
+<h2 id="writing-your-first-decorator">Writing your first decorator</h2>
+<p><a id="org72d6697"></a></p>
+<h3 id="blueprint">Blueprint</h3>
+<p>from functools import wraps
+def decorator<sub>name</sub>(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        if not can<sub>run</sub>:
+            return "Function will not run"
+        return f(*args, **kwargs)
+    return decorated</p>
+<p>@decorator<sub>name</sub>
+def func():
+    return("Function is running")</p>
+<p><a id="orgb756967"></a></p>
+<h3 id="use-cases">Use-cases</h3>
+<ul>
+<li>web authorization</li>
+<li>logging</li>
+</ul>
+<p><a id="org7210ebb"></a></p>
+<h2 id="decorators-with-arguments">Decorators with Arguments</h2>
+<p><a id="org8f162b6"></a></p>
+<h1 id="global-return">Global &amp; Return</h1>
+<p>Don't use global.</p>
+<p><a id="orga3d717c"></a></p>
+<h2 id="namedtuple">namedtuple</h2>
+<p>from collections import namedtuple
+def profile():
+    Person = namedtuple('Person', 'name age')
+    return Person(name="Danny", age=31)</p>
+<p>p = profile()</p>
+<p>p.name, p.age</p>
+<p>p[0], p[1]</p>
+<p>name, age = profile()</p>
+<p><a id="org3ad7a9d"></a></p>
+<h1 id="mutation">Mutation</h1>
+<p>mutable means ‘able to be changed’ and immutable means ‘constant’</p>
+<ul>
+<li>In Python the default arguments are evaluated once when the function is defined, not each time the function is called.
+    You should never define default arguments of mutable type unless you know what you are doing.</li>
+</ul>
+<p><a id="org4ecfe01"></a></p>
+<h1 id="_slots__-magic">_<sub>slots</sub>__ Magic</h1>
+<p>Python uses a dict to store an object's instance attributes, which sucks a lot of RAM.
+Using <span class="underline"><span class="underline">slots</span></span> to tell python not to use a dict, and only allocate space for a fixed set of attributes.
+Exp:</p>
+<p>class MyClass(object):
+    def _<sub>init</sub>_<sub>(self, name, id)</sub>:
+        self.name = name
+        self.id = id
+        self.set<sub>up</sub>()</p>
+<p>class MyClass(object):
+    <span class="underline"><span class="underline">slots</span></span> = ['name', 'id']
+    def _<sub>init</sub>_<sub>(self, name, id)</sub>:
+        self.name = name
+        self.id = id
+        self.set<sub>up</sub>()</p>
+<p><a id="org8d405eb"></a></p>
+<h1 id="virtual-environment">Virtual Environment</h1>
+<p>virtualenv</p>
+<p><a id="org0238805"></a></p>
+<h1 id="collections">Collections</h1>
+<p>container data types</p>
+<p><a id="org2c88ef2"></a></p>
+<h2 id="defaultdict">defaultdict</h2>
+<ul>
+<li>Unlike dict, with defaultdict you do not need to check whether a key is present or not</li>
+<li>One other very important use case is when you are appending to nested lists inside a dictionary.</li>
+</ul>
+<p>If a key is not already present in the dictionary then you are greeted with a KeyError. 
+defaultdict allows us to circumvent this issue in a clever way.</p>
+<ul>
+<li>Exp:</li>
+</ul>
+<p>some<sub>dict</sub> = []
+some<sub>dict</sub>['colours']['favourite'] = "yellow" # Raises KeyError: 'colours'</p>
+<p>from collections import defaultdict
+tree = lambda: defaultdict(tree)
+some<sub>dict</sub> = tree()
+some<sub>dict</sub>['colours']['favourite'] = "yellow"</p>
+<p>import json
+print(json.dumps(some<sub>dict</sub>))</p>
+<p><a id="orgef8ff1f"></a></p>
+<h2 id="ordereddict">OrderedDict</h2>
+<p>OrderedDict keeps its entries sorted as they are initially inserted.
+Overwriting a value of an existing key doesn’t change the position of that key.
+However, deleting and reinserting an entry moves the key to the end of the dictionary.</p>
+<ul>
+<li>Problem:</li>
+</ul>
+<p>colours =  {"Red" : 198, "Green" : 170, "Blue" : 160}
+for key, value in colours.items():
+    print(key, value)</p>
+<p>Solution:
+from collections import OrderedDict
+colours = OrderedDict([("Red", 198), ("Green", 170), ("Blue", 160)])
+for key, value in colours.items():
+    print(key, value)</p>
+<p><a id="org657312e"></a></p>
+<h2 id="counter">counter</h2>
+<p>Counter allows us to count the occurrences of a particular item.</p>
+<ul>
+<li>exp:</li>
+</ul>
+<p>from collections import Counter</p>
+<p>colours = (
+    ('Yasoob', 'Yellow'),
+    ('Ali', 'Blue'),
+    ('Arham', 'Green'),
+    ('Ali', 'Black'),
+    ('Yasoob', 'Red'),
+    ('Ahmed', 'Silver'),
+)</p>
+<p>favs = Counter(name for name, colour in colours)
+print(favs)</p>
+<ul>
+<li>exp:</li>
+</ul>
+<p>with open('filename', 'rb') as f:
+    line<sub>count</sub> = Counter(f)
+print(line<sub>count</sub>)</p>
+<p><a id="org328c0c2"></a></p>
+<h2 id="deque">deque</h2>
+<p>from collections import deque
+d = deque()
+d.append()
+d.extend()
+d.extendleft()
+d.popleft()
+d.pop()</p>
+<p><a id="org539d71c"></a></p>
+<h2 id="namedtuple_1">namedtuple</h2>
+<p>from collections import namedtuple
+Animal = namedtuple('Animal', 'name age type')
+perry = Animal(name="perry", age=31, type="cat")
+print(perry)</p>
+<p>print(perry.name)</p>
+<p>perry.<sub>asdict</sub>() # convert to dict</p>
+<ul>
+<li>attributes in namedtuples are immutable</li>
+</ul>
+<p><a id="orgdc89a59"></a></p>
+<h2 id="enumenum">enum.Enum</h2>
+<p>from collections import namedtuple
+from enum import Enum</p>
+<p>class Species(Enum):
+    cat = 1
+    dog = 2
+    horse = 3
+    owl = 4
+    dragon = 5
+    kitten = 1
+    puppy = 2</p>
+<p>Animal = namedtuple('Animal', 'name age type')
+perry = Animal(name="Perry", age=31, type=Species.cat)
+tom = Animal(name="Tom", age=2, type=Species.kitten)</p>
+<ul>
+<li>three ways to access enumeration members:
+    Species[1]
+    Species['cat']
+    Species.cat</li>
+</ul>
+<p><a id="org8a6ec65"></a></p>
+<h1 id="enumerate">Enumerate</h1>
+<p>for counter, value in enumerate(some<sub>list</sub>):
+    print(counter, value)</p>
+<p>for counter, value in enumerate(some<sub>list</sub>, start<sub>index</sub>):
+    print(counter, value)</p>
+<p><a id="orgd8c8003"></a></p>
+<h1 id="object-introspection">Object introspection</h1>
+<p><a id="org92b2dd6"></a></p>
+<h2 id="dir">dir</h2>
+<p>my<sub>list</sub> = [1,2,3]
+dir(my<sub>list</sub>)</p>
+<p><a id="org0562517"></a></p>
+<h2 id="type-and-id">type and id</h2>
+<ul>
+<li>The type function returns the type of an object. For example:
+    print(type(''))
+    print(type([]))
+    print(type(3))</li>
+<li>id returns the unique ids of various objects. For instance:
+    name = "Yang"
+    print(id(name)</li>
+</ul>
+<p><a id="org04faf03"></a></p>
+<h2 id="inspect-module">inspect module</h2>
+<p>import inspect
+print(inspect.getmembers(str))</p>
+<p><a id="org8338f88"></a></p>
+<h1 id="comprehensions">Comprehensions</h1>
+<p><a id="orgf7f2b28"></a></p>
+<h2 id="list-comprehensions">list comprehensions</h2>
+<ul>
+<li>Blueprint:
+    variable = [out<sub>exp</sub> for out<sub>exp</sub> in input<sub>list</sub> if out<sub>exp</sub> == 2]</li>
+<li>exp:
+    multiples = [i for i in range(30) if i%3 == 0]
+    squared = [x**2 for x in range(10)]</li>
+</ul>
+<p><a id="org7c8cc8e"></a></p>
+<h2 id="dict-comprehensions">dict comprehensions</h2>
+<p>{v:k for k,v in some<sub>dict.items</sub>()}</p>
+<p><a id="orgd35f7ad"></a></p>
+<h2 id="set-comprehensions">set comprehensions</h2>
+<p>squared = {x**2 for x in [1,1,2]}</p>
+<p><a id="orgc027d98"></a></p>
+<h2 id="generator-comprehensions">generator comprehensions</h2>
+<p>multiples<sub>gen</sub> = (i for i in range(30) if i%3 == 0)
+for x in multiples<sub>gen</sub>:
+    print(x)</p>
+<p><a id="org6f4d80d"></a></p>
+<h1 id="exceptions">Exceptions</h1>
+<p><a id="org7364953"></a></p>
+<h2 id="tryexcept">try/except</h2>
+<p>try:
+    file = open('test.txt', 'rb')
+except IOError as e:
+    print('An IOError occurred. {}'.format(e.args[-1]))</p>
+<p><a id="org738a53a"></a></p>
+<h2 id="handling-multiple-exceptions">Handling multiple exceptions</h2>
+<p><a id="org0cc9b59"></a></p>
+<h3 id="method-1">method 1</h3>
+<p>try:
+    file = open('test.txt', 'rb')
+except (IOError, EOFError) as e:
+    print("An error occurred. {}".format(e.args[-1]))</p>
+<p><a id="orgf9e2086"></a></p>
+<h3 id="method-2">method 2</h3>
+<p>try:
+    file = open('test.txt', 'rb')
+except EOFError as e:
+    print("An EOF error occurred.")
+    raise e
+except IOError as e:
+    print("An error occurred.")
+    raise e</p>
+<p><a id="org045e79f"></a></p>
+<h3 id="method-3-this-can-be-helpful-when-you-have-no-idea-about-the-exceptions-which-may-be-thrown-by-your-program">method 3 (This can be helpful when you have no idea about the exceptions which may be thrown by your program.)</h3>
+<p>try:
+    file = open('test.txt', 'rb')
+except Exception as e:</p>
+<p>raise e</p>
+<p><a id="orgf7a7d53"></a></p>
+<h2 id="finally">finally</h2>
+<p>try:
+    file = open('test.txt', 'rb')
+except IOError as e:
+    print('An IOError occurred. {}'.format(e.args[-1]))
+finally:
+    print("This would be printed whether or not an exception occurred!")</p>
+<p><a id="orga1a8ad5"></a></p>
+<h2 id="tryelse">try/else</h2>
+<p>try:
+    print('I am sure no exception is going to occur!')
+except Exception:
+    print('exception')
+else:</p>
+<pre><code>print('This would only run if no exception occurs. And an error here '
+      'would NOT be caught.')
+</code></pre>
+<p>finally:
+    print('This would be printed in every case.')</p>
+<p><a id="orgafe052a"></a></p>
+<h1 id="classes">Classes</h1>
+<p><a id="orgfb362e9"></a></p>
+<h2 id="instance-class-variables">Instance &amp; Class variables</h2>
+<ul>
+<li>Instance variables are for data which is unique to every object</li>
+<li>Class variables are for data shared between different instances of a class</li>
+</ul>
+<p>class Cal(object):</p>
+<p>pi = 3.142</p>
+<p>def _<sub>init</sub>_<sub>(self, radius)</sub>:</p>
+<p>self.radius = radius</p>
+<p>def area(self):
+    return self.pi * (self.radius ** 2)</p>
+<ul>
+<li>do not use mutable class variables</li>
+</ul>
+<p><a id="orgdce7028"></a></p>
+<h2 id="new-style-classes-python-3-only-has-new-style-classes">New style classes (Python 3 only has new-style classes)</h2>
+<ul>
+<li>Differences:<ol>
+<li>old base classes do not inherit from anything</li>
+<li>New style base classes inherit from <strong>object</strong></li>
+</ol>
+</li>
+<li>
+<p>Exp:
+    class OldClass():
+        def _<sub>init</sub>_<sub>(self)</sub>:
+        print('I am an old class')</p>
+<p>class NewClass(object):
+    def _<sub>init</sub>_<sub>(self)</sub>:
+    print('I am a new class')</p>
+<p>old = OldClass()
+new = NewClass()</p>
+</li>
+</ul>
+<p><a id="orgd3cb5c8"></a></p>
+<h2 id="magic-methods">Magic Methods</h2>
+<p>Python’s classes are famous for their magic methods, commonly called <strong>dunder</strong> (double underscore) methods.</p>
+<p><a id="orge6f99e0"></a></p>
+<h3 id="_init__">_<sub>init</sub>__</h3>
+<p>class initializer, whenever an instance of a class is created, its <span class="underline"><span class="underline">init</span></span> method is called</p>
+<p><a id="org852b9c6"></a></p>
+<h3 id="_getitem__">_<sub>getitem</sub>__</h3>
+<p>Implementing getitem in a class allows its instances to use the [] (indexer) operator.
+Exp:
+class GetTest(object):
+    def _<sub>init</sub>_<sub>(self)</sub>:
+        self.info = {
+            'name':'Yasoob',
+            'country':'Pakistan',
+            'number':12345812
+        }</p>
+<p>def _<sub>getitem</sub>_<sub>(self,i)</sub>:
+    return self.info[i]</p>
+<p>foo = GetTest()</p>
+<p>foo['name']</p>
+<p>foo['number']</p>
+<p><a id="org0321bd7"></a></p>
+<h1 id="lambdas">Lambdas</h1>
+<ul>
+<li>lambdas are one line functions, they are anonymous</li>
+<li>Blueprint:
+    lambda argument: manipulate(argument)</li>
+<li>Exp:
+    add = lambda x,y: x+y
+    a.sort(key=lambda x: x[1])</li>
+</ul>
+<p><a id="orgb67f240"></a></p>
+<h1 id="one-liners">One-Liners</h1>
+<p><a id="org060c857"></a></p>
+<h2 id="simple-web-server">Simple Web Server</h2>
+<p>python -m SimpleHTTPServer</p>
+<p>python -m http.server</p>
+<p><a id="org9ec55c1"></a></p>
+<h2 id="pretty-printing">Pretty Printing</h2>
+<p>from pprint import pprint</p>
+<p><a id="orgbc9db6d"></a></p>
+<h2 id="profiling-a-script">Profiling a script</h2>
+<p>This can be extremely helpful in pinpointing the bottlenecks in your script:
+python -m cProfile my<sub>script.py</sub>
+(cProfile is a faster implementation of profile as it is written in C)</p>
+<p><a id="orgf322479"></a></p>
+<h2 id="csv-to-json">CSV to json</h2>
+<p>python -c "import csv,json;print json.dumps(list(csv.reader(open('csv<sub>file.csv</sub>'))))"</p>
+<p><a id="orgf816c15"></a></p>
+<h2 id="list-flattening">List Flattening</h2>
+<p>You can quickly and easily flatten a list using <strong>itertools.chain.from<sub>iterable</sub></strong> from the <strong>itertools</strong> package.
+Exp:
+a<sub>list</sub> = [[1, 2], [3, 4], [5, 6]]
+print(list(itertools.chain.from<sub>iterable</sub>(a<sub>list</sub>)))</p>
+<p>print(list(itertools.chain(*a<sub>list</sub>)))</p>
+<p><a id="org8519c56"></a></p>
+<h2 id="one-line-constructors">One-Line Constructors</h2>
+<p>Avoid a lot of boilerplate assignments when initializing a class.</p>
+<p>class A(object):
+    def <span class="underline"><span class="underline">init_<sub>(self, a, b, c, d, e, f)</sub>:
+        self._<sub>dict</sub></span></span>.update({k: v for k, v in locals().items() if k != 'self'})</p>
+<p><a id="org69d8863"></a></p>
+<h1 id="forelse">for/else</h1>
+<ul>
+<li>else condition executes when no break happens</li>
+<li>exp:</li>
+</ul>
+<p>for item in container:
+    if search<sub>something</sub>(item):</p>
+<pre><code>    process(item)
+    break
+</code></pre>
+<p>else:</p>
+<p>not<sub>found</sub><sub>in</sub><sub>container</sub>()</p>
+<ul>
+<li>exp:</li>
+</ul>
+<p>for n in range(2,10):
+    for x in range(2,n):
+        if n%x == 0:
+            print(n, 'equals', x, '*', n/x)
+            break
+    else:</p>
+<p>print(n, 'is a prime number')</p>
+<p><a id="orgd81e36d"></a></p>
+<h1 id="python-c-extensions">Python C extensions</h1>
+<ul>
+<li>three key methods to call C functions from python code</li>
+<li>C is about 50x faster than python</li>
+<li>certain legacy C libraries work well, no need to rewrite in python</li>
+<li>certain low level resource access &#x2013; from memory to file interfaces</li>
+</ul>
+<p><a id="org44afe6d"></a></p>
+<h2 id="ctypes">CTypes</h2>
+<p>//file: add.c
+//sample C file to add 2 numbers - int and floats</p>
+<p>#include <stdio.h></p>
+<p>int add<sub>int</sub>(int, int);
+float add<sub>float</sub>(float, float);</p>
+<p>int add<sub>int</sub>(int num1, int num2){
+    return num1 + num2;
+}</p>
+<p>float add<sub>float</sub>(float num1, float num2){
+    return num1 + num2;
+}</p>
+<ul>
+<li>compile the C file to .so/.dll file:
+    gcc -shared -Wl,-soname,adder -o adder.so -fPIC add.c</li>
+<li>
+<p>now in python code:
+    from ctypes import *</p>
+<p>#load the shared object file
+adder = CDLL('./adder.so')</p>
+<p>#Find sum of integers
+res<sub>int</sub> = adder.add<sub>int</sub>(4,5)
+print "Sum of 4 and 5 = " + str(res<sub>int</sub>)</p>
+<p>#Find sum of floats
+a = c<sub>float</sub>(5.5)
+b = c<sub>float</sub>(4.1)</p>
+<p>add<sub>float</sub> = adder.add<sub>float</sub>
+add<sub>float.restype</sub> = c<sub>float</sub>
+print "Sum of 5.5 and 4.1 = ", str(add<sub>float</sub>(a, b))</p>
+</li>
+</ul>
+<p><a id="orgbd5edff"></a></p>
+<h2 id="swig">SWIG</h2>
+<p><a id="org4a44412"></a></p>
+<h2 id="pythonc-api">Python/C API</h2>
+<p><a id="orgec2e17b"></a></p>
+<h1 id="open-function"><strong>open</strong> Function</h1>
+<ul>
+<li>open(filename, mode)
+    mode:
+    r read
+    r+ read and write
+    overwrite w
+    append a
+    binary b</li>
+<li>always use "with":
+    with open('test.jpg', 'r+') as f:
+        jpgdata = f.read()</li>
+<li>pay attention to <strong>encoding</strong></li>
+</ul>
+<p><a id="orgb775cf8"></a></p>
+<h1 id="targeting-python-23">Targeting Python 2+3</h1>
+<p>some tricks to make your program compatible with both python2 and python3</p>
+<p><a id="org815834d"></a></p>
+<h2 id="future-imports">future imports</h2>
+<p>_<sub>future</sub>__ import allows you to import python3 functionality in python2
+from <span class="underline"><span class="underline">future</span></span> import with<sub>statement</sub></p>
+<p><a id="orga98d233"></a></p>
+<h2 id="dealing-with-module-renaming">dealing with module renaming</h2>
+<p>try:
+    import urllib.request as urllib<sub>request</sub>  # for Python 3
+except ImportError:
+    import urllib2 as urllib<sub>request</sub>  # for Python 2</p>
+<p><a id="org2f4e65c"></a></p>
+<h2 id="obsolete-python2-builtins">obsolete python2 builtins</h2>
+<p>from future.builtins.disabled import *</p>
+<p><a id="org58a4ba8"></a></p>
+<h2 id="external-standard-library-backports">external standard-library backports</h2>
+<p><a id="orge096ff0"></a></p>
+<h1 id="coroutines">Coroutines</h1>
+<p>Coroutines are similar to generators with a few differences. The main differences are:</p>
+<ol>
+<li>generators are data producers</li>
+<li>coroutines are data consumers</li>
+<li>generator exp:
+    def fib():
+        a,b = 0,1
+        while 1:
+        yield a
+        a,b = b,a+b</li>
+<li>
+<p>coroutine exp:
+    def grep(pattern):
+        print("Searching for", pattern)
+        while 1:
+        line = (yield)
+        if pattern in line:
+            print(line)</p>
+<p>search = grep('coroutine')
+next(search)
+search.send("hahaha")
+search.send("I love coroutines!")</p>
+<p>search.close()</p>
+</li>
+</ol>
+<p><a id="org259f4a9"></a></p>
+<h1 id="function-caching">Function caching</h1>
+<p>Function caching allows us to cache the return values of a function depending on the arguments.</p>
+<ul>
+<li>
+<p>exp:
+    from functools import lru<sub>cache</sub></p>
+<p>@lru<sub>cache</sub>(maxsize=32)
+def fib(n):
+    if n &lt; 2:
+    return n
+    return fib(n-1) + fib(n-2)</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>print([fib(n) for n in range(10)])
+-   fib.cache<sub>clear</sub>()</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<p><a id="org979ac9e"></a></p>
+<h1 id="context-managers">Context Managers</h1>
+<p>Context managers allow you to allocate and release resources precisely when you want to.
+The most widely used example of context manager is <strong>with</strong>.</p>
+<p><a id="org202c83f"></a></p>
+<h2 id="implementing-a-context-manager-as-a-class">Implementing a Context Manager as a Class</h2>
+<ul>
+<li>a context manager has an <span class="underline"><span class="underline">enter</span></span> and <span class="underline"><span class="underline">exit</span></span> method defined</li>
+<li>
+<p>exp:
+    class File(object):
+        def _<sub>init</sub>_<sub>(self, file<sub>name</sub>, method)</sub>:
+        self.file<sub>obj</sub> = open(file<sub>name</sub>, method)
+        def _<sub>enter</sub>_<sub>(self)</sub>:
+        return self.file<sub>obj</sub>
+        def _<sub>exit</sub>_<sub>(self, type, value, traceback)</sub>:
+        return self.file<sub>obj.close</sub>()</p>
+<p>with File('demo.txt', 'w') as opened<sub>file</sub>:
+    opened<sub>file.write</sub>('Hola!')</p>
+</li>
+</ul>
+<p><a id="org023ea78"></a></p>
+<h2 id="handling-exceptions">Handling Exceptions</h2>
+<p>class File(object):
+     def _<sub>init</sub>_<sub>(self, file<sub>name</sub>, method)</sub>:
+         self.file<sub>obj</sub> = open(file<sub>name</sub>, method)
+     def _<sub>enter</sub>_<sub>(self)</sub>:
+         return self.file<sub>obj</sub>
+     def _<sub>exit</sub>_<sub>(self, type, value, traceback)</sub>:
+         print("Exception has been handled")
+         self.file<sub>obj.close</sub>()
+         return True</p>
+<p>with File('demo.txt', 'w') as opened<sub>file</sub>:
+    opened<sub>file.undefined</sub><sub>function</sub>()</p>
+<p><a id="org862d226"></a></p>
+<h2 id="implementing-a-context-manager-as-a-generator">Implementing a Context Manager as a Generator</h2>
+<p>from contextlib import contextmanager</p>
+<p>@contextmanager
+def open<sub>file</sub>(name):
+    f = open(name, 'w')
+    yield f
+    f.close()</p>
+<p>with open<sub>file</sub>('some<sub>file</sub>') as f:
+    f.write('hola!')</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../pythonic/" class="btn btn-neutral float-left" title="pythonic"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../python3/" class="btn btn-neutral float-right" title="python3">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../pythonic/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../python3/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

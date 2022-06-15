@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>底层逻辑 - Study Notes</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u5e95\u5c42\u903b\u8f91";
+        var mkdocs_page_input_path = "other/\u5e95\u5c42\u903b\u8f91.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Study Notes
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Algorithm</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/alg_blog_note/">Alg blog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorithms_4th_edition/">Algorithms (4th Edition)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Blockchain</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blockchain/blockchain/">Blockchain</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Deep Learning</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/google-machine-learning-crash-course/">Google ML Crash Course</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">Python机器学习</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/dive_into_deep_learning/">Dive into Deep Learning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mathematics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mathematics/beauty_of_mathematics/">数学之美</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mathematics/statistics_concepts_and_controversies/">统计学的世界</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Psychology & Mind</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%B8%8E%E4%BC%97%E4%B8%8D%E5%90%8C%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6/">与众不同的心理学</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E5%86%B3%E7%AD%96%E4%B8%8E%E5%88%A4%E6%96%AD/">决策与判断</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E6%9A%97%E6%97%B6%E9%97%B4/">暗时间</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%BD%A0%E7%9A%84%E7%81%AF%E4%BA%AE%E7%9D%80%E5%90%97/">你的灯亮着吗</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E6%B2%9F%E9%80%9A%E7%9A%84%E8%89%BA%E6%9C%AF/">沟通的艺术</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E5%BD%B1%E5%93%8D%E5%8A%9B/">影响力</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%B8%93%E6%B3%A8%E5%8A%9B/">专注力</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective python</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/pythonic/">pythonic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/py_tips/">py tips</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/python3/">python3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/numpy/">numpy</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Research</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/">像外行一样思考，像专家一样实践</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Startup</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../startup/how_google_works/">How Google Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../startup/startup/">startup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">vim</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">git</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">markdown</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../history_of_quantum_physics/">上帝掷骰子吗？量子物理史话</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%847%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效能人士的7个习惯</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">底层逻辑</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#notes">Notes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_1">人生商业模式=能力×效率×杠杆</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">读后感</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E9%AB%98%E6%95%88%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8445%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效程序员的45个习惯</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Todo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../todo/todo/">TODO</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Study Notes</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Other &raquo;</li><li>底层逻辑</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="by">底层逻辑 by 刘润</h1>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>
+<p>“第一桶金，也就是复利公式里的本金，是财富自由的最大权重。我们看世界富豪榜的前100名，其中90名以上都是靠第一桶金获得财富自由，而不是靠复利公式。”</p>
+</li>
+<li>
+<p>“创造财富，而不是靠财富自己创造财富，才是获得财富自由的真谛。</p>
+</li>
+<li>
+<p>本金↑（1+收益率）时间-欲望=财富自由”</p>
+</li>
+<li>
+<p>吴军的书《数学之美》《浪潮之巅》《硅谷之谜》《智能时代》《文明之光》《大学之路》《全球科技通史》《见识》《态度》，吴军老师在得到开设了六门课程，分别是《硅谷来信》《谷歌方法论》《信息论40讲》《科技史纲60讲》《吴军讲5G》以及《数学通识50讲》。</p>
+</li>
+</ul>
+<h2 id="_1">人生商业模式=能力×效率×杠杆</h2>
+<ol>
+<li>能力——通过勤奋而获得</li>
+<li>效率——选择+方法+工具，“第一要义，是选择做那些对你来说最最重要的事情。然后，使用更高效的方法、更称手的工具。”</li>
+<li>杠杆——能力+科技+资本+影响力，“团队杠杆、产品杠杆、资本杠杆、影响力杠杆”</li>
+</ol>
+<h2 id="_2">读后感</h2>
+<p>笔记较少，一部分原因是用iPad看的，所以就没记，另一部分是很多观点我个人不太认同，觉得有点太激进了。比如说书里充斥着大量的类似于“996是福报”的观点，甚至觉得996太轻松了。讲得很好，下次不要讲了，我选择躺平。再比如书里的观点“别人对你态度不好，请找自身原因，是不是自己太弱了，不够优秀”，作者本人讲述了自己出名前后的对比，你厉害你有名，别人会主动来找你social，你菜你找别人social、请求别人做什么事，别人都不理你。我觉得这就是典型的受害者有罪论...我被人骚扰了因为我穿的少？</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%847%E4%B8%AA%E4%B9%A0%E6%83%AF/" class="btn btn-neutral float-left" title="高效能人士的7个习惯"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../%E9%AB%98%E6%95%88%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8445%E4%B8%AA%E4%B9%A0%E6%83%AF/" class="btn btn-neutral float-right" title="高效程序员的45个习惯">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%847%E4%B8%AA%E4%B9%A0%E6%83%AF/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../%E9%AB%98%E6%95%88%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8445%E4%B8%AA%E4%B9%A0%E6%83%AF/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

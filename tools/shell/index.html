@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>shell - Study Notes</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "shell";
+        var mkdocs_page_input_path = "tools/shell.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Study Notes
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Algorithm</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/alg_blog_note/">Alg blog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorithms_4th_edition/">Algorithms (4th Edition)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Blockchain</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blockchain/blockchain/">Blockchain</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Deep Learning</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/google-machine-learning-crash-course/">Google ML Crash Course</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">Python机器学习</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/dive_into_deep_learning/">Dive into Deep Learning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mathematics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mathematics/beauty_of_mathematics/">数学之美</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mathematics/statistics_concepts_and_controversies/">统计学的世界</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Psychology & Mind</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%B8%8E%E4%BC%97%E4%B8%8D%E5%90%8C%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6/">与众不同的心理学</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E5%86%B3%E7%AD%96%E4%B8%8E%E5%88%A4%E6%96%AD/">决策与判断</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E6%9A%97%E6%97%B6%E9%97%B4/">暗时间</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%BD%A0%E7%9A%84%E7%81%AF%E4%BA%AE%E7%9D%80%E5%90%97/">你的灯亮着吗</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E6%B2%9F%E9%80%9A%E7%9A%84%E8%89%BA%E6%9C%AF/">沟通的艺术</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E5%BD%B1%E5%93%8D%E5%8A%9B/">影响力</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%B8%93%E6%B3%A8%E5%8A%9B/">专注力</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective python</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/pythonic/">pythonic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/py_tips/">py tips</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/python3/">python3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/numpy/">numpy</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Research</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/">像外行一样思考，像专家一样实践</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Startup</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../startup/how_google_works/">How Google Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../startup/startup/">startup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../practical_vim/">vim</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">shell</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../git/">git</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../markdown/">markdown</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/history_of_quantum_physics/">上帝掷骰子吗？量子物理史话</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%847%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效能人士的7个习惯</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91/">底层逻辑</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8445%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效程序员的45个习惯</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Todo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../todo/todo/">TODO</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Study Notes</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Tools &raquo;</li><li>shell</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="table-of-contents">Table of Contents</h1>
+<ol>
+<li><a href="#org6c1e8e0">search string in files from current directory (use more to view the result)</a></li>
+<li><a href="#org027a8e9">Creating a Script</a></li>
+<li><a href="#orgd8c399f">Making a Script Executable</a></li>
+<li><a href="#orge68a03d">Shell Syntax</a><ol>
+<li><a href="#org1691637">Variables: strings, numbers, environments, and parameters</a><ol>
+<li><a href="#orgfca909e">Quoting</a></li>
+<li><a href="#org5c2e71c">Environment Variables</a></li>
+<li><a href="#org9bb747c">Parameter Variables</a></li>
+</ol>
+</li>
+<li><a href="#org85381c4">Conditions: shell Booleans</a><ol>
+<li>[The test or <a href="#orgdbbe57e"> Command</a></li>
+</ol>
+</li>
+<li><a href="#org569d59e">Program Control Structures: if, elif, for, while, until, case</a><ol>
+<li><a href="#orgdf696e0">if, elif</a></li>
+<li><a href="#org89ff5ae">for</a></li>
+<li><a href="#org3151ce8">while</a></li>
+<li><a href="#orgdcc4686">until</a></li>
+<li><a href="#org1614b09">case</a></li>
+<li><a href="#org3f919d1">Lists</a></li>
+</ol>
+</li>
+<li><a href="#org239ad97">Functions</a><ol>
+<li><a href="#org44d1306">break</a></li>
+<li><a href="#orgbf1bd95">The : Command (colon)</a></li>
+<li><a href="#orgfc0d01c">continue</a></li>
+<li><a href="#org2b3889f">The . Command</a></li>
+<li><a href="#org48f74d4">echo</a></li>
+<li><a href="#org555e4b9">eval</a></li>
+<li><a href="#org2bff73f">exec</a></li>
+<li><a href="#org62ac712">exit n</a></li>
+<li><a href="#orgede636f">export</a></li>
+<li><a href="#org5b59c60">expr</a></li>
+<li><a href="#orgf0a4485">printf</a></li>
+<li><a href="#org1d5143b">return</a></li>
+<li><a href="#orgf0136e6">set</a></li>
+<li><a href="#orgd4da9eb">shift</a></li>
+<li><a href="#org584b1be">trap</a></li>
+<li><a href="#orgcb3f3a0">unset</a></li>
+</ol>
+</li>
+<li><a href="#org6fc30b9">Commands built into the shell</a><ol>
+<li><a href="#orgd861049">find</a></li>
+<li><a href="#org4cdf212">grep (general regular expression parser)</a></li>
+</ol>
+</li>
+<li><a href="#orge8c1b20">Getting the result of a command</a><ol>
+<li><a href="#orga9d93f1">Arithmetic Expansion</a></li>
+<li><a href="#org6e1b578">Parameter Expansion</a></li>
+</ol>
+</li>
+<li><a href="#org27d77aa">Here documents</a></li>
+</ol>
+</li>
+</ol>
+<p><a id="org6c1e8e0"></a></p>
+<h1 id="search-string-in-files-from-current-directory-use-more-to-view-the-result">search string in files from current directory (use more to view the result)</h1>
+<ul>
+<li>grep -l STRING * # replace STRING with the string you want to match</li>
+<li>more `grep -l STRING *`</li>
+<li>more $(grep -l STRING *)</li>
+<li>grep -l STRING * | more</li>
+</ul>
+<p><a id="org027a8e9"></a></p>
+<h1 id="creating-a-script">Creating a Script</h1>
+<ul>
+<li># as comment</li>
+<li>first line: #!/bin/bash
+    #! is special, which tellls the system that the argument that follows on the line is the program to be used to execute this file</li>
+<li>example:
+    for file in *
+    do
+      if grep -q STRING $file
+      then
+        echo $file
+      fi
+    done
+    exit 0 # zero denotes success in shell programming</li>
+<li>script can contain any Linux commands referenced by PATH environment variable</li>
+<li>script filename doesn't have to be ".sh", use <em>file</em> command to check the type of the file</li>
+</ul>
+<p><a id="orgd8c399f"></a></p>
+<h1 id="making-a-script-executable">Making a Script Executable</h1>
+<ul>
+<li>/bin/bash xxx.sh</li>
+<li>chmod +x xxx.sh</li>
+<li>put the script in /home/yang/yangbin, add yangbin to PATH, then you can use the script</li>
+<li>add script to /usr/local/bin to let other users use it</li>
+</ul>
+<p><a id="orge68a03d"></a></p>
+<h1 id="shell-syntax">Shell Syntax</h1>
+<p><a id="org1691637"></a></p>
+<h2 id="variables-strings-numbers-environments-and-parameters">Variables: strings, numbers, environments, and parameters</h2>
+<ul>
+<li>create variables by using them, don't usually declare variables before using them</li>
+<li>by default, all variables are considered and stored as strings (even they are assigned numeric values)</li>
+<li>case-sensitive</li>
+<li>a string must be delimited by quote marks "" if it contains spaces, say "Yang Shen"</li>
+<li>there can't be any spaces on either side of the equals sign
+    myname = "Yang Shen"  -&gt;  wrong
+    myname="Yang Shen"  -&gt;  correct</li>
+<li>assign user input to a variable by using <em>read</em> command:
+    $ read name
+    who's yang?
+    $ echo $name
+    who's yang?</li>
+</ul>
+<p><a id="orgfca909e"></a></p>
+<h3 id="quoting">Quoting</h3>
+<ul>
+<li>white characters (e.g., a space, a tab, or a newline character)</li>
+<li>if you want a parameter to contain one or more whitespace characters, you must <strong>quote</strong> the parameter</li>
+<li>the behavior of variables such as $foo inside quotes depends on the type of quotes you use:
+    double quotes: "$foo", it's replaced with its value
+    single quotes: '$foo', no substitution takes place, just '$foo'
+    remove special meaning of $ symbol by prefacing it with a \: \$</li>
+</ul>
+<p><a id="org5c2e71c"></a></p>
+<h3 id="environment-variables">Environment Variables</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Environment Variable</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="org-left">$HOME</td>
+<td class="org-left">The home directory of current user</td>
+</tr>
+
+
+<tr>
+<td class="org-left">$PATH</td>
+<td class="org-left">A colon-separated list of directories to search for commands</td>
+</tr>
+
+
+<tr>
+<td class="org-left">$PS1</td>
+<td class="org-left">A command prompt, frequently $, but in bash you can use some</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">more complex values; for example, the string [\u@\h \W]$ is a</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">popular default that tells you the user, machine name, and</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">current directory, as well as providing a $ prompt.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">$PS2</td>
+<td class="org-left">A secondary prompt, used when prompting for additional input,</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">usually &gt;.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">$IFS</td>
+<td class="org-left">An <b>Input Field Separator</b>. This is a list of characters that</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">are used to separate words when the shell is reading input,</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">usually space, tab, and newline characters.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">$0</td>
+<td class="org-left">The name of the shell script</td>
+</tr>
+
+
+<tr>
+<td class="org-left">$#</td>
+<td class="org-left">The number of parameters passed</td>
+</tr>
+
+
+<tr>
+<td class="org-left">$$</td>
+<td class="org-left">The process ID of the shell script, often used inside a script</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">for generating unique temporary filenames; for example:</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">/tmp/tmpfile_$$</td>
+</tr>
+</tbody>
+</table>
+
+<p><a id="org9bb747c"></a></p>
+<h3 id="parameter-variables">Parameter Variables</h3>
+<p>If no parameters are passed, $# still exists but has a value of 0.</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Parameter Variable</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="org-left">$1, $2, &#x2026;</td>
+<td class="org-left">The parameters given to the script</td>
+</tr>
+
+
+<tr>
+<td class="org-left">$*</td>
+<td class="org-left">A list of all parameters, in a single variable, separated by the</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">first character in the environment variable IFS. If IFS is</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">modified, then the way $* separates the command line into</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">parameters will change.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">$@</td>
+<td class="org-left">A subtle variation on $*; it doesn't use the IFS environment</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">variable, so parameters are not run together even if IFS is empty</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>example:
+    IFS=''
+    set foo bar bam
+    echo "$@" # foo bar bam
+    echo "$*" # foobarbam
+      unset IFS
+      echo "$@" # foo bar bam</li>
+</ul>
+<p><a id="org85381c4"></a></p>
+<h2 id="conditions-shell-booleans">Conditions: shell Booleans</h2>
+<p><a id="orgdbbe57e"></a></p>
+<h3 id="the-test-or-command">The test or [ Command</h3>
+<p>check whether a file exists</p>
+<ul>
+<li>if test -f xxx.c
+    then
+    &#x2026;
+    fi</li>
+<li>if [ -f xxx.c ] # you must put spaces between [ braces and the condition being checked
+    then
+    &#x2026;
+    fi</li>
+<li>
+<p># use semicolon 
+    if [ -f xxx.c ]; then &#x2026;; fi</p>
+</li>
+<li>
+<p>Condition types: <em>string comparison</em>, <em>arithmetic comparison</em>, and <em>file conditionals</em></p>
+<p>str for string, exp for expression</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<p><colgroup>
+<col  class="org-left" /></p>
+<p><col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">String Comparison</th>
+<th scope="col" class="org-left">Result</th>
+</tr>
+</thead></p>
+<p><tbody>
+<tr>
+<td class="org-left">str1 = str2</td>
+<td class="org-left">&#xa0;</td>
+</tr></p>
+<p><tr>
+<td class="org-left">str1 != str2</td>
+<td class="org-left">&#xa0;</td>
+</tr></p>
+<p><tr>
+<td class="org-left">-n str</td>
+<td class="org-left">True if str is not null</td>
+</tr></p>
+<p><tr>
+<td class="org-left">-z str</td>
+<td class="org-left">True if string is null (an empty string)</td>
+</tr>
+</tbody></p>
+<p><tbody>
+<tr>
+<td class="org-left">Arithmetic Comparison</td>
+<td class="org-left">Result</td>
+</tr></p>
+<p><tr>
+<td class="org-left">exp1 -eq exp2</td>
+<td class="org-left">True if expressions are equal</td>
+</tr></p>
+<p><tr>
+<td class="org-left">exp1 -ne exp2</td>
+<td class="org-left">True if expressions are not equal</td>
+</tr></p>
+<p><tr>
+<td class="org-left">exp1 -gt exp2</td>
+<td class="org-left">greater than</td>
+</tr></p>
+<p><tr>
+<td class="org-left">exp1 -ge exp2</td>
+<td class="org-left">greater than or equal</td>
+</tr></p>
+<p><tr>
+<td class="org-left">exp1 -lt exp2</td>
+<td class="org-left">less than</td>
+</tr></p>
+<p><tr>
+<td class="org-left">exp1 -le exp2</td>
+<td class="org-left">less than or equal</td>
+</tr></p>
+<p><tr>
+<td class="org-left">! exp</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody></p>
+<p><tbody>
+<tr>
+<td class="org-left">File Conditional</td>
+<td class="org-left">Result</td>
+</tr></p>
+<p><tr>
+<td class="org-left">-d file</td>
+<td class="org-left">True if file is a directory</td>
+</tr></p>
+<p><tr>
+<td class="org-left">-e file</td>
+<td class="org-left">True if file exists (not portable, -f usually used)</td>
+</tr></p>
+<p><tr>
+<td class="org-left">-f file</td>
+<td class="org-left">True if file is a regular file</td>
+</tr></p>
+<p><tr>
+<td class="org-left">-g file</td>
+<td class="org-left">True if set-group-id (set-gid) is set on file</td>
+</tr></p>
+<p><tr>
+<td class="org-left">-r file</td>
+<td class="org-left">True if file is readable</td>
+</tr></p>
+<p><tr>
+<td class="org-left">-s file</td>
+<td class="org-left">True if file has nonzero size</td>
+</tr></p>
+<p><tr>
+<td class="org-left">-u file</td>
+<td class="org-left">True if set-user-id (set-uid) is set on file</td>
+</tr></p>
+<p><tr>
+<td class="org-left">-w file</td>
+<td class="org-left">True if file is writable</td>
+</tr></p>
+<p><tr>
+<td class="org-left">-x file</td>
+<td class="org-left">True if file is executable</td>
+</tr>
+</tbody>
+</table></p>
+</li>
+</ul>
+<p><a id="org569d59e"></a></p>
+<h2 id="program-control-structures-if-elif-for-while-until-case">Program Control Structures: if, elif, for, while, until, case</h2>
+<p><a id="orgdf696e0"></a></p>
+<h3 id="if-elif">if, elif</h3>
+<p>if condition
+then
+  statements # you can use extra white space to indent, shell ignores the additional white space
+elif
+  statements
+else
+  statements
+fi</p>
+<ol>
+<li>
+<p>A Problem with Variables</p>
+<ul>
+<li>example: if [ $answer = "yes" ]
+    it's not a valid condition, use if [ "$answer" = "yes" ]</li>
+</ul>
+</li>
+<li>
+<p>echo command to delete the trailing new line</p>
+<p>bash allows "echo -n" to suppress the new line</p>
+</li>
+</ol>
+<p><a id="org89ff5ae"></a></p>
+<h3 id="for">for</h3>
+<p>for variable in values
+do
+  statements
+done</p>
+<ol>
+<li>
+<p>example 1</p>
+<p>for foo in bar fud 43
+do
+  echo $foo
+done
+exit 0</p>
+<hr />
+<p>output: 
+bar
+fud
+43</p>
+</li>
+<li>
+<p>example 2</p>
+<p>for file in $(ls f*.sh); do
+  lpr $file
+done
+exit 0</p>
+</li>
+</ol>
+<p><a id="org3151ce8"></a></p>
+<h3 id="while">while</h3>
+<p>while condition do
+  statements
+done</p>
+<p><a id="orgdcc4686"></a></p>
+<h3 id="until">until</h3>
+<p>until condition
+do
+  statements
+done</p>
+<ul>
+<li>if a loop should always execute at least once, use while loop;
+    if it may not need to execute at all, use an until loop</li>
+</ul>
+<p><a id="org1614b09"></a></p>
+<h3 id="case">case</h3>
+<p>case variable in
+  pattern [ | pattern] &#x2026;) statements;; # end with ;;
+  pattern [ | pattern] &#x2026;) statements;;
+  &#x2026;
+esac</p>
+<ul>
+<li>case executes the first match it finds, not the best match, so put the most explicit matches first and the most general match last</li>
+<li>example</li>
+</ul>
+<p>case "$input" in
+    [yY] | [Yy][Ee][Ss]) echo "powerful match";;
+    yes) echo "entered yes";;
+    no ) echo "entered no";;
+    y  ) echo "entered y";;
+    n  ) echo "entered n";;
+    Y | Yes | YES) echo "hahaha";;
+                   echo "you typed Y or Yes or YES"
+                 ;;
+    n* | N*) echo "jajaja";;</p>
+<ul>
+<li>) echo "please type yes(y) or no(n)"
+    exit 1
+    ;; # optional</li>
+</ul>
+<p>esac
+exit 0</p>
+<ul>
+<li>;; before esac is optional</li>
+</ul>
+<p><a id="org3f919d1"></a></p>
+<h3 id="lists">Lists</h3>
+<ul>
+<li>example 1:</li>
+</ul>
+<p>if [ -f this<sub>file</sub> ]; then
+  if [ -f that<sub>file</sub> ]; then
+    if [ -f the<sub>other</sub><sub>file</sub> ]; then
+      echo “All files present, and correct”
+    fi
+  fi
+fi</p>
+<ul>
+<li>example 2:</li>
+</ul>
+<p>if [ -f this<sub>file</sub> ]; then
+  foo=”True”
+elif [ -f that<sub>file</sub> ]; then
+  foo=”True”
+elif [ -f the<sub>other</sub><sub>file</sub> ]; then
+  foo=”True”
+else
+  foo=”False”
+fi
+if [ “$foo” = “True” ]; then
+  echo “One of the files exists”
+fi</p>
+<ol>
+<li>
+<p>The AND List</p>
+<p>statement1 &amp;&amp; statement2 &amp;&amp; statement3 &amp;&amp; &#x2026;</p>
+</li>
+<li>
+<p>The OR List</p>
+<p>statement1 || statement2 || statement3 || &#x2026;</p>
+</li>
+<li>
+<p>Statement Blocks</p>
+<p>enclosing statements in braces {} to make a statement block, for example:
+get<sub>confirm</sub> &amp;&amp; {
+    grep -v "$cdcatnum" $track<sub>file</sub> &gt; $temp<sub>file</sub>
+    cat $temp<sub>file</sub> &gt; $tracks<sub>file</sub>
+    echo
+    add<sub>record</sub><sub>tracks</sub>
+}</p>
+</li>
+</ol>
+<p><a id="org239ad97"></a></p>
+<h2 id="functions">Functions</h2>
+<p>function<sub>name</sub> () {
+  statements
+}</p>
+<ul>
+<li>example:</li>
+</ul>
+<p>#!/bin/bash
+foo() {
+  echo "Function foo is executing"
+}
+echo "script starting"
+foo
+echo "script ended"
+exit 0</p>
+<ul>
+<li>always define a function before invoking it</li>
+<li>use <em>return</em> to return numeric values</li>
+<li>use <em>echo</em> to return strings</li>
+<li>declare local variables within shell functions by using the <em>local</em> keyword (only in scope within the function)</li>
+</ul>
+<p>#!/bin/bash
+sample<sub>text</sub>="global variable"
+foo() {
+  local sample<sub>text</sub>="local variable"
+  echo "Function foo is executing"
+  echo $sample<sub>text</sub>
+}
+echo "script starting"
+echo $sample<sub>text</sub>
+foo
+echo "script ended"
+echo $sample<sub>text</sub>
+exit 0</p>
+<p><a id="org44d1306"></a></p>
+<h3 id="break">break</h3>
+<ul>
+<li>Use <em>break</em> for escaping from an enclosing for, while, or until loop before the controlling condition has been met.</li>
+<li>You can give <em>break</em> an additional numeric parameter, which is the number of loops to break out of (not suggested)</li>
+</ul>
+<p><a id="orgbf1bd95"></a></p>
+<h3 id="the-command-colon">The : Command (colon)</h3>
+<ul>
+<li>The colon command is a null command. It's occasionally useful to simplify the logic of conditions, being an alias for <em>true</em>.</li>
+<li>Since : is built-in, : runs faster than <em>true</em>. For example, <em>while :</em> implements an infinite loop (while true)</li>
+<li>
+<p>The : construct is also useful in the conditional setting of variables. For example,</p>
+<pre><code>${var:=value}
+</code></pre>
+<p>Without the :, the shell would try to evaluate $var as a command.</p>
+</li>
+</ul>
+<p><a id="orgfc0d01c"></a></p>
+<h3 id="continue">continue</h3>
+<ul>
+<li>similar to break</li>
+</ul>
+<p><a id="org2b3889f"></a></p>
+<h3 id="the-command">The . Command</h3>
+<ul>
+<li>The dot(.) command executes the command in the current shell:
+    . ./shell<sub>script</sub></li>
+<li>works a little like #include in C/C++</li>
+</ul>
+<p><a id="org48f74d4"></a></p>
+<h3 id="echo">echo</h3>
+<ul>
+<li>echo -n</li>
+<li>echo -e</li>
+</ul>
+<p><a id="org555e4b9"></a></p>
+<h3 id="eval">eval</h3>
+<ul>
+<li>evaluate arguments, it's built into the shell and doesn't normally exist as a separate command.</li>
+<li>example</li>
+</ul>
+<p>foo=10
+x=foo
+y='$'$x
+echo $y # $foo
+eval y='$'$x
+echo $y # 10</p>
+<ul>
+<li><em>eval</em> is a bit like an extra $</li>
+<li><em>eval</em> command is very useful, enabling code to be generated and run on-the-fly</li>
+</ul>
+<p><a id="org2bff73f"></a></p>
+<h3 id="exec">exec</h3>
+<p>two different uses</p>
+<ol>
+<li>
+<p>typical use is to replace the current shell with a different program</p>
+<p>exec wall "Thanks for all the fish"
+in a script will replace the current shell with the <em>wall</em> command. No lines in the script after <em>exec</em> will be processed, 
+because the shell that was executing the script no longer exists.</p>
+</li>
+<li>
+<p>second use is to modify the current file descriptors</p>
+<p>exec 3&lt; afile
+This causes file descriptor three to be opened for reading from file <em>afile</em>. It's rarely used.</p>
+</li>
+</ol>
+<p><a id="org62ac712"></a></p>
+<h3 id="exit-n">exit n</h3>
+<ul>
+<li><em>exit</em> command causes the script to exit with exit code n</li>
+<li>in shell script programming, exit code</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Exit Code</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-left">Success</td>
+</tr>
+
+
+<tr>
+<td class="org-right">1-125</td>
+<td class="org-left">Error codes that can</td>
+</tr>
+
+
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">be used by script</td>
+</tr>
+
+
+<tr>
+<td class="org-right">126</td>
+<td class="org-left">The file was not executable</td>
+</tr>
+
+
+<tr>
+<td class="org-right">127</td>
+<td class="org-left">A command was not found</td>
+</tr>
+
+
+<tr>
+<td class="org-right">128 and above</td>
+<td class="org-left">A signal occurred</td>
+</tr>
+</tbody>
+</table>
+
+<p>Using 0 as success may seem a little unusual to C/C++. The 
+big advantage in scripts is that they enable you to use 125
+user-defined error codes without the need for a global error
+code variable.</p>
+<ul>
+<li>example</li>
+</ul>
+<p>#!/bin/bash
+if [ -f .profile ]; then
+    exit 0
+fi
+exit 1</p>
+<p><a id="orgede636f"></a></p>
+<h3 id="export">export</h3>
+<p>The <em>export</em> command makes the variable named as its parameter 
+available in subshells. By default, variables created in a shell 
+are not available in further (sub)shells invoked from that shell.</p>
+<ul>
+<li>example</li>
+</ul>
+<p>export2.sh
+#!/bin/bash
+echo "$foo"
+echo "$bar"
+export1.sh
+#!/bin/bash
+foo="hello"
+export bar="hola"
+export2
+The output is:</p>
+<p>hola</p>
+<p><a id="org5b59c60"></a></p>
+<h3 id="expr">expr</h3>
+<p>The <em>expr</em> command evaluates its arguments as an expression.
+It's most commonly used for simple arithmetic in the following form:
+x=`expr $x + 1`</p>
+<ol>
+<li>
+<p>Expression Evaluation</p>
+<ul>
+<li>| &amp; = &gt; &gt;= &lt; &lt;= != + - * / %</li>
+<li>the use of <em>expr</em> is normally replaced with the more efficient $((&#x2026;)) syntax</li>
+</ul>
+</li>
+</ol>
+<p><a id="orgf0a4485"></a></p>
+<h3 id="printf">printf</h3>
+<ul>
+<li>syntax</li>
+</ul>
+<p>printf "format string" parameter1 parameter2 &#x2026;</p>
+<ul>
+<li>very similar to C/C++, floating point is not supported (all arithmetic in the shell is performed as integers)</li>
+</ul>
+<p><a id="org1d5143b"></a></p>
+<h3 id="return">return</h3>
+<ul>
+<li><em>return</em> takes a single numeric parameter that is available to the script calling the function</li>
+<li>if no parameter is specified, then <em>return</em> defaults to the exit code of the last command</li>
+</ul>
+<p><a id="orgf0136e6"></a></p>
+<h3 id="set">set</h3>
+<ul>
+<li>The <em>set</em> command sets the parameter variables for the shell. It can be a useful way 
+    of using fields in commands that output space-separated values.</li>
+<li>example</li>
+</ul>
+<p>#!/bin/bash
+echo the date is $(date) # Tue Feb 6 21:24:31 CST 2018
+set $(date)
+echo The month is $2 # Feb
+exit 0</p>
+<ul>
+<li>set -x</li>
+</ul>
+<p>makes a script display a trace of its currently executing command</p>
+<p><a id="orgd4da9eb"></a></p>
+<h3 id="shift">shift</h3>
+<p>The <em>shift</em> command moves all the parameter variables down by one, so that $2 becomes $1, 
+$3 becomes $2, and so on. The previous value of $1 is discarded, while $0 remains unchanged.
+If a numeric parameter is specified in the call to <em>shift</em>, the parameters move that 
+many spaces. The other variables, $*, $@, and $#, are also modified in line with 
+the new arrangement of parameter variables.</p>
+<ul>
+<li><em>shift</em> is often useful for scanning through parameters passed into a script</li>
+<li>if your script requires 10 or more parameters, you'll need <em>shift</em> to access the tenth and beyond</li>
+<li>example</li>
+</ul>
+<p>#!/bin/bash
+while [ "$1" != "" ]; do
+    echo "$1"
+    shift
+done
+exit 0</p>
+<p><a id="org584b1be"></a></p>
+<h3 id="trap">trap</h3>
+<p>The <em>trap</em> command is used to specify the actions to take on receipt of signals.
+A common use is to tidy up a script when it is interrupted.</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Signal</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="org-left">HUP(1)</td>
+<td class="org-left">Hang up; usually sent when a terminal goes offline, or a user logs out</td>
+</tr>
+
+
+<tr>
+<td class="org-left">INT(2)</td>
+<td class="org-left">Interrupt; usually sent by pressing Ctrl+C</td>
+</tr>
+
+
+<tr>
+<td class="org-left">QUIT(3)</td>
+<td class="org-left">Quit; usually sent by pressing Ctrl+\</td>
+</tr>
+
+
+<tr>
+<td class="org-left">ABRT(6)</td>
+<td class="org-left">Abort; usually sent on some serious execution error</td>
+</tr>
+
+
+<tr>
+<td class="org-left">ALRM(14)</td>
+<td class="org-left">Alarm; usually used for handling timeouts</td>
+</tr>
+
+
+<tr>
+<td class="org-left">TERM(15)</td>
+<td class="org-left">Terminate; usually sent by the system when it' shutting down</td>
+</tr>
+</tbody>
+</table>
+
+<p><a id="orgcb3f3a0"></a></p>
+<h3 id="unset">unset</h3>
+<p>The <em>unset</em> command removes variables or functions from the environment.
+It can't do this to read-only variables defined by the shell itself, such as IFS.
+It's not often used.</p>
+<p><a id="org6fc30b9"></a></p>
+<h2 id="commands-built-into-the-shell">Commands built into the shell</h2>
+<p><a id="orgd861049"></a></p>
+<h3 id="find">find</h3>
+<p>search for files, syntax:
+find [path] [options] [tests] [actions]
+for example, find ~/ -name test -print</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Option</th>
+<th scope="col" class="org-left">Meaning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="org-left">-depth</td>
+<td class="org-left">Search the contents of a directory before looking at the directory itself</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-follow</td>
+<td class="org-left">Follow symbolic links</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-maxdepths N</td>
+<td class="org-left">Search at most N levels of the directory when searching</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-mount (or -xdev)</td>
+<td class="org-left">Don't search directories on other file systems</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="org-left">Test</td>
+<td class="org-left">Meaning</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="org-left">-atime N</td>
+<td class="org-left">The file was last accessed N days ago</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-mtime N</td>
+<td class="org-left">The file was last modified N days ago</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-name pattern</td>
+<td class="org-left">The name of the file, excluding any path, matches the pattern provided.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">To ensure that the pattern is passed to <i>find</i>, and not evaluated by the</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">shell immediately, the pattern must always be in quotes.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-newer otherfile</td>
+<td class="org-left">The file is newer than the file otherfile</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-type C</td>
+<td class="org-left">The file is of type C, where C can be a particular type; the most common</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">are "d" for a directory and "f" for a regular file.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-user username</td>
+<td class="org-left">The file is owned by the user with given name</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="org-left">Operator</td>
+<td class="org-left">Meaning</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="org-left">! or -not</td>
+<td class="org-left">Invert the test</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-a or -and</td>
+<td class="org-left">Both tests must be true</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-o or -or</td>
+<td class="org-left">Either test must be true</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="org-left">Action</td>
+<td class="org-left">Meaning</td>
+</tr>
+</tbody>
+
+<tbody>
+<tr>
+<td class="org-left">-exec command</td>
+<td class="org-left">Execute a command. Must be terminated with a \; character pair.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-ok command</td>
+<td class="org-left">Like -exec, except that it prompts for user confirmation of each file on</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">which it will carry out the command before executing the command. Also</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">must be terminated with a \; character pair.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-print</td>
+<td class="org-left">Print out the name of the file.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-ls</td>
+<td class="org-left">Use ls -dils on the current file.</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>find . -newer file2 -type f -exec ls -l {} \;</li>
+</ul>
+<p><a id="org4cdf212"></a></p>
+<h3 id="grep-general-regular-expression-parser">grep (general regular expression parser)</h3>
+<p>search files for strings, syntax:
+grep [options] PATTERN [FILES]
+If no filenames are given, it searches standard input.</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Option</th>
+<th scope="col" class="org-left">Meaning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="org-left">-c</td>
+<td class="org-left">Rather than print matching lines, print a count of the number of lines that match.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-E</td>
+<td class="org-left">Turn on extended expressions.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-h</td>
+<td class="org-left">Suppress the normal prefixing of each output line with the name of the file it was found in.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-i</td>
+<td class="org-left">Ignore case.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-l</td>
+<td class="org-left">List the names of the files with matching lines; don't output the actual matched line.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">-v</td>
+<td class="org-left">Invert the matching pattern to select nonmathcing lines, rather than matching lines.</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>
+<p>grep in words.txt # find lines with "in" in words.txt</p>
+</li>
+<li>
+<p>Regular Expressions</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<p><colgroup>
+<col  class="org-left" /></p>
+<p><col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Character</th>
+<th scope="col" class="org-left">Meaning</th>
+</tr>
+</thead></p>
+<p><tbody>
+<tr>
+<td class="org-left">^</td>
+<td class="org-left">Anchor to the beginning of a line</td>
+</tr></p>
+<p><tr>
+<td class="org-left">$</td>
+<td class="org-left">Anchor to the end of a line</td>
+</tr></p>
+<p><tr>
+<td class="org-left">.</td>
+<td class="org-left">Any single character</td>
+</tr></p>
+<p><tr>
+<td class="org-left">[ ]</td>
+<td class="org-left">A range of characters, any one of which may be matched.</td>
+</tr>
+</tbody></p>
+<p><tbody>
+<tr>
+<td class="org-left">Match Pattern</td>
+<td class="org-left">Meaning</td>
+</tr>
+</tbody></p>
+<p><tbody>
+<tr>
+<td class="org-left">[:alnum:]</td>
+<td class="org-left">Alphanumeric characters</td>
+</tr></p>
+<p><tr>
+<td class="org-left">[:alpha:]</td>
+<td class="org-left">Letters</td>
+</tr></p>
+<p><tr>
+<td class="org-left">[:ascii:]</td>
+<td class="org-left">ASCII characters</td>
+</tr></p>
+<p><tr>
+<td class="org-left">[:blank:]</td>
+<td class="org-left">Space or tab</td>
+</tr></p>
+<p><tr>
+<td class="org-left">[:cntrl:]</td>
+<td class="org-left">ASCII control characters</td>
+</tr></p>
+<p><tr>
+<td class="org-left">[:digit:]</td>
+<td class="org-left">Digits</td>
+</tr></p>
+<p><tr>
+<td class="org-left">[:graph:]</td>
+<td class="org-left">Noncontrol, nonspace characters</td>
+</tr></p>
+<p><tr>
+<td class="org-left">[:lower:]</td>
+<td class="org-left">Lowercase letters</td>
+</tr></p>
+<p><tr>
+<td class="org-left">[:print:]</td>
+<td class="org-left">Printable characters</td>
+</tr></p>
+<p><tr>
+<td class="org-left">[:punct:]</td>
+<td class="org-left">Punctuation characters</td>
+</tr></p>
+<p><tr>
+<td class="org-left">[:space:]</td>
+<td class="org-left">Whitespace characters, including vertical tab</td>
+</tr></p>
+<p><tr>
+<td class="org-left">[:upper:]</td>
+<td class="org-left">Uppercase letters</td>
+</tr></p>
+<p><tr>
+<td class="org-left">[:xdigit:]</td>
+<td class="org-left">Hexadecimal digits</td>
+</tr>
+</tbody>
+</table></p>
+<p>If -E is specified, </p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<p><colgroup>
+<col  class="org-left" /></p>
+<p><col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Option</th>
+<th scope="col" class="org-left">Meaning</th>
+</tr>
+</thead></p>
+<p><tbody>
+<tr>
+<td class="org-left">?</td>
+<td class="org-left">Match is optional but maybe matched at most once</td>
+</tr></p>
+<p><tr>
+<td class="org-left">*</td>
+<td class="org-left">Must be matched zero or more times</td>
+</tr></p>
+<p><tr>
+<td class="org-left">+</td>
+<td class="org-left">Must be matched one or more times</td>
+</tr></p>
+<p><tr>
+<td class="org-left">{n}</td>
+<td class="org-left">Must be matched n times</td>
+</tr></p>
+<p><tr>
+<td class="org-left">{n,}</td>
+<td class="org-left">Must be matched n or more times</td>
+</tr></p>
+<p><tr>
+<td class="org-left">{n,m}</td>
+<td class="org-left">Must be matched between n or m times, inclusive</td>
+</tr>
+</tbody>
+</table></p>
+<ul>
+<li>grep "e$" myfile.txt # list lines end with "e"</li>
+<li>grep "<sup>aa</sup>" myfile.txt # list lines start with "aa"</li>
+<li>grep "a[ [:blank:] ]" myfile.txt # lines with "a " or "a TAB"</li>
+<li>grep ysh. myfile.txt # lines with "ysh.", "." match any single character</li>
+<li>grep -E [a-z]\{10\} myfile.txt # lines with a range of characters to match a to z, and a reptition of 10 matches, i.e., string [a-z] with length 10</li>
+</ul>
+</li>
+</ul>
+<p><a id="orge8c1b20"></a></p>
+<h2 id="getting-the-result-of-a-command">Getting the result of a command</h2>
+<p>Use $(command) syntax.</p>
+<ul>
+<li>example</li>
+</ul>
+<p>#!/bin/bash
+echo pwd is $PWD # PWD is shell environment variable, no need to use ()
+echo current user is $(whoami) # need ()
+exit 0</p>
+<p><a id="orga9d93f1"></a></p>
+<h3 id="arithmetic-expansion">Arithmetic Expansion</h3>
+<ul>
+<li>using <em>expr</em> mentioned above, but it's quite slow because a new shell is invoked to process the <em>expr</em> command</li>
+<li>a newer and better alternative is $((&#x2026;)) expansion, by enclosing the expression you wish to evaluate in $((&#x2026;))</li>
+<li>example</li>
+</ul>
+<p>#!/bin/bash
+x=0
+while [ "$x" -ne 10 ]; do
+  echo $x
+  x=$(($x+1))
+done
+exit 0</p>
+<p><a id="org6e1b578"></a></p>
+<h3 id="parameter-expansion">Parameter Expansion</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Parameter Expansion</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="org-left">${param:-default}</td>
+<td class="org-left">If param is null, then set it to the value of default.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">${#param}</td>
+<td class="org-left">Gives the length of param.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">${param%word}</td>
+<td class="org-left">From the end, removes the smallest part of param that</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">matches <i>word</i> and returns the rest.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">${param%%word}</td>
+<td class="org-left">From the end, removes the longest part of param that</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">matches <i>word</i> and returns the rest.</td>
+</tr>
+
+
+<tr>
+<td class="org-left">${param#word}</td>
+<td class="org-left">From the beginning, removes the smallest &#x2026;</td>
+</tr>
+
+
+<tr>
+<td class="org-left">${param##word}</td>
+<td class="org-left">From the beginning, removes the longest &#x2026;</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>example</li>
+</ul>
+<p>#!/bin/bash
+unset foo
+echo ${foo:-bar}
+foo=fud
+echo ${foo:-bar}
+foo=/usr/bin/X11/startx
+echo ${foo#*/}
+echo ${foo##*/}
+bar=/usr/local/etc/local/networks
+echo ${bar%local*}
+echo ${bar%%local*}
+exit 0</p>
+<p><a id="org27d77aa"></a></p>
+<h2 id="here-documents">Here documents</h2>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../practical_vim/" class="btn btn-neutral float-left" title="vim"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../git/" class="btn btn-neutral float-right" title="git">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../practical_vim/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../git/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

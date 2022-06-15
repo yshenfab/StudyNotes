@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Dive into Deep Learning - Study Notes</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Dive into Deep Learning";
+        var mkdocs_page_input_path = "deep_learning/dive_into_deep_learning.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Study Notes
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Algorithm</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/alg_blog_note/">Alg blog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorithms_4th_edition/">Algorithms (4th Edition)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Blockchain</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blockchain/blockchain/">Blockchain</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Deep Learning</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../google-machine-learning-crash-course/">Google ML Crash Course</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">Python机器学习</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Dive into Deep Learning</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#preface">Preface</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_1">监督学习</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#regression">回归Regression</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#classification">分类Classification</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_2">强化学习</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">预备知识</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">线性神经网络</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mathematics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mathematics/beauty_of_mathematics/">数学之美</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mathematics/statistics_concepts_and_controversies/">统计学的世界</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Psychology & Mind</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%B8%8E%E4%BC%97%E4%B8%8D%E5%90%8C%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6/">与众不同的心理学</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E5%86%B3%E7%AD%96%E4%B8%8E%E5%88%A4%E6%96%AD/">决策与判断</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E6%9A%97%E6%97%B6%E9%97%B4/">暗时间</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%BD%A0%E7%9A%84%E7%81%AF%E4%BA%AE%E7%9D%80%E5%90%97/">你的灯亮着吗</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E6%B2%9F%E9%80%9A%E7%9A%84%E8%89%BA%E6%9C%AF/">沟通的艺术</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E5%BD%B1%E5%93%8D%E5%8A%9B/">影响力</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%B8%93%E6%B3%A8%E5%8A%9B/">专注力</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective python</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/pythonic/">pythonic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/py_tips/">py tips</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/python3/">python3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/numpy/">numpy</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Research</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/">像外行一样思考，像专家一样实践</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Startup</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../startup/how_google_works/">How Google Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../startup/startup/">startup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">vim</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">git</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">markdown</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/history_of_quantum_physics/">上帝掷骰子吗？量子物理史话</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%847%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效能人士的7个习惯</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91/">底层逻辑</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8445%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效程序员的45个习惯</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Todo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../todo/todo/">TODO</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Study Notes</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Deep Learning &raquo;</li><li>Dive into Deep Learning</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="dive-into-deep-learning">Dive into Deep Learning</h1>
+<h2 id="preface">Preface</h2>
+<p>Key components: data, model, objective function, algorithm (调整模型参数以优化目标函数)</p>
+<h3 id="_1">监督学习</h3>
+<h4 id="regression">回归Regression</h4>
+<ul>
+<li>问题类型的本质是输出决定的，输出是一个实值</li>
+<li>判断回归问题的一个很好的经验法则是，任何有关“多少”的问题很可能就是回归问题</li>
+<li>例：手术需要多少小时？未来6小时会有多少降雨量？预测用户对一部电影的评分是多少？</li>
+<li>学习最小化“预测值和实际标签值的差异”的模型，关注最小化平方误差损失函数(MSE)</li>
+</ul>
+<h4 id="classification">分类Classification</h4>
+<ul>
+<li>“哪一个？”的问题叫做分类，模型预测样本属于哪个类别</li>
+<li>分类问题常见的损失函数是交叉熵cross-entropy</li>
+</ul>
+<p>R## 无监督学习
+数据中不含有"目标"的问题为无监督学习
+- 聚类 clustering
+- 主成分分析 principal component analysis
+    (PCA)：找到少量参数准确捕捉数据的线性相关属性
+- 因果关系 causality
+- 概率图模型 probabilistic graphical models
+- 生成对抗网络 GAN</p>
+<h3 id="_2">强化学习</h3>
+<h2 id="_3">预备知识</h2>
+<ul>
+<li>范数norm：一个向量的范数告诉我们一个向量有多大。向量范数是将向量映射到标量的函数。L1范数表示向量元素的绝对值之和，L2范数表示向量元素平方和的平方根。深度学习中经常使用L2范数的平方。</li>
+<li>optimization用模型拟合数据 + generalization运用于训练数据外的数据</li>
+</ul>
+<h2 id="_4">线性神经网络</h2>
+<p>回归（regression）是能为一个或多个自变量与因变量之间关系建模的一类方法，回归经常用来表示输入和输出之间的关系。</p>
+<p>梯度下降（gradient descent）通过不断地在损失函数递减的方向上更新参数来降低误差。梯度下降最简单的用法是计算损失函数（数据集中所有样本的损失均值） 关于模型参数的导数（在这里也可以称为梯度）。 但实际中的执行可能会非常慢：因为在每一次更新参数之前，我们必须遍历整个数据集。 因此，我们通常会在每次需要计算更新的时候随机抽取一小批样本， 这种变体叫做小批量随机梯度下降（minibatch stochastic gradient descent）。</p>
+<p>可以调整但不在训练过程中更新的参数称为超参数（hyperparameter），比如batch size, learning rate等。</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="btn btn-neutral float-left" title="Python机器学习"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../mathematics/beauty_of_mathematics/" class="btn btn-neutral float-right" title="数学之美">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../mathematics/beauty_of_mathematics/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

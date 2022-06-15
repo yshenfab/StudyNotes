@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>numpy - Study Notes</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "numpy";
+        var mkdocs_page_input_path = "python/numpy.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Study Notes
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Algorithm</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/alg_blog_note/">Alg blog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorithms_4th_edition/">Algorithms (4th Edition)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Blockchain</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blockchain/blockchain/">Blockchain</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Deep Learning</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/google-machine-learning-crash-course/">Google ML Crash Course</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">Python机器学习</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/dive_into_deep_learning/">Dive into Deep Learning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mathematics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mathematics/beauty_of_mathematics/">数学之美</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mathematics/statistics_concepts_and_controversies/">统计学的世界</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Psychology & Mind</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%B8%8E%E4%BC%97%E4%B8%8D%E5%90%8C%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6/">与众不同的心理学</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E5%86%B3%E7%AD%96%E4%B8%8E%E5%88%A4%E6%96%AD/">决策与判断</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E6%9A%97%E6%97%B6%E9%97%B4/">暗时间</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%BD%A0%E7%9A%84%E7%81%AF%E4%BA%AE%E7%9D%80%E5%90%97/">你的灯亮着吗</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E6%B2%9F%E9%80%9A%E7%9A%84%E8%89%BA%E6%9C%AF/">沟通的艺术</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E5%BD%B1%E5%93%8D%E5%8A%9B/">影响力</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%B8%93%E6%B3%A8%E5%8A%9B/">专注力</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../effective_python/">Effective python</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pythonic/">pythonic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../py_tips/">py tips</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python3/">python3</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">numpy</a>
+    <ul class="current">
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Research</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/">像外行一样思考，像专家一样实践</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Startup</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../startup/how_google_works/">How Google Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../startup/startup/">startup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">vim</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">git</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">markdown</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/history_of_quantum_physics/">上帝掷骰子吗？量子物理史话</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%847%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效能人士的7个习惯</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91/">底层逻辑</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8445%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效程序员的45个习惯</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Todo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../todo/todo/">TODO</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Study Notes</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Python &raquo;</li><li>numpy</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="table-of-contents">Table of Contents</h1>
+<ol>
+<li><a href="#orgc9e4402">Numpy Tutorial</a><ol>
+<li><a href="#org562c378">The Basics</a></li>
+<li><a href="#org470dd06">Example</a></li>
+</ol>
+</li>
+<li><a href="#org39d49df">Tutorial2</a><ol>
+<li><a href="#orgf66a8f2">Part 1: Introduction to Arrays</a><ol>
+<li><a href="#orgfa4a52a">How to create a numpy array</a></li>
+<li><a href="#org2ca7fd9">How to inspect the size and shape of a numpy array</a></li>
+<li><a href="#org92fad9b">How to extract specific items from an array</a></li>
+<li><a href="#org1dd032e">Reshaping and Flattening Multidimensional arrays</a></li>
+<li><a href="#org96edcdc">How to create sequences, repetitions and random numbers using numpy</a></li>
+</ol>
+</li>
+<li><a href="#org428f60d">Part 2: Vital Functions for Data Analysis</a><ol>
+<li><a href="#org8b39666">How to get index locations that satisfy a given condition using np.where</a></li>
+<li><a href="#org80d44ae">How to import and export data as a csv file</a></li>
+<li><a href="#orgbe7f5b0">How to save and load numpy objects</a></li>
+<li><a href="#orgc404802">How to concatenate two numpy arrays column-wise and row-wise</a></li>
+<li><a href="#org3259aa8">How to sort a numpy array based on one or more columns</a></li>
+<li><a href="#org9da90e5">Working with dates</a></li>
+<li><a href="#orge1a06f9">Advanced numpy functions</a></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p><a id="orgc9e4402"></a></p>
+<h1 id="numpy-tutorial">Numpy Tutorial</h1>
+<p><a id="org562c378"></a></p>
+<h2 id="the-basics">The Basics</h2>
+<p>In Numpy dimensions are called <em>axes</em>. The number of axes is <em>rank</em>.
+A 3D space point [1,2,1] is an array of rank 1 because it has one axis.
+[[1,0,0], [0,1,2]] has rank 2 (2-dimensional), the first dimension(axis) has a length of 2, the second has a length of 3.</p>
+<ul>
+<li>Numpy's array class is called <strong>ndarray</strong>, also known as by alias <strong>array</strong>.</li>
+<li>ndarray.ndim: number of axes of the array</li>
+<li>ndarray.shape: n rows m columns, shape is (n,m)</li>
+<li>ndarray.size: total num of elements in array</li>
+<li>ndarray.dtype: data type</li>
+<li>ndarray.itemsize: size in bytes of each element of the array</li>
+<li>ndarray.data: buffer containing actual elements of the array</li>
+</ul>
+<p><a id="org470dd06"></a></p>
+<h2 id="todo-example">TODO Example</h2>
+<ul>
+<li>a = np.array([1,2,3,4])</li>
+<li>b = np.array([(1.5,2,3), (4,5,6)])</li>
+<li>c = np.array( [ [1,2], [3,4] ], dtype=complex )</li>
+<li>np.zeros( (3,4) )</li>
+<li>np.ones( (2,3,4), dtype=np.int16 )</li>
+<li>np.empty( (2,3) )</li>
+<li>np.arange( 10, 30, 5 )</li>
+<li>np.arange( 0, 2, 0.3 ) # 不建议用arange()接收float，用linspace代替</li>
+<li>np.linspace( 0, 2, 9 ) # 9 numbers from 0 to 2</li>
+<li>a = np.array( [20,30,40,50] )
+    b = np.arange( 4 )
+    c = a-b # array([20, 29, 38, 47])
+    b**2 # array([0, 1, 4, 9])
+    10*np.sin(a) # array([ 9.12945251, -9.88031624,  7.4511316 , -2.62374854])
+    a&lt;35 # array([ True, True, False, False], dtype=bool)</li>
+<li>A = np.array( [[1,1],</li>
+</ul>
+<p>&#x2026;             [0,1]] )
+  B = np.array( [[2,0],
+&#x2026;             [3,4]] )
+  A*B                         # elementwise product
+array([[2, 0],
+       [0, 4]])
+  A.dot(B)                    # matrix product
+array([[5, 4],
+       [3, 4]])
+  np.dot(A, B)                # another matrix product
+array([[5, 4],
+       [3, 4]])</p>
+<ul>
+<li>a.sum() a.max() a.min()
+    b.sum(axis=0)                            # sum of each column
+    b.min(axis=1)                            # min of each row
+    b.cumsum(axis=1)                         # cumulative sum along each row</li>
+<li>until: Search "Iterating over multidimensional arrays is done with respect to the first axis:" in <a href="https://docs.scipy.org/doc/numpy-dev/user/quickstart.html">https://docs.scipy.org/doc/numpy-dev/user/quickstart.html</a></li>
+<li><a href="http://cs231n.github.io/python-numpy-tutorial/">http://cs231n.github.io/python-numpy-tutorial/</a></li>
+<li><a href="http://www.scipy-lectures.org/">http://www.scipy-lectures.org/</a></li>
+</ul>
+<p><a id="org39d49df"></a></p>
+<h1 id="tutorial2">Tutorial2</h1>
+<p><a id="orgf66a8f2"></a></p>
+<h2 id="part-1-introduction-to-arrays">Part 1: Introduction to Arrays</h2>
+<p><a id="orgfa4a52a"></a></p>
+<h3 id="how-to-create-a-numpy-array">How to create a numpy array</h3>
+<p>import numpy as np</p>
+<p>list1 = [0,1,2,3,4]
+arr1d = np.array(list1) # np.array([0,1,2,3,4])</p>
+<p>list2 = [[0,1,2], [3,4,5], [6,7,8]]
+arr2d = np.array(list2)</p>
+<p>arr2d<sub>f</sub> = np.array(list2, dtype='float') # dtype: float, int, bool, str, object, float32, float64, int8, int16, int32&#x2026;</p>
+<p>arr2d<sub>f.astype</sub>('int')</p>
+<p>arr2d<sub>f.astype</sub>('int').astype('str')</p>
+<p>arr2d<sub>b</sub> = np.array([1,0,10], dtype='bool') # True, False, True</p>
+<p>arr1d<sub>obj</sub> = np.array([1,'a'], dtype='object')</p>
+<p>arr1d<sub>obj.tolist</sub>() # [1,'a']</p>
+<p><a id="org2ca7fd9"></a></p>
+<h3 id="how-to-inspect-the-size-and-shape-of-a-numpy-array">How to inspect the size and shape of a numpy array</h3>
+<p>list2 = [[1, 2, 3, 4],[3, 4, 5, 6], [5, 6, 7, 8]]
+arr2 = np.array(list2, dtype='float')</p>
+<p>arr2.shape # (3,4)</p>
+<p>arr2.dtype # float64</p>
+<p>arr2.size # 12</p>
+<p>arr2.ndim # 2</p>
+<p><a id="org92fad9b"></a></p>
+<h3 id="how-to-extract-specific-items-from-an-array">How to extract specific items from an array</h3>
+<p>arr2[:2, :2] # array([1, 2], [3, 4])</p>
+<p>b = arr2 &gt; 4
+b # array([[False, False, False, False],[False, False,  True,  True],[ True,  True,  True,  True]], dtype=bool)
+arr2[b] # array([ 5.,  6.,  5.,  6.,  7.,  8.])</p>
+<ol>
+<li>
+<p>How to reverse the rows and the whole array</p>
+<p>arr2[::-1, ] # array([[ 5.,  6.,  7.,  8.], [ 3.,  4.,  5.,  6.], [ 1.,  2.,  3.,  4.]])</p>
+<p>arr2[::-1, ::-1] # array([[ 8.,  7.,  6.,  5.], [ 6.,  5.,  4.,  3.], [ 4.,  3.,  2.,  1.]])</p>
+</li>
+<li>
+<p>How to represent missing values and infinite</p>
+<ul>
+<li>missing values: np.nan</li>
+<li>infinite: np.inf</li>
+</ul>
+<p>arr2[1,1] = np.nan
+arr2[1,2] = np.inf</p>
+<p>missing<sub>bool</sub> = np.isnan(arr2) | np.isinf(arr2)
+arr2[missing<sub>bool</sub>] = -1
+#&gt; array([[ 1.,  2.,  3.,  4.],
+#&gt;        [ 3., -1., -1.,  6.],
+#&gt;        [ 5.,  6.,  7.,  8.]])</p>
+</li>
+<li>
+<p>How to compute mean, min, max on the ndarray</p>
+<p>arr2.mean()
+arr2.min()
+arr2.max()</p>
+<p>np.amin(arr2, axis=0) # [1. -1. -1. 4.] column wise minimum，每一列的min
+np.amin(arr2, axis=1) # [1. -1. 5.] row wise minimum，每一行的min</p>
+<p>np.cumsum(arr2) # array([  1.,   3.,   6.,  10.,  13.,  12.,  11.,  17.,  22.,  28.,  35., 43.])</p>
+</li>
+<li>
+<p>How to create a new array from an existing array</p>
+<p>If you just assign a portion of an array to another array, the new array you just created actually refers to 
+the parent array in memory. That means, if you make any changes to the new array, it will reflect in the parent array as well.
+So to avoid disturbing the parent array, you need to make a copy of it using copy().</p>
+<p>arr2a = arr2[:2,:2]
+arr2a[:1,:1] = 100 # 100 will reflect in arr2
+#&gt; array([[ 100.,    2.,    3.,    4.],
+#&gt;        [   3.,   -1.,   -1.,    6.],
+#&gt;        [   5.,    6.,    7.,    8.]])</p>
+<p>arr2b = arr2[:2,:2].copy()
+arr2b[:1,:1] = 101 # 101 will not reflect in arr2
+#&gt; array([[ 100.,    2.,    3.,    4.],
+#&gt;        [   3.,   -1.,   -1.,    6.],
+#&gt;        [   5.,    6.,    7.,    8.]])</p>
+</li>
+</ol>
+<p><a id="org1dd032e"></a></p>
+<h3 id="reshaping-and-flattening-multidimensional-arrays">Reshaping and Flattening Multidimensional arrays</h3>
+<ul>
+<li>Reshaping: change the arrangement of items, shape changes while maintaining the same number of dimensions</li>
+<li>Flattening: convert a multi-dimensional array to a flat 1d array, and not any other shape</li>
+</ul>
+<p>arr2.reshape(4,3)
+#&gt; array([[ 100.,    2.,    3.],
+#&gt;        [   4.,    3.,   -1.],
+#&gt;        [  -1.,    6.,    5.],
+#&gt;        [   6.,    7.,    8.]])</p>
+<ol>
+<li>
+<p>What is the difference between flatten() and ravel()</p>
+<ul>
+<li>two ways to implement flattening: flatten() and ravel()</li>
+<li>diff: the new array created using ravel is a reference to the parent array, changes to new array will affect the parent,
+    but is memory efficient since it doesn't create a copy</li>
+</ul>
+<p>arr2.flatten() # array([100., 2., 3., 4., 3., -1., -1., 6., 5., 6., 7., 8.]) # or use arr2.ravel()</p>
+</li>
+</ol>
+<p><a id="org96edcdc"></a></p>
+<h3 id="how-to-create-sequences-repetitions-and-random-numbers-using-numpy">How to create sequences, repetitions and random numbers using numpy</h3>
+<ul>
+<li>np.arange() to create sequences as ndarray</li>
+</ul>
+<p>np.arange(5) # [0 1 2 3 4]
+np.arange(0,10) # [0 1 2 3 4 5 6 7 8 9]
+np.arange(0,10,2) # [0 2 4 6 8]
+np.arange(10,0,-1) # [10  9  8  7  6  5  4  3  2  1]</p>
+<ul>
+<li>np.linspace</li>
+</ul>
+<p>np.linspace(start=1,stop=50,num=10,dtype=int)
+#&gt; array([ 1,  6, 11, 17, 22, 28, 33, 39, 44, 50])</p>
+<ul>
+<li>np.logspace: base<sup>start</sup>, base<sup>stop</sup>, default base 10</li>
+</ul>
+<p>np.set<sub>printoptions</sub>(precision=2)</p>
+<p>np.logspace(start=1,stop=50,num=10,base=10)
+#&gt; array([  1.00e+01,   2.78e+06,   7.74e+11,   2.15e+17,   5.99e+22,
+#&gt;          1.67e+28,   4.64e+33,   1.29e+39,   3.59e+44,   1.00e+50])</p>
+<ul>
+<li>np.zeros() and np.ones()</li>
+</ul>
+<p>np.zeros([2,2])
+#&gt; array([[ 0.,  0.],
+#&gt;        [ 0.,  0.]])
+np.ones([2,2])
+#&gt; array([[ 1.,  1.],
+#&gt;        [ 1.,  1.]])</p>
+<ol>
+<li>
+<p>How to create repeating sequences</p>
+<ul>
+<li>np.tile: repeat a whole list or array n times</li>
+<li>np.repeat: repeat each item n times</li>
+</ul>
+<p>a = [1,2,3]</p>
+<p>np.tile(a,2) # [1 2 3 1 2 3]
+np.repeat(a,2) # [1 1 2 2 3 3]</p>
+</li>
+<li>
+<p>How to generate random numbers</p>
+<p>np.random.rand(2,2)</p>
+<p>np.random.randn(2,2)</p>
+<p>np.random.randint(0,10,size=[2,2])</p>
+<p>np.random.random()</p>
+<p>np.random.random(size=[2,2])</p>
+<p>np.random.choice(['a','e','i','o','u'],size=10)</p>
+<p>np.random.choice(['a', 'e', 'i', 'o', 'u'], size=10, p=[0.3, .1, 0.1, 0.4, 0.1]) # picks more o's</p>
+<ul>
+<li>set seed &amp; random state</li>
+</ul>
+<p>rn = np.random.RandomState(100)</p>
+<p>rn.rand(2,2)</p>
+<p>np.random.seed(100)</p>
+<p>np.random.rand(2,2)</p>
+</li>
+<li>
+<p>How to get the unique items and the counts</p>
+<ul>
+<li>np.unique</li>
+</ul>
+<p>np.random.seed(100)
+arr<sub>rand</sub> = np.random.randint(0,10,size=10)
+#&gt; [8 8 3 7 7 0 4 2 5 2]</p>
+<p>uniqs, counts = np.unique(arr<sub>rand</sub>, return<sub>counts</sub>=True)
+#&gt; Unique items :  [0 2 3 4 5 7 8]
+#&gt; Counts       :  [1 2 1 1 1 2 2]</p>
+</li>
+</ol>
+<p><a id="org428f60d"></a></p>
+<h2 id="part-2-vital-functions-for-data-analysis">Part 2: Vital Functions for Data Analysis</h2>
+<p><a id="org8b39666"></a></p>
+<h3 id="how-to-get-index-locations-that-satisfy-a-given-condition-using-npwhere">How to get index locations that satisfy a given condition using np.where</h3>
+<ul>
+<li>np.where: locates the positions in the array where a given condition holds true</li>
+</ul>
+<p>arr<sub>rand</sub> = np.array([8, 8, 3, 7, 7, 0, 4, 2, 5, 2])</p>
+<p>index<sub>gt5</sub> = np.where(arr<sub>rand</sub> &gt; 5) # (array([0, 1, 3, 4]),)</p>
+<p>arr<sub>rand.take</sub>(index<sub>gt5</sub>) # array([ [8,8,7,7]])</p>
+<p>np.where(arr<sub>rand</sub>&gt;5,'gt5','le5')
+#&gt; array(['gt5', 'gt5', 'le5', 'gt5', 'gt5', 'le5', 'le5', 'le5', 'le5', 'le5'],
+      dtype='&lt;U3')</p>
+<p>np.argmax(arr<sub>rand</sub>) # 0
+np.argmin(arr<sub>rand</sub>) # 5</p>
+<p><a id="org80d44ae"></a></p>
+<h3 id="how-to-import-and-export-data-as-a-csv-file">How to import and export data as a csv file</h3>
+<ul>
+<li>import: np.genfromtxt() or np.loadtxt(), np.genfromtxt() is more powerful, while np.loadtxt() assumes the dataset has no missing values</li>
+</ul>
+<p>np.set<sub>printoptions</sub>(suppress=True)</p>
+<p>path = 'https://raw.githubusercontent.com/selva86/datasets/master/Auto.csv'</p>
+<p>data = np.genfromtxt(path, delimiter=',', skip<sub>header</sub>=1, filling<sub>values</sub>=-999, dtype='float')
+data[:3] # see first 3 rows</p>
+<ol>
+<li>
+<p>How to handle datasets that has both numbers and text columns</p>
+<ul>
+<li>set dtype as 'object' or None</li>
+</ul>
+<p>data2 = np.genfromtxt(path, delimiter=',', skip<sub>header</sub>=1, dtype='object')
+data2 = np.genfromtxt(path, delimiter=',', skip<sub>header</sub>=1, dtype=None)
+data2[:3]  # see first 3 rows</p>
+<p>np.savetxt("out.csv", data, delimiter=",")</p>
+</li>
+</ol>
+<p><a id="orgbe7f5b0"></a></p>
+<h3 id="how-to-save-and-load-numpy-objects">How to save and load numpy objects</h3>
+<p>Numpy provides the .npy and the .npz file types for this purpose.</p>
+<ul>
+<li>If you want to store a single ndarray object, store it as a .npy file using np.save. This can be loaded back using the np.load.</li>
+<li>If store more than 1 ndarray object in a single file, save it as a .npz file using np.savez.</li>
+</ul>
+<p>np.save('myarray.npy', arr2d)</p>
+<p>np.savez('array.npz', arr2d<sub>f</sub>, arr2d<sub>b</sub>)</p>
+<p>a = np.load('myarray.npy')</p>
+<p>b = np.load('array.npz')
+print(b.files) # ['arr<sub>0</sub>','arr<sub>1</sub>']
+b['arr<sub>0</sub>']
+#&gt; array([[ 0.,  1.,  2.],
+#&gt;        [ 3.,  4.,  5.],
+#&gt;        [ 6.,  7.,  8.]])</p>
+<p><a id="orgc404802"></a></p>
+<h3 id="how-to-concatenate-two-numpy-arrays-column-wise-and-row-wise">How to concatenate two numpy arrays column-wise and row-wise</h3>
+<p>There are 3 different ways of concatenating two or more numpy arrays.</p>
+<ul>
+<li>Method 1: np.concatenate by changing the axis parameter to 0 and 1</li>
+<li>Method 2: np.vstack and np.hstack</li>
+<li>Method 3: np.r_ and np.c_</li>
+</ul>
+<p>All three methods provide the same output.
+One key difference: unlike the other 2 methods, np.r_ and np.c_ use [] to stack arrays</p>
+<p>a = np.zeros([4,4])
+b = np.ones([4,4])</p>
+<p>np.concatenate([a,b], axis=0)
+np.vstack([a,b])
+np.r_[a,b]
+#&gt; array([[ 0.,  0.,  0.,  0.],
+#&gt;        [ 0.,  0.,  0.,  0.],
+#&gt;        [ 0.,  0.,  0.,  0.],
+#&gt;        [ 0.,  0.,  0.,  0.],
+#&gt;        [ 1.,  1.,  1.,  1.],
+#&gt;        [ 1.,  1.,  1.,  1.],
+#&gt;        [ 1.,  1.,  1.,  1.],
+#&gt;        [ 1.,  1.,  1.,  1.]])</p>
+<p>np.concatenate([a,b], axis=1)
+np.hstack([a,b])
+np.c_[a,b]
+#&gt; array([[ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  1.],
+#&gt;        [ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  1.],
+#&gt;        [ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  1.],
+#&gt;        [ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  1.]])</p>
+<p>np.r_[[1,2,3], 0, 0, [4,5,6]]
+#&gt; array([1, 2, 3, 0, 0, 4, 5, 6])</p>
+<p><a id="org3259aa8"></a></p>
+<h3 id="how-to-sort-a-numpy-array-based-on-one-or-more-columns">How to sort a numpy array based on one or more columns</h3>
+<p>arr = np.random.randint(1,6, size=[8, 4]) # 8 rows, 4 columns
+#&gt; array([[3, 3, 2, 1],
+#&gt;        [1, 5, 4, 5],
+#&gt;        [3, 1, 4, 2],
+#&gt;        [3, 4, 5, 5],
+#&gt;        [2, 4, 5, 5],
+#&gt;        [4, 4, 4, 2],
+#&gt;        [2, 4, 1, 3],
+#&gt;        [2, 2, 4, 3]])</p>
+<p>np.sort(arr, axis=0)
+#&gt; array([[1, 1, 1, 1],
+#&gt;        [2, 2, 2, 2],
+#&gt;        [2, 3, 4, 2],
+#&gt;        [2, 4, 4, 3],
+#&gt;        [3, 4, 4, 3],
+#&gt;        [3, 4, 4, 5],
+#&gt;        [3, 4, 5, 5],
+#&gt;        [4, 5, 5, 5]])</p>
+<ol>
+<li>
+<p>How to sort a numpy array based on 1 column using argsort</p>
+<ul>
+<li>np.argsort() returns the index positions of that would make a given 1d array sorted.</li>
+</ul>
+<p>x = np.array([1,10,5,2,8,9])
+sort<sub>index</sub> = np.argsort(x) # [0 3 2 4 5 1]
+x[sort<sub>index</sub>] # array([ 1,  2,  5,  8,  9, 10])</p>
+<p>sorted<sub>index</sub><sub>1stcol</sub> = arr[:,0].argsort()</p>
+<p>arr[sorted<sub>index</sub><sub>1stcol</sub>]
+#&gt; array([[1, 5, 4, 5],
+#&gt;        [2, 4, 5, 5],
+#&gt;        [2, 4, 1, 3],
+#&gt;        [2, 2, 4, 3],
+#&gt;        [3, 3, 2, 1],
+#&gt;        [3, 1, 4, 2],
+#&gt;        [3, 4, 5, 5],
+#&gt;        [4, 4, 4, 2]])</p>
+<p>arr[sorted<sub>index</sub><sub>1stcol</sub>[::-1]]
+#&gt; array([[4, 4, 4, 2],
+#&gt;        [3, 4, 5, 5],
+#&gt;        [3, 1, 4, 2],
+#&gt;        [3, 3, 2, 1],
+#&gt;        [2, 2, 4, 3],
+#&gt;        [2, 4, 1, 3],
+#&gt;        [2, 4, 5, 5],
+#&gt;        [1, 5, 4, 5]])</p>
+</li>
+<li>
+<p>How to sort a numpy array based on 2 or more columns</p>
+<ul>
+<li>np.lexsort: passing a tuple of columns based on which the array should be sorted</li>
+</ul>
+<p>lexsorted<sub>index</sub> = np.lexsort((arr[:, 1], arr[:, 0])) 
+arr[lexsorted<sub>index</sub>]</p>
+</li>
+</ol>
+<p><a id="org9da90e5"></a></p>
+<h3 id="working-with-dates">Working with dates</h3>
+<p>date64 = np.datetime64('2018-02-04 23:10:10') #&gt; numpy.datetime64('2018-02-04T23:10:10')</p>
+<p>dt64 = np.datetime64(date64,'D') #&gt; numpy.datetime64('2018-02-04')</p>
+<p>tenminutes = np.timedelta64(10, 'm')  # 10 minutes
+tenseconds = np.timedelta64(10, 's')  # 10 seconds
+tennanoseconds = np.timedelta64(10, 'ns')  # 10 nanoseconds
+print('Add 10 days: ', dt64 + 10)
+print('Add 10 minutes: ', dt64 + tenminutes)
+print('Add 10 seconds: ', dt64 + tenseconds)
+print('Add 10 nanoseconds: ', dt64 + tennanoseconds)
+#&gt; Add 10 days:  2018-02-14
+#&gt; Add 10 minutes:  2018-02-04T00:10
+#&gt; Add 10 seconds:  2018-02-04T00:00:10
+#&gt; Add 10 nanoseconds:  2018-02-04T00:00:00.000000010</p>
+<p>np.datetime<sub>as</sub><sub>string</sub>(dt64) #&gt; '2018-02-04'</p>
+<ol>
+<li>
+<p>How to create a sequence of dates</p>
+<p>dates = np.arange(np.datetime64('2018-02-01'), np.datetime64('2018-02-10'))
+print(dates)</p>
+<p>np.is<sub>busday</sub>(dates)
+#&gt; ['2018-02-01' '2018-02-02' '2018-02-03' '2018-02-04' '2018-02-05'
+#&gt;  '2018-02-06' '2018-02-07' '2018-02-08' '2018-02-09']
+array([ True,  True, False, False,  True,  True,  True,  True,  True], dtype=bool)</p>
+</li>
+<li>
+<p>How to convert numpy.datetime64 to datetime.datetime object</p>
+<p>import datetime
+dt = dt64.tolist() #&gt; datetime.date(2018, 2, 4)
+print('Year: ', dt.year)<br />
+print('Day of month: ', dt.day)
+print('Month of year: ', dt.month)<br />
+print('Day of Week: ', dt.weekday())  # Sunday
+#&gt; Year:  2018
+#&gt; Day of month:  4
+#&gt; Month of year:  2
+#&gt; Day of Week:  6</p>
+</li>
+</ol>
+<p><a id="orge1a06f9"></a></p>
+<h3 id="advanced-numpy-functions">Advanced numpy functions</h3>
+<ol>
+<li>
+<p>vectorize – Make a scalar function work on vectors</p>
+<p>def foo(x):
+    if x % 2 == 1:
+        return x**2
+    else:
+        return x/2</p>
+<p>print('x = 10 returns ', foo(10)) # 5.0
+print('x = 11 returns ', foo(11)) # 121</p>
+<p>foo<sub>v</sub> = np.vectorize(foo, otypes=[float])
+print('x = [10, 11, 12] returns ', foo<sub>v</sub>([10, 11, 12]))
+print('x = [[10, 11, 12], [1, 2, 3]] returns ', foo<sub>v</sub>([[10, 11, 12], [1, 2, 3]]))
+#&gt; x = [10, 11, 12] returns  [   5.  121.    6.]
+#&gt; x = [[10, 11, 12], [1, 2, 3]] returns  [[ 5. 121. 6.] [ 1.  1.  9.] ]</p>
+</li>
+<li>
+<p>apply<sub>along</sub><sub>axis</sub> – Apply a function column wise or row wise</p>
+<p>np.random.seed(100)
+arr<sub>x</sub> = np.random.randint(1,10,size=[4,10])
+#&gt; array([[9, 9, 4, 8, 8, 1, 5, 3, 6, 3],
+#&gt;        [3, 3, 2, 1, 9, 5, 1, 7, 3, 5],
+#&gt;        [2, 6, 4, 5, 5, 4, 8, 2, 2, 8],
+#&gt;        [8, 1, 3, 4, 3, 6, 9, 2, 1, 8]])</p>
+<p>def max<sub>minus</sub><sub>min</sub>(x):
+    return np.max(x) - np.min(x)</p>
+<p>print('Row wise: ', np.apply<sub>along</sub><sub>axis</sub>(max<sub>minus</sub><sub>min</sub>, 1, arr=arr<sub>x</sub>))
+#&gt; Row wise:  [8 8 6 8]</p>
+<p>print('Column wise: ', np.apply<sub>along</sub><sub>axis</sub>(max<sub>minus</sub><sub>min</sub>, 0, arr=arr<sub>x</sub>))
+#&gt; Column wise:  [7 8 2 7 6 5 8 5 5 5]</p>
+</li>
+<li>
+<p>searchsorted – Find the location to insert so the array will remain sorted</p>
+<ul>
+<li>np.searchsorted() gives the index position at which a number should be inserted in order to keep the array sorted.</li>
+</ul>
+<p>x = np.arange(10)
+print('Where should 5 be inserted?: ', np.searchsorted(x, 5))
+#&gt; Where should 5 be inserted?:  5
+print('Where should 5 be inserted (right)?: ', np.searchsorted(x, 5, side='right'))
+#&gt; Where should 5 be inserted (right)?:  6</p>
+<p>lst = range(10000)  # the list
+probs = np.random.random(10000); probs /= probs.sum()  # probabilities
+%timeit lst[np.searchsorted(probs.cumsum(), np.random.random())]
+%timeit np.random.choice(lst, p=probs)
+#&gt; 36.6 µs ± 3.93 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+#&gt; 1.02 ms ± 7.16 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)</p>
+</li>
+<li>
+<p>How to add a new axis to a numpy array</p>
+<ul>
+<li>np.newaxis</li>
+</ul>
+<p>x = np.arange(5)
+print('Original array: ', x)</p>
+<p>x<sub>col</sub> = x[:, np.newaxis]
+print('x<sub>col</sub> shape: ', x<sub>col.shape</sub>)
+print(x<sub>col</sub>)</p>
+<p>x<sub>row</sub> = x[np.newaxis, :]
+print('x<sub>row</sub> shape: ', x<sub>row.shape</sub>)
+print(x<sub>row</sub>)
+#&gt; Original array:  [0 1 2 3 4]
+#&gt; x<sub>col</sub> shape:  (5, 1)
+#&gt; [[0]
+#&gt;  [1]
+#&gt;  [2]
+#&gt;  [3]
+#&gt;  [4]]
+#&gt; x<sub>row</sub> shape:  (1, 5)
+#&gt; [[0 1 2 3 4] ]</p>
+</li>
+<li>
+<p>More Useful Functions</p>
+<ul>
+<li>Digitize</li>
+</ul>
+<p>Use np.digitize to return the index position of the bin each element belongs to.</p>
+<p>x = np.arange(10)
+bins = np.array([0, 3, 6, 9])</p>
+<p>np.digitize(x, bins)
+#&gt; array([1, 1, 1, 2, 2, 2, 3, 3, 3, 4])</p>
+<ul>
+<li>Clip</li>
+</ul>
+<p>Use np.clip to cap the numbers within a given cutoff range. All number lesser than the lower 
+limit will be replaced by the lower limit. Same applies to the upper limit also.</p>
+<p>np.clip(x, 3, 8)
+#&gt; array([3, 3, 3, 3, 4, 5, 6, 7, 8, 8])</p>
+<ul>
+<li>Histogram and Bincount</li>
+</ul>
+<p>Both histogram() and bincount() gives the frequency of occurences. But with certain differences.
+While histogram() gives the frequency counts of the bins, bincount() gives the frequency count of all the 
+elements in the range of the array between the min and max values. Including the values that did not occur.</p>
+<p>x = np.array([1,1,2,2,2,4,4,5,6,6,6]) # doesn't need to be sorted
+np.bincount(x) # 0 occurs 0 times, 1 occurs 2 times, 2 occurs thrice, 3 occurs 0 times, &#x2026;</p>
+<p>counts, bins = np.histogram(x, [0, 2, 4, 6, 8])
+print('Counts: ', counts)
+print('Bins: ', bins)
+#&gt; Counts:  [2 3 3 3]
+#&gt; Bins:  [0 2 4 6 8]</p>
+</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../python3/" class="btn btn-neutral float-left" title="python3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/" class="btn btn-neutral float-right" title="像外行一样思考，像专家一样实践">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../python3/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

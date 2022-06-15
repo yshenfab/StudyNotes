@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>How Google Works - Study Notes</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "How Google Works";
+        var mkdocs_page_input_path = "startup/how_google_works.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Study Notes
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Algorithm</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/alg_blog_note/">Alg blog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorithms_4th_edition/">Algorithms (4th Edition)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Blockchain</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blockchain/blockchain/">Blockchain</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Deep Learning</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/google-machine-learning-crash-course/">Google ML Crash Course</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">Python机器学习</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/dive_into_deep_learning/">Dive into Deep Learning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mathematics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mathematics/beauty_of_mathematics/">数学之美</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mathematics/statistics_concepts_and_controversies/">统计学的世界</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Psychology & Mind</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%B8%8E%E4%BC%97%E4%B8%8D%E5%90%8C%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6/">与众不同的心理学</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E5%86%B3%E7%AD%96%E4%B8%8E%E5%88%A4%E6%96%AD/">决策与判断</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E6%9A%97%E6%97%B6%E9%97%B4/">暗时间</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%BD%A0%E7%9A%84%E7%81%AF%E4%BA%AE%E7%9D%80%E5%90%97/">你的灯亮着吗</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E6%B2%9F%E9%80%9A%E7%9A%84%E8%89%BA%E6%9C%AF/">沟通的艺术</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E5%BD%B1%E5%93%8D%E5%8A%9B/">影响力</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%B8%93%E6%B3%A8%E5%8A%9B/">专注力</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective python</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/pythonic/">pythonic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/py_tips/">py tips</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/python3/">python3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/numpy/">numpy</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Research</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/">像外行一样思考，像专家一样实践</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Startup</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">How Google Works</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../startup/">startup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">vim</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">git</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">markdown</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/history_of_quantum_physics/">上帝掷骰子吗？量子物理史话</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%847%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效能人士的7个习惯</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91/">底层逻辑</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8445%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效程序员的45个习惯</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Todo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../todo/todo/">TODO</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Study Notes</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Startup &raquo;</li><li>How Google Works</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="table-of-contents">Table of Contents</h1>
+<ol>
+<li><a href="#org1a4355a">导言</a><ol>
+<li><a href="#org4654578">创意精英</a></li>
+</ol>
+</li>
+<li><a href="#orgd1d5269">文化：相信自己的口号</a><ol>
+<li><a href="#org0e0b25e">拥挤出成绩</a></li>
+<li><a href="#orgddf757a">一起吃住，一起工作</a></li>
+<li><a href="#org88a2a1b">别听父母的：杂乱是种美德</a></li>
+<li><a href="#org5bbf9c1">别听“河马”的话</a></li>
+<li><a href="#orgab4d9d1">7的法则</a></li>
+<li><a href="#orgeb0dcec">切莫自扫门前雪</a></li>
+<li><a href="#org89e284e">重组工作的关键</a></li>
+<li><a href="#org420f1a2">贝佐斯的“两个批萨”原则</a></li>
+<li><a href="#org84e1b9c">组织要以最有影响力的人物为中心</a></li>
+<li><a href="#org30fcb1b">驱除恶棍，保护明星</a></li>
+<li><a href="#orgcafbd77">“过劳”有道</a></li>
+<li><a href="#orgb1691fd">营造说“好”的企业文化</a></li>
+<li><a href="#org1ac5f78">快乐工作强扭不来</a></li>
+<li><a href="#org44abab8">别光着身子就行</a></li>
+<li><a href="#org517f0a0">跟我来</a></li>
+<li><a href="#org2eb6324">不作恶 Don't be evil</a></li>
+</ol>
+</li>
+<li><a href="#org6dea99d">战略：你的计划是错误的</a><ol>
+<li><a href="#org9ea503a">信赖技术洞见，而非市场调查</a></li>
+<li><a href="#org91f5c86">组合创新时代的到来</a></li>
+<li><a href="#orgd880c33">别去找快马</a></li>
+<li><a href="#orgbff52f8">为成长而优化</a></li>
+<li><a href="#org5551172">科斯与企业的性质</a></li>
+<li><a href="#org663dcd6">专注的力量</a></li>
+<li><a href="#org0880778">开放为王</a></li>
+<li><a href="#orgd90dbeb">选择封闭系统的前提</a></li>
+<li><a href="#org0779f86">莫被竞争对手牵着鼻子走</a></li>
+</ol>
+</li>
+<li><a href="#org4fbd028">人才：招聘是你最重要的工作</a><ol>
+<li><a href="#org3aef85e">羊群效应</a></li>
+<li><a href="#org2f0a814">有激情的人不把“激情”挂嘴边</a></li>
+<li><a href="#org83f55a7">雇佣学习型动物</a></li>
+<li><a href="#orgdbd3826">机场测试</a></li>
+<li><a href="#orgd595d9e">客观评价人才</a></li>
+<li><a href="#org03804e3">招聘 &amp; 面试</a></li>
+<li><a href="#orgf3b7586">给优秀的人才超出常规的回报</a></li>
+<li><a href="#org60a0e46">换出巧克力，留下葡萄干</a></li>
+<li><a href="#org8bb2458">爱他，就让他走（但是得先做完这些）</a></li>
+<li><a href="#orga9d4200">宁可“漏聘”，也不“误聘”</a></li>
+<li><a href="#org80e4ed2">谷歌招聘之行为准则</a></li>
+<li><a href="#orga31f565">选择行业中的战斗机</a></li>
+</ol>
+</li>
+<li><a href="#org97b309b">决策：共识的真正含义</a><ol>
+<li><a href="#orge38944e">用数据做决策</a></li>
+<li><a href="#org753efc1">谨防“摇头娃娃”的附和</a></li>
+<li><a href="#orgf7a7c63">该响铃时就响铃</a></li>
+<li><a href="#orgc29e465">少做决策</a></li>
+<li><a href="#org8d325c2">每天开会</a></li>
+<li><a href="#orgf2ed7a9">“你们两边说得都对”</a></li>
+<li><a href="#orge66a9c2">每场会议都需要有主人</a></li>
+<li><a href="#org22861da">马背原则</a></li>
+<li><a href="#orgd02bfcc">把80%的时间花在80%的收入上</a></li>
+<li><a href="#org997571b">接班人计划</a></li>
+</ol>
+</li>
+<li><a href="#orgd1b79d5">沟通：当最牛的路由器</a><ol>
+<li><a href="#org045f1f9">心态开放</a></li>
+<li><a href="#orgc1a0c5a">掌握细节</a></li>
+<li><a href="#org019a040">为讲真话营造安全的环境</a></li>
+<li><a href="#org173bb3c">制造话题</a></li>
+<li><a href="#orgb4d1aba">祷文不会因重复而失色</a></li>
+<li><a href="#org915cab6">以旅行报告作为会议的开场</a></li>
+<li><a href="#orgbd33832">自我评价</a></li>
+<li><a href="#orgd343d35">电邮常识</a></li>
+<li><a href="#org3699a21">备一本情境手册</a></li>
+<li><a href="#org916b3e9">靠关系而非层级</a></li>
+</ol>
+</li>
+<li><a href="#org2e717c5">创新：缔造原始的混沌</a><ol>
+<li><a href="#org9cef6bc">创新是什么?</a></li>
+<li><a href="#org6b16902">了解环境</a></li>
+<li><a href="#orgbc59f93">首席执行官必须兼任首席创新官</a></li>
+<li><a href="#orgc7f257c">聚焦用户</a></li>
+<li><a href="#org85e8d78">往大处想</a></li>
+<li><a href="#orge29eba0">制定(近乎)遥不可及的目标</a></li>
+<li><a href="#org55d0051">70/20/10原则</a></li>
+<li><a href="#orge2e6058">20%时间制</a></li>
+<li><a href="#org6ddaf08">创意无处不在</a></li>
+<li><a href="#org422468e">交付,迭代</a></li>
+<li><a href="#orgef6d019">败得漂亮</a></li>
+<li><a href="#org18f90d3">与钱无关</a></li>
+</ol>
+</li>
+<li><a href="#org9cbe98c">结语</a></li>
+</ol>
+<p>To be honest，这本书其实读一读目录标题就行了，如果标题比较隐晦，就细读内容</p>
+<p><a id="org1a4355a"></a></p>
+<h1 id="_1">导言</h1>
+<p><a id="org4654578"></a></p>
+<h2 id="_2">创意精英</h2>
+<ul>
+<li>所谓创意精英,不仅拥有过硬的专业知识,懂得如何使用专业工具,还需具备充足的实践经验。</li>
+<li>创意精英有分析头脑</li>
+<li>创意精英有商业头脑</li>
+<li>创意精英有竞争头脑</li>
+<li>创意精英有用户头脑</li>
+<li>创意精英是新颖原创构想的源泉</li>
+<li>创意精英充满好奇心</li>
+<li>创意精英喜爱冒险</li>
+<li>创意精英自动自发</li>
+<li>创意精英心态开放</li>
+<li>创意精英一丝不苟</li>
+<li>创意精英善于沟通</li>
+</ul>
+<p><a id="orgd1d5269"></a></p>
+<h1 id="_3">文化：相信自己的口号</h1>
+<p><a id="org0e0b25e"></a></p>
+<h2 id="_4">拥挤出成绩</h2>
+<ul>
+<li>不强调地位、办公室大小</li>
+</ul>
+<p><a id="orgddf757a"></a></p>
+<h2 id="_5">一起吃住，一起工作</h2>
+<p><a id="org88a2a1b"></a></p>
+<h2 id="_6">别听父母的：杂乱是种美德</h2>
+<p><a id="org5bbf9c1"></a></p>
+<h2 id="_7">别听“河马”的话</h2>
+<ul>
+<li>要有主见，不能光听从领导</li>
+</ul>
+<p><a id="orgab4d9d1"></a></p>
+<h2 id="7">7的法则</h2>
+<ul>
+<li>管理者的桌上至少要放7份直接报告</li>
+</ul>
+<p><a id="orgeb0dcec"></a></p>
+<h2 id="_8">切莫自扫门前雪</h2>
+<ul>
+<li>一切透明</li>
+</ul>
+<p><a id="org89e284e"></a></p>
+<h2 id="_9">重组工作的关键</h2>
+<ul>
+<li>发挥每个人的长处，做最适合的事</li>
+</ul>
+<p><a id="org420f1a2"></a></p>
+<h2 id="_10">贝佐斯的“两个批萨”原则</h2>
+<ul>
+<li>团队人数不能多到2个批萨还吃不饱</li>
+</ul>
+<p><a id="org84e1b9c"></a></p>
+<h2 id="_11">组织要以最有影响力的人物为中心</h2>
+<p><a id="org30fcb1b"></a></p>
+<h2 id="_12">驱除恶棍，保护明星</h2>
+<p><a id="orgcafbd77"></a></p>
+<h2 id="_13">“过劳”有道</h2>
+<ul>
+<li>宽松与自由，不强制加班</li>
+</ul>
+<p><a id="orgb1691fd"></a></p>
+<h2 id="_14">营造说“好”的企业文化</h2>
+<ul>
+<li>鼓励</li>
+</ul>
+<p><a id="org1ac5f78"></a></p>
+<h2 id="_15">快乐工作强扭不来</h2>
+<ul>
+<li>必然会有吐嘈</li>
+</ul>
+<p><a id="org44abab8"></a></p>
+<h2 id="_16">别光着身子就行</h2>
+<ul>
+<li>Google着装标准</li>
+</ul>
+<p><a id="org517f0a0"></a></p>
+<h2 id="_17">跟我来</h2>
+<ul>
+<li>坚持、激情、敬业</li>
+</ul>
+<p><a id="org2eb6324"></a></p>
+<h2 id="dont-be-evil">不作恶 Don't be evil</h2>
+<p><a id="org6dea99d"></a></p>
+<h1 id="_18">战略：你的计划是错误的</h1>
+<p>商业计划永远是错的，必然要随着对产品和市场了解的加深而不断调整</p>
+<p><a id="org9ea503a"></a></p>
+<h2 id="_19">信赖技术洞见，而非市场调查</h2>
+<ul>
+<li>所谓的技术洞见,是指用创新方式应用科技或设计,以达到生产</li>
+</ul>
+<p>成本的显著降低或产品功能和可用性的大幅提升。依靠技术洞见生产出来的
+产品,可以与同类竞争产品拉开显著差距。而这样一来,产品不仅得到了显
+著的提升,且无须大肆宣传也照样能让消费者感受到其独一无二的魅力。</p>
+<p><a id="org91f5c86"></a></p>
+<h2 id="_20">组合创新时代的到来</h2>
+<ul>
+<li>跨学科</li>
+</ul>
+<p><a id="orgd880c33"></a></p>
+<h2 id="_21">别去找快马</h2>
+<ul>
+<li>避免被消费者的需求牵着鼻子走</li>
+</ul>
+<p><a id="orgbff52f8"></a></p>
+<h2 id="_22">为成长而优化</h2>
+<ul>
+<li>商业生态系统</li>
+<li>创造平台：科技行业中的企业永远“只看平台，不看产品”</li>
+</ul>
+<p><a id="org5551172"></a></p>
+<h2 id="_23">科斯与企业的性质</h2>
+<ul>
+<li>诺贝尔经济学奖得主科斯：“如果在企业内部组织的一笔额外交易与通过在公开市场上完成同</li>
+</ul>
+<p>一笔交易或是在另一个企业中组织同样交易的成本相同,企业将倾向于扩张。”</p>
+<ul>
+<li>靠全球开放网络制胜：我们身边充斥着建立平台的机会，成功的领导者就是那些善于发现平台的人</li>
+</ul>
+<p><a id="org663dcd6"></a></p>
+<h2 id="_24">专注的力量</h2>
+<ul>
+<li>寻找专业化途径，把一个点/一件事做到极致</li>
+</ul>
+<p><a id="org0880778"></a></p>
+<h2 id="_25">开放为王</h2>
+<ul>
+<li>开放的平台更容易实现快速扩张</li>
+<li>开发往往是激发创意和降低成本的最好方式</li>
+</ul>
+<p><a id="orgd90dbeb"></a></p>
+<h2 id="_26">选择封闭系统的前提</h2>
+<ul>
+<li>你的产品具有明显的优势，处在一个快速发展的新兴市场</li>
+</ul>
+<p><a id="org0779f86"></a></p>
+<h2 id="_27">莫被竞争对手牵着鼻子走</h2>
+<ul>
+<li>不是视而不见，而是别被约束实现真正的创新</li>
+</ul>
+<p><a id="org4fbd028"></a></p>
+<h1 id="_28">人才：招聘是你最重要的工作</h1>
+<p>人才是企业最重要的资产</p>
+<p><a id="org3aef85e"></a></p>
+<h2 id="_29">羊群效应</h2>
+<ul>
+<li>只招牛人，绝不降低标准，牛人团队会吸引更多牛人</li>
+</ul>
+<p><a id="org2f0a814"></a></p>
+<h2 id="_30">有激情的人不把“激情”挂嘴边</h2>
+<p><a id="org83f55a7"></a></p>
+<h2 id="_31">雇佣学习型动物</h2>
+<ul>
+<li>请务必雇用那些比你聪明的人</li>
+<li>招聘时不要太看重应聘者掌握了多少知识,而要重视他们尚未开发的潜力</li>
+</ul>
+<p><a id="orgdbd3826"></a></p>
+<h2 id="_32">机场测试</h2>
+<ul>
+<li>性格、待人友善</li>
+</ul>
+<p><a id="orgd595d9e"></a></p>
+<h2 id="_33">客观评价人才</h2>
+<ul>
+<li>多样化</li>
+</ul>
+<p><a id="org03804e3"></a></p>
+<h2 id="_34">招聘 &amp; 面试</h2>
+<ul>
+<li>加大光圈甄才</li>
+<li>全员出动招募人才</li>
+<li>面试是最重要的技能</li>
+<li>将面试时间设为30min</li>
+<li>自由主张</li>
+<li>设立招聘委员会</li>
+<li>宁缺勿滥</li>
+</ul>
+<p><a id="orgf3b7586"></a></p>
+<h2 id="_35">给优秀的人才超出常规的回报</h2>
+<p><a id="org60a0e46"></a></p>
+<h2 id="_36">换出巧克力，留下葡萄干</h2>
+<p><a id="org8bb2458"></a></p>
+<h2 id="_37">爱他，就让他走（但是得先做完这些）</h2>
+<ul>
+<li>电梯演讲：30秒打动投资人</li>
+</ul>
+<p><a id="orga9d4200"></a></p>
+<h2 id="_38">宁可“漏聘”，也不“误聘”</h2>
+<p><a id="org80e4ed2"></a></p>
+<h2 id="_39">谷歌招聘之行为准则</h2>
+<p>雇用那些比你更聪明、更有见识的人。
+不要雇用那些不能让你有所收获也不能对你构成挑战的人。
+雇用那些能对产品和文化带来价值的人。
+不要雇用那些无法为产品和文化带来积极影响的人。
+雇用那些做实事的人。
+不要雇用那些只想不做的人。
+雇用那些满腔热情、自动自发的人。
+不要雇用那些只想混口饭吃的人。
+雇用那些能启发别人且善于与人相处的人。
+不要雇用那些偏爱自己单干的人。
+雇用那些能随着团队和企业一同成长发展的人。
+不要雇用那些枯燥乏味、不具备全面技能的人。
+雇用那些多才多艺、兼有独特兴趣和天赋的人。
+不要雇用那些只为工作而活的人。
+雇用那些道德高尚、坦诚沟通的人。
+不要雇用那些趋炎附势、工于心计的人。
+务必雇用优秀的候选人。
+宁缺毋滥。</p>
+<p><a id="orga31f565"></a></p>
+<h2 id="_40">选择行业中的战斗机</h2>
+<ul>
+<li>职业选择，有如冲浪</li>
+<li>听从科技达人的意见</li>
+<li>规划你的职业</li>
+<li>统计分析助你成为职场赢家</li>
+<li>阅读</li>
+<li>练好电梯演讲</li>
+<li>出国去</li>
+<li>从事富有激情的事业</li>
+</ul>
+<p><a id="org97b309b"></a></p>
+<h1 id="_41">决策：共识的真正含义</h1>
+<p><a id="orge38944e"></a></p>
+<h2 id="_42">用数据做决策</h2>
+<p><a id="org753efc1"></a></p>
+<h2 id="_43">谨防“摇头娃娃”的附和</h2>
+<ul>
+<li>摇头娃娃：开会频繁点头表示同意，会后却抱怨或有意见</li>
+<li>“共识”并不是指人人都必须同意,而是指共同达成对公司最有利的决策,并围绕决策共同努力</li>
+</ul>
+<p><a id="orgf7a7c63"></a></p>
+<h2 id="_44">该响铃时就响铃</h2>
+<ul>
+<li>设定deadline，别浪费时间</li>
+</ul>
+<p><a id="orgc29e465"></a></p>
+<h2 id="_45">少做决策</h2>
+<p><a id="org8d325c2"></a></p>
+<h2 id="_46">每天开会</h2>
+<ul>
+<li>即便作为CEO，你也应该多做决策。你的任务,就是分析数据、鼓励讨论、引导大家达成共识,凭借你过人的才识做出决策。</li>
+</ul>
+<p><a id="orgf2ed7a9"></a></p>
+<h2 id="_47">“你们两边说得都对”</h2>
+<ul>
+<li>不但要晓之以理，还要动之以情</li>
+</ul>
+<p><a id="orge66a9c2"></a></p>
+<h2 id="_48">每场会议都需要有主人</h2>
+<ul>
+<li>会议应该有一位决策者or主持</li>
+<li>决策者应当亲力亲为</li>
+<li>即便是在信息共享or头脑风暴这种不必制定决策的会议上，也应该明确指定会议的主任</li>
+<li>会议应该很容易取消</li>
+<li>会议规模应以便于管理为宜</li>
+<li>出席必要的会议</li>
+<li>守时很重要</li>
+<li>开会时就认真开会</li>
+</ul>
+<p><a id="org22861da"></a></p>
+<h2 id="_49">马背原则</h2>
+<ul>
+<li>一位骑在马上的牛仔将马勒住,对周围形势进行一番打量,好决定下一步的行动。</li>
+<li>在一定的情况下,我们只需坐在马背上(这通常只是打比方),快速环视四周,然后继续上路。</li>
+</ul>
+<p><a id="orgd02bfcc"></a></p>
+<h2 id="8080">把80%的时间花在80%的收入上</h2>
+<ul>
+<li>把注意力和热情集中在核心业务上</li>
+</ul>
+<p><a id="org997571b"></a></p>
+<h2 id="_50">接班人计划</h2>
+<ul>
+<li>热爱一项事业,就应该为离开它做好规划</li>
+<li>世界上最顶尖的运动员都需要教练,你不需要吗?</li>
+</ul>
+<p><a id="orgd1b79d5"></a></p>
+<h1 id="_51">沟通：当最牛的路由器</h1>
+<p>最有能力的管理者不但不独霸信息,还会分享信息。
+力量并不来自掌握的知识,而是来自分享的知识。这一点,应该在企业的价值观及奖励机制中体现出来。</p>
+<p><a id="org045f1f9"></a></p>
+<h2 id="_52">心态开放</h2>
+<p><a id="orgc1a0c5a"></a></p>
+<h2 id="_53">掌握细节</h2>
+<p><a id="org019a040"></a></p>
+<h2 id="_54">为讲真话营造安全的环境</h2>
+<p><a id="org173bb3c"></a></p>
+<h2 id="_55">制造话题</h2>
+<p><a id="orgb4d1aba"></a></p>
+<h2 id="_56">祷文不会因重复而失色</h2>
+<ul>
+<li>正确信息轰炸（重复）的几条基本指导原则：
+    1.沟通能否强化你希望深入人心的核心理念？
+    2.沟通有效吗？
+    3.沟通是否有趣、鼓舞人心？
+    4.沟通是否发自肺腑？
+    5.沟通对象是否合适？
+    6.你使用的沟通媒介合适吗？
+    7.诚实谦虚，积攒人品。</li>
+</ul>
+<p><a id="org915cab6"></a></p>
+<h2 id="_57">以旅行报告作为会议的开场</h2>
+<p><a id="orgbd33832"></a></p>
+<h2 id="_58">自我评价</h2>
+<p><a id="orgd343d35"></a></p>
+<h2 id="_59">电邮常识</h2>
+<ul>
+<li>迅速回复</li>
+<li>在写电子邮件的时候，每个字都很重要，冗长的堆砌是多余的</li>
+<li>经常清理收件箱</li>
+<li>先处理后收到的邮件</li>
+<li>不要忘了，你是台路由器：转发分享</li>
+<li>在你使用密件抄送功能时，问问自己为什么要这么做</li>
+<li>不要拿邮件泄愤</li>
+<li>要方便跟踪进度</li>
+<li>帮助未来的你更方便地搜索信息</li>
+</ul>
+<p><a id="org3699a21"></a></p>
+<h2 id="_60">备一本情境手册</h2>
+<ul>
+<li>一对一会谈：清单对对碰</li>
+<li>董事会：要关心，莫插手</li>
+<li>合作伙伴：学学外交官</li>
+<li>媒体访问：对话，而非传话</li>
+</ul>
+<p><a id="org916b3e9"></a></p>
+<h2 id="_61">靠关系而非层级</h2>
+<p><a id="org2e717c5"></a></p>
+<h1 id="_62">创新：缔造原始的混沌</h1>
+<p><a id="org9cef6bc"></a></p>
+<h2 id="_63">创新是什么?</h2>
+<ul>
+<li>创新不只是创造新奇实用的想法,还包括实践</li>
+<li>创新的东西不仅需要新的功能,还需要出人意料</li>
+<li>创新的东西不仅要新颖、出人意料,还要非常实用（不是实用，是非常实用）</li>
+</ul>
+<p><a id="org6b16902"></a></p>
+<h2 id="_64">了解环境</h2>
+<ul>
+<li>在决定是否要实践某个想法的时候：
+    1.这个想法必须涉及一个能够影响数亿人甚至几十亿人的巨大挑战或机遇
+    2.这个想法必须提供一种与市场上现存的解决方案截然不同的方法。我们不希望在已有的做事方法上做改进,而是想另辟蹊径
+    3.将突破性解决方案变为现实的科技至少必须具备可行性,且在不久的将来可以实现</li>
+</ul>
+<p><a id="orgbc59f93"></a></p>
+<h2 id="_65">首席执行官必须兼任首席创新官</h2>
+<p><a id="orgc7f257c"></a></p>
+<h2 id="_66">聚焦用户</h2>
+<p><a id="org85e8d78"></a></p>
+<h2 id="_67">往大处想</h2>
+<p><a id="orge29eba0"></a></p>
+<h2 id="_68">制定(近乎)遥不可及的目标</h2>
+<ul>
+<li>“OKR”管理方式</li>
+</ul>
+<p><a id="org55d0051"></a></p>
+<h2 id="702010">70/20/10原则</h2>
+<ul>
+<li>资源配置：70%核心业务，20%新兴产品，10%全新产品</li>
+</ul>
+<p><a id="orge2e6058"></a></p>
+<h2 id="20">20%时间制</h2>
+<ul>
+<li>谷歌的“20%时间”工作方式,允许工程师拿出20%的时间来研究自己喜欢的项目</li>
+<li>该制度的重点在于自由,而不在时间长短</li>
+<li>与其说20%的时间,不如称120%的时间更合适,因为这个时间往往都会安排在夜晚和周末</li>
+</ul>
+<p><a id="org6ddaf08"></a></p>
+<h2 id="_69">创意无处不在</h2>
+<p><a id="org422468e"></a></p>
+<h2 id="_70">交付,迭代</h2>
+<ul>
+<li>完美是优秀的敌人</li>
+<li>能交付才是真正的艺术家</li>
+<li>新想法不可能一出炉就完美无缺,你也没有时间等到想法完美的那一天。打造一款产品,投放市场,看看</li>
+</ul>
+<p>反响如何,设计并加以改进,再重新投入市场。这就是交付和迭代,在此方面最为眼疾手快的公司,才能成为赢家。</p>
+<p><a id="orgef6d019"></a></p>
+<h2 id="_71">败得漂亮</h2>
+<ul>
+<li>学会从失误中汲取教训</li>
+<li>所有失败的项目都会衍生有关技术、用户以及营销方面的宝贵信息,为你的下一次出征做准备。</li>
+<li>修改创意,而不要否决创意:世界上多数伟大发明的最终用途与最初设想都是天差地别。</li>
+<li>及时止损</li>
+</ul>
+<p><a id="org18f90d3"></a></p>
+<h2 id="_72">与钱无关</h2>
+<ul>
+<li>工作本身就是动力</li>
+</ul>
+<p><a id="org9cbe98c"></a></p>
+<h1 id="_73">结语</h1>
+<p>想象无止境</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/" class="btn btn-neutral float-left" title="像外行一样思考，像专家一样实践"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../startup/" class="btn btn-neutral float-right" title="startup">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../startup/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

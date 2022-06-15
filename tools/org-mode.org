@@ -1,0 +1,563 @@
+#+TITLE: Org Manual
+#+AUTHOR: Yang
+
+* Basic Operations                                                    :intro:
+** Introduction                                                        :tag:
+- S-Shift
+- C-Ctrl
+- M-alt
+- RET-Enter 回车
+
+** Simple operations                                                   :tag:
+- S-TAB  循环打开各级目录
+- M-RET  创建同等级标题
+- C-c-C-e 输出export (可以选择不同格式，比如html，按h)
+- C-c-C-t 设置TODO or DONE
+- C-c-C-s 设置要安排的开始时间scheduled
+- C-c-C-d 设置deadline
+- C-c-. 设置一段时间(起始+结束)
+- C-c-[ 加入行程agenda里
+- C-c-a-a 查看agenda
+- ++1d 设置每天做
+- M-up/down 上下移动子树
+- C-c / 只列出包含搜索结果的大纲，并高亮(支持多种搜索方式)
+- M-x org-indent-mode 切换默认大纲显示模式，带缩进（如果想让某个文件默认用这种方式打开，文件头部添加#+STARTUP: indent）
+- C-c C-l 创建or修改链接(link)
+- C-c C-o 打开链接
+
+** Markup
++ /italic/
++ *bold*
++ _underline_
++ +delete+
++ H_2 O 下标
++ E=mc^2 上标
++ =git= 等宽字体
++ ~git~ 等宽字体
+** Linking
+  1. [[link][description]]([[ link ] [ description ]] or [ [xxx] ])
+  2. http://orgmode.org
+  3. http://google.com
+  4. [[http://google.com][Google]]  
+  5. [[Markup][jump]
+  6. file:/home/yang/Study/makefile.pdf
+  7. [[http://www.baidu.com][BAIDU]
+     
+** Tables
+- C-c | 创建or转换成表格
+- 输入表头"|Name|Pone|Age"之后,C-c RET即可
+| Name  | Pone | Age |
+|-------+------+-----|
+| Anna  | 4321 |  25 |
+| Peter | 1234 |  17 |
+| Yang  | 9999 |  23 |
+|       |      |     |
+- C-c C-c 调整表格
+- TAB 移动到下一区域，自动新建一行
+- Shift-TAB 移动到上一区域
+- RET 移动到下一行
+- M-left/right 移动列
+- M-up/down 移动行
+- M-S-left/right 删除/插入列
+- M-S-up/down 删除/插入行
+- C-c - 添加水平分割线
+- C-c RET 添加水平分割线并跳到下一行
+- C-c ^ 根据当前列排序（可选择排序方式，首字母/数字/时间）
+
+-----
+
+** Export
+C-c C-e
+* Compact Guide
+** Introduction
+| cmd  | func           |
+|------+----------------|
+| C-cl | org-store-link |
+| C-ca | org-agenda     |
+| C-cb | org-iswitchb   |
+| C-cc | org-capture    |
+** Document Structure
+*** Headlines
+use *
+*** Visibility Cycling
+- TAB and S-TAB for subtree cycling
+- C-u TAB for global cycling
+- #+STARTUP: overview, content, showall
+*** Motion
+| cmd     | motion                           |
+|---------+----------------------------------|
+| C-c C-n | next heading                     |
+| C-c C-p | previous heading                 |
+| C-c C-f | next heading same level          |
+| C-c C-b | previous heading same level      |
+| C-c C-u | backward to higher level heading |
+*** Structure Editing
+| cmd          | func                                                |
+|--------------+-----------------------------------------------------|
+| M-RET        | insert new heading with same level                  |
+| M-S-RET      | insert new TODO entry with same level               |
+| M-LEFT/RIGHT | promote/demote current heading by one level         |
+| M-UP/DOWN    | move subtree up/down                                |
+| C-c C-w      | refile entry or region to a different location      |
+| C-x n s/w    | narrow buffer to current subtree and widen it again |
+*** WAITING Sparse Trees (don't understand)
+| C-c /   | prompts for an extra key to select a sparse-tree creating command |
+| C-c / r | prompts a regexp and shows a sparse tree with all matches         |
+*** Plain Lists
+| list type        | items    |
+|------------------+----------|
+| unordered list   | -,+,*    |
+| ordered list     | 1. or 1) |
+| description list | ::       |
+Shortcut:
+| cmd     | func                                                                    |
+|---------+-------------------------------------------------------------------------|
+| TAB     | fold                                                                    |
+| M-RET   | insert new item                                                         |
+| M-S-RET | insert new item with a checkbox                                         |
+| C-c C-c | toggle the state of the checkbox                                        |
+| C-c -   | cycle the entire list level through different itemize/enumerate bullets |
+Example:
+**** Lord of the Rings
+My favorite scenes are (in this order)
+1. The attack of the Rohirrim
+2. Eowyn's fight with the witch king
+   + this was already my favorite scene in the book
+   + I really like Miranda Otto.
+Important actors in this film are:
+- Elijah Wood :: He plays Frodo
+- Sean Austin :: He plays Sam, Frodo's friend.
+*** Footnote
+The org homepage[fn:1] now looks a lot better thank it used to.
+| cmd       | func                                  |
+|-----------+---------------------------------------|
+| C-c C-x f | create a new footnote                 |
+| C-c C-c   | jump between definition and reference |
+** Tables
+- |name|phone|age  C-c RET
+- C-c |  :: convert active region to table, if no active region, then create an empty table (columns x rows)
+*** Re-aligning and field motion
+| cmd          | func                                    |
+|--------------+-----------------------------------------|
+| C-c C-c      | re-align the table without moving point |
+| TAB          | re-align the table, move to next field  |
+| S-TAB        | re-align and move to previous field     |
+| RET          | re-aligh and move down to next row      |
+| S-UP/DOWN    | move a cell up/down                     |
+| S-LEFT/RIGHT | move a cell left/right                  |
+*** Column and row editing
+| cmd          | func                                 |
+|--------------+--------------------------------------|
+| M-LEFT/RIGHT | move current column left/right       |
+| M-S-LEFT     | kill current column                  |
+| M-S-RIGHT    | insert a new column                  |
+| M-UP/DOWN    | move current row up/down             |
+| M-S-UP       | kill current row                     |
+| M-S-DOWN     | insert a new row                     |
+| C-c -        | insert a hline                       |
+| C-c RET      | insert a hline and move to next line |
+| C-c ^        | sort the table lines in the region   |
+** Hyperlinks
+[ [link][description]]  or [ [link] ] with no SPC
+[[link][description]] or [[link]] (use C-c C-l to edit)
+*** Internal links
+[ [#my-custom-id] ]
+*** External links
+| link                                    | description                      |
+|-----------------------------------------+----------------------------------|
+| http://www.astro.uva.nl                 | on the web                       |
+| file:/home/yang/test.jpg                | file, absoulate path             |
+| /home/yang/test.jpg                     | same as above                    |
+| file:papers/last.pdf                    | file, relative path              |
+| ./papers/last.pdf                       | same as above                    |
+| file:projects.org                       | another org file                 |
+| docview:papers/last.pdf::NNN            | open in DocView mode at page NNN |
+| id:B7423F4D-2E8A-471B-8810-C40F074717E9 | link to heading by ID            |
+| news:comp.emacs                         | Usenet link                      |
+| mailto:adent@galaxy.net                 | mail link                        |
+| info:org#Hyperlinks                     | info node link                   |
+file links can contain additional info to make emacs jump to a paticular location.
+| link                              | description                 |
+|-----------------------------------+-----------------------------|
+| file:~/code/main.c::255           | find line 255               |
+| file:~/xx.org::my target          | find 'my target'            |
+| [ [file:~xx.org::#my-custom-id] ] | find entry with a custom ID |
+*** Handling Links
+| cmd     | description                                                 |
+|---------+-------------------------------------------------------------|
+| C-c l   | store a link                                                |
+| C-c C-l | insert a link, or modify a link when point on existing link |
+| C-c C-o | open link at point                                          |
+| C-c &   | jump back to a recorded position                            |
+** Todo items
+*** Basic TODO Functionality
+| cmd              | description                                                                                   |
+|------------------+-----------------------------------------------------------------------------------------------|
+| C-c C-t          | rotate the TODO state (unmarked -> TODO -> DONE)                                              |
+| S-RIGHT/LEFT     | similar to cycling TODO state                                                                 |
+| C-c / t          | View TODO items in a sparse tree, folds entire buffer but shows all TODO/not-DONE state items |
+| M-x org-agenda t | show global TODO list, collect the TODO items from all agenda files into a single buffer      |
+| S-M-RET          | insert a new TODO entry                                                                       |
+*** Multi-state Workflow
+#+BEGIN_SRC emacs-lisp
+(setq org-todo-keywords
+      '((sequence "TODO" "FEEDBACK" "VERIFY" "|" "DONE" "DELEGATED")))
+
+(setq org-todo-keywords
+      '(sequence "TODO(t)" "|" "DONE(d)")
+       (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)"))
+#+END_SRC
+To define TODO keywords that are valid in a single file:
+#+TODO: TODO(t) | DONE(d)
+#+TODO: REPORT(r) BUG(b) KNOWNCAUSE(k) | FIXED(f)
+#+TODO: | CANCELED(c)
+*** Progress Logging
+| cmd         | description                                                  |
+|-------------+--------------------------------------------------------------|
+| C-u C-c C-t | prompt for a note and record a time of the TODO state change |
+**** Closing items
+(setq org-log-done 'time)
+or
+(setq org-log-done 'note)
+**** Tracking TODO state changes
+customize org-log-into-drawer
+#+TODO: TODO(t) WAIT(w@/!) | DONE(d!) CANCELED(c@)
+*** Priorities
+three priorities: A, B, C, A is the highest, B is default
+| cmd       | description                    |
+|-----------+--------------------------------|
+| C-c ,     | set priority                   |
+| S-UP/DOWN | increase/decrease the priority |
+**** TODO [#A] Write letter to Sam
+**** TODO [#B] Call Sam
+*** Breaking Tasks Down into Subtasks
+insert [/] or [%], use C-c C-c to update the status
+Example:
+**** TODO Organize Party [33%]
+***** TODO Call people [1/2]
+****** TODO Peter
+****** DONE Sarah
+***** TODO Buy food
+***** DONE Talk to neighbor
+*** Checkboxes
+| cmd     | description                       |
+|---------+-----------------------------------|
+| C-c C-c | toggle checkbox status            |
+| M-S-RET | insert a new item with a checkbox |
+**** Organize party [1/3]
+- [-] call people [1/2]
+  - [ ] Peter
+  - [X] Sarah
+- [X] order food
+- [ ] think about what music to play
+** Tags :tag:
+*** Tag inheritance
+If a heading has a certain tag, all subheadings inherit the tag as well.
+You can also set tags like:
+#+FILETAGS: :Peter:Boss:Secret:
+Example:
+**** Meeting with the French group :work:
+***** Summary by Frank :boss:notes:
+****** Prepare slides for him :action:
+*** Setting tags                                                     :test:
+| cmd     | description                                              |
+|---------+----------------------------------------------------------|
+| C-c C-q | add new tag for current headline                         |
+| C-c C-c | when point is in a headline, this does the same as above |
+#+TAGS: @work @home @tennisclub
+#+TAGS: laptop car pc sailboat
+#+TAGS: @work(w) @home(h) @tennisclub(t) laptop(l) pc(p)
+(setq org-tag-alist '(("@work" . ?w) ("@home" . ?h) ("laptop" . ?l)))
+*** Tag groups
+set group tags by using brackets, and insert a colon between the group tag and its related tags:
+#+TAGS: [ GTD : Control Persp ]
+or, if tags should be mutually exclusive:
+#+TAGS: { Context : @Home @Work }
+*** Tag searches
+| cmd              | description                                                                                                      |
+|------------------+------------------------------------------------------------------------------------------------------------------|
+| C-c / m          | create a sparse tree with all headlines matching a tags search                                                   |
+| C-c \            | same as above                                                                                                    |
+| M-x org-agenda m | create a global list of tag matches from all agenda files                                                        |
+| M-x org-agenda M | create a global list of tag matches from all agenda files, but check only TODO items and force checking subitems |
+** Properties
+Properties are key-value pairs associated with an entry.
+| cmd       | description       |
+|-----------+-------------------|
+| C-c C-x p | set a property    |
+| C-c C-c d | remove a property |
+Example:
+*** CD collection
+**** Classic
+***** Goldberg Variations
+:PROPERTIES:
+:Title: Goldberg Variations
+:Composer: J.S. Bach
+:Publisher: Deutsche Grammophon
+:NDisks: 1
+:END:
+*** CD collection
+:PROPERTIES:
+:NDisks_ALL: 1 2 3 4
+:Publisher_ALL: "Deutsche Grammophon" Philips EMI
+:END:
+** Dates & Times
+*** Timestamps
+**** Plain timestamp
+- meet Peter at the movies <2019-12-11 Wed 19:15>
+- discussion on climate change <2019-12-11 Wed 20:00-22:00>
+**** Timestamp with repeater interval
+interval of N days(d), weeks(w), months(m) or years(y)
+- pick up Sam at school <2019-12-11 Wed 17:00 +1w>
+**** Diary-style expression entries
+- the nerd meeting on every 2nd Thursday of the month <%%(diary-float t 4 2)>
+**** Time/Date range
+use '--' to denote a range
+- meeting in Amsterdam <2019-12-10 Tue>--<2019-12-11 Wed>
+**** Inactive timestamp
+similar to plain timestamp, but use square brackets '[]'
+- Fillian comes late for the fifth time [2019-12-11 Wed]
+*** Creating Timestamps
+| cmd          | description                                  |
+|--------------+----------------------------------------------|
+| C-c .        | insert a timestamp                           |
+| C-c !        | like C-c ., but insert an inactive timestamp |
+| S-LEFT/RIGHT | change date at point by one day              |
+| S-UP/DOWN    | change the item under point                  |
+*** Deadlines & Scheduling
+SCHEDULED: <2019-12-11 Wed> DEADLINE: <2019-12-11 Wed>
+| cmd     | description     |
+|---------+-----------------|
+| C-c C-d | insert DEADLINE |
+| C-c C-s | insert SCHEDULE |
+- Pay the rent <2019-12-11 Wed +1m>
+*** Clocking Work Time
+:LOGBOOK:
+CLOCK: [2019-12-11 Wed 16:18]--[2019-12-11 Wed 16:22] =>  0:04
+:END:
+| cmd         | description                                                            |
+|-------------+------------------------------------------------------------------------|
+| C-c C-x C-i | start the clock on current item (clock-in), insert the 'CLOCK' keyword |
+| C-c C-x C-o | stop the clock (clock-in), also add '=> HH:MM'                         |
+| C-c C-x C-e | update the effort estimate for the current clock task                  |
+| C-c C-x C-q | cancel the current clock                                               |
+| C-c C-x C-j | jump to the headline of currently clocked in task                      |
+** Capture, Refile, Archive
+*** Capture
+**** Setting up capture
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+**** Using capture
+| cmd             | description                                                            |
+|-----------------+------------------------------------------------------------------------|
+| M-x org-capture | start a capture process                                                |
+| C-c C-c         | once finished capture, return to window before the capture process     |
+| C-c C-w         | finalize the capture process by refiling the note to a different place |
+| C-c C-k         | abort the capture process and return to previous state                 |
+**** Capture templates
+#+BEGIN_SRC emacs-lisp
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+         "* TODO %?\n %i\n %a")
+         ("j" "Journal" entry (file+datetree "~/org/journal.org")
+         "* %?\nEntered on %U\n %i\n %a")))
+#+END_SRC
+*** Refile & Copy
+| cmd             | description                                                               |
+|-----------------+---------------------------------------------------------------------------|
+| C-c C-w         | refile the entry or region at point                                       |
+| C-u C-c C-w     | use the refile interface to jump to a heading                             |
+| C-u C-u C-c C-w | jump to the location where org-refile last moved a tree to                |
+| C-c M-w         | copying works like refiling, except that the original note is not deleted |
+*** Archiving
+| cmd                  | description                           |
+|----------------------+---------------------------------------|
+| C-c C-x C-a          | archive current entry                 |
+| C-c C-x C-s or C-c $ | archive the subtree starting at point |
+** Agenda View
+*** Agenda Files
+| cmd        | description                                                       |
+|------------+-------------------------------------------------------------------|
+| C-c [      | add current file to the list of agenda files                      |
+| C-c ]      | remove current file from the list of agenda files                 |
+| C-' or C-, | cycle through agenda file list, visiting one file after the other |
+*** The Agenda Dispatcher
+C-c a
+| cmd | description                                                                                      |
+|-----+--------------------------------------------------------------------------------------------------|
+| a   | create calendar-like agenda                                                                      |
+| t/T | create a list of TODO items                                                                      |
+| m/M | create a list of headlines matching a given expression                                           |
+| s   | create a list of entries selected by a boolean expression of keywords and/or regular expressions |
+*** The Weekly/Daily Agenda
+C-c a a
+**** Holidays
+:PROPERTIES:
+:CATEGORY: Holiday
+:END:
+%%(org-calendar-holiday) ; special function for holiday names
+**** Birthdays
+:PROPERTIES:
+:CATEGORY: Ann
+:END:
+%%(org-anniversary 1990 10 1) Yang is %d years old
+*** The Global TODO List
+| cmd     | description                                                     |
+|---------+-----------------------------------------------------------------|
+| C-c a t | show the global TODO list                                       |
+| C-c a T | like the above, but allows selection of a specific TODO keyword |
+*** Matching Tags & Properties
+If headlines in agenda files are marked with tags or have properties, then
+| cmd     | description                                                                                                                              |       |
+|---------+------------------------------------------------------------------------------------------------------------------------------------------+-------|
+| C-c a m | produce a list of all headlines that match a given set of tags, boolean logic expression with tags like '+work+urgent-withboss' or 'work | home' |
+| C-c a M | like m, but only select headlines that are also TODO items                                                                               |       |
+*** Search View
+org-search-view
+| C-c a s |select entries by matching a substring or specific words using a boolean logic |
+*** Commands in the Agenda Buffer
+*** Custom Agenda Views
+(setq org-agenda-custom-commands
+      '(("w" todo "WAITING")
+        ("u" tags "+boss-urgent")
+        ("v" tags-todo "+boss-urgent")))
+** Markup for Rich Contents
+*** Paragraphs
+- paragraphs are separated by at least one empty line
+- \\ for a new line
+- to preserve the line breaks, indentation and blank lines in a region:
+  #+BEGIN_VERSE
+   Great clouds overhead
+   Tiny black birds rise and fall
+   Snow covers Emacs
+
+     ---AlexSchroeder
+  #+END_VERSE
+- Quote:
+  #+BEGIN_QUOTE
+  Everything should be made as simple as possible,
+  but not any simpler ---Albert Einstein
+  #+END_QUOTE
+- Center:
+  #+BEGIN_CENTER
+  Everything should be made as simple as possible, \\
+  but not any simpler
+  #+END_CENTER
+*** Emphasis and Monospace
+- *bold*
+- /italic/
+- _underlined_
+- =verbatim=
+- ~code~
+- +strike-through+
+- C-c ;   add comment
+*** Embedded LaTeX
+The radius of the sum is R_sun = 6.96 x 10^8 m. On the other hand,
+the radius of Alpha Centauri is R_{Alpha Centauri} = 1.28 x R_{sun}.
+
+\begin{equation}   % arbitrary environments
+        x=\sqrt{b} % even tables, figures
+\end{equation}     % etc
+
+If $a^2=b$ and \( b=2 \), then...
+*** Literal examples
+#+BEGIN_EXAMPLE
+  Some example from a text file.
+#+END_EXAMPLE
+
+start example lines with a colon followed by a space
+Here is an example
+   : Some example from a text file.
+*** Images
+./img/cat.jpg
+
+or
+
+#+CAPTION: This is a caption for the next figure link (or table)
+#+NAME: fig:SED-HR4049
+[ [./img/a.jpg] ]
+*** Creating Footnotes
+** Exporting
+*** The Export Dispatcher
+C-c C-e
+*** Export Settings
+TITLE, AUTHOR, DATE, EMAIL, LANGUAGE
+*** Table of Contents
+#+OPTIONS: toc:2 (only include two levels in TOC)
+#+OPTIONS: toc:nil (no default TOC at all)
+*** Include Files
+#+INCLUDE: "~/.emacs.d/myinit.el" src emacs-lisp
+*** Comment Lines
+#+BEGIN_COMMENT
+  comment here
+#+END_COMMENT
+*** ASCII/UTF-8 Export
+| cmd         | description                                   |
+|-------------+-----------------------------------------------|
+| C-c C-e t a | export as an ASCII file with '.txt' extension |
+| C-c C-e t u | same as above, using UTF8 encoding            |
+*** HTML Export
+C-c C-e h h
+*** LaTeX Export
+| cmd       | description               |
+|-----------+---------------------------|
+| C-c C-e l | export latex file         |
+| C-c C-e p | export latex and pdf      |
+| C-c C-e d | export latex and open pdf |
+*** iCalendar Export
+C-c C-e i
+C-c C-e c
+** Publishing
+#+BEGIN_SRC emacs-lisp
+  (setq org-publish-project-alist
+      '(("org"
+         :base-directory "~/org/"
+         :publishing-directory "~/public_html"
+         :section-numbers nil
+         :table-of-contents nil
+         :style "<link rel=\"stylesheet\"
+                href=\"../other/mystyle.css\"
+                type=\"text/css\"/>")))
+#+END_SRC
+| cmd       | description                                                      |
+|-----------+------------------------------------------------------------------|
+| C-c C-e C | prompt for a specific project and publish all files belong to it |
+| C-c C-e P | publish the project containing current file                      |
+| C-c C-e F | publish only current file                                        |
+| C-c C-e E | publish every project                                            |
+** Working with Source Code
+*** code block:
+#+NAME: <name>
+#+BEGIN_SRC <language> <switches> <header arguments>
+  <body>
+#+END_SRC
+*** Using header arguments
+#+NAME: factorial
+#+BEGIN_SRC haskell :results silent :exports code :var n=0
+fac 0 = 1
+fac n = n * fac (n-1)
+#+END_SRC
+*** Evaluating code blocks
+use C-c C-c to evaluate code, C-c ' to edit/quit code
+#+begin_src emacs-lisp
+  (+ 1 2 3 4)
+#+end_src
+
+#+RESULTS:
+: 10
+*** Results of evaluation
+Collection, Type, Format, Handling
+*** Exporting code blocks
+*** Extracting source code
+C-c C-v t
+** Miscellaneous
+*** Completion
+M-TAB
+*** Structure Templates
+To quickly insert empty structural blocks such as #+BEGIN_SRC #+END_SRC, use
+C-c C-,
+*** Clean View
+#+STARTUP: indent
+#+STARTUP: hidestars odd
+* Footnotes
+
+[fn:1] the link is http://orgmode.org

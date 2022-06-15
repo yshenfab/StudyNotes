@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Algorithms (4th Edition) - Study Notes</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Algorithms (4th Edition)";
+        var mkdocs_page_input_path = "algorithm/algorithms_4th_edition.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Study Notes
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Algorithm</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../alg_blog_note/">Alg blog</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Algorithms (4th Edition)</a>
+    <ul class="current">
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Blockchain</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blockchain/blockchain/">Blockchain</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Deep Learning</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/google-machine-learning-crash-course/">Google ML Crash Course</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">Python机器学习</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/dive_into_deep_learning/">Dive into Deep Learning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mathematics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mathematics/beauty_of_mathematics/">数学之美</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mathematics/statistics_concepts_and_controversies/">统计学的世界</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Psychology & Mind</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%B8%8E%E4%BC%97%E4%B8%8D%E5%90%8C%E7%9A%84%E5%BF%83%E7%90%86%E5%AD%A6/">与众不同的心理学</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E5%86%B3%E7%AD%96%E4%B8%8E%E5%88%A4%E6%96%AD/">决策与判断</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E6%9A%97%E6%97%B6%E9%97%B4/">暗时间</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%BD%A0%E7%9A%84%E7%81%AF%E4%BA%AE%E7%9D%80%E5%90%97/">你的灯亮着吗</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E6%B2%9F%E9%80%9A%E7%9A%84%E8%89%BA%E6%9C%AF/">沟通的艺术</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E5%BD%B1%E5%93%8D%E5%8A%9B/">影响力</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%B8%93%E6%B3%A8%E5%8A%9B/">专注力</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective python</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/pythonic/">pythonic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/py_tips/">py tips</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/python3/">python3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/numpy/">numpy</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Research</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/">像外行一样思考，像专家一样实践</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Startup</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../startup/how_google_works/">How Google Works</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../startup/startup/">startup</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">vim</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">shell</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">git</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">markdown</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/history_of_quantum_physics/">上帝掷骰子吗？量子物理史话</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%847%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效能人士的7个习惯</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91/">底层逻辑</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8445%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效程序员的45个习惯</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Todo</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../todo/todo/">TODO</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Study Notes</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Algorithm &raquo;</li><li>Algorithms (4th Edition)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="table-of-contents">Table of Contents</h1>
+<ol>
+<li><a href="#orgc35f39c">基础</a><ol>
+<li><a href="#orga8d4382">基础编程模型</a><ol>
+<li><a href="#orgdcf581e">递归</a></li>
+</ol>
+</li>
+<li><a href="#org1465479">数据抽象</a></li>
+<li><a href="#org6319deb">背包、队列和栈（bag, queue, stack）</a><ol>
+<li><a href="#org61e2eb8">泛型（又叫参数化类型）</a></li>
+<li><a href="#orga85d8f9">链表</a></li>
+</ol>
+</li>
+<li><a href="#org3271174">算法分析</a></li>
+<li><a href="#orgcf1ed70">案例研究：union-find算法</a></li>
+</ol>
+</li>
+<li><a href="#org6c54496">排序</a><ol>
+<li><a href="#org9bafc8a">初级排序算法</a><ol>
+<li><a href="#orga785c40">选择排序</a></li>
+<li><a href="#orgf9d9658">插入排序</a></li>
+<li><a href="#org6cf3a50">希尔排序</a></li>
+</ol>
+</li>
+<li><a href="#org2d41af8">归并排序</a></li>
+<li><a href="#org31813d5">快速排序</a><ol>
+<li><a href="#org46f45ed">基本算法</a></li>
+<li><a href="#org9c07c56">算法改进</a></li>
+</ol>
+</li>
+<li><a href="#orge8ff82d">优先队列</a><ol>
+<li><a href="#org54c2d3f">堆(heap)的定义</a></li>
+</ol>
+</li>
+<li><a href="#org864f363">堆排序</a><ol>
+<li><a href="#org0d8df98">堆的构造</a></li>
+<li><a href="#org72d4e4b">下沉排序</a></li>
+<li><a href="#org9cccccf">先下沉后上浮</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="#org81c4a01">查找</a><ol>
+<li><a href="#org22ac478">符号表（字典）</a><ol>
+<li><a href="#org4421f64">无续链表的顺序查找 SequentialSearch</a></li>
+<li><a href="#orga0ec3e3">有序数组的二分查找 BinarySearch</a></li>
+<li><a href="#org865f417">符号表各种实现的优缺点</a></li>
+</ol>
+</li>
+<li><a href="#org3194f6b">二叉查找树 BST (pg263)</a></li>
+<li><a href="#org2702d2a">平衡查找树</a></li>
+<li><a href="#orgc0e36ac">散列表</a></li>
+<li><a href="#org3f49b2d">应用</a></li>
+</ol>
+</li>
+<li><a href="#orge47cbc5">图</a><ol>
+<li><a href="#org348a280">无向图</a></li>
+<li><a href="#org9fa450f">有向图</a></li>
+<li><a href="#orgff455cf">最小生成树</a></li>
+<li><a href="#orge3a9389">最短路径</a></li>
+</ol>
+</li>
+<li><a href="#orgf0c36da">字符串</a><ol>
+<li><a href="#org89d7dbf">字符串排序</a></li>
+<li><a href="#org6a2c6d4">单词查找树</a></li>
+<li><a href="#org6501e72">子字符串查找</a></li>
+<li><a href="#orgab2a488">正则表达式</a></li>
+<li><a href="#orgc4aca36">数据压缩</a></li>
+</ol>
+</li>
+<li><a href="#org4173670">背景</a></li>
+</ol>
+<p><a id="orgc35f39c"></a></p>
+<h1 id="_1">基础</h1>
+<p><a id="orga8d4382"></a></p>
+<h2 id="_2">基础编程模型</h2>
+<p><a id="orgdcf581e"></a></p>
+<h3 id="_3">递归</h3>
+<p>满足3点：</p>
+<ol>
+<li>递归总有一个最简单的情况</li>
+<li>递归调用总是去尝试解决一个规模更小的子问题（这样才能收敛到最简单的情况）</li>
+<li>递归调用的父问题和尝试解决的子问题之间不应该有交集</li>
+</ol>
+<p><a id="org1465479"></a></p>
+<h2 id="_4">数据抽象</h2>
+<ul>
+<li>抽象数据类型（ADT）：类似于Point2D, vec3f等等</li>
+</ul>
+<p><a id="org6319deb"></a></p>
+<h2 id="bag-queue-stack">背包、队列和栈（bag, queue, stack）</h2>
+<ul>
+<li>区别在于操作（添加、删除、访问）不同</li>
+</ul>
+<p><a id="org61e2eb8"></a></p>
+<h3 id="_5">泛型（又叫参数化类型）</h3>
+<ul>
+<li>集合类的抽象数据类型的一个关键特性是可以存储任意类型的数据：vector<int> vector<float></li>
+</ul>
+<p><a id="orga85d8f9"></a></p>
+<h3 id="_6">链表</h3>
+<ul>
+<li>定义：链表是一种递归的数据结构，它或者为空(null)，或者是指向一个结点(node)的引用，
+    该结点含有一个泛型的元素和一个指向另一条链表的引用。
+    class Node
+    {
+        Item item;
+        Node next;
+    }</li>
+<li>数组 vs 链表</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">数据结构</th>
+<th scope="col" class="org-left">优点</th>
+<th scope="col" class="org-left">缺点</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="org-left">数组</td>
+<td class="org-left">通过索引可以直接访问任意元素</td>
+<td class="org-left">初始化时需要知道元素的数量</td>
+</tr>
+
+
+<tr>
+<td class="org-left">链表</td>
+<td class="org-left">使用的空间大小和元素数量成正比</td>
+<td class="org-left">需要通过引用访问任意元素</td>
+</tr>
+</tbody>
+</table>
+
+<p><a id="org3271174"></a></p>
+<h2 id="_7">算法分析</h2>
+<ul>
+<li>时间复杂度、空间复杂度</li>
+</ul>
+<p><a id="orgcf1ed70"></a></p>
+<h2 id="union-find">案例研究：union-find算法</h2>
+<p><a id="org6c54496"></a></p>
+<h1 id="_8">排序</h1>
+<p><a id="org9bafc8a"></a></p>
+<h2 id="_9">初级排序算法</h2>
+<p><a id="orga785c40"></a></p>
+<h3 id="_10">选择排序</h3>
+<ul>
+<li>找到数组中最小的元素</li>
+<li>将最小的元素和第1个元素交换位置</li>
+<li>repeat</li>
+<li>O(n<sup>2</sup>)</li>
+</ul>
+<p><a id="orgf9d9658"></a></p>
+<h3 id="_11">插入排序</h3>
+<p><a id="org6cf3a50"></a></p>
+<h3 id="_12">希尔排序</h3>
+<p>改进插入排序，交换不相邻的元素以对数组的局部进行排序，最终用插入排序将局部有序的数组排序</p>
+<p><a id="org2d41af8"></a></p>
+<h2 id="_13">归并排序</h2>
+<ul>
+<li>divide and conquer，将两个有序数组归并成一个更大的有序数组（实现递归）</li>
+<li>时间O(NlogN)，空间O(N)</li>
+<li>缺点：所需的额外空间和n成正比</li>
+</ul>
+<p><a id="org31813d5"></a></p>
+<h2 id="_14">快速排序</h2>
+<ul>
+<li>应用最广：实现简单、适用于各种不同的输入数据、在一般应用中比其他排序算法都要快的多</li>
+<li>时间O(NlogN)，空间O(lgN)</li>
+<li>快排的内循环比大多数排序算法都要短小，意味着在理论和实际中都要更快</li>
+<li>缺点：非常脆弱，实现时要非常小心才能避免低劣的性能</li>
+</ul>
+<p><a id="org46f45ed"></a></p>
+<h3 id="_15">基本算法</h3>
+<ul>
+<li>分治：将一个数组分成2个子数组，两部分独立排序</li>
+<li><strong>快排和归并排序是互补的</strong>
+    归并排序将数组分成2个子数组分别排序，并将有序的子数组归并以将整个数组排序；（递归调用发生在处理整个数组之前，一个数组被等分为两半）
+    快排是当2个子数组都有序时，整个数组也就自然有序了。（递归调用发生在处理整个数组之后，切分的位置取决于数组的内容）</li>
+<li>快排的关键在于切分(partition)，find a pivot</li>
+</ul>
+<p><a id="org9c07c56"></a></p>
+<h3 id="_16">算法改进</h3>
+<ol>
+<li>
+<p>切换到插入排序</p>
+<p>和大多数递归排序算法一样，改进快排性能的一个简单办法基于以下两点：</p>
+<ol>
+<li>对于小数组，快排比插入排序慢；</li>
+<li>因为递归，快排的sort()方法在小数组中也会调用自己。</li>
+</ol>
+<p>if(hi &lt;= lo) return; 替换成 if(hi &lt;= lo+M) {Insertion.sort(a,lo,hi); return;}</p>
+</li>
+<li>
+<p>三取样切分</p>
+<ul>
+<li>使用子数组的一小部分元素的中位数来切分数组，这样做切分会更好，代价是需要计算中位数</li>
+<li>取样大小设为3并用大小居中的元素切分效果最好</li>
+</ul>
+</li>
+<li>
+<p>熵最优的排序</p>
+<ul>
+<li>实际应用中常会出现含有大量重复元素的数组，采用“三向切分的快速排序”</li>
+<li>对于包含大量重复元素的数组，三向切分将排序时间从线性对数级降低到线性级别</li>
+</ul>
+</li>
+</ol>
+<p><a id="orge8ff82d"></a></p>
+<h2 id="_17">优先队列</h2>
+<ul>
+<li>支持操作：删除最大元素、插入元素</li>
+</ul>
+<p><a id="org54c2d3f"></a></p>
+<h3 id="heap">堆(heap)的定义</h3>
+<ul>
+<li><strong>定义</strong> 当一棵二叉树的每个结点都大于等于它的两个子结点时，它被成为堆有序。</li>
+<li>二叉堆能够很好地实现优先队列的基本操作</li>
+<li>
+<p>堆的有序化(reheapifying)，自下而上or自上而下</p>
+</li>
+<li>
+<p>自下而上（上浮 swim）</p>
+<ul>
+<li>当一个结点太大的时候（大于父结点），它需要上浮到堆的更高层</li>
+<li>位置k的结点的父结点的位置是k/2向下取整</li>
+<li>实现：</li>
+</ul>
+<p>void swin(int k)
+{
+    while(k&gt;1 &amp;&amp; less(k/2,k)) // less: 小于比较 返回boolean
+    {
+        exch(k/2,k); // exch: exchange 交换变量值
+        k=k/2;
+    }
+}</p>
+</li>
+<li>
+<p>自上而下（下沉 sink）</p>
+<ul>
+<li>当一个结点比它的子结点小时，它需要和它两个子结点里较大的交换来恢复堆，下沉到堆的更低层</li>
+<li>位置k的结点的子结点位于2k和2k+1</li>
+<li>void sink(int k)
+    {
+        while(2*k &lt;= N)
+        {
+        int j = 2*k;
+        if(j&lt;N &amp;&amp; less(j,j+1)) j++;
+        if(!less(k,j)) break;
+        exch(k,j);
+        k=j;
+        }
+    }</li>
+</ul>
+</li>
+<li>
+<p>插入元素</p>
+<ul>
+<li>将新元素添加到数组末尾，增加堆的大小并让新元素上浮到合适的位置</li>
+<li>实现：
+    void insert(Key v)
+    {
+        pq[++N]=v;
+        swim(N);
+    }</li>
+</ul>
+</li>
+<li>
+<p>删除最大元素</p>
+<ul>
+<li>从数组顶端删去最大的元素并将数组的最后一个元素放到顶端，减小堆的大小并让这个元素下沉到合适的位置</li>
+<li>实现：
+    Key delMax()
+    {
+        Key max = pq[1]; <em>/ 从根结点得到最大元素
+        exch(1,N&#x2013;); /</em> 将其和最后一个结点交换
+        pq[N+1] = null; <em>/ 防止越界
+        sink(1); /</em> 恢复堆的有序性
+        return max;
+    }</li>
+</ul>
+</li>
+</ul>
+<p><a id="org864f363"></a></p>
+<h2 id="_18">堆排序</h2>
+<p>堆排序分2个阶段：</p>
+<ol>
+<li>堆的构造阶段，将原始数组重新组织安排进一个堆中；</li>
+<li>下沉排序阶段，从堆中按递减顺序取出所有元素并得到排序结果。</li>
+</ol>
+<p>排序时将需要排序的数组本身作为堆，因此无需任何额外空间。
+时间O(NlogN)，空间O(1)</p>
+<p><a id="org0d8df98"></a></p>
+<h3 id="_19">堆的构造</h3>
+<ul>
+<li>从左到右遍历数组，用swim()保证扫描指针左侧的所有元素已经是一棵堆有序的完全树，O(NlogN)</li>
+<li>一个更聪明高效的方法：从右至左用sink()构造子堆（少于2N次比较以及少于N次交换）</li>
+<li>堆排序实现：</li>
+</ul>
+<p>void heapSort(Comparable[] a)
+{
+    int N = a.length;
+    for(int k=N/2; k&gt;=1; k&#x2013;) // 构造堆
+        sink(a, k, N);
+    while(N&gt;1)
+    {
+        exch(a, 1, N&#x2013;);
+        sink(a, 1, N);
+    }
+}</p>
+<p><a id="org72d4e4b"></a></p>
+<h3 id="_20">下沉排序</h3>
+<p>堆排序的主要工作都是在第二阶段完成的，将堆中的堆大元素删除，然后放入堆缩小后数组中空出的位置。</p>
+<p><a id="org9cccccf"></a></p>
+<h3 id="_21">先下沉后上浮</h3>
+<p><strong>堆排序是唯一能够同时最优地利用空间和时间的方法</strong></p>
+<ul>
+<li>当空间十分紧张时用的多，现代系统很少用，因为它无法利用缓存</li>
+<li>数组元素很少和相邻的其他元素进行比较，因此缓存未命中的次数要远远高于大多数比较都在相邻元素间进行的算法，如快速排序、归并排序，甚至是希尔排序</li>
+<li>用堆实现优先队列在现代应用程序中越来越重要，因为它能在插入操作和删除最大元素操作混合的动态场景中保证对数级别的运行时间</li>
+</ul>
+<p><a id="org81c4a01"></a></p>
+<h1 id="_22">查找</h1>
+<p><a id="org22ac478"></a></p>
+<h2 id="_23">符号表（字典）</h2>
+<p>key-value pair</p>
+<ul>
+<li><strong>定义</strong> 符号表是一种存储键值对的数据结构，支持2种操作：插入(put)，即将一组新的键值对存入表中；查找(get)，即根据给定的键得到相应的值</li>
+<li><strong>查找的成本模型</strong> 统计比较的次数（等价性测试或是键的相互比较），在内循环不进行比较（极少）的情况下，统计数组访问次数</li>
+</ul>
+<p><a id="org4421f64"></a></p>
+<h3 id="sequentialsearch">无续链表的顺序查找 SequentialSearch</h3>
+<p><a id="orga0ec3e3"></a></p>
+<h3 id="binarysearch">有序数组的二分查找 BinarySearch</h3>
+<ol>
+<li>
+<p>二分查找</p>
+<ul>
+<li>递归的二分查找</li>
+</ul>
+<p>int rank(Key key, int lo, int hi)
+{
+    if(hi &lt; lo) return lo;
+    int mid = lo + (hi-lo)/2;
+    int cmp = key.compareTo(keys[mid]);
+    if(cmp&lt;0)
+        return rank(key, lo, mid-1);
+    else if(cmp&gt;0)
+        return rank(key, mid+1, hi);
+    else
+        return mid;
+}</p>
+<ul>
+<li>迭代的二分查找</li>
+</ul>
+<p>int rank(Key key)
+{
+    int lo=0, hi=N-1;
+    while(lo &lt;= hi)
+    {
+        int mid = lo + (hi-lo)/2;
+        int cmp = key.compareTo(keys[mid]);
+        if(cmp&lt;0)
+            hi = mid - 1;
+        else if(cmp&gt;0)
+            lo = mid + 1;
+        else
+            return mid;
+    }
+    return lo;
+}</p>
+</li>
+</ol>
+<p><a id="org865f417"></a></p>
+<h3 id="_24">符号表各种实现的优缺点</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">数据结构</th>
+<th scope="col" class="org-left">实现</th>
+<th scope="col" class="org-left">优点</th>
+<th scope="col" class="org-left">缺点</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="org-left">链表（顺序查找）</td>
+<td class="org-left">SequentialSearchST</td>
+<td class="org-left">适用于小型问题</td>
+<td class="org-left">对于大型符号表很慢</td>
+</tr>
+
+
+<tr>
+<td class="org-left">有序数组（二分查找）</td>
+<td class="org-left">BinarySearchST</td>
+<td class="org-left">最优的查找效率和空间需求，</td>
+<td class="org-left">插入操作很慢</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">能够进行有序性相关的操作</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+
+<tr>
+<td class="org-left">二叉查找树</td>
+<td class="org-left">BST</td>
+<td class="org-left">实现简单，支持有序性相关操作</td>
+<td class="org-left">没有性能上界的保证，链接需要额外的空间</td>
+</tr>
+
+
+<tr>
+<td class="org-left">平衡二叉查找树</td>
+<td class="org-left">RedBlackBST</td>
+<td class="org-left">最优的查找效率和插入效率，</td>
+<td class="org-left">链接需要额外的空间</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">能够进行有序性相关的操作</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+
+<tr>
+<td class="org-left">散列表</td>
+<td class="org-left">SeparateChainHashST</td>
+<td class="org-left">能够快速查找和插入常见数据类型</td>
+<td class="org-left">需要计算每种类型的数据的散列，无法进行有序性</td>
+</tr>
+
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">LinearProbingHashST</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">相关操作，链接和空结点需要额外的空间</td>
+</tr>
+</tbody>
+</table>
+
+<p><a id="org3194f6b"></a></p>
+<h2 id="todo-bst-pg263">TODO 二叉查找树 BST (pg263)</h2>
+<p><a id="org2702d2a"></a></p>
+<h2 id="_25">平衡查找树</h2>
+<p><a id="orgc0e36ac"></a></p>
+<h2 id="_26">散列表</h2>
+<p><a id="org3f49b2d"></a></p>
+<h2 id="_27">应用</h2>
+<p><a id="orge47cbc5"></a></p>
+<h1 id="_28">图</h1>
+<p><a id="org348a280"></a></p>
+<h2 id="_29">无向图</h2>
+<p><a id="org9fa450f"></a></p>
+<h2 id="_30">有向图</h2>
+<p><a id="orgff455cf"></a></p>
+<h2 id="_31">最小生成树</h2>
+<p><a id="orge3a9389"></a></p>
+<h2 id="_32">最短路径</h2>
+<p><a id="orgf0c36da"></a></p>
+<h1 id="_33">字符串</h1>
+<p><a id="org89d7dbf"></a></p>
+<h2 id="_34">字符串排序</h2>
+<p><a id="org6a2c6d4"></a></p>
+<h2 id="_35">单词查找树</h2>
+<p><a id="org6501e72"></a></p>
+<h2 id="_36">子字符串查找</h2>
+<p><a id="orgab2a488"></a></p>
+<h2 id="_37">正则表达式</h2>
+<p><a id="orgc4aca36"></a></p>
+<h2 id="_38">数据压缩</h2>
+<p><a id="org4173670"></a></p>
+<h1 id="_39">背景</h1>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../alg_blog_note/" class="btn btn-neutral float-left" title="Alg blog"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../blockchain/blockchain/" class="btn btn-neutral float-right" title="Blockchain">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../alg_blog_note/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../blockchain/blockchain/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
