@@ -91,15 +91,11 @@
               </ul>
               <p class="caption"><span class="caption-text">Python</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective python</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../python/pythonic/">pythonic</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../python/py_tips/">py tips</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../python/python3/">python3</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/numpy/">numpy</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Research</span></p>
@@ -122,6 +118,32 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">git</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#config">Config</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ssh">SSH</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ssh-keygen-add-key">ssh-keygen &amp; add key</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#authentication">Authentication</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gpg">GPG</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#generate-gpg-key">Generate GPG Key</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#faq">FAQ</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q1-git-pull">Q1: git pull提示</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q2-git-pull">Q2: git pull提示</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q3-git-merge-somebranch-get-conflicts">Q3: git merge somebranch get conflicts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#q4-somebranchgit-rebase-master-get-conflicts">Q4: 在somebranch执行git rebase master get conflicts</a>
+    </li>
     </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../markdown/">markdown</a>
@@ -167,58 +189,71 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="table-of-contents">Table of Contents</h1>
-<ol>
-<li><a href="#org1cc4f5f">git config</a></li>
-<li><a href="#org10c4877">SSH</a><ol>
-<li><a href="#org182f974">生成和添加key</a></li>
-<li><a href="#orgd926085">验证</a></li>
-</ol>
-</li>
-<li><a href="#orga4a33ae">GPG</a><ol>
-<li><a href="#org55e1252">生成GPG Key</a></li>
-</ol>
-</li>
-<li><a href="#orgfade340">basic usage</a></li>
-</ol>
-<p><a id="org1cc4f5f"></a></p>
-<h1 id="git-config">git config</h1>
+                <h1 id="git">Git</h1>
+<h2 id="config">Config</h2>
 <p>refer to dotfiles repo</p>
-<p><a id="org10c4877"></a></p>
-<h1 id="ssh">SSH</h1>
-<p><a id="org182f974"></a></p>
-<h2 id="key">生成和添加key</h2>
-<p>ssh-keygen -t rsa -b 4096 -C "xxxxxx@qq.com"
-复制~/.ssh/id<sub>rsa.pub的内容里</sub>（也就是key）
-进入github settings，添加到New SSH key</p>
-<p><a id="orgd926085"></a></p>
-<h2 id="_1">验证</h2>
-<p>ssh -T git@github.com
-如果看到You've successfully authenticated, but GitHub does not provide shell access表明成功</p>
-<p><a id="orga4a33ae"></a></p>
-<h1 id="gpg">GPG</h1>
-<p><a id="org55e1252"></a></p>
-<h2 id="gpg-key">生成GPG Key</h2>
-<p>gpg &#x2013;gen-key
-要求输入Real Name: FirstName LastName，Email: xxxxxxx@qq.com以及密码
-生成pub公钥，sub私钥
-pub后面的一长串就是GPG Key ID，例如为9639D**92E4A，复制它，然后
-gpg &#x2013;armor &#x2013;export 9639D**92E4A
-会生成
-&#x2013;&#x2014;BEGIN PGP PUBLIC KEY BLOCK&#x2013;&#x2014; </p>
-<!--&#x2013; your GPG key ID here &#x2013;-->
-<p>&#x2013;&#x2014;END PGP PUBLIC KEY BLOCK&#x2013;&#x2014;
-进入github settings，添加到New GPG key，复制上方所有内容，粘贴后add GPG key
-再配置本地git：
-git config &#x2013;global user.signingkey 9639D**92E4A
-git config &#x2013;global commit.gpgsign true</p>
-<p><a id="orgfade340"></a></p>
-<h1 id="basic-usage">basic usage</h1>
-<p>git init
-git add <file> / git add .
-git commit -m "message"
-git remote add origin <a href="https://github.com/yshenfab/repo_name.git">https://github.com/yshenfab/repo_name.git</a>
-git push origin master</p>
+<h2 id="ssh">SSH</h2>
+<h3 id="ssh-keygen-add-key">ssh-keygen &amp; add key</h3>
+<pre><code class="language-sh">ssh-keygen -t rsa -b 4096 -C &quot;email@domain&quot;
+</code></pre>
+<p>进入github settings，添加到New SSH key</p>
+<p>复制~/.ssh/id_rsa.pub文件中的内容，粘贴过来</p>
+<h3 id="authentication">Authentication</h3>
+<pre><code class="language-sh">ssh -T git@github.com
+</code></pre>
+<p>如果看到You've successfully authenticated, but GitHub does not provide shell access表明成功</p>
+<h2 id="gpg">GPG</h2>
+<h3 id="generate-gpg-key">Generate GPG Key</h3>
+<pre><code class="language-sh">gpg --gen-key
+</code></pre>
+<p>根据提示输入Real Name, Email, Password等信息，生成pub公钥和sub私钥</p>
+<p>pub后面的一长串就是GPG Key ID，例如为9639D****92E4A，复制它，然后</p>
+<pre><code class="language-sh">gpg --armor --export 9639D****92E4A
+</code></pre>
+<p>会生成</p>
+<pre><code class="language-txt">-----BEGIN PGP PUBLIC KEY BLOCK----- 
+&lt;!-- your GPG key ID here --&gt;
+-----END PGP PUBLIC KEY BLOCK-----
+</code></pre>
+<p>进入github settings，添加到New GPG key，复制上方所有内容，粘贴后add GPG key</p>
+<p>再配置本地git</p>
+<pre><code class="language-sh">git config --global user.signingkey 9639D****92E4A
+git config --global commit.gpgsign true
+</code></pre>
+<h2 id="faq">FAQ</h2>
+<h2 id="q1-git-pull">Q1: <code>git pull</code>提示</h2>
+<pre><code class="language-txt">fatal: Not possible to fast-forward, aborting.
+</code></pre>
+<p>原因是本地版本较老，且commit了新内容，加上--rebase即可，如：</p>
+<pre><code class="language-sh">git pull origin master --rebase
+</code></pre>
+<h2 id="q2-git-pull">Q2: <code>git pull</code>提示</h2>
+<pre><code class="language-txt">error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+</code></pre>
+<p>原因是本地有修改的内容没有commit，只需要commit一下之后再rebase即可</p>
+<h2 id="q3-git-merge-somebranch-get-conflicts">Q3: <code>git merge somebranch</code> get conflicts</h2>
+<pre><code class="language-txt">Auto-merging myfile.txt
+CONFLICT (content): Merge conflict in myfile.txt
+Automatic merge failed; fix conflicts and then commit the result.
+</code></pre>
+<p>这时需要打开文件myfile.txt进行手动修改，修改完之后</p>
+<pre><code class="language-sh">git add myfile.txt
+git commit -m &quot;your msg&quot;
+</code></pre>
+<h2 id="q4-somebranchgit-rebase-master-get-conflicts">Q4: 在somebranch执行<code>git rebase master</code> get conflicts</h2>
+<pre><code class="language-txt">Auto-merging myfile.txt
+CONFLICT (content): Merge conflict in myfile.txt
+error: could not apply 65b67af... commit message
+</code></pre>
+<p>同Q3，也是手动修改myfile.txt里的冲突，修改完之后提交不用commit，而是</p>
+<pre><code class="language-sh">git add myfile.txt
+git rebase --continue
+</code></pre>
+<p>如果需要fast-forward merge，切换到master再merge就行</p>
+<pre><code class="language-sh">git checkout master
+git merge somebrach
+</code></pre>
               
             </div>
           </div><footer>
