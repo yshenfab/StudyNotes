@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>pythonic - Study Notes</title>
+    <title>merge (TODO) - Study Notes</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "pythonic";
-        var mkdocs_page_input_path = "python/pythonic.md";
+        var mkdocs_page_name = "merge (TODO)";
+        var mkdocs_page_input_path = "python/merge.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -91,13 +91,17 @@
               </ul>
               <p class="caption"><span class="caption-text">Python</span></p>
               <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">pythonic</a>
-    <ul class="current">
-    </ul>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../py_tips/">py tips</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../python3/">python3</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">merge (TODO)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#pythonic">Pythonic</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#python-tips-todo">Python Tips (TODO)</a>
+    </li>
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Research</span></p>
@@ -153,7 +157,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Python &raquo;</li><li>pythonic</li>
+          <li>Python &raquo;</li><li>merge (TODO)</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -163,277 +167,193 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="table-of-contents">Table of Contents</h1>
-<ol>
-<li><a href="#org0bf1f2c">pythonic</a><ol>
-<li><a href="#org19857ed">string</a></li>
-<li><a href="#orgbd6257d">zip</a></li>
-<li><a href="#org2dee251">enumerate</a></li>
-<li><a href="#org97c3e20">reverse list</a></li>
-<li><a href="#org6a3d887">open file</a></li>
-<li><a href="#org0be1df0">iter()</a></li>
-<li><a href="#org753874c">for&#x2026;else</a></li>
-<li><a href="#org1885f81">dict</a></li>
-<li><a href="#org333728c">update sequence</a></li>
-<li><a href="#org79f543e">装饰器/修饰符/注解 decorator</a></li>
-<li><a href="#org724885d">使用ignored()代替pass exception</a></li>
-<li><a href="#org2cf442b">简洁的单句表达</a></li>
-<li><a href="#orgd6e22a9">列表推导与循环</a></li>
-<li><a href="#orgde32908">函数嵌套定义</a></li>
-<li><a href="#orgd6402e5">with语句</a></li>
-<li><a href="#org4af418e">any</a></li>
-<li><a href="#orgdceace8">namedtuple</a></li>
-<li><a href="#org516c1b9">map/filter/reduce与列表推导</a></li>
-<li><a href="#orgbdf274b">lambda表达式</a></li>
-<li><a href="#org893e35e">yield, generator</a></li>
-<li><a href="#org87624a3">monkey patching</a></li>
-<li><a href="#orgec5fdf1">books</a></li>
-</ol>
+                <h1 id="python-notes">Python Notes</h1>
+<h2 id="pythonic">Pythonic</h2>
+<ul>
+<li>reverse list a: <code>a[::-1]</code></li>
+<li><code>string.join(iterable)</code></li>
+<li>use <code>zip</code>, <code>list(zip(a,b))</code>, <code>dict(zip(a,b))</code></li>
+<li>open file</li>
+</ul>
+<pre><code class="language-python">with open('filename', 'r') as f:
+    f.read()
+</code></pre>
+<ul>
+<li><code>iter()</code>连续调用函数</li>
+<li>for/else, try/else, while/else</li>
+<li>dict: 
+popitem()是原子操作</li>
+</ul>
+<pre><code class="language-python">while d:
+    key, value = d.popitem()
+</code></pre>
+<p>连接多个字典
+<code>d = ChainMap(command_line_args, os.environ, defaults)</code></p>
+<ul>
+<li>deque更有效，两端都可操作，<code>Q = collections.deque()</code>，<code>append(), appendleft(),
+    extend(), extendleft(), pop(), popleft()</code></li>
+<li>
+<p>collections: deque, namedtuple, counter, defaultdict, etc.</p>
 </li>
-<li><a href="#org2166b8d">Books</a><ol>
-<li><a href="#orgb55ea94">Idiomatic</a><ol>
-<li><a href="#org6467c65">list comprehensions</a></li>
-<li><a href="#org25d631f">iterators</a></li>
-<li><a href="#org8368087">generators</a></li>
-<li><a href="#org429d39e">assert</a></li>
-</ol>
+<li>
+<p>decorator: 装饰器事实上就是一个函数到另一个函数的映射，可以在不修改原函数代码的情况下为其增加新的功能。本质上，decorator就是一个返回函数的高阶函数。</p>
 </li>
-</ol>
+<li>
+<p>使用ignored()代替pass exception，例如</p>
 </li>
-</ol>
-<p><a id="org0bf1f2c"></a></p>
-<h1 id="pythonic">pythonic</h1>
-<p><a id="org19857ed"></a></p>
-<h2 id="string">string</h2>
-<ul>
-<li>''.join()</li>
 </ul>
-<p><a id="orgbd6257d"></a></p>
-<h2 id="zip">zip</h2>
-<ul>
-<li>list(zip(a,b))</li>
-<li>dict(zip(a,b))</li>
-</ul>
-<p><a id="org2dee251"></a></p>
-<h2 id="enumerate">enumerate</h2>
-<ul>
-<li>for idx, value in enumerate(a):
-    print(idx, value)</li>
-</ul>
-<p><a id="org97c3e20"></a></p>
-<h2 id="reverse-list">reverse list</h2>
-<ul>
-<li>a[::-1]</li>
-</ul>
-<p><a id="org6a3d887"></a></p>
-<h2 id="open-file">open file</h2>
-<ul>
-<li>with open('test.txt', 'r') as f:
-    f.read()</li>
-</ul>
-<p><a id="org0be1df0"></a></p>
-<h2 id="iter">iter()</h2>
-<ul>
-<li>连续调用函数</li>
-</ul>
-<p><a id="org753874c"></a></p>
-<h2 id="forelse">for&#x2026;else</h2>
-<ul>
-<li>try else, while else</li>
-</ul>
-<p><a id="org1885f81"></a></p>
-<h2 id="dict">dict</h2>
-<ul>
-<li>popitem()是原子操作</li>
-</ul>
-<p>while d:
-      key, value = d.popitem()</p>
-<ul>
-<li>连接多个字典</li>
-</ul>
-<p>d = ChainMap(command<sub>line</sub><sub>args</sub>, os.environ, defaults)</p>
-<p><a id="org333728c"></a></p>
-<h2 id="update-sequence">update sequence</h2>
-<ul>
-<li>deque更有效，两端都可操作</li>
-<li>Q = collections.deque()
-    Q.append(1)
-    Q.appendleft(2)
-    Q.extend([3,4])
-    Q.extendleft([5,6]) # deque([6,5,2,1,3,4])
-    Q.pop() # 4
-    Q.popleft() # 6</li>
-</ul>
-<p><a id="org79f543e"></a></p>
-<h2 id="decorator">装饰器/修饰符/注解 decorator</h2>
-<ul>
-<li>使用装饰器分离出管理逻辑</li>
-</ul>
-<p>@cache
-def web<sub>lookup</sub>(url):
-    return urllib.urlopen(url).read()</p>
-<ul>
-<li>装饰器事实上就是一个函数到另一个函数的映射，可以在不修改原函数代码的情况下为其增加新的功能
-    本质上，decorator就是一个返回函数的高阶函数</li>
-<li>def func():
-        print("I have a dream!")
-    现在想知道执行函数的时候打印时间，那么就定义一个装饰器
-    def log<sub>time</sub>(func):
-        def wrapper(*args, **kw):
-        print("run %s() and time is: " % func._<sub>name</sub>__ + str(datetime.datetime.now()))
-        return func(*args, **kw)
-        return wrapper</li>
-</ul>
-<p>@log<sub>time</sub>
-def func():
-    print("I have a dream!")</p>
-<p><a id="org724885d"></a></p>
-<h2 id="ignoredpass-exception">使用ignored()代替pass exception</h2>
-<ul>
-<li>try:
-        os.remove('somefile.tmp')
-    except OSError:
-        pass
-    改成
-    with ignored(OSError):
-        os.remove('somefile.tmp')</li>
-</ul>
-<p><a id="org2cf442b"></a></p>
-<h2 id="_1">简洁的单句表达</h2>
+<pre><code class="language-python">try:
+    os.remove('somefile.tmp')
+except OSError:
+    pass
+</code></pre>
+<p>改成</p>
+<pre><code class="language-python">with ignored(OSError):
+    os.remove('somefile.tmp')
+</code></pre>
 <ul>
 <li>两个冲突的原则：
-    1.一行不要有太多逻辑
-    2.不要把单一的想法拆分成多个部分</li>
-<li>Raymond的原则：
-    一行代码的逻辑等价于一句自然语言</li>
-<li>列表解析和生成器
-    sum(i**2 for i in range(10))</li>
+  1.一行不要有太多逻辑
+  2.不要把单一的想法拆分成多个部分</li>
+<li>Raymond的原则：一行代码的逻辑等价于一句自然语言</li>
+<li>列表解析和生成器<code>sum(i**2 for i in range(10))</code></li>
+<li>函数嵌套定义</li>
 </ul>
-<p><a id="orgd6e22a9"></a></p>
-<h2 id="_2">列表推导与循环</h2>
-<ul>
-<li>new<sub>list</sub> = []
-    for v in old<sub>list</sub>:
-        if v[2]:
-        new<sub>list.append</sub>(v[1])
-    写成
-    new<sub>list</sub> = [v[1] for v in old<sub>list</sub> if v[2]]</li>
-</ul>
-<p><a id="orgde32908"></a></p>
-<h2 id="_3">函数嵌套定义</h2>
-<ul>
-<li>def my<sub>func</sub>():
+<pre><code class="language-python">def my_func():
     def subfunc():
-       &#x2026;
+        ...
     subfunc()
-    &#x2026;</li>
-</ul>
-<p><a id="orgd6402e5"></a></p>
-<h2 id="with">with语句</h2>
+    ...
+</code></pre>
 <ul>
-<li>with比起try&#x2026;finally&#x2026;来说，更强调“作用域”</li>
+<li>
+<p>with比起try...finally...来说，更强调"作用域"</p>
+</li>
+<li>
+<p>any</p>
+</li>
 </ul>
-<p><a id="org4af418e"></a></p>
-<h2 id="any">any</h2>
+<pre><code class="language-py">def has_primary_key():
+    return any(row[1] ==0 and row[9] != 'YES' for row in rows:)
+</code></pre>
 <ul>
-<li>def has<sub>primary</sub><sub>key</sub>():
-    return any(row[1] <code>=0 and row[9] !</code> 'YES' for row in rows:)</li>
+<li>namedtuple</li>
 </ul>
-<p><a id="orgdceace8"></a></p>
-<h2 id="namedtuple">namedtuple</h2>
+<pre><code class="language-python">Point = collections.namedtuple('Point', ['x', 'y'])
+p = Point(x=1.0, y=2.0)
+p.x
+p.y
+</code></pre>
 <ul>
-<li>Point = collections.namedtuple('Point', ['x', 'y'])
-    p = Point(x=1.0, y=2.0)
-    p.x
-    p.y</li>
+<li>
+<p>map/filter/reduce与列表推导</p>
+</li>
+<li>
+<p>map是从一个集合到另一个集合的映射，比如已知集合lst，要得到每一项平方组成的新集合：</p>
+</li>
 </ul>
-<p><a id="org516c1b9"></a></p>
-<h2 id="mapfilterreduce">map/filter/reduce与列表推导</h2>
+<pre><code class="language-python">  lst = [1,2,3]
+  map(lambda item: item**2, lst)
+  [item**2 for item in lst]
+</code></pre>
 <ul>
-<li>map是从一个集合到另一个集合的映射，比如已知集合lst，要得到每一项平方组成的新集合：
-    lst = [1,2,3]
-    map(lambda item: item**2, lst)
-    [item**2 for item in lst]</li>
-<li>filter也可以通过列表推导来实现，比如已知集合lst，要得到奇数的平方的新集合：
-    [item**2 for item in lst if item % 2]
-    map(lambda item: item**2, filter(lambda item: item % 2, lst))</li>
-<li>reduce把结果继续和序列的下一个元素做累积计算
-    reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
-    from functools import reduce
-    reduce(lambda x,y: x+y, [1,2,3,4]) # 10</li>
+<li>filter也可以通过列表推导来实现，比如已知集合lst，要得到奇数的平方的新集合：</li>
 </ul>
-<p><a id="orgbdf274b"></a></p>
-<h2 id="lambda">lambda表达式</h2>
-<p>add = lambda x, y: x + y</p>
-<p><a id="org893e35e"></a></p>
-<h2 id="yield-generator">yield, generator</h2>
+<pre><code class="language-python">  [item**2 for item in lst if item % 2]
+  map(lambda item: item**2, filter(lambda item: item % 2, lst))
+</code></pre>
 <ul>
-<li>yield的作用就是把一个函数变成一个generator</li>
-<li>使用yield的好处在于，它返回的是一个generator生成器</li>
-<li>generator生成器，列表推导用[]进行生成，把[]换成()，就创建了一个generator：
-    L = [x*x for x in range(10)] # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-    g = (x*x for x in range(10)) # <generator object \<genexpr> at 0x7fd2264607d8>
-    L是一个list，g是一个generator，而generator是可迭代的</li>
+<li>reduce把结果继续和序列的下一个元素做累积计算</li>
 </ul>
-<p><a id="org87624a3"></a></p>
-<h2 id="monkey-patching">monkey patching</h2>
+<pre><code class="language-python">  reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
+  from functools import reduce
+  reduce(lambda x,y: x+y, [1,2,3,4]) # 10
+</code></pre>
 <ul>
-<li>Monkey patching means modifying some code at runtime.</li>
+<li>lambda表达式 <code>add = lambda x,y : x+y</code></li>
+<li>yield的作用就是把一个函数变成一个generator，使用yield的好处在于，它返回的是一个generator生成器</li>
+<li>generator生成器，列表推导用[]进行生成，把[]换成()，就创建了一个generator：</li>
 </ul>
-<p><a id="orgec5fdf1"></a></p>
-<h2 id="books">books</h2>
+<pre><code class="language-python">  # L是一个list，g是一个generator，而generator是可迭代的
+  L = [x*x for x in range(10)] # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+  g = (x*x for x in range(10)) # &lt;generator object &lt;genexpr&gt; at 0x7fd2264607d8&gt;
+</code></pre>
 <ul>
-<li><a href="https://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/idiomatic-python.html">https://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/idiomatic-python.html</a></li>
-<li><a href="http://book.pythontips.com/en/latest/index.html">http://book.pythontips.com/en/latest/index.html</a></li>
+<li><code>__slots__</code> Magic: save RAM instead of using dict</li>
 </ul>
-<p>generators,map,reduce,lambda ,decorators, *args</p>
+<h2 id="python-tips-todo">Python Tips (TODO)</h2>
+<p>Tips from <a href="http://book.pythontips.com/en/latest/index.html">python tips</a></p>
 <ul>
+<li><code>*args</code> and <code>**kwargs</code></li>
+</ul>
+<p><code>*args</code>: non-keyworded
+<code>**kwargs</code>: allow you to pass keyworded variable length of arguments to a
+function.</p>
+<ul>
+<li>Debugging: python debugger (pdb)</li>
+</ul>
+<p>running from command line:</p>
+<p><code>python -m pdb my_code.py</code></p>
+<p>running inside a script:</p>
+<pre><code class="language-python">import pdb
+def make_bread():
+    pdb.set_trace() # set break points
+    return &quot;I don't have time&quot;
+
+print(make_bread())
+</code></pre>
+<ul>
+<li>pdb usage</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>shortcut</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>c</td>
+<td>continue execution</td>
+</tr>
+<tr>
+<td>w</td>
+<td>show context of current line it is executing</td>
+</tr>
+<tr>
+<td>a</td>
+<td>print the argument list of current function</td>
+</tr>
+<tr>
+<td>s</td>
+<td>execute the current line and stop at the first possible occasion</td>
+</tr>
+<tr>
+<td>n</td>
+<td>continue execution until the next line in the current function is reached or it returns</td>
+</tr>
+</tbody>
+</table>
+<h1 id="books">Books</h1>
+<ul>
+<li><a href="https://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/idiomatic-python.html">Idiomatic Python</a></li>
+<li><a href="http://book.pythontips.com/en/latest/index.html">python tips</a></li>
 <li>《编写高质量代码：改善Python程序的91个建议》</li>
 <li>《Effective Python:编写高质量Python代码的59个有效方法》</li>
 </ul>
-<p><a id="org2166b8d"></a></p>
-<h1 id="books_1">Books</h1>
-<p><a id="orgb55ea94"></a></p>
-<h2 id="idiomatic">Idiomatic</h2>
-<p><a href="https://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/idiomatic-python.html">https://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/idiomatic-python.html</a></p>
-<p><a id="org6467c65"></a></p>
-<h3 id="list-comprehensions">list comprehensions</h3>
-<p>[ expression for var in list if conditional ]</p>
-<p><a id="org25d631f"></a></p>
-<h3 id="iterators">iterators</h3>
-<p><a id="org8368087"></a></p>
-<h3 id="generators">generators</h3>
+<h1 id="other">Other</h1>
 <ul>
-<li>Generators are a Python implementation of coroutines. Essentially, they’re functions that let you suspend execution and return a result.</li>
-</ul>
-<p><a id="org429d39e"></a></p>
-<h3 id="assert">assert</h3>
-<p>Assert is pretty simple: it takes a boolean, and if the boolean evaluates to False, it fails (by raising an AssertionError exception). assert True is a no-op.</p>
-<p><a id="org429d39e"></a></p>
-<h3 id="tips">Tips</h3>
-<ul>
-<li>string.join()</li>
-<li>zip</li>
-<li>enumerate</li>
-<li>set</li>
-<li>with open() as f:</li>
-<li>for/else, try/else, while/else</li>
-<li>decorator</li>
-<li>exception: try/except, try/except/finally, try/except/else/finally</li>
-<li>comprehensions: list, dict, set, generator</li>
-<li>collections: deque, namedtuple, counter, defaultdict, etc.</li>
-<li>map/filter/reduce: from functools import map/filter/reduce</li>
-<li>lambda var1, var2: expression</li>
-<li>generator &amp; yield</li>
-<li>monkey patching: modify code at runtime</li>
-<li><strong>slots</strong> Magic: save RAM instead of using dict</li>
+<li>List comprehensions: <code>[expression for var in list if conditional]</code></li>
+<li><strong>Generators</strong> are a Python implementation of coroutines. Essentially, they’re functions that let you suspend execution and return a result.</li>
+<li><strong>Assert</strong> is pretty simple: it takes a boolean, and if the boolean evaluates to False, it fails (by raising an AssertionError exception). assert True is a no-op.</li>
 </ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../psychology/%E4%B8%93%E6%B3%A8%E5%8A%9B/" class="btn btn-neutral float-left" title="专注力"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../py_tips/" class="btn btn-neutral float-right" title="py tips">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../python3/" class="btn btn-neutral float-left" title="python3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/" class="btn btn-neutral float-right" title="像外行一样思考，像专家一样实践">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -456,10 +376,10 @@ def func():
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../psychology/%E4%B8%93%E6%B3%A8%E5%8A%9B/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../python3/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../py_tips/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
