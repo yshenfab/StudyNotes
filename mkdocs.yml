@@ -24,11 +24,11 @@ nav:
     - 影响力: 'psychology/影响力.md'
     - 专注力: 'psychology/专注力.md'
   - Python:
-    - Effective python: 'python/effective_python.md'
+    # - Effective python (TODO): 'python/effective_python.md'
     - pythonic: 'python/pythonic.md'
     - py tips: 'python/py_tips.md'
     - python3: 'python/python3.md'
-    - numpy: 'python/numpy.md'
+    # - numpy: 'python/numpy.md'
   - Research:
     - 像外行一样思考，像专家一样实践: 'research/像外行一样思考，像专家一样实践.md'
   - Startup:
