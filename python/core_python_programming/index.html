@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>merge (TODO) - Study Notes</title>
+    <title>Core Python Programming (2/662) - Study Notes</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "merge (TODO)";
-        var mkdocs_page_input_path = "python/merge.md";
+        var mkdocs_page_name = "Core Python Programming (2/662)";
+        var mkdocs_page_input_path = "python/core_python_programming.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -91,17 +91,21 @@
               </ul>
               <p class="caption"><span class="caption-text">Python</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../py_tips/">py tips</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../pythonic/">pythonic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../python_tips/">python tips</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../python3/">python3</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">merge (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../python_cookbook/">Python Cookbook (3/100)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../effective_python/">Effective Python (TODO)</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Core Python Programming (2/662)</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#pythonic">Pythonic</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#python-tips-todo">Python Tips (TODO)</a>
-    </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fluent_python/">Fluent Python (42/1022)</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Research</span></p>
@@ -157,7 +161,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Python &raquo;</li><li>merge (TODO)</li>
+          <li>Python &raquo;</li><li>Core Python Programming (2/662)</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -167,193 +171,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="python-notes">Python Notes</h1>
-<h2 id="pythonic">Pythonic</h2>
-<ul>
-<li>reverse list a: <code>a[::-1]</code></li>
-<li><code>string.join(iterable)</code></li>
-<li>use <code>zip</code>, <code>list(zip(a,b))</code>, <code>dict(zip(a,b))</code></li>
-<li>open file</li>
-</ul>
-<pre><code class="language-python">with open('filename', 'r') as f:
-    f.read()
-</code></pre>
-<ul>
-<li><code>iter()</code>连续调用函数</li>
-<li>for/else, try/else, while/else</li>
-<li>dict: 
-popitem()是原子操作</li>
-</ul>
-<pre><code class="language-python">while d:
-    key, value = d.popitem()
-</code></pre>
-<p>连接多个字典
-<code>d = ChainMap(command_line_args, os.environ, defaults)</code></p>
-<ul>
-<li>deque更有效，两端都可操作，<code>Q = collections.deque()</code>，<code>append(), appendleft(),
-    extend(), extendleft(), pop(), popleft()</code></li>
-<li>
-<p>collections: deque, namedtuple, counter, defaultdict, etc.</p>
-</li>
-<li>
-<p>decorator: 装饰器事实上就是一个函数到另一个函数的映射，可以在不修改原函数代码的情况下为其增加新的功能。本质上，decorator就是一个返回函数的高阶函数。</p>
-</li>
-<li>
-<p>使用ignored()代替pass exception，例如</p>
-</li>
-</ul>
-<pre><code class="language-python">try:
-    os.remove('somefile.tmp')
-except OSError:
-    pass
-</code></pre>
-<p>改成</p>
-<pre><code class="language-python">with ignored(OSError):
-    os.remove('somefile.tmp')
-</code></pre>
-<ul>
-<li>两个冲突的原则：
-  1.一行不要有太多逻辑
-  2.不要把单一的想法拆分成多个部分</li>
-<li>Raymond的原则：一行代码的逻辑等价于一句自然语言</li>
-<li>列表解析和生成器<code>sum(i**2 for i in range(10))</code></li>
-<li>函数嵌套定义</li>
-</ul>
-<pre><code class="language-python">def my_func():
-    def subfunc():
-        ...
-    subfunc()
-    ...
-</code></pre>
-<ul>
-<li>
-<p>with比起try...finally...来说，更强调"作用域"</p>
-</li>
-<li>
-<p>any</p>
-</li>
-</ul>
-<pre><code class="language-py">def has_primary_key():
-    return any(row[1] ==0 and row[9] != 'YES' for row in rows:)
-</code></pre>
-<ul>
-<li>namedtuple</li>
-</ul>
-<pre><code class="language-python">Point = collections.namedtuple('Point', ['x', 'y'])
-p = Point(x=1.0, y=2.0)
-p.x
-p.y
-</code></pre>
-<ul>
-<li>
-<p>map/filter/reduce与列表推导</p>
-</li>
-<li>
-<p>map是从一个集合到另一个集合的映射，比如已知集合lst，要得到每一项平方组成的新集合：</p>
-</li>
-</ul>
-<pre><code class="language-python">  lst = [1,2,3]
-  map(lambda item: item**2, lst)
-  [item**2 for item in lst]
-</code></pre>
-<ul>
-<li>filter也可以通过列表推导来实现，比如已知集合lst，要得到奇数的平方的新集合：</li>
-</ul>
-<pre><code class="language-python">  [item**2 for item in lst if item % 2]
-  map(lambda item: item**2, filter(lambda item: item % 2, lst))
-</code></pre>
-<ul>
-<li>reduce把结果继续和序列的下一个元素做累积计算</li>
-</ul>
-<pre><code class="language-python">  reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
-  from functools import reduce
-  reduce(lambda x,y: x+y, [1,2,3,4]) # 10
-</code></pre>
-<ul>
-<li>lambda表达式 <code>add = lambda x,y : x+y</code></li>
-<li>yield的作用就是把一个函数变成一个generator，使用yield的好处在于，它返回的是一个generator生成器</li>
-<li>generator生成器，列表推导用[]进行生成，把[]换成()，就创建了一个generator：</li>
-</ul>
-<pre><code class="language-python">  # L是一个list，g是一个generator，而generator是可迭代的
-  L = [x*x for x in range(10)] # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-  g = (x*x for x in range(10)) # &lt;generator object &lt;genexpr&gt; at 0x7fd2264607d8&gt;
-</code></pre>
-<ul>
-<li><code>__slots__</code> Magic: save RAM instead of using dict</li>
-</ul>
-<h2 id="python-tips-todo">Python Tips (TODO)</h2>
-<p>Tips from <a href="http://book.pythontips.com/en/latest/index.html">python tips</a></p>
-<ul>
-<li><code>*args</code> and <code>**kwargs</code></li>
-</ul>
-<p><code>*args</code>: non-keyworded
-<code>**kwargs</code>: allow you to pass keyworded variable length of arguments to a
-function.</p>
-<ul>
-<li>Debugging: python debugger (pdb)</li>
-</ul>
-<p>running from command line:</p>
-<p><code>python -m pdb my_code.py</code></p>
-<p>running inside a script:</p>
-<pre><code class="language-python">import pdb
-def make_bread():
-    pdb.set_trace() # set break points
-    return &quot;I don't have time&quot;
-
-print(make_bread())
-</code></pre>
-<ul>
-<li>pdb usage</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>shortcut</th>
-<th>meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>c</td>
-<td>continue execution</td>
-</tr>
-<tr>
-<td>w</td>
-<td>show context of current line it is executing</td>
-</tr>
-<tr>
-<td>a</td>
-<td>print the argument list of current function</td>
-</tr>
-<tr>
-<td>s</td>
-<td>execute the current line and stop at the first possible occasion</td>
-</tr>
-<tr>
-<td>n</td>
-<td>continue execution until the next line in the current function is reached or it returns</td>
-</tr>
-</tbody>
-</table>
-<h1 id="books">Books</h1>
-<ul>
-<li><a href="https://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/idiomatic-python.html">Idiomatic Python</a></li>
-<li><a href="http://book.pythontips.com/en/latest/index.html">python tips</a></li>
-<li>《编写高质量代码：改善Python程序的91个建议》</li>
-<li>《Effective Python:编写高质量Python代码的59个有效方法》</li>
-</ul>
-<h1 id="other">Other</h1>
-<ul>
-<li>List comprehensions: <code>[expression for var in list if conditional]</code></li>
-<li><strong>Generators</strong> are a Python implementation of coroutines. Essentially, they’re functions that let you suspend execution and return a result.</li>
-<li><strong>Assert</strong> is pretty simple: it takes a boolean, and if the boolean evaluates to False, it fails (by raising an AssertionError exception). assert True is a no-op.</li>
-</ul>
+                <h1 id="core-python-programming-3rd-edition-python">Core Python Programming (3rd Edition) Python核心编程</h1>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../python3/" class="btn btn-neutral float-left" title="python3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/" class="btn btn-neutral float-right" title="像外行一样思考，像专家一样实践">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../effective_python/" class="btn btn-neutral float-left" title="Effective Python (TODO)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../fluent_python/" class="btn btn-neutral float-right" title="Fluent Python (42/1022)">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -376,10 +200,10 @@ print(make_bread())
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../python3/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../effective_python/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../fluent_python/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

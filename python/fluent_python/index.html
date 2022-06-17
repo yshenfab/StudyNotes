@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Alg blog - Study Notes</title>
+    <title>Fluent Python (42/1022) - Study Notes</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Alg blog";
-        var mkdocs_page_input_path = "algorithm/alg_blog_note.md";
+        var mkdocs_page_name = "Fluent Python (42/1022)";
+        var mkdocs_page_input_path = "python/fluent_python.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -45,12 +45,10 @@
                 </li>
               </ul>
               <p class="caption"><span class="caption-text">Algorithm</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Alg blog</a>
-    <ul class="current">
-    </ul>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/alg_blog_note/">Alg blog</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../algorithms_4th_edition/">Algorithms (4th Edition)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorithms_4th_edition/">Algorithms (4th Edition)</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Blockchain</span></p>
@@ -92,20 +90,88 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Python</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/pythonic/">pythonic</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../pythonic/">pythonic</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/python_tips/">python tips</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../python_tips/">python tips</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/python3/">python3</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../python3/">python3</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/python_cookbook/">Python Cookbook (3/100)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../python_cookbook/">Python Cookbook (3/100)</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective Python (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../effective_python/">Effective Python (TODO)</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/core_python_programming/">Core Python Programming (2/662)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../core_python_programming/">Core Python Programming (2/662)</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/fluent_python/">Fluent Python (42/1022)</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Fluent Python (42/1022)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#section-1">Section 1 序幕</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-1-python">Chap 1 Python数据模型</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-2">Section 2 数据结构</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-2">Chap 2 数据结构</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-3">Chap 3 字典和集合</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-4">Chap 4 文本和字节序列</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-3">Section 3 把函数视作对象</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-5">Chap 5 一等函数</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-6">Chap 6 使用一等函数实现设计模式</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-7">Chap 7 函数装饰器和闭包</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-4">Section 4 面向对象惯用法</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-8">Chap 8 对象引用、可变性和垃圾回收</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-9-python">Chap 9 符合Python风格的对象</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-10">Chap 10 序列的修改、散列和切片</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-11">Chap 11 接口：从协议到抽象基类</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-12">Chap 12 继承的优缺点</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-13">Chap 13 正确重载运算符</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-5">Section 5 控制流程</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-14">Chap 14 可迭代的对象、迭代器和生成器</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-15-else">Chap 15 上下文管理器和else块</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-16">Chap 16 协程</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-17">Chap 17 使用期物处理并发</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-18-asyncio">Chap 18 使用asyncio包处理并发</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#section-6">Section 6 元编程</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-19">Chap 19 动态属性和特性</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-20">Chap 20 属性描述符</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#chap-21">Chap 21 类元编程</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Research</span></p>
@@ -161,7 +227,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Algorithm &raquo;</li><li>Alg blog</li>
+          <li>Python &raquo;</li><li>Fluent Python (42/1022)</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -171,177 +237,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="table-of-contents">Table of Contents</h1>
-<ol>
-<li><a href="#org41f8577">随机（概率）算法</a><ol>
-<li><a href="#org1e89fd3">数值概率算法</a><ol>
-<li><a href="#org31c5dea">应用</a></li>
-</ol>
-</li>
-<li><a href="#orge9bcd9b">蒙特卡洛算法Monte Cario</a></li>
-<li><a href="#org90dec6e">拉斯维加斯算法Las Vegas</a></li>
-<li><a href="#org161e2cd">舍伍德算法Sherwood</a><ol>
-<li><a href="#org5e518f4">思想</a></li>
-</ol>
-</li>
-<li><a href="#org665e2d8">随机数</a></li>
-</ol>
-</li>
-<li><a href="#orgfb85ab4">生物启发式学习算法（五个）</a><ol>
-<li><a href="#orga1a79d9">前言</a><ol>
-<li><a href="#orgf4a3b86">搜索/路径寻找算法</a></li>
-<li><a href="#org33d9739">预测建模算法</a></li>
-</ol>
-</li>
-<li><a href="#org963ba18">五大生物启发式学习算法</a><ol>
-<li><a href="#org46c7540">人工神经网络</a></li>
-<li><a href="#orga0bd7d4">遗传算法</a></li>
-<li><a href="#orgb3bcb0d">群集／集群智能（SWARM/COLLECTIVE INTELLIGENCE）</a></li>
-<li><a href="#org72ae9ab">强化学习</a></li>
-<li><a href="#orgc892524">人工免疫系统（AIS）</a></li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<p><a id="org41f8577"></a></p>
-<h1 id="_1">随机（概率）算法</h1>
-<p>（随机）概率算法，分为如下四类：</p>
-<p><a id="org1e89fd3"></a></p>
-<h2 id="_2">数值概率算法</h2>
-<ul>
-<li>用于数值问题的求解，通常是近似解</li>
-</ul>
-<p><a id="org31c5dea"></a></p>
-<h3 id="_3">应用</h3>
-<ol>
-<li>
-<p>随机投点法计算pi</p>
-</li>
-<li>
-<p>计算定积分</p>
-</li>
-<li>
-<p>解非线性方程组</p>
-</li>
-</ol>
-<p><a id="orge9bcd9b"></a></p>
-<h2 id="monte-cario">蒙特卡洛算法Monte Cario</h2>
-<ul>
-<li>能得到问题的一个解，但不一定是正确解，正确的概率依赖于算法运行的时间，算法所用的时间越多，正确的概率也越高。求问题的准确解</li>
-<li><strong>一定能给出解，但不一定正确</strong></li>
-</ul>
-<p><a id="org90dec6e"></a></p>
-<h2 id="las-vegas">拉斯维加斯算法Las Vegas</h2>
-<ul>
-<li>不断调用随机算法求解，直到求得正确解或调用次数达到某个阈值。所以，如果能得到解，一定是正确解。</li>
-<li>理解为：不断掷骰子，直到得到某个值，或掷累了</li>
-<li>拉斯维加斯算法不一定能获得解，随着运行时间的增加，获得解的概率也越大。它可以用来求解某些迄今没有有效解法的问题，因为通过不断的随机尝试，也许能够找到正确解。</li>
-<li><strong>不一定能给出解，给出则必正确</strong></li>
-</ul>
-<p><a id="org161e2cd"></a></p>
-<h2 id="sherwood">舍伍德算法Sherwood</h2>
-<ul>
-<li>利用随机算法改造已有算法，使得算法的性能尽量与输入数据无关，即平滑算法的性能。它总能求得问题的一个解，且求得的解总是正确的。</li>
-</ul>
-<p><a id="org5e518f4"></a></p>
-<h3 id="_4">思想</h3>
-<ul>
-<li>以快速排序算法为例，平均情况O(nlogn)，最坏情况O(n<sup>2</sup>)</li>
-<li>Sherwood算法思想是：设计随机算法，使得算法的性能和具体的输入值无关，
-    算法的性能 =平均性能 + 一个很小的随机值。</li>
-</ul>
-<p><a id="org665e2d8"></a></p>
-<h2 id="_5">随机数</h2>
-<p>计算机产生的随机数都是伪随机数，通过线性同余法得到。方法：
-产生随机序列a1, a2, &#x2026;, an
-a0 = d
-an = (ba<sub>n-1</sub>+c) mod m
-其中，d称为种子，m取值越大越好，m和b互质，常数b为质数</p>
-<p><a id="orgfb85ab4"></a></p>
-<h1 id="_6">生物启发式学习算法（五个）</h1>
-<p><a id="orga1a79d9"></a></p>
-<h2 id="_7">前言</h2>
-<p><a id="orgf4a3b86"></a></p>
-<h3 id="_8">搜索/路径寻找算法</h3>
-<ul>
-<li>搜索算法被设计用来发现通往目标的最优/最短的路径</li>
-</ul>
-<p><a id="org33d9739"></a></p>
-<h3 id="_9">预测建模算法</h3>
-<ul>
-<li>预测建模本质上借助统计学来预测结果</li>
-<li>两类预测建模问题：回归和分类</li>
-<li>回归是找到两组变量关联性的暗黑艺术</li>
-<li>分类是确定数据集属于不同组的概率的过程</li>
-</ul>
-<p><a id="org963ba18"></a></p>
-<h2 id="_10">五大生物启发式学习算法</h2>
-<p><a id="org46c7540"></a></p>
-<h3 id="_11">人工神经网络</h3>
-<ul>
-<li>算法类型：预测建模</li>
-<li>生物启发：认知脑功能（神经元）</li>
-<li>用例：情感分析、图像识别/检测、语言修正、机器人</li>
-</ul>
-<p><a id="orga0bd7d4"></a></p>
-<h3 id="_12">遗传算法</h3>
-<ul>
-<li>算法类型：搜索/路径寻找</li>
-<li>生物启发：适者生存/进化（细胞繁殖）</li>
-<li>用例：数据挖掘/分析、机器人、制造/设计、流程优化</li>
-</ul>
-<p><a id="orgb3bcb0d"></a></p>
-<h3 id="swarmcollective-intelligence">群集／集群智能（SWARM/COLLECTIVE INTELLIGENCE）</h3>
-<ul>
-<li>算法类型：搜索／路径寻找</li>
-<li>生物启发：蚁群／鱼群／鸟群</li>
-<li>
-<p>用例：机器人、视频游戏AI、制造业、路径规划</p>
-</li>
-<li>
-<p>两种最广为人知的「集群智能」算法</p>
-<ul>
-<li>从基础层面上来看，这些算法都使用了多智能体。每个智能体执行非常基础的动作，合起来就是更复杂、更即时的动作，可用于解决问题。</li>
-<li>
-<p>二者的目的都是执行即时动作，但采用的是两种不同方式</p>
-</li>
-<li>
-<p>蚁群优化（Ant Colony Optimisation, ACO）</p>
-<p>ACO与真实蚁群类似，利用信息激素指导单个智能体走最短的路径。最初，随机信息激素在问题空间中初始化。
-单个智能体开始遍历搜索空间，边走边洒下信息激素。信息激素在每个时间步中按一定速率衰减。
-单个智能体根据前方的信息激素强度决定遍历搜索空间的路径。某个方向的信息激素强度越大，智能体越可能朝这个方向前进。
-全局最优方案就是具备最强信息激素的路径。</p>
-</li>
-<li>
-<p>粒子群优化（Particle Swarm Optimisation, PSO）</p>
-<p>PSO更关注整体方向。多个智能体初始化，并按随机方向前进。每个时间步中，每个智能体需要就是否改变方向作出决策，
-决策基于全局最优解的方向、局部最优解的方向和当前方向。新方向通常是以上三个值的最优「权衡」结果。</p>
-</li>
-</ul>
-</li>
-</ul>
-<p><a id="org72ae9ab"></a></p>
-<h3 id="_13">强化学习</h3>
-<ul>
-<li>算法类型：预测建模</li>
-<li>生物启发：经典条件反射</li>
-<li>用例：视频游戏、自动驾驶汽车、生产线软件、财务系统</li>
-</ul>
-<p><a id="orgc892524"></a></p>
-<h3 id="ais">人工免疫系统（AIS）</h3>
-<ul>
-<li>算法类型：预测建模</li>
-<li>生物启发：免疫系统</li>
-<li>用例：安全软件、自动导航系统、调度系统、故障检测软件</li>
-<li>常用算法： 克隆选择、树突状细胞、负选择、人工免疫识别</li>
-</ul>
+                <h1 id="fluent-python-python">Fluent Python 流畅的Python</h1>
+<p>pg 42/1022</p>
+<h2 id="section-1">Section 1 序幕</h2>
+<h3 id="chap-1-python">Chap 1 Python数据模型</h3>
+<h2 id="section-2">Section 2 数据结构</h2>
+<h3 id="chap-2">Chap 2 数据结构</h3>
+<h3 id="chap-3">Chap 3 字典和集合</h3>
+<h3 id="chap-4">Chap 4 文本和字节序列</h3>
+<h2 id="section-3">Section 3 把函数视作对象</h2>
+<h3 id="chap-5">Chap 5 一等函数</h3>
+<h3 id="chap-6">Chap 6 使用一等函数实现设计模式</h3>
+<h3 id="chap-7">Chap 7 函数装饰器和闭包</h3>
+<h2 id="section-4">Section 4 面向对象惯用法</h2>
+<h3 id="chap-8">Chap 8 对象引用、可变性和垃圾回收</h3>
+<h3 id="chap-9-python">Chap 9 符合Python风格的对象</h3>
+<h3 id="chap-10">Chap 10 序列的修改、散列和切片</h3>
+<h3 id="chap-11">Chap 11 接口：从协议到抽象基类</h3>
+<h3 id="chap-12">Chap 12 继承的优缺点</h3>
+<h3 id="chap-13">Chap 13 正确重载运算符</h3>
+<h2 id="section-5">Section 5 控制流程</h2>
+<h3 id="chap-14">Chap 14 可迭代的对象、迭代器和生成器</h3>
+<h3 id="chap-15-else">Chap 15 上下文管理器和else块</h3>
+<h3 id="chap-16">Chap 16 协程</h3>
+<h3 id="chap-17">Chap 17 使用期物处理并发</h3>
+<h3 id="chap-18-asyncio">Chap 18 使用asyncio包处理并发</h3>
+<h2 id="section-6">Section 6 元编程</h2>
+<h3 id="chap-19">Chap 19 动态属性和特性</h3>
+<h3 id="chap-20">Chap 20 属性描述符</h3>
+<h3 id="chap-21">Chap 21 类元编程</h3>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../.." class="btn btn-neutral float-left" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../algorithms_4th_edition/" class="btn btn-neutral float-right" title="Algorithms (4th Edition)">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../core_python_programming/" class="btn btn-neutral float-left" title="Core Python Programming (2/662)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/" class="btn btn-neutral float-right" title="像外行一样思考，像专家一样实践">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -364,10 +294,10 @@ an = (ba<sub>n-1</sub>+c) mod m
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../core_python_programming/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../algorithms_4th_edition/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
