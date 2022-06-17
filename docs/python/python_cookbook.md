@@ -113,4 +113,57 @@ c = {key: a[key] for key in a.keys() - {'z', 'w'}}
 # c is {'x': 1, 'y': 2}
 ```
 
-- 
+- 从序列中去掉重复元素，且保持顺序不变
+```python
+# if items in sequence is hashable, use set and generator
+def dedupe(items):
+    seen = set()
+    for item in items:
+        if item not in seen:
+            yield item
+            seen.add(item)
+
+
+a = [1, 5, 2, 1, 9, 1, 5, 10]
+list(dedupe(a))  # [1,5,2,9,10]
+
+
+# if not hashable
+def dedupe2(items, key=None):
+    seen = set()
+    for item in items:
+        val = item if key is None else key(item)
+        if val not in seen:
+            yield item
+            seen.add(val)
+
+
+a = [{'x': 1, 'y': 2}, {'x': 1, 'y': 3}, {'x': 1, 'y': 2}, {'x': 2, 'y': 4}]
+list(dedupe2(a, key=lambda d: (d['x'], d['y'])))
+# [{'x': 1, 'y': 2}, {'x': 1, 'y': 3}, {'x': 2, 'y': 4}]
+list(dedupe2(a, key=lambda d: d['x']))
+# [{'x': 1, 'y': 2}, {'x': 2, 'y': 4}]
+```
+
+- 找出序列中出现次数最多的元素
+```python
+from collections import Counter
+
+words = [blablabla]
+word_counts = Counter(words)
+top_three = word_counts.most_common(3)
+```
+
+- 通过公共键对字典列表排序
+```python
+from operator import itemgetter
+
+rows = [{'name': 'Yang', 'uid': 1001}, {'name': 'James', 'uid': 1003}]
+
+rows_by_name = sorted(rows, key=itemgetter('name'))
+rows_by_uid = sorted(rows, key=itemgetter('uid'))
+# use lambda expression to replace itemgetter (itemgetter runs faster)
+rows_by_name = sorted(rows, key=lambda r: r['name'])
+rows_by_uid = sorted(rows, key=lambda r: r['uid'])
+```
+
