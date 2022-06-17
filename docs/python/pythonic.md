@@ -1,5 +1,6 @@
-# Python Notes
-## Pythonic
+# Pythonic
+
+[Idiomatic Python](https://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/idiomatic-python.html)
 
 - reverse list a: `a[::-1]`
 - `string.join(iterable)`
@@ -94,51 +95,6 @@ p.y
   g = (x*x for x in range(10)) # <generator object <genexpr> at 0x7fd2264607d8>
 ```
 - `__slots__` Magic: save RAM instead of using dict
-
-## Python Tips (TODO)
-Tips from [python tips](http://book.pythontips.com/en/latest/index.html)
-
-- `*args` and `**kwargs`
-
-`*args`: non-keyworded
-`**kwargs`: allow you to pass keyworded variable length of arguments to a
-function.
-
-- Debugging: python debugger (pdb)
-
-running from command line:
-
-`python -m pdb my_code.py`
-
-running inside a script:
-```python
-import pdb
-def make_bread():
-    pdb.set_trace() # set break points
-    return "I don't have time"
-
-print(make_bread())
-```
-
-- pdb usage
-
-|shortcut|meaning|
-|---|---|
-|c|continue execution|
-|w|show context of current line it is executing|
-|a|print the argument list of current function|
-|s|execute the current line and stop at the first possible occasion|
-|n|continue execution until the next line in the current function is reached or it returns|
-
-# Books
-
-- [Idiomatic Python](https://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/idiomatic-python.html)
-- [python tips](http://book.pythontips.com/en/latest/index.html)
-- 《编写高质量代码：改善Python程序的91个建议》
-- 《Effective Python:编写高质量Python代码的59个有效方法》
-
-# Other
-
 - List comprehensions: `[expression for var in list if conditional]`
 - **Generators** are a Python implementation of coroutines. Essentially, they’re functions that let you suspend execution and return a result.
 - **Assert** is pretty simple: it takes a boolean, and if the boolean evaluates to False, it fails (by raising an AssertionError exception). assert True is a no-op.
