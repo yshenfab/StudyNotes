@@ -77,3 +77,40 @@ json.dump(d) #  {"foo": 1, "bar": 2, "spam": 3, "grok": 4}
 OrderedDict内部维护了一个双向链表，根据元素加入的顺序来排列key的位置。第一个新加入的元素被放置在链表的末尾，接下来对已存在的key做重新赋值不会改变key的顺序。OrderedDict的大小是普通dict的2倍。
 
 - dict相关的计算，用zip()，排序用sorted()
+```python
+prices = {
+    'ACME': 45.23,
+    'AAPL': 612.78,
+    'IBM': 205.55,
+    'HPQ': 37.20,
+    'FB': 10.75
+}
+
+min_price = min(zip(prices.values(), prices.keys()))
+# min_price is (10.75, 'FB')
+max_price = max(zip(prices.values(), prices.keys()))
+# max_price is (612.78, 'AAPL')
+prices_sorted = sorted(zip(prices.values(), prices.keys()))
+# zip()创建了一个迭代器，它的内容只能被消费一次
+prices_and_names = zip(prices.values(), prices.keys())
+print(min(prices_and_names))  # OK
+print(max(prices_and_names))  # ValueError: max() arg is an empty sequence
+```
+
+- 在两个dict中寻找相同点
+```python
+a = {'x': 1, 'y': 2, 'z': 3}
+b = {'w': 10, 'x': 11, 'y': 2}
+# keys() or items()
+# find keys in common
+a.keys() & b.keys()  # {'x', 'y'}
+# find keys in a not in b
+a.keys() - b.keys()  # {'z'}
+# find (key, value) pairs in common
+a.items() & b.items()  # {('y', 2)}
+# make a new dict with certain keys removed
+c = {key: a[key] for key in a.keys() - {'z', 'w'}}
+# c is {'x': 1, 'y': 2}
+```
+
+- 
