@@ -252,6 +252,43 @@ json.dump(d) #  {&quot;foo&quot;: 1, &quot;bar&quot;: 2, &quot;spam&quot;: 3, &q
 <ul>
 <li>dict相关的计算，用zip()，排序用sorted()</li>
 </ul>
+<pre><code class="language-python">prices = {
+    'ACME': 45.23,
+    'AAPL': 612.78,
+    'IBM': 205.55,
+    'HPQ': 37.20,
+    'FB': 10.75
+}
+
+min_price = min(zip(prices.values(), prices.keys()))
+# min_price is (10.75, 'FB')
+max_price = max(zip(prices.values(), prices.keys()))
+# max_price is (612.78, 'AAPL')
+prices_sorted = sorted(zip(prices.values(), prices.keys()))
+# zip()创建了一个迭代器，它的内容只能被消费一次
+prices_and_names = zip(prices.values(), prices.keys())
+print(min(prices_and_names))  # OK
+print(max(prices_and_names))  # ValueError: max() arg is an empty sequence
+</code></pre>
+<ul>
+<li>在两个dict中寻找相同点</li>
+</ul>
+<pre><code class="language-python">a = {'x': 1, 'y': 2, 'z': 3}
+b = {'w': 10, 'x': 11, 'y': 2}
+# keys() or items()
+# find keys in common
+a.keys() &amp; b.keys()  # {'x', 'y'}
+# find keys in a not in b
+a.keys() - b.keys()  # {'z'}
+# find (key, value) pairs in common
+a.items() &amp; b.items()  # {('y', 2)}
+# make a new dict with certain keys removed
+c = {key: a[key] for key in a.keys() - {'z', 'w'}}
+# c is {'x': 1, 'y': 2}
+</code></pre>
+<ul>
+<li></li>
+</ul>
               
             </div>
           </div><footer>
