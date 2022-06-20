@@ -15,6 +15,8 @@ nav:
   - Mathematics:
     - 数学之美: 'mathematics/beauty_of_mathematics.md'
     - 统计学的世界: 'mathematics/statistics_concepts_and_controversies.md'
+  - Network:
+    - 图解网络 (TODO): 'network/图解网络.md'
   - Psychology & Mind:
     - 与众不同的心理学: 'psychology/与众不同的心理学.md'
     - 决策与判断: 'psychology/决策与判断.md'
@@ -27,8 +29,8 @@ nav:
     - pythonic: 'python/pythonic.md'
     - python tips: 'python/python_tips.md'
     - python3: 'python/python3.md'
-    - Python Cookbook (3/100): 'python/python_cookbook.md'
     - Effective Python (TODO): 'python/effective_python.md'
+    - Python Cookbook (143/2058): 'python/python_cookbook.md'
     - Core Python Programming (2/662): 'python/core_python_programming.md'
     - Fluent Python (42/1022): 'python/fluent_python.md'
     # - numpy: 'python/numpy.md'
@@ -42,9 +44,9 @@ nav:
     - shell: 'tools/shell.md'
     - git: 'tools/git.md'
     - markdown: 'tools/markdown.md'
-    # - makefile (TODO): 'tools/makefile.md'
+    - makefile (TODO): 'tools/makefile.md'
   - Other:
-    # - 编码 隐匿在计算机软硬件背后的语言 (TODO): 'other/code.md'
+    - 编码 隐匿在计算机软硬件背后的语言 (TODO): 'other/code.md'
     - 上帝掷骰子吗？量子物理史话: 'other/history_of_quantum_physics.md'
     - 高效能人士的7个习惯: 'other/高效能人士的7个习惯.md'
     - 底层逻辑: 'other/底层逻辑.md'
