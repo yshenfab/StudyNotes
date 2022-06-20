@@ -4,7 +4,7 @@
 1.  [随机（概率）算法](#org41f8577)
     1.  [数值概率算法](#org1e89fd3)
         1.  [应用](#org31c5dea)
-    2.  [蒙特卡洛算法Monte Cario](#orge9bcd9b)
+    2.  [蒙特卡洛算法Monte Carlo](#orge9bcd9b)
     3.  [拉斯维加斯算法Las Vegas](#org90dec6e)
     4.  [舍伍德算法Sherwood](#org161e2cd)
         1.  [思想](#org5e518f4)
@@ -49,7 +49,7 @@
 
 <a id="orge9bcd9b"></a>
 
-## 蒙特卡洛算法Monte Cario
+## 蒙特卡洛算法Monte Carlo
 
 -   能得到问题的一个解，但不一定是正确解，正确的概率依赖于算法运行的时间，算法所用的时间越多，正确的概率也越高。求问题的准确解
 -   **一定能给出解，但不一定正确**
