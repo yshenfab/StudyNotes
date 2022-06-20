@@ -6,11 +6,11 @@ A collection of my study notes.
 
 ## Usage
 ```sh
-mkdocs serve     # http://127.0.0.1:8000 view changes locally
+mkdocs serve     # http://127.0.0.1:8000 view locally
 mkdocs gh-deploy # deploy github pages
 ```
 
-## Links
+## Link
 [https://yshenfab.github.io/StudyNotes/](https://yshenfab.github.io/StudyNotes/)
 
 
