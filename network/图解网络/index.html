@@ -425,6 +425,7 @@
 <p>这都是基于TCP传输层的问题，所以HTTP/3把HTTP下层的TCP协议改成了UDP！UDP发生是不管顺序，也不管丢包的，所以不会出现HTTP/1.1的队头阻塞和HTTP/2的一个丢包全部重传问题。UDP是不可靠传输的，但基于UDP 的QUIC协议可以实现类似TCP的可靠性传输。</p>
 <p>QUIC有自己的一套机制可以保证传输的可靠性的。当某个流发生丢包时，只会阻塞这个流，其他流不会受到影响。TLS3升级成了最新的1.3版本，头部压缩算法也升级成了QPack。HTTPS要建立一个连接，要花费6次交互，先是建立三次握手，然后是TLS/1.3的三次握手。QUIC直接把以往的TCP和TLS/1.3的6次交互合并成了3次，减少了交互次数。所以，QUIC是一个在UDP之上的伪TCP + TLS + HTTP/2的多路复用的协议。</p>
 <p>QUIC是新协议，对于很多网络设备，根本不知道什么是QUIC，只会当做UDP，这样会出现新的问题。所以HTTP/3现在普及的进度非常的缓慢，不知道未来UDP是否能够逆袭TCP。</p>
+<p><img alt="HTTP演变" src="../http.png" /></p>
 <ul>
 <li>TLS和SSL实际上是一个东西，SSL全称Secure Sockets Layer，中文叫安全套接层。到了1999年SSL应用广泛，IETF把SSL标准化，标准化之后的名次改为了TLS (Transport Layer Security)，中文叫传输层安全协议。</li>
 </ul>
