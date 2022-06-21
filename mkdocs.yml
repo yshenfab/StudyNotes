@@ -30,9 +30,10 @@ nav:
     - python tips: 'python/python_tips.md'
     - python3: 'python/python3.md'
     - Effective Python (TODO): 'python/effective_python.md'
-    - Python Cookbook (143/2058): 'python/python_cookbook.md'
-    - Core Python Programming (2/662): 'python/core_python_programming.md'
-    - Fluent Python (42/1022): 'python/fluent_python.md'
+    - Data Structures and Algorithms in Python: 'python/data_structure_and_algorithms_in_python.md'
+    # - Python Cookbook (143/2058): 'python/python_cookbook.md'
+    # - Core Python Programming (2/662): 'python/core_python_programming.md'
+    # - Fluent Python (42/1022): 'python/fluent_python.md'
     # - numpy: 'python/numpy.md'
   - Research:
     - 像外行一样思考，像专家一样实践: 'research/像外行一样思考，像专家一样实践.md'
