@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>python tips - Study Notes</title>
+    <title>Data Structures and Algorithms in Python - Study Notes</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "python tips";
-        var mkdocs_page_input_path = "python/python_tips.md";
+        var mkdocs_page_name = "Data Structures and Algorithms in Python";
+        var mkdocs_page_input_path = "python/data_structure_and_algorithms_in_python.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -98,15 +98,65 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../pythonic/">pythonic</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">python tips</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../python_tips/">python tips</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../python3/">python3</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../effective_python/">Effective Python (TODO)</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../data_structure_and_algorithms_in_python/">Data Structures and Algorithms in Python</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Data Structures and Algorithms in Python</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-1-python-primer">Chapter 1 Python Primer</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-2-object-oriented-programming">Chapter 2 Object-Oriented Programming</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-3-algorithm-analysis">Chapter 3 Algorithm Analysis</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-4-recursion">Chapter 4 Recursion</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-5-array-based-sequences">Chapter 5 Array-Based Sequences</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-6-stacks-queues-and-deques">Chapter 6 Stacks, Queues, and Deques</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-7-linked-lists">Chapter 7 Linked Lists</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-8-trees">Chapter 8 Trees</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-9-priority-queues">Chapter 9 Priority Queues</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-10-maps-hash-tables-and-skip-lists">Chapter 10 Maps, Hash Tables, and Skip Lists</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-11-search-trees">Chapter 11 Search Trees</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-2-object-oriented-programming_1">Chapter 2 Object-Oriented Programming</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-3-algorithm-analysis_1">Chapter 3 Algorithm Analysis</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-4-recursion_1">Chapter 4 Recursion</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-5-array-based-sequences_1">Chapter 5 Array-Based Sequences</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-6-stacks-queues-and-deques_1">Chapter 6 Stacks, Queues, and Deques</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-7-linked-lists_1">Chapter 7 Linked Lists</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-8-trees_1">Chapter 8 Trees</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-9-priority-queues_1">Chapter 9 Priority Queues</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-10-maps-hash-tables-and-skip-lists_1">Chapter 10 Maps, Hash Tables, and Skip Lists</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-11-search-trees_1">Chapter 11 Search Trees</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-12-sorting-and-selection">Chapter 12 Sorting and Selection</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-13-text-processing">Chapter 13 Text Processing</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-14-graph-algorithms">Chapter 14 Graph Algorithms</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#chapter-15-memory-management-and-b-trees">Chapter 15 Memory Management and B-Trees</a>
+    </li>
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Research</span></p>
@@ -166,7 +216,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Python &raquo;</li><li>python tips</li>
+          <li>Python &raquo;</li><li>Data Structures and Algorithms in Python</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -176,312 +226,211 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="python-tips">Python Tips</h1>
-<p>Tips collected from <a href="http://book.pythontips.com/en/latest/index.html">python tips</a></p>
+                <h1 id="data-structure-and-algorithms-in-python">Data Structure and Algorithms in Python</h1>
+<h2 id="chapter-1-python-primer">Chapter 1 Python Primer</h2>
 <ul>
-<li><code>*args</code> and <code>**kwargs</code></li>
-</ul>
-<p><code>*args</code>: non-keyworded
-<code>**kwargs</code>: allow you to pass keyworded variable length of arguments to a
-function.</p>
-<ul>
-<li>Debugging: python debugger (pdb)</li>
-</ul>
-<p>running from command line:</p>
-<p><code>python -m pdb my_code.py</code></p>
-<p>running inside a script:</p>
-<pre><code class="language-python">import pdb
-def make_bread():
-    pdb.set_trace() # set break points
-    return &quot;I don't have time&quot;
-
-print(make_bread())
-</code></pre>
-<ul>
-<li>pdb usage</li>
+<li>build-in classes</li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>shortcut</th>
-<th>meaning</th>
+<th>Class</th>
+<th>Description</th>
+<th>Immutable?</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>c</td>
-<td>continue execution</td>
+<td>bool</td>
+<td>boolean value</td>
+<td>yes</td>
 </tr>
 <tr>
-<td>w</td>
-<td>show context of current line it is executing</td>
+<td>int</td>
+<td>integer</td>
+<td>yes</td>
 </tr>
 <tr>
-<td>a</td>
-<td>print the argument list of current function</td>
+<td>float</td>
+<td>floating-point number</td>
+<td>yes</td>
 </tr>
 <tr>
-<td>s</td>
-<td>execute the current line and stop at the first possible occasion</td>
+<td>list</td>
+<td>mutable sequence of objects</td>
+<td>no</td>
 </tr>
 <tr>
-<td>n</td>
-<td>continue execution until the next line in the current function is reached or it returns</td>
+<td>tuple</td>
+<td>immutable sequence of objects</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>str</td>
+<td>character string</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>set</td>
+<td>unordered set of distinct objects</td>
+<td>no</td>
+</tr>
+<tr>
+<td>frozenset</td>
+<td>immutable form of set class</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>dict</td>
+<td>associative mapping</td>
+<td>no</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Ternary Operators</li>
-</ul>
-<p>Ternary operators are more commonly known as conditional expressions in
-Python.</p>
-<p><code>condition if true if condition else condition if false</code></p>
-<p><code>state = "nice" if condition else "not nice"</code></p>
-<ul>
-<li>
-<p>Decorators are functions which modify the functionality of other functions. </p>
-<p>1) Define functions within functions;</p>
-<p>2) Return functions from within functions;</p>
-<p>3) Give a function as an argument to another function.</p>
-</li>
-<li>
-<p>Don't use global.</p>
-</li>
-<li>Mutable means "able to be changed", immutable means "constant". In Python, the default arguments are evaluated once when the function is defined, not each time the function is called. You should never define default arguments of mutable type unless you know what you are doing.</li>
+<li>equality operators</li>
 </ul>
 <table>
 <thead>
 <tr>
-<th></th>
-<th>Data types</th>
+<th>operator</th>
+<th>desciption</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>mutable</td>
-<td>list, dict, set</td>
+<td><code>is</code></td>
+<td>same identity</td>
 </tr>
 <tr>
-<td>immutable</td>
-<td>int, float, bool, string, tuple</td>
+<td><code>is not</code></td>
+<td>different identity</td>
+</tr>
+<tr>
+<td><code>==</code></td>
+<td>equivalent (value)</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>not equivalent</td>
 </tr>
 </tbody>
 </table>
+<p>The expression a is b evaluates to true, precisely when identifiers a and b are
+aliases for the same object. The expression a==b tests a more general notion of
+equivalence (values are deemed equivalent).</p>
 <ul>
-<li><code>__slots__</code> Magic</li>
-</ul>
-<p>Python uses dict to store an object's instance attributes, which sucks a lot of
-RAM. Using <code>__slots__</code> to tell python not to use a dict, and only allocate space
-for a fixed set of attributes, i.e., save RAM instead of using dict.</p>
-<p>Example:</p>
-<pre><code class="language-python"># without __slots__
-class MyClass(object):
-    def __init__(self, name, uid):
-        self.name = name
-        self.id = uid
-        self.set_up()
-
-# with __slots__ (40%-50% reduction of RAM)
-class MyClass(object):
-    __slots__ = ['name', 'uid']
-    def __init__(self, name, uid):
-        self.name = name
-        self.id = uid
-        self.set_up()
-</code></pre>
-<ul>
-<li>
-<p>Collections, container data types (defaultdict, OrderedDict, counter, deque,
-    namedtuple, enum.Enum)</p>
-</li>
-<li>
-<p>Object introspection</p>
-<p>1) <code>dir(list)</code> to get all the methods of a list;</p>
-<p>2) <code>type(object)</code> returns the type of an object, <code>id(object)</code> returns the
-unique id of an object;</p>
-<p>3) insepct module, <code>import inspect</code>,
-<code>inspect.getmembers(str)</code></p>
-</li>
-<li>
-<p>list/dict/set/generator comprehensions</p>
-</li>
-<li>
-<p>Exceptions</p>
-</li>
-</ul>
-<p>1) try/except</p>
-<pre><code class="language-python">try:
-    file = open(filename, 'rb')
-except IOError as e:
-    print(f'An IOError occured. {e.args[-1]}')
-</code></pre>
-<p>2) Handling multiple exceptions</p>
-<pre><code class="language-python"># method 1
-except (IOError, EOFError) as e:
-    print(f'An Error occured. {e.args[-1]}')
-    raise e
-# method 2
-except IOError as e:
-    print(&quot;An IO error occurred.&quot;)
-    raise e
-except EOFError as e:
-    print(&quot;An EOF error occurred.&quot;)
-    raise e
-# method 3
-except (IOError, EOFError) as e:
-    # some logging
-    raise e
-</code></pre>
-<p>3) finally</p>
-<pre><code class="language-python">try:
-    file = open('test.txt', 'rb')
-except IOError as e:
-    print('An IOError occurred. {}'.format(e.args[-1]))
-finally:
-    print(&quot;This would be printed whether or not an exception occurred!&quot;)
-</code></pre>
-<p>4) try/else</p>
-<pre><code class="language-python">try:
-    print('I am sure no exception is going to occur!')
-except Exception:
-    print('exception')
-else:
-    # any code that should only run if no exception occurs in the try,
-    # but for which exceptions should NOT be caught
-    print('This would only run if no exception occurs. And an error here '
-          'would NOT be caught.')
-finally:
-    print('This would be printed in every case.')
-</code></pre>
-<ul>
-<li>Lambdas (one line functions, anoymous), blueprint: <code>lambda arguments: manipulate(arguments)</code></li>
-<li>Profiling a script. This can be extremely helpful in pinpointing the bottlenecks in your script:</li>
-</ul>
-<p><code>python -m cProfile my_script.py</code></p>
-<p>(cProfile is a faster implementation of profile as it is written in C)</p>
-<ul>
-<li>for/else: else condition executes when no break happens</li>
-<li>Python C extensions: ctypes</li>
-<li><code>open()</code>, syntax: <code>open(filename, mode)</code></li>
+<li>sequence operators (str, tuple, list)</li>
 </ul>
 <table>
 <thead>
 <tr>
-<th>mode</th>
+<th>operator syntaxes</th>
 <th>description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>r</td>
-<td>read</td>
+<td>s[j]</td>
+<td>element at index j</td>
 </tr>
 <tr>
-<td>r+</td>
-<td>read and write</td>
+<td>s[start:stop]</td>
+<td>slice including indices [start,stop)</td>
 </tr>
 <tr>
-<td>w</td>
-<td>overwrite</td>
+<td>s[start:stop:step]</td>
+<td>slice with step</td>
 </tr>
 <tr>
-<td>a</td>
-<td>append</td>
+<td>s+t</td>
+<td>concatenation of sequences</td>
 </tr>
 <tr>
-<td>b</td>
-<td>binary</td>
+<td>k*s</td>
+<td>shorthand for s+s+s+... (k times)</td>
+</tr>
+<tr>
+<td>val in s</td>
+<td>containment check</td>
+</tr>
+<tr>
+<td>val not in s</td>
+<td>non-containment check</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>Coroutines: similar to generators with a few differences. Generators are data
-    producers. Coroutines are data consumers</li>
+<li>operators for dict</li>
 </ul>
-<pre><code class="language-python"># generator
-def fib():
-    a,b = 0,1
-    while 1:
-        yield a
-        a,b = b,a+b
-# coroutine
-def grep(pattern):
-    print(&quot;Searching for&quot;, pattern)
-    while 1:
-        line = (yield)
-        if pattern in line:
-            print(line)
-
-search = grep('coroutine')
-next(search)
-search.send(&quot;hahaha&quot;)
-search.send(&quot;I love coroutines!&quot;)
-# ...
-search.close()
-</code></pre>
-<ul>
-<li>Function Caching: Function caching allows us to cache the return values of a function depending on the arguments.</li>
-</ul>
-<pre><code class="language-python">from functools import lru_cache
-
-@lru_cache(maxsize=32)
-def fib(n):
-    if n &lt; 2:
-        return n
-    return fib(n-1) + fib(n-2)
-
-print([fib(n) for n in range(10)])
-# Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
-fib.cache_clear()
-</code></pre>
-<ul>
-<li>Context Managers: Context managers allow you to allocate and release resources precisely when you want to. The most widely used example of context manager is <code>with</code>.</li>
-</ul>
-<pre><code class="language-python"># Implementing a Context Manager as a Class
-# a context manager has an __enter__ and __exit__ method defined
-class File(object):
-    def __init__(self, file_name, method):
-        self.file_obj = open(file_name, method)
-    def __enter__(self):
-        return self.file_obj
-    def __exit__(self, type, value, traceback):
-        return self.file_obj.close()
-
-with File('demo.txt', 'w') as opened_file:
-    opened_file.write('Hola!')
-
-# Handling Exceptions
-class File(object):
-     def __init__(self, file_name, method):
-         self.file_obj = open(file_name, method)
-     def __enter__(self):
-         return self.file_obj
-     def __exit__(self, type, value, traceback):
-         print(&quot;Exception has been handled&quot;)
-         self.file_obj.close()
-         return True
-
-with File('demo.txt', 'w') as opened_file:
-    opened_file.undefined_function()
-
-# Implementing a Context Manager as a generator
-from contextlib import contextmanager
-
-@contextmanager
-def open_file(name):
-    f = open(name, 'w')
-    yield f
-    f.close()
-
-with open_file('some_file') as f:
-    f.write('hola!')
-</code></pre>
+<table>
+<thead>
+<tr>
+<th>operator syntaxes</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d[key]</td>
+<td>value associated with given key</td>
+</tr>
+<tr>
+<td>d[key]=value</td>
+<td>set (or reset) the value associated with given key</td>
+</tr>
+<tr>
+<td>del d[key]</td>
+<td>remove key and its associated value from dict</td>
+</tr>
+<tr>
+<td>key in d</td>
+<td>containment check</td>
+</tr>
+<tr>
+<td>key not in d</td>
+<td>non-containment check</td>
+</tr>
+<tr>
+<td>d1==d2</td>
+<td>d1 is equivalent to d2</td>
+</tr>
+<tr>
+<td>d1!=d2</td>
+<td>d1 is not equivalent to d2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="chapter-2-object-oriented-programming">Chapter 2 Object-Oriented Programming</h2>
+<h2 id="chapter-3-algorithm-analysis">Chapter 3 Algorithm Analysis</h2>
+<h2 id="chapter-4-recursion">Chapter 4 Recursion</h2>
+<h2 id="chapter-5-array-based-sequences">Chapter 5 Array-Based Sequences</h2>
+<h2 id="chapter-6-stacks-queues-and-deques">Chapter 6 Stacks, Queues, and Deques</h2>
+<h2 id="chapter-7-linked-lists">Chapter 7 Linked Lists</h2>
+<h2 id="chapter-8-trees">Chapter 8 Trees</h2>
+<h2 id="chapter-9-priority-queues">Chapter 9 Priority Queues</h2>
+<h2 id="chapter-10-maps-hash-tables-and-skip-lists">Chapter 10 Maps, Hash Tables, and Skip Lists</h2>
+<h2 id="chapter-11-search-trees">Chapter 11 Search Trees</h2>
+<h2 id="chapter-2-object-oriented-programming_1">Chapter 2 Object-Oriented Programming</h2>
+<h2 id="chapter-3-algorithm-analysis_1">Chapter 3 Algorithm Analysis</h2>
+<h2 id="chapter-4-recursion_1">Chapter 4 Recursion</h2>
+<h2 id="chapter-5-array-based-sequences_1">Chapter 5 Array-Based Sequences</h2>
+<h2 id="chapter-6-stacks-queues-and-deques_1">Chapter 6 Stacks, Queues, and Deques</h2>
+<h2 id="chapter-7-linked-lists_1">Chapter 7 Linked Lists</h2>
+<h2 id="chapter-8-trees_1">Chapter 8 Trees</h2>
+<h2 id="chapter-9-priority-queues_1">Chapter 9 Priority Queues</h2>
+<h2 id="chapter-10-maps-hash-tables-and-skip-lists_1">Chapter 10 Maps, Hash Tables, and Skip Lists</h2>
+<h2 id="chapter-11-search-trees_1">Chapter 11 Search Trees</h2>
+<h2 id="chapter-12-sorting-and-selection">Chapter 12 Sorting and Selection</h2>
+<h2 id="chapter-13-text-processing">Chapter 13 Text Processing</h2>
+<h2 id="chapter-14-graph-algorithms">Chapter 14 Graph Algorithms</h2>
+<h2 id="chapter-15-memory-management-and-b-trees">Chapter 15 Memory Management and B-Trees</h2>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../pythonic/" class="btn btn-neutral float-left" title="pythonic"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../python3/" class="btn btn-neutral float-right" title="python3">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../effective_python/" class="btn btn-neutral float-left" title="Effective Python (TODO)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/" class="btn btn-neutral float-right" title="像外行一样思考，像专家一样实践">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -504,10 +453,10 @@ with open_file('some_file') as f:
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../pythonic/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../effective_python/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../python3/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
