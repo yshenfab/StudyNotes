@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>python tips - Study Notes</title>
+    <title>DL Notes - Study Notes</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "python tips";
-        var mkdocs_page_input_path = "python/python_tips.md";
+        var mkdocs_page_name = "DL Notes";
+        var mkdocs_page_input_path = "deep_learning/dl_notes.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -57,14 +57,22 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Deep Learning</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/google-machine-learning-crash-course/">Google ML Crash Course</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../google-machine-learning-crash-course/">Google ML Crash Course</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">Python机器学习</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">Python机器学习</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/dive_into_deep_learning/">Dive into Deep Learning</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../dive_into_deep_learning/">Dive into Deep Learning</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/dl_notes/">DL Notes</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">DL Notes</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#neural-network-embedding">Neural Network Embedding</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#graph-neural-network-gnn">Graph Neural Network (GNN)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#visualization">Visualization</a>
+    </li>
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Mathematics</span></p>
@@ -97,18 +105,16 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Python</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../pythonic/">pythonic</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/pythonic/">pythonic</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">python tips</a>
-    <ul class="current">
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/python_tips/">python tips</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../python3/">python3</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/python3/">python3</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../effective_python/">Effective Python (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective Python (TODO)</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../data_structure_and_algorithms_in_python/">Data Structures and Algorithms in Python</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/data_structure_and_algorithms_in_python/">Data Structures and Algorithms in Python</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Research</span></p>
@@ -170,7 +176,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Python &raquo;</li><li>python tips</li>
+          <li>Deep Learning &raquo;</li><li>DL Notes</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -180,312 +186,54 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="python-tips">Python Tips</h1>
-<p>Tips collected from <a href="http://book.pythontips.com/en/latest/index.html">python tips</a></p>
+                <h1 id="dl-notes">DL Notes</h1>
+<h2 id="neural-network-embedding">Neural Network Embedding</h2>
 <ul>
-<li><code>*args</code> and <code>**kwargs</code></li>
+<li>传统DL方法应用在欧氏空间数据的特征方面，许多实际应用场景的数据是从非欧氏空间生成的。</li>
+<li>Neural Network Embedding: 将离散变量转变为连续向量的方式，减少离散变量的空间维数。</li>
+<li>相对于one-hot来说，one-hot向量维数太大且过于稀疏，one-hot映射之间完全独立，不能表示不同类别之间的关系。</li>
+<li>Embedding方便可视化，比如通过降维到2-3维，popular的降维技术是t-Distributed
+    Stochastic Neighbor Embedding (TSNE)</li>
 </ul>
-<p><code>*args</code>: non-keyworded
-<code>**kwargs</code>: allow you to pass keyworded variable length of arguments to a
-function.</p>
-<ul>
-<li>Debugging: python debugger (pdb)</li>
-</ul>
-<p>running from command line:</p>
-<p><code>python -m pdb my_code.py</code></p>
-<p>running inside a script:</p>
-<pre><code class="language-python">import pdb
-def make_bread():
-    pdb.set_trace() # set break points
-    return &quot;I don't have time&quot;
-
-print(make_bread())
-</code></pre>
-<ul>
-<li>pdb usage</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>shortcut</th>
-<th>meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>c</td>
-<td>continue execution</td>
-</tr>
-<tr>
-<td>w</td>
-<td>show context of current line it is executing</td>
-</tr>
-<tr>
-<td>a</td>
-<td>print the argument list of current function</td>
-</tr>
-<tr>
-<td>s</td>
-<td>execute the current line and stop at the first possible occasion</td>
-</tr>
-<tr>
-<td>n</td>
-<td>continue execution until the next line in the current function is reached or it returns</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Ternary Operators</li>
-</ul>
-<p>Ternary operators are more commonly known as conditional expressions in
-Python.</p>
-<p><code>condition if true if condition else condition if false</code></p>
-<p><code>state = "nice" if condition else "not nice"</code></p>
+<h2 id="graph-neural-network-gnn">Graph Neural Network (GNN)</h2>
+<p><a href="https://zhuanlan.zhihu.com/p/136521625">GNN Intro</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/75307407">GNN Survey</a></p>
 <ul>
 <li>
-<p>Decorators are functions which modify the functionality of other functions. </p>
-<p>1) Define functions within functions;</p>
-<p>2) Return functions from within functions;</p>
-<p>3) Give a function as an argument to another function.</p>
+<p>Graph Convolution Networks (GCN)</p>
+<p>将卷积从传统数据推广到图数据，核心思想是学习一个函数映射<script type="math/tex">f(.)</script>，通过映射，graph中的节点<script type="math/tex">v_i</script>可以聚合它自己的特征<script type="math/tex">x_i</script>与它的邻居特征<script type="math/tex">x_j,\ j\in N(v_i)</script>来生成节点<script type="math/tex">v_i</script>的新表示。</p>
+<p>GCN方法分两大类，基于谱 (spectral-based)和基于空间 (spatial-based)。后者近年来更popular。</p>
 </li>
 <li>
-<p>Don't use global.</p>
-</li>
-<li>Mutable means "able to be changed", immutable means "constant". In Python, the default arguments are evaluated once when the function is defined, not each time the function is called. You should never define default arguments of mutable type unless you know what you are doing.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Data types</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>mutable</td>
-<td>list, dict, set</td>
-</tr>
-<tr>
-<td>immutable</td>
-<td>int, float, bool, string, tuple</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><code>__slots__</code> Magic</li>
-</ul>
-<p>Python uses dict to store an object's instance attributes, which sucks a lot of
-RAM. Using <code>__slots__</code> to tell python not to use a dict, and only allocate space
-for a fixed set of attributes, i.e., save RAM instead of using dict.</p>
-<p>Example:</p>
-<pre><code class="language-python"># without __slots__
-class MyClass(object):
-    def __init__(self, name, uid):
-        self.name = name
-        self.id = uid
-        self.set_up()
-
-# with __slots__ (40%-50% reduction of RAM)
-class MyClass(object):
-    __slots__ = ['name', 'uid']
-    def __init__(self, name, uid):
-        self.name = name
-        self.id = uid
-        self.set_up()
-</code></pre>
-<ul>
-<li>
-<p>Collections, container data types (defaultdict, OrderedDict, counter, deque,
-    namedtuple, enum.Enum)</p>
+<p>Graph Attention Networks</p>
+<p>通过注意力机制，放大数据中最重要的部分的影响。GNN在聚合过程中使用注意力，整合多个模型的输出，并生成面向重要目标的随机行走。</p>
 </li>
 <li>
-<p>Object introspection</p>
-<p>1) <code>dir(list)</code> to get all the methods of a list;</p>
-<p>2) <code>type(object)</code> returns the type of an object, <code>id(object)</code> returns the
-unique id of an object;</p>
-<p>3) insepct module, <code>import inspect</code>,
-<code>inspect.getmembers(str)</code></p>
+<p>Graph Autoencoders</p>
+<p>图自动编码器是一类Graph Embedding方法，目的是利用神经网络结构将图的顶点表示为低维向量。典型解决方案是利用多层感知机作为编码器来获取节点embedding，
+其中解码器重建节点的邻域统计信息。目前基于GCN的自编码器方法主要有Graph
+Autoencoder (GAE)和Adversarially Regularized Graph Autoencoder (ARGA)。</p>
 </li>
 <li>
-<p>list/dict/set/generator comprehensions</p>
+<p>Graph Generative Networks</p>
+<p>图生成网络的目标是在给定一组观察到的图的情况下生成新的图。图生成网络的许多方法都是特定于领域的。</p>
 </li>
 <li>
-<p>Exceptions</p>
+<p>Graph Spatial-temporal Networks</p>
+<p>图时空网络同时捕捉时空图的时空相关性。时空图具有全局图结构，每个节点的输入随时间变化。</p>
 </li>
 </ul>
-<p>1) try/except</p>
-<pre><code class="language-python">try:
-    file = open(filename, 'rb')
-except IOError as e:
-    print(f'An IOError occured. {e.args[-1]}')
-</code></pre>
-<p>2) Handling multiple exceptions</p>
-<pre><code class="language-python"># method 1
-except (IOError, EOFError) as e:
-    print(f'An Error occured. {e.args[-1]}')
-    raise e
-# method 2
-except IOError as e:
-    print(&quot;An IO error occurred.&quot;)
-    raise e
-except EOFError as e:
-    print(&quot;An EOF error occurred.&quot;)
-    raise e
-# method 3
-except (IOError, EOFError) as e:
-    # some logging
-    raise e
-</code></pre>
-<p>3) finally</p>
-<pre><code class="language-python">try:
-    file = open('test.txt', 'rb')
-except IOError as e:
-    print('An IOError occurred. {}'.format(e.args[-1]))
-finally:
-    print(&quot;This would be printed whether or not an exception occurred!&quot;)
-</code></pre>
-<p>4) try/else</p>
-<pre><code class="language-python">try:
-    print('I am sure no exception is going to occur!')
-except Exception:
-    print('exception')
-else:
-    # any code that should only run if no exception occurs in the try,
-    # but for which exceptions should NOT be caught
-    print('This would only run if no exception occurs. And an error here '
-          'would NOT be caught.')
-finally:
-    print('This would be printed in every case.')
-</code></pre>
-<ul>
-<li>Lambdas (one line functions, anoymous), blueprint: <code>lambda arguments: manipulate(arguments)</code></li>
-<li>Profiling a script. This can be extremely helpful in pinpointing the bottlenecks in your script:</li>
-</ul>
-<p><code>python -m cProfile my_script.py</code></p>
-<p>(cProfile is a faster implementation of profile as it is written in C)</p>
-<ul>
-<li>for/else: else condition executes when no break happens</li>
-<li>Python C extensions: ctypes</li>
-<li><code>open()</code>, syntax: <code>open(filename, mode)</code></li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>mode</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>r</td>
-<td>read</td>
-</tr>
-<tr>
-<td>r+</td>
-<td>read and write</td>
-</tr>
-<tr>
-<td>w</td>
-<td>overwrite</td>
-</tr>
-<tr>
-<td>a</td>
-<td>append</td>
-</tr>
-<tr>
-<td>b</td>
-<td>binary</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Coroutines: similar to generators with a few differences. Generators are data
-    producers. Coroutines are data consumers</li>
-</ul>
-<pre><code class="language-python"># generator
-def fib():
-    a,b = 0,1
-    while 1:
-        yield a
-        a,b = b,a+b
-# coroutine
-def grep(pattern):
-    print(&quot;Searching for&quot;, pattern)
-    while 1:
-        line = (yield)
-        if pattern in line:
-            print(line)
-
-search = grep('coroutine')
-next(search)
-search.send(&quot;hahaha&quot;)
-search.send(&quot;I love coroutines!&quot;)
-# ...
-search.close()
-</code></pre>
-<ul>
-<li>Function Caching: Function caching allows us to cache the return values of a function depending on the arguments.</li>
-</ul>
-<pre><code class="language-python">from functools import lru_cache
-
-@lru_cache(maxsize=32)
-def fib(n):
-    if n &lt; 2:
-        return n
-    return fib(n-1) + fib(n-2)
-
-print([fib(n) for n in range(10)])
-# Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
-fib.cache_clear()
-</code></pre>
-<ul>
-<li>Context Managers: Context managers allow you to allocate and release resources precisely when you want to. The most widely used example of context manager is <code>with</code>.</li>
-</ul>
-<pre><code class="language-python"># Implementing a Context Manager as a Class
-# a context manager has an __enter__ and __exit__ method defined
-class File(object):
-    def __init__(self, file_name, method):
-        self.file_obj = open(file_name, method)
-    def __enter__(self):
-        return self.file_obj
-    def __exit__(self, type, value, traceback):
-        return self.file_obj.close()
-
-with File('demo.txt', 'w') as opened_file:
-    opened_file.write('Hola!')
-
-# Handling Exceptions
-class File(object):
-     def __init__(self, file_name, method):
-         self.file_obj = open(file_name, method)
-     def __enter__(self):
-         return self.file_obj
-     def __exit__(self, type, value, traceback):
-         print(&quot;Exception has been handled&quot;)
-         self.file_obj.close()
-         return True
-
-with File('demo.txt', 'w') as opened_file:
-    opened_file.undefined_function()
-
-# Implementing a Context Manager as a generator
-from contextlib import contextmanager
-
-@contextmanager
-def open_file(name):
-    f = open(name, 'w')
-    yield f
-    f.close()
-
-with open_file('some_file') as f:
-    f.write('hola!')
-</code></pre>
+<h2 id="visualization">Visualization</h2>
+<ol>
+<li><a href="https://github.com/HarisIqbal88/PlotNeuralNet">PlotNeuralNet</a> </li>
+<li>powerpoint/keynote/google docs，导出成矢量pdf</li>
+</ol>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../pythonic/" class="btn btn-neutral float-left" title="pythonic"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../python3/" class="btn btn-neutral float-right" title="python3">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../dive_into_deep_learning/" class="btn btn-neutral float-left" title="Dive into Deep Learning"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../mathematics/beauty_of_mathematics/" class="btn btn-neutral float-right" title="数学之美">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -508,10 +256,10 @@ with open_file('some_file') as f:
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../pythonic/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../dive_into_deep_learning/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../python3/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../mathematics/beauty_of_mathematics/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

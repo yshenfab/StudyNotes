@@ -64,6 +64,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/dive_into_deep_learning/">Dive into Deep Learning</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../deep_learning/dl_notes/">DL Notes</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Mathematics</span></p>
               <ul>
@@ -145,6 +147,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../other/%E5%BA%95%E5%B1%82%E9%80%BB%E8%BE%91/">底层逻辑</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8445%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效程序员的45个习惯</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/type_system/">Type System</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Todo</span></p>
@@ -273,8 +277,8 @@ insert.o search.o files.o utils.o
 上面一堆.o文件，用一个变量表示：
 objects = main.o kbd.o command.o display.o \
 insert.o search.o files.o utils.o
-然后在makefile中以"$(objects)"的方式使用变量
-edit: $(objects)
+然后在makefile中以"<script type="math/tex">(objects)"的方式使用变量
+edit: </script>(objects)
 cc -o edit $(objects)</p>
 </li>
 <li>
@@ -286,8 +290,8 @@ cc -c whatever.c也会被推导出来。</p>
 </ul>
 <p>objects = main.o kbd.o command.o display.o \
 insert.o search.o files.o utils.o</p>
-<p>edit: $(objects)
-cc -o edit $(objects)</p>
+<p>edit: <script type="math/tex">(objects)
+cc -o edit </script>(objects)</p>
 <p>main.o: defs.h
 kbd.o: defs.h command.h
 command.o: defs.h command.h
@@ -367,9 +371,9 @@ clean:
 <li>语法：include <filename> 没有#号
     filename可以是当前操作系统shell的文件模式（可以包含路径和通配符）
     include前面可以有一些空字符，但绝不能是TAB</li>
-<li>example: 有几个Makefile: a.mk, b.mk, c.mk，还有一个文件foo.make，以及一个变量$(bar)包含了e.mk和f.mk
+<li>example: 有几个Makefile: a.mk, b.mk, c.mk，还有一个文件foo.make，以及一个变量<script type="math/tex">(bar)包含了e.mk和f.mk
     那么可以写成
-    include foo.make **.mk $(bar)</li>
+    include foo.make \*\*.mk </script>(bar)</li>
 </ul>
 </li>
 <li>
@@ -474,14 +478,14 @@ vpath %.h ../headers
     多个目标同时依赖于一个文件</li>
 <li>example:
     bigoutput littleoutput : text.g
-    generate text.g -$(subst output,,$@) &gt; $@
+    generate text.g -<script type="math/tex">(subst output,,</script>@) &gt; <script type="math/tex">@
       上述规则相当于：
       bigoutput : text.g
-      generate text.g -big &gt; bigoutput
+      generate text.g -big > bigoutput
       littleoutput : text.g
-      generate text.g -little &gt; littleoutput
-      其中，-$(subst output,,$@)中的"$"表示执行一个Makefile的函数，函数名为subst，后面的为参数。
-    subst函数是截取字符串的意思，"$@"表示目标的集合，就像一个数组，"$@"依次取出目标，并执行命令。</li>
+      generate text.g -little > littleoutput
+      其中，-</script>(subst output,,<script type="math/tex">@)中的"</script>"表示执行一个Makefile的函数，函数名为subst，后面的为参数。
+    subst函数是截取字符串的意思，"<script type="math/tex">@"表示目标的集合，就像一个数组，"</script>@"依次取出目标，并执行命令。</li>
 </ul>
 </li>
 <li>
@@ -497,15 +501,15 @@ vpath %.h ../headers
 <li>prereq-patterns是目标的依赖模式，它对target-pattern形成的模式再进行一次依赖目标的定义</li>
 <li>example:
     objects = foo.o bar.o
-    all: $(objects)
-    $(objects): %.o : %.c
-    $(CC) -c $(CFLAGS) $&lt; -o $@
-      其中，"$&lt;"表示所有的依赖目标集（也就是"foo.c bar.c"），"$@"表示目标集（也就是"foo.o bar.o"）
+    all: <script type="math/tex">(objects)
+    </script>(objects): %.o : %.c
+    <script type="math/tex">(CC) -c </script>(CFLAGS) <script type="math/tex">< -o </script>@
+      其中，"<script type="math/tex"><"表示所有的依赖目标集（也就是"foo.c bar.c"），"</script>@"表示目标集（也就是"foo.o bar.o"）
     于是，上面的规则展开后等价于：
     foo.o : foo.c
-    $(CC) -c $(CFLAGS) foo.c -o foo.o
+    <script type="math/tex">(CC) -c </script>(CFLAGS) foo.c -o foo.o
     bar.o : bar.c
-    $(CC) -c $(CFLAGS) bar.c -o bar.o</li>
+    <script type="math/tex">(CC) -c </script>(CFLAGS) bar.c -o bar.o</li>
 </ul>
 </li>
 <li>
@@ -546,10 +550,10 @@ cd /home/yang ; pwd
 <li>大工程可以在不同目录写一个该目录的Makefile，这样不会太乱，方便维护。总控的Makefile可以这样写：</li>
 </ul>
 <p>subsystem:
-cd subdir &amp;&amp; $(MAKE)
+cd subdir &amp;&amp; <script type="math/tex">(MAKE)
 等价于
 subsystem:
-$(MAKE) -C subdir</p>
+</script>(MAKE) -C subdir</p>
 <ul>
 <li>传递/不传递变量到下级Makefile中
     export <variable &#x2026;>
@@ -572,7 +576,7 @@ $(MAKE) -C subdir</p>
 <p>如果Makefile中出现一些相同命令序列，那么可以为这些相同的命令序列定义一个变量。
 语法：以define开始，以endef结束，如：
 define run-yacc
-yacc $(firstword $^)
+yacc <script type="math/tex">(firstword </script>^)
 mv y.tab.c $@
 endef
 这里，run-yacc是命令包的名字，不要和Makefile中变量重名。</p>
@@ -587,14 +591,14 @@ endef
 <ol>
 <li>
 <p>变量的基础</p>
-<p>变量声明时需要给予初值，使用时需要在变量名前加上"$"符号，但最好用小括号()或大括号{}把变量包起来，
-如果要用"$"字符，用"$$"表示。变量就是“替代”的作用。</p>
+<p>变量声明时需要给予初值，使用时需要在变量名前加上"<script type="math/tex">"符号，但最好用小括号()或大括号{}把变量包起来，
+如果要用"</script>"字符，用"$$"表示。变量就是“替代”的作用。</p>
 </li>
 <li>
 <p>变量中的变量</p>
 <p>变量可以使用后面的变量来定义：
-foo = $(bar)
-bar = $(ugh)
+foo = <script type="math/tex">(bar)
+bar = </script>(ugh)
 ugh = Huh?
 all:
 echo $(foo)</p>
@@ -603,13 +607,13 @@ echo $(foo)</p>
     CFLAGS = $(include<sub>dirs</sub>) -O
     include<sub>dirs</sub> = -Ifoo -Ibar</li>
 <li>坏处：递归定义，无限展开
-    CFLAGS = $(CFLAGS) -O
+    CFLAGS = <script type="math/tex">(CFLAGS) -O
     或
-    A = $(B)
-    B = $(A)
+    A = </script>(B)
+    B = <script type="math/tex">(A)
     为了避免这样，我们使用make中另一种用变量来定义变量的方法，使用":="操作符：
     x := foo
-    y := $(x) bar
+    y := </script>(x) bar
     x := later
     等价于：
     y := foo bar
@@ -626,7 +630,7 @@ echo $(foo)</p>
 <li>
 <p>变量值的替换</p>
 <ul>
-<li>替换变量中共有的部分，格式是"$(var:a=b)"或"${var:a=b}"，意思是把变量var中所有以a结尾（空格或结束符）的a替换成b</li>
+<li>替换变量中共有的部分，格式是"<script type="math/tex">(var:a=b)"或"</script>{var:a=b}"，意思是把变量var中所有以a结尾（空格或结束符）的a替换成b</li>
 <li>example
     foo := a.o b.o c.o
     bar := $(foo:.o=.c)
@@ -641,13 +645,13 @@ echo $(foo)</p>
 <p>简单的例子：
 x = y
 y = z
-a := $($(x))
+a := <script type="math/tex">(</script>(x))
 复杂的例子：
 x = variable1
 variable2 := Hello
-y = $(subst 1,2,$(x))
+y = <script type="math/tex">(subst 1,2,</script>(x))
 z = y
-a := $($($(z)))</p>
+a := <script type="math/tex">(</script>($(z)))</p>
 </li>
 </ol>
 </li>
@@ -741,6 +745,7 @@ variable += more
     <script>var base_url = '../..';</script>
     <script src="../../js/theme_extra.js" defer></script>
     <script src="../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
       <script src="../../search/main.js" defer></script>
     <script defer>
         window.onload = function () {
