@@ -1,6 +1,13 @@
 site_name: Study Notes
 theme: readthedocs
 
+extra_javascript:
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+markdown_extensions:
+  - mdx_math:
+      enable_dollar_delimiter: True  # enable $...$ for inline math
+
 nav:
   - Introduction: 'index.md'
   - Algorithm:
@@ -12,6 +19,7 @@ nav:
     - Google ML Crash Course: 'deep_learning/google-machine-learning-crash-course.md'
     - Python机器学习: 'deep_learning/Python机器学习.md'
     - Dive into Deep Learning: 'deep_learning/dive_into_deep_learning.md'
+    - DL Notes: 'deep_learning/dl_notes.md'
   - Mathematics:
     - 数学之美: 'mathematics/beauty_of_mathematics.md'
     - 统计学的世界: 'mathematics/statistics_concepts_and_controversies.md'
@@ -52,5 +60,6 @@ nav:
     - 高效能人士的7个习惯: 'other/高效能人士的7个习惯.md'
     - 底层逻辑: 'other/底层逻辑.md'
     - 高效程序员的45个习惯: 'other/高效程序员的45个习惯.md'
+    - Type System: 'other/type_system.md'
   - Todo:
     - TODO: 'todo/todo.md'
