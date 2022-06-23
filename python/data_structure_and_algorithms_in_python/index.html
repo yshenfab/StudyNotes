@@ -484,9 +484,287 @@ each element of the series.</p>
 <h2 id="chapter-3-algorithm-analysis">Chapter 3 Algorithm Analysis</h2>
 <p>Big-O notation</p>
 <h2 id="chapter-4-recursion">Chapter 4 Recursion</h2>
+<p>Recursion is a technique by which a function makes one or more calls to itself during execution, or by which a data structure relies upon smaller instances of the very same type of structure in its representation.</p>
+<p>In general, an algorithm uses recursion typically has the following form: 1)
+Test for base case; 2) Recur.</p>
+<p>Tail recursion: a recursion is a tail recursion if any recursive call that is
+made from one context is the very last operation in that context, with the
+return value of the recursive call (if any) immediately returned by the
+enclosing recursion. A tail recursion must be a linear recursion. </p>
+<p>若函数在尾位置调用自身（或是一个尾调用本身的其他函数等等），则称这种情况为尾递归。特点：1）在尾部调用的是函数自身 (self-called)；2）可通过优化，使得计算仅占用常量栈空间 (stack space)。</p>
+<pre><code class="language-python">def recsum(x):
+    if x == 1:
+        return x
+    else:
+        return x + recsum(x - 1)
+
+
+def tail_recsum(x, running_total=0):
+    if x == 0:
+        return running_total
+    else:
+        return tail_recsum(x - 1, running_total + x)
+</code></pre>
+<p>尾递归，比线性递归多一个参数，这个参数是上一次调用函数得到的结果；所以，关键点在于，尾递归每次调用都在收集结果，避免了线性递归不收集结果只能依次展开消耗内存的坏处。</p>
 <h2 id="chapter-5-array-based-sequences">Chapter 5 Array-Based Sequences</h2>
+<p>Built-in "sequence" classes: list, tuple, str.</p>
+<p>An implementation of a DynamicArray class, using a raw array from the <em>ctypes</em>
+module as storage.</p>
+<pre><code class="language-python">import ctypes
+
+
+class DynamicArray(object):
+    def __init__(self):
+        self._n = 0  # count actual elements
+        self._capacity = 1  # default array capacity
+        self._A = self._make_array(self._capacity)  # low-level array
+
+    def __len__(self):
+        return self._n
+
+    def __getitem__(self, k):
+        if not 0 &lt;= k &lt; self._n:
+            raise IndexError('invalid index')
+        return self._A[k]
+
+    def append(self, obj):
+        if self._n == self._capacity:  # not enough room
+            self._resize(2 * self._capacity)
+        self._A[self._n] = obj
+        self._n += 1
+
+    def _resize(self, c):
+        &quot;&quot;&quot; resize internal array to capacity c &quot;&quot;&quot;
+        B = self._make_array(c)
+        for k in range(self._n):
+            B[k] = self._A[k]
+        self._A = B
+        self._capacity = c
+
+    def _make_array(self, c):
+        return (c * ctypes.py_object)()
+
+    def insert(self, k, value):
+        &quot;&quot;&quot; insert value at index k, shifting subsequent values rightward &quot;&quot;&quot;
+        # assume 0&lt;=k&lt;=n
+        if self._n == self._capacity:
+            self._resize(2 * self._capacity)
+        for j in range(self._n, k, -1):
+            self._A[j] = self._A[j - 1]
+        self._A[k] = value
+        self._n += 1
+
+    def remove(self, value):
+        &quot;&quot;&quot; remove first occurrence of value (or raise ValueError) &quot;&quot;&quot;
+        for k in range(self._n):
+            if self._A[k] == value:
+                for j in range(k, self, _n - 1):  # shift others to fill gap
+                    self._A[j] = self._A[j + 1]
+                self._A[self._n - 1] = None  # garbage collection
+                self._n -= 1
+                return
+            raise ValueError('value not found')
+</code></pre>
 <h2 id="chapter-6-stacks-queues-and-deques">Chapter 6 Stacks, Queues, and Deques</h2>
+<ul>
+<li>
+<p>Stacks (LIFO)</p>
+<p>ADT</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S.push(e)</td>
+<td>add element e to the top of stack S</td>
+</tr>
+<tr>
+<td>S.pop()</td>
+<td>remove and return the top element from stack S; an error occurs if the stack is empty</td>
+</tr>
+<tr>
+<td>S.top()</td>
+<td>return a reference to the top element of stack S, without removing it; an error occurs if S is empty</td>
+</tr>
+<tr>
+<td>S.is_empty()</td>
+<td>return True if stack S does not contain any elements</td>
+</tr>
+<tr>
+<td>len(S)</td>
+<td>return number of elements in stack S</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Queues (FIFO)</p>
+<p>ADT</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q.enqueue(e)</td>
+<td>add element e to the back of queue Q</td>
+</tr>
+<tr>
+<td>Q.dequeue()</td>
+<td>remove and return the first element from queue Q; an error occurs if the stack is empty</td>
+</tr>
+<tr>
+<td>Q.first()</td>
+<td>return a reference to the element at the front of queue Q, without</td>
+</tr>
+<tr>
+<td>removing it; an error occurs if the queue if empty</td>
+<td></td>
+</tr>
+<tr>
+<td>Q.is_empty()</td>
+<td>return True if Queue Q does not contain any elements</td>
+</tr>
+<tr>
+<td>len(Q)</td>
+<td>return number of elements in queue Q</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Deques (Double-Ended Queues)</p>
+<p>ADT</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D.add_first(e)</td>
+<td>add element e to the front of deque D</td>
+</tr>
+<tr>
+<td>D.add_last(e)</td>
+<td>add to the back</td>
+</tr>
+<tr>
+<td>D.delete_first()</td>
+<td>remove and return the first element from deque D; an error occurs if the deque is empty</td>
+</tr>
+<tr>
+<td>D.delete_last()</td>
+<td>remove and return the last element from deque D; an error occurs if the deque is empty</td>
+</tr>
+<tr>
+<td>D.first()</td>
+<td>return (but do not remove) the first element from deque D; an error occurs if the deque is empty</td>
+</tr>
+<tr>
+<td>D.last()</td>
+<td>return (but do not remove) the last element from deque D; an error occurs if the deque is empty</td>
+</tr>
+<tr>
+<td>D.is_empty()</td>
+<td>return True if deque D does not contain any elements</td>
+</tr>
+<tr>
+<td>len(D)</td>
+<td>return number of elements in dequeue D</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>collections.deque</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>len(D)</td>
+<td>number of elements</td>
+</tr>
+<tr>
+<td>D.appendleft()</td>
+<td>add to beginning</td>
+</tr>
+<tr>
+<td>D.append()</td>
+<td>add to end</td>
+</tr>
+<tr>
+<td>D.popleft()</td>
+<td>remove from beginning</td>
+</tr>
+<tr>
+<td>D.pop()</td>
+<td>remove from end</td>
+</tr>
+<tr>
+<td>D[0]</td>
+<td>access first element</td>
+</tr>
+<tr>
+<td>D[-1]</td>
+<td>access last element</td>
+</tr>
+<tr>
+<td>D[j]</td>
+<td>access arbitrary entry by index</td>
+</tr>
+<tr>
+<td>D[j]=val</td>
+<td>modify arbitrary entry by index</td>
+</tr>
+<tr>
+<td>D.clear()</td>
+<td>clear all contents</td>
+</tr>
+<tr>
+<td>D.rotate(k)</td>
+<td>circularly shift rightward k steps</td>
+</tr>
+<tr>
+<td>D.remove(e)</td>
+<td>remove first matching element</td>
+</tr>
+<tr>
+<td>D.count(e)</td>
+<td>count number of matches for e</td>
+</tr>
+</tbody>
+</table>
 <h2 id="chapter-7-linked-lists">Chapter 7 Linked Lists</h2>
+<pre><code class="language-python"># a lightweight _Node class for a singly linked list
+class _Node(object):
+    __slots__ = '_element', '_next'
+
+    def __init__(self, element, next):
+        self._element = element
+        self._next = next
+</code></pre>
+<ul>
+<li>circularly linked list: tail points to the head</li>
+<li>doubly linked list: each node keeps an explicit reference to the node before it and a reference to the node after it</li>
+</ul>
 <h2 id="chapter-8-trees">Chapter 8 Trees</h2>
 <h2 id="chapter-9-priority-queues">Chapter 9 Priority Queues</h2>
 <h2 id="chapter-10-maps-hash-tables-and-skip-lists">Chapter 10 Maps, Hash Tables, and Skip Lists</h2>
