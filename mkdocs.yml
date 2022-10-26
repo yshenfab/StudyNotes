@@ -53,9 +53,9 @@ nav:
     - shell: 'tools/shell.md'
     - git: 'tools/git.md'
     - markdown: 'tools/markdown.md'
-    - makefile (TODO): 'tools/makefile.md'
+    # - makefile (TODO): 'tools/makefile.md'
   - Other:
-    - 编码 隐匿在计算机软硬件背后的语言 (TODO): 'other/code.md'
+    # - 编码 隐匿在计算机软硬件背后的语言 (TODO): 'other/code.md'
     - 上帝掷骰子吗？量子物理史话: 'other/history_of_quantum_physics.md'
     - 高效能人士的7个习惯: 'other/高效能人士的7个习惯.md'
     - 底层逻辑: 'other/底层逻辑.md'

@@ -2,10 +2,8 @@
 
 ## Todo List
 
-- [  ] add more python notes (fluent python, core python programming, python
-    cookbook, effective python, etc.)
-- [  ] add more existing study notes (some are .tex file)
-- [  ] add an interview section
+- [  ] solve formatting issues
+- [  ] add interview notes
 
 ## Reading List
 

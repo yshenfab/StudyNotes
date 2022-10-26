@@ -11,7 +11,7 @@ mkdocs gh-deploy # deploy github pages
 ```
 
 ## Link
-[https://yshenfab.github.io/StudyNotes/](https://yshenfab.github.io/StudyNotes/)
+[https://yshenfab.github.io/notes/](https://yshenfab.github.io/notes/)
 
 
 ## Notice
