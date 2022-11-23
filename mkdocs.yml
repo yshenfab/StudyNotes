@@ -53,6 +53,7 @@ nav:
     - shell: 'tools/shell.md'
     - git: 'tools/git.md'
     - markdown: 'tools/markdown.md'
+    - docker: 'tools/docker.md'
     # - makefile (TODO): 'tools/makefile.md'
   - Other:
     # - 编码 隐匿在计算机软硬件背后的语言 (TODO): 'other/code.md'
