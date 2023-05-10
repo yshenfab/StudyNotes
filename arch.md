@@ -131,8 +131,10 @@ yay -S deepin.com.wechat2
 
 ## VPN
 
-[linkhub](https://linkhub.mobi/)
-[maoxiong](https://linxing.maoxiong.cloud/)
+- [linkhub](https://linkhub.mobi/)
+- [ssrdog](https://ssrdog111.com/#/)
+- [一元机场](https://一元机场.com/)
+- [maoxiong](https://linxing.maoxiong.cloud/)
 
 
 ```
@@ -158,3 +160,18 @@ systemctl enable bluetooth.service
 systemctl enable/start sshd.service
 
 systemctl enable/start lxdm.service
+
+## system time
+
+```timedatectl set-ntp true``` should be okay
+
+```sh
+sudo ntpd -qg
+# method 1
+# method 2
+sudo ntpdate ntp.ubuntu.com
+# sync system time with network time
+timedatectl set-ntp true
+# check status
+timedatectl status
+```

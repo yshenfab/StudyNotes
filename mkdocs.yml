@@ -49,6 +49,7 @@ nav:
     - How Google Works: 'startup/how_google_works.md'
     - startup: 'startup/startup.md'
   - Tools:
+    - neovim: 'tools/neovim.md'
     - vim: 'tools/practical_vim.md'
     - shell: 'tools/shell.md'
     - git: 'tools/git.md'
