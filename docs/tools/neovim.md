@@ -8,60 +8,63 @@
 
   [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 
-- LazyVim
-
-  [LazyVim](https://www.lazyvim.org/)
-
-  [LazyVim](https://github.com/LazyVim/LazyVim)
-
-  [LazyVim Github](https://github.com/folke/lazy.nvim) 4.5k
-
-## Plugin Manager
-
-- [Lazy](https://github.com/folke/lazy.nvim) 4.5k
-- [Packer](https://github.com/wbthomason/packer.nvim) 6.2k
-
-## Collections
-### Config
-
-[blog](https://galexbh.hashnode.dev/the-best-ide-style-configurations-for-nvim)
+## Frameworks
 
 - [SpaceVim](https://github.com/SpaceVim/SpaceVim) 19.8k
 - [NvChad](https://github.com/NvChad/NvChad) 16.4k
 - [LunarVim](https://github.com/LunarVim/LunarVim) 14.2k
 - [AstroNvim](https://github.com/AstroNvim/AstroNvim) 9.1k
+- [LazyVim](https://github.com/LazyVim/LazyVim) 5.2k
 - [CosmicNvim](https://github.com/CosmicNvim/CosmicNvim) 913
 - [VapourNvim](https://github.com/VapourNvim/VapourNvim) 479
 
-### IDE
+## IDE
 - [Onivim](https://github.com/onivim/oni2) 7.6k
 - [Helix](https://github.com/helix-editor/helix) 21.4k
 
-### AI Code Generator/Completion
+## AI Coding Assistants
+
+For more AI coding assitants, check this repo [Awesome AI Coding](https://github.com/wsxiaoys/awesome-ai-coding).
+
+Here are some plugins for vim/neovim.
 
 - [Copilot](https://github.com/features/copilot) (Github, Microsoft)
 
   [copilot.vim](https://github.com/github/copilot.vim) 5.2k
-- [CodeWhisperer](https://aws.amazon.com/cn/codewhisperer/) (Amazon, no plugin for neovim)
 - [Tabnine](https://www.tabnine.com/)
 
   [TabNine Github](https://github.com/codota/TabNine) 9.9k
 
-  [tabnine-nvim](https://github.com/codota/tabnine-nvim) 129
+  Official plugin: [tabnine-nvim](https://github.com/codota/tabnine-nvim) 129
+
+  For nvim-cmp: [cmp-tabnine](https://github.com/tzachar/cmp-tabnine) 250
+
 - [Codeium](https://codeium.ai/)
 
-  [codeium.vim](https://github.com/Exafunction/codeium.vim) 1k
+  Official plugin: [codeium.vim](https://github.com/Exafunction/codeium.vim) 1k
+
+  For nvim-cmp: [codeium.nvim](https://github.com/jcdickinson/codeium.nvim) 142
+
+- [Kite](https://github.com/kiteco/vim-plugin) (python only)
+
+These two products have no plugins for neovim.
+- [CodeWhisperer](https://aws.amazon.com/cn/codewhisperer/) (Amazon, no plugin for neovim)
 - [Bito](https://bito.ai/) (no plugin for neovim)
 
-- [Kite](https://github.com/kiteco/vim-plugin)
-  only for python code
-
 ## Plugins
+### Plugin Manager
 
-| usage                       | plugins                                           |
+Lazy is recommended.
+
+- [Lazy](https://github.com/folke/lazy.nvim) 4.5k
+- [Packer](https://github.com/wbthomason/packer.nvim) 6.2k
+
+### Plugins List
+
+| Usage                       | Plugins                                           |
 |-----------------------------|---------------------------------------------------|
 | file explorer               | neotree, nvimtree                                 |
-| auto-completion, snippets   | nvim-cmp,LuaSnip, friendly-snippets               |
+| auto-completion, snippets   | nvim-cmp, LuaSnip, friendly-snippets               |
 | file searching              | telescope                                         |
 | syntax highlighting         | nvim-treesitter                                   |
 | cheatsheet                  | whichkey                                          |
@@ -93,3 +96,7 @@ Other LSP config:
 ## DAP
 
 [DAP](https://microsoft.github.io/debug-adapter-protocol/)
+
+## My Neovim Config
+
+Refer to [Neovim Config](https://github.com/yshenfab/dotfiles/tree/master/neovim).
