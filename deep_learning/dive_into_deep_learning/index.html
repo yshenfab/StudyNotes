@@ -34,7 +34,7 @@
           <a href="../.." class="icon icon-home"> Study Notes
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -68,9 +68,9 @@
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#_1">监督学习</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#regression">回归Regression</a>
+    <li class="toctree-l4"><a class="reference internal" href="#regression">回归 Regression</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#classification">分类Classification</a>
+    <li class="toctree-l4"><a class="reference internal" href="#classification">分类 Classification</a>
     </li>
         </ul>
     </li>
@@ -143,6 +143,10 @@
               </ul>
               <p class="caption"><span class="caption-text">Tools</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/arch/">Arch Linux</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/neovim/">neovim</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">vim</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">shell</a>
@@ -150,6 +154,8 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">git</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">markdown</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/docker/">docker</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
@@ -183,51 +189,58 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Deep Learning &raquo;</li><li>Dive into Deep Learning</li>
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Deep Learning &raquo;</li>
+      <li>Dive into Deep Learning</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
   <hr/>
 </div>
-
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="dive-into-deep-learning">Dive into Deep Learning</h1>
+                <h1 id="dive-into-deep-learning">Dive into Deep Learning 动手学深度学习</h1>
+<ul>
+<li><a href="https://zh.d2l.ai/">d2l website</a></li>
+<li><a href="https://github.com/d2l-ai/d2l-zh">github</a></li>
+<li><a href="https://space.bilibili.com/1567748478/channel/seriesdetail?sid=358497">online course</a></li>
+</ul>
 <h2 id="preface">Preface</h2>
 <p>Key components: data, model, objective function, algorithm (调整模型参数以优化目标函数)</p>
 <h3 id="_1">监督学习</h3>
-<h4 id="regression">回归Regression</h4>
+<h4 id="regression">回归 Regression</h4>
 <ul>
 <li>问题类型的本质是输出决定的，输出是一个实值</li>
 <li>判断回归问题的一个很好的经验法则是，任何有关“多少”的问题很可能就是回归问题</li>
-<li>例：手术需要多少小时？未来6小时会有多少降雨量？预测用户对一部电影的评分是多少？</li>
+<li>例：手术需要多少小时？未来 6 小时会有多少降雨量？预测用户对一部电影的评分是多少？</li>
 <li>学习最小化“预测值和实际标签值的差异”的模型，关注最小化平方误差损失函数(MSE)</li>
 </ul>
-<h4 id="classification">分类Classification</h4>
+<h4 id="classification">分类 Classification</h4>
 <ul>
 <li>“哪一个？”的问题叫做分类，模型预测样本属于哪个类别</li>
-<li>分类问题常见的损失函数是交叉熵cross-entropy</li>
+<li>分类问题常见的损失函数是交叉熵 cross-entropy</li>
 </ul>
 <p>R## 无监督学习
-数据中不含有"目标"的问题为无监督学习
-- 聚类 clustering
-- 主成分分析 principal component analysis
-    (PCA)：找到少量参数准确捕捉数据的线性相关属性
-- 因果关系 causality
-- 概率图模型 probabilistic graphical models
-- 生成对抗网络 GAN</p>
+数据中不含有"目标"的问题为无监督学习</p>
+<ul>
+<li>聚类 clustering</li>
+<li>主成分分析 principal component analysis
+  (PCA)：找到少量参数准确捕捉数据的线性相关属性</li>
+<li>因果关系 causality</li>
+<li>概率图模型 probabilistic graphical models</li>
+<li>生成对抗网络 GAN</li>
+</ul>
 <h3 id="_2">强化学习</h3>
 <h2 id="_3">预备知识</h2>
 <ul>
-<li>范数norm：一个向量的范数告诉我们一个向量有多大。向量范数是将向量映射到标量的函数。L1范数表示向量元素的绝对值之和，L2范数表示向量元素平方和的平方根。深度学习中经常使用L2范数的平方。</li>
-<li>optimization用模型拟合数据 + generalization运用于训练数据外的数据</li>
+<li>范数 norm：一个向量的范数告诉我们一个向量有多大。向量范数是将向量映射到标量的函数。L1 范数表示向量元素的绝对值之和，L2 范数表示向量元素平方和的平方根。深度学习中经常使用 L2 范数的平方。</li>
+<li>optimization 用模型拟合数据 + generalization 运用于训练数据外的数据</li>
 </ul>
 <h2 id="_4">线性神经网络</h2>
 <p>回归（regression）是能为一个或多个自变量与因变量之间关系建模的一类方法，回归经常用来表示输入和输出之间的关系。</p>
 <p>梯度下降（gradient descent）通过不断地在损失函数递减的方向上更新参数来降低误差。梯度下降最简单的用法是计算损失函数（数据集中所有样本的损失均值） 关于模型参数的导数（在这里也可以称为梯度）。 但实际中的执行可能会非常慢：因为在每一次更新参数之前，我们必须遍历整个数据集。 因此，我们通常会在每次需要计算更新的时候随机抽取一小批样本， 这种变体叫做小批量随机梯度下降（minibatch stochastic gradient descent）。</p>
-<p>可以调整但不在训练过程中更新的参数称为超参数（hyperparameter），比如batch size, learning rate等。</p>
+<p>可以调整但不在训练过程中更新的参数称为超参数（hyperparameter），比如 batch size, learning rate 等。</p>
               
             </div>
           </div><footer>

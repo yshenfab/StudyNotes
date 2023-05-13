@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>pythonic - Study Notes</title>
+    <title>neovim - Study Notes</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "pythonic";
-        var mkdocs_page_input_path = "python/pythonic.md";
+        var mkdocs_page_name = "neovim";
+        var mkdocs_page_input_path = "tools/neovim.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -97,18 +97,16 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Python</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">pythonic</a>
-    <ul class="current">
-    </ul>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/pythonic/">pythonic</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../python_tips/">python tips</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/python_tips/">python tips</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../python3/">python3</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/python3/">python3</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../effective_python/">Effective Python (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective Python (TODO)</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../data_structure_and_algorithms_in_python/">Data Structures and Algorithms in Python</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/data_structure_and_algorithms_in_python/">Data Structures and Algorithms in Python</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Research</span></p>
@@ -124,20 +122,42 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Tools</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/arch/">Arch Linux</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../arch/">Arch Linux</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/neovim/">neovim</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">neovim</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#tutorial">Tutorial</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#frameworks">Frameworks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ide">IDE</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ai-coding-assistants">AI Coding Assistants</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#plugins">Plugins</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#plugin-manager">Plugin Manager</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#plugins-list">Plugins List</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dap">DAP</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#my-neovim-config">My Neovim Config</a>
+    </li>
+    </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">vim</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../practical_vim/">vim</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">shell</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../shell/">shell</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">git</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../git/">git</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">markdown</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../markdown/">markdown</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/docker/">docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../docker/">docker</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
@@ -172,8 +192,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>Python &raquo;</li>
-      <li>pythonic</li>
+          <li>Tools &raquo;</li>
+      <li>neovim</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -182,129 +202,179 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="pythonic">Pythonic</h1>
-<p><a href="https://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/idiomatic-python.html">Idiomatic Python</a></p>
+                <h1 id="neovim-config">Neovim config</h1>
+<h2 id="tutorial">Tutorial</h2>
 <ul>
-<li>reverse list a: <code>a[::-1]</code></li>
-<li><code>string.join(iterable)</code></li>
-<li>use <code>zip</code>, <code>list(zip(a,b))</code>, <code>dict(zip(a,b))</code></li>
-<li>open file</li>
+<li>Tutorial by TJ DeVries</li>
 </ul>
-<pre><code class="language-python">with open('filename', 'r') as f:
-    f.read()
-</code></pre>
+<p><a href="https://www.youtube.com/watch?v=stqUbv-5u2s">Effective Neovim: Instant IDE</a></p>
+<p><a href="https://github.com/nvim-lua/kickstart.nvim">Kickstart.nvim</a></p>
+<h2 id="frameworks">Frameworks</h2>
 <ul>
-<li><code>iter()</code>连续调用函数</li>
-<li>for/else, try/else, while/else</li>
-<li>dict: 
-popitem()是原子操作</li>
+<li><a href="https://github.com/SpaceVim/SpaceVim">SpaceVim</a> 19.8k</li>
+<li><a href="https://github.com/NvChad/NvChad">NvChad</a> 16.4k</li>
+<li><a href="https://github.com/LunarVim/LunarVim">LunarVim</a> 14.2k</li>
+<li><a href="https://github.com/AstroNvim/AstroNvim">AstroNvim</a> 9.1k</li>
+<li><a href="https://github.com/LazyVim/LazyVim">LazyVim</a> 5.2k</li>
+<li><a href="https://github.com/CosmicNvim/CosmicNvim">CosmicNvim</a> 913</li>
+<li><a href="https://github.com/VapourNvim/VapourNvim">VapourNvim</a> 479</li>
 </ul>
-<pre><code class="language-python">while d:
-    key, value = d.popitem()
-</code></pre>
-<p>连接多个字典
-<code>d = ChainMap(command_line_args, os.environ, defaults)</code></p>
+<h2 id="ide">IDE</h2>
 <ul>
-<li>deque更有效，两端都可操作，<code>Q = collections.deque()</code>，<code>append(), appendleft(),
-    extend(), extendleft(), pop(), popleft()</code></li>
-<li>
-<p>collections: deque, namedtuple, counter, defaultdict, etc.</p>
-</li>
-<li>
-<p>decorator: 装饰器事实上就是一个函数到另一个函数的映射，可以在不修改原函数代码的情况下为其增加新的功能。本质上，decorator就是一个返回函数的高阶函数。</p>
-</li>
-<li>
-<p>使用ignored()代替pass exception，例如</p>
-</li>
+<li><a href="https://github.com/onivim/oni2">Onivim</a> 7.6k</li>
+<li><a href="https://github.com/helix-editor/helix">Helix</a> 21.4k</li>
 </ul>
-<pre><code class="language-python">try:
-    os.remove('somefile.tmp')
-except OSError:
-    pass
-</code></pre>
-<p>改成</p>
-<pre><code class="language-python">with ignored(OSError):
-    os.remove('somefile.tmp')
-</code></pre>
+<h2 id="ai-coding-assistants">AI Coding Assistants</h2>
+<p>For more AI coding assitants, check this repo <a href="https://github.com/wsxiaoys/awesome-ai-coding">Awesome AI Coding</a>.</p>
+<p>Here are some plugins for vim/neovim.</p>
 <ul>
-<li>两个冲突的原则：
-  1.一行不要有太多逻辑
-  2.不要把单一的想法拆分成多个部分</li>
-<li>Raymond的原则：一行代码的逻辑等价于一句自然语言</li>
-<li>列表解析和生成器<code>sum(i**2 for i in range(10))</code></li>
-<li>函数嵌套定义</li>
+<li><a href="https://github.com/features/copilot">Copilot</a> (Github, Microsoft)</li>
 </ul>
-<pre><code class="language-python">def my_func():
-    def subfunc():
-        ...
-    subfunc()
-    ...
-</code></pre>
+<p><a href="https://github.com/github/copilot.vim">copilot.vim</a> 5.2k
+- <a href="https://www.tabnine.com/">Tabnine</a></p>
+<p><a href="https://github.com/codota/TabNine">TabNine Github</a> 9.9k</p>
+<p>Official plugin: <a href="https://github.com/codota/tabnine-nvim">tabnine-nvim</a> 129</p>
+<p>For nvim-cmp: <a href="https://github.com/tzachar/cmp-tabnine">cmp-tabnine</a> 250</p>
 <ul>
-<li>
-<p>with比起try...finally...来说，更强调"作用域"</p>
-</li>
-<li>
-<p>any</p>
-</li>
+<li><a href="https://codeium.ai/">Codeium</a></li>
 </ul>
-<pre><code class="language-py">def has_primary_key():
-    return any(row[1] ==0 and row[9] != 'YES' for row in rows:)
-</code></pre>
+<p>Official plugin: <a href="https://github.com/Exafunction/codeium.vim">codeium.vim</a> 1k</p>
+<p>For nvim-cmp: <a href="https://github.com/jcdickinson/codeium.nvim">codeium.nvim</a> 142</p>
 <ul>
-<li>namedtuple</li>
+<li><a href="https://github.com/kiteco/vim-plugin">Kite</a> (python only)</li>
 </ul>
-<pre><code class="language-python">Point = collections.namedtuple('Point', ['x', 'y'])
-p = Point(x=1.0, y=2.0)
-p.x
-p.y
-</code></pre>
+<p>These two products have no plugins for neovim.
+- <a href="https://aws.amazon.com/cn/codewhisperer/">CodeWhisperer</a> (Amazon, no plugin for neovim)
+- <a href="https://bito.ai/">Bito</a> (no plugin for neovim)</p>
+<h2 id="plugins">Plugins</h2>
+<h3 id="plugin-manager">Plugin Manager</h3>
+<p>Lazy is recommended.</p>
 <ul>
-<li>
-<p>map/filter/reduce与列表推导</p>
-</li>
-<li>
-<p>map是从一个集合到另一个集合的映射，比如已知集合lst，要得到每一项平方组成的新集合：</p>
-</li>
+<li><a href="https://github.com/folke/lazy.nvim">Lazy</a> 4.5k</li>
+<li><a href="https://github.com/wbthomason/packer.nvim">Packer</a> 6.2k</li>
 </ul>
-<pre><code class="language-python">  lst = [1,2,3]
-  map(lambda item: item**2, lst)
-  [item**2 for item in lst]
-</code></pre>
+<h3 id="plugins-list">Plugins List</h3>
+<table>
+<thead>
+<tr>
+<th>Usage</th>
+<th>Plugins</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file explorer</td>
+<td>neotree, nvimtree</td>
+</tr>
+<tr>
+<td>auto-completion, snippets</td>
+<td>nvim-cmp, LuaSnip, friendly-snippets</td>
+</tr>
+<tr>
+<td>file searching</td>
+<td>telescope</td>
+</tr>
+<tr>
+<td>syntax highlighting</td>
+<td>nvim-treesitter</td>
+</tr>
+<tr>
+<td>cheatsheet</td>
+<td>whichkey</td>
+</tr>
+<tr>
+<td>LSP</td>
+<td>nvim-lspconfig, mason, goto-preview</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>comment.nvim</td>
+</tr>
+<tr>
+<td>autopair</td>
+<td>nvim-autopairs</td>
+</tr>
+<tr>
+<td>greeter</td>
+<td>alpha-nvim, startify</td>
+</tr>
+<tr>
+<td>indent</td>
+<td>indent-blankline.nvim</td>
+</tr>
+<tr>
+<td>terminal</td>
+<td>toggleterm.nvim</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>nvim-web-devicons</td>
+</tr>
+<tr>
+<td>UI</td>
+<td>lualine, bufferline.nvim</td>
+</tr>
+<tr>
+<td>git</td>
+<td>vim-fugutive, gitsigns</td>
+</tr>
+<tr>
+<td>diag/ref/telescope/quickfix</td>
+<td>trouble.nvim</td>
+</tr>
+<tr>
+<td>todo</td>
+<td>todo-comments.nvim</td>
+</tr>
+<tr>
+<td>tpope</td>
+<td>vim-surround, vim-repeat, vim-sleuth</td>
+</tr>
+<tr>
+<td>outline</td>
+<td>symbols-outline.nvim</td>
+</tr>
+<tr>
+<td>markdown</td>
+<td>markdown-preview.nvim</td>
+</tr>
+<tr>
+<td>scratchpad</td>
+<td>codi.vim (neovim support is still in its infancy)</td>
+</tr>
+<tr>
+<td>motion</td>
+<td>hop.nvim (2.1k), leap.nvim (3k)</td>
+</tr>
+<tr>
+<td>code runner</td>
+<td>sniprun</td>
+</tr>
+<tr>
+<td>copilot</td>
+<td>copilot.lua, copilot-cmp</td>
+</tr>
+<tr>
+<td>debug</td>
+<td>nvim-dap</td>
+</tr>
+</tbody>
+</table>
+<p>Other LSP config:</p>
 <ul>
-<li>filter也可以通过列表推导来实现，比如已知集合lst，要得到奇数的平方的新集合：</li>
+<li>null-ls.nvim (used by LunarVim &amp; AstroNvim)</li>
+<li>lsp-zero.nvim</li>
 </ul>
-<pre><code class="language-python">  [item**2 for item in lst if item % 2]
-  map(lambda item: item**2, filter(lambda item: item % 2, lst))
-</code></pre>
-<ul>
-<li>reduce把结果继续和序列的下一个元素做累积计算</li>
-</ul>
-<pre><code class="language-python">  reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
-  from functools import reduce
-  reduce(lambda x,y: x+y, [1,2,3,4]) # 10
-</code></pre>
-<ul>
-<li>lambda表达式 <code>add = lambda x,y : x+y</code></li>
-<li>yield的作用就是把一个函数变成一个generator，使用yield的好处在于，它返回的是一个generator生成器</li>
-<li>generator生成器，列表推导用[]进行生成，把[]换成()，就创建了一个generator：</li>
-</ul>
-<pre><code class="language-python">  # L是一个list，g是一个generator，而generator是可迭代的
-  L = [x*x for x in range(10)] # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-  g = (x*x for x in range(10)) # &lt;generator object &lt;genexpr&gt; at 0x7fd2264607d8&gt;
-</code></pre>
-<ul>
-<li><code>__slots__</code> Magic: save RAM instead of using dict</li>
-<li>List comprehensions: <code>[expression for var in list if conditional]</code></li>
-<li><strong>Generators</strong> are a Python implementation of coroutines. Essentially, they’re functions that let you suspend execution and return a result.</li>
-<li><strong>Assert</strong> is pretty simple: it takes a boolean, and if the boolean evaluates to False, it fails (by raising an AssertionError exception). assert True is a no-op.</li>
-</ul>
+<h2 id="dap">DAP</h2>
+<p><a href="https://microsoft.github.io/debug-adapter-protocol/">DAP</a></p>
+<h2 id="my-neovim-config">My Neovim Config</h2>
+<p>Refer to <a href="https://github.com/yshenfab/dotfiles/tree/master/neovim">Neovim Config</a>.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../../psychology/%E4%B8%93%E6%B3%A8%E5%8A%9B/" class="btn btn-neutral float-left" title="专注力"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../python_tips/" class="btn btn-neutral float-right" title="python tips">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../arch/" class="btn btn-neutral float-left" title="Arch Linux"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../practical_vim/" class="btn btn-neutral float-right" title="vim">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -327,10 +397,10 @@ p.y
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../../psychology/%E4%B8%93%E6%B3%A8%E5%8A%9B/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../arch/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../python_tips/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../practical_vim/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
