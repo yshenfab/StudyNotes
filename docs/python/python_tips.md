@@ -15,6 +15,7 @@ running from command line:
 `python -m pdb my_code.py`
 
 running inside a script:
+
 ```python
 import pdb
 def make_bread():
@@ -26,13 +27,13 @@ print(make_bread())
 
 - pdb usage
 
-|shortcut|meaning|
-|---|---|
-|c|continue execution|
-|w|show context of current line it is executing|
-|a|print the argument list of current function|
-|s|execute the current line and stop at the first possible occasion|
-|n|continue execution until the next line in the current function is reached or it returns|
+| shortcut | meaning                                                                                 |
+| -------- | --------------------------------------------------------------------------------------- |
+| c        | continue execution                                                                      |
+| w        | show context of current line it is executing                                            |
+| a        | print the argument list of current function                                             |
+| s        | execute the current line and stop at the first possible occasion                        |
+| n        | continue execution until the next line in the current function is reached or it returns |
 
 - Ternary Operators
 
@@ -43,7 +44,7 @@ Python.
 
 `state = "nice" if condition else "not nice"`
 
-- Decorators are functions which modify the functionality of other functions. 
+- Decorators are functions which modify the functionality of other functions.
 
       1) Define functions within functions;
 
@@ -54,10 +55,10 @@ Python.
 - Don't use global.
 - Mutable means "able to be changed", immutable means "constant". In Python, the default arguments are evaluated once when the function is defined, not each time the function is called. You should never define default arguments of mutable type unless you know what you are doing.
 
-||Data types|
-|---|---|
-|mutable|list, dict, set|
-|immutable|int, float, bool, string, tuple|
+|           | Data types                      |
+| --------- | ------------------------------- |
+| mutable   | list, dict, set                 |
+| immutable | int, float, bool, string, tuple |
 
 - `__slots__` Magic
 
@@ -85,23 +86,23 @@ class MyClass(object):
 ```
 
 - Collections, container data types (defaultdict, OrderedDict, counter, deque,
-    namedtuple, enum.Enum)
+  namedtuple, enum.Enum)
 
 - Object introspection
 
-    1) `dir(list)` to get all the methods of a list;
+  1. `dir(list)` to get all the methods of a list;
 
-    2) `type(object)` returns the type of an object, `id(object)` returns the
-    unique id of an object;
+  2. `type(object)` returns the type of an object, `id(object)` returns the
+     unique id of an object;
 
-    3) insepct module, `import inspect`,
-    `inspect.getmembers(str)`
+  3. insepct module, `import inspect`,
+     `inspect.getmembers(str)`
 
 - list/dict/set/generator comprehensions
 
 - Exceptions
 
-1) try/except
+1. try/except
 
 ```python
 try:
@@ -110,7 +111,8 @@ except IOError as e:
     print(f'An IOError occured. {e.args[-1]}')
 ```
 
-2) Handling multiple exceptions
+2. Handling multiple exceptions
+
 ```python
 # method 1
 except (IOError, EOFError) as e:
@@ -129,7 +131,8 @@ except (IOError, EOFError) as e:
     raise e
 ```
 
-3) finally
+3. finally
+
 ```python
 try:
     file = open('test.txt', 'rb')
@@ -139,7 +142,8 @@ finally:
     print("This would be printed whether or not an exception occurred!")
 ```
 
-4) try/else
+4. try/else
+
 ```python
 try:
     print('I am sure no exception is going to occur!')
@@ -165,17 +169,17 @@ finally:
 - Python C extensions: ctypes
 - `open()`, syntax: `open(filename, mode)`
 
-|mode|description|
-|---|---|
-|r|read|
-|r+|read and write|
-|w|overwrite|
-|a|append|
-|b|binary|
+| mode | description    |
+| ---- | -------------- |
+| r    | read           |
+| r+   | read and write |
+| w    | overwrite      |
+| a    | append         |
+| b    | binary         |
 
 - Coroutines: similar to generators with a few differences. Generators are data
-    producers. Coroutines are data consumers
-    
+  producers. Coroutines are data consumers
+
 ```python
 # generator
 def fib():
@@ -190,7 +194,7 @@ def grep(pattern):
         line = (yield)
         if pattern in line:
             print(line)
-        
+
 search = grep('coroutine')
 next(search)
 search.send("hahaha")
@@ -214,6 +218,7 @@ print([fib(n) for n in range(10)])
 # Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 fib.cache_clear()
 ```
+
 - Context Managers: Context managers allow you to allocate and release resources precisely when you want to. The most widely used example of context manager is `with`.
 
 ```python

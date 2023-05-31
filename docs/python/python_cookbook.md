@@ -1,9 +1,11 @@
 # Python Cookbook (3rd Edition)
 
 ## Chap 1 数据结构和算法
+
 list, set, dict, collections module
 
-- 找到最大or最小的n个元素
+- 找到最大 or 最小的 n 个元素
+
 ```python
 # nlargest(), nsmallest()
 import heapq
@@ -22,7 +24,8 @@ cheap = heapq.nsmallest(3, portfolio, key=lambda s: s['price'])
 expensive = heapq.nlargest(3, portfolio, key=lambda s: s['price'])
 ```
 
-- 实现优先级队列，以给定优先级对元素排序，且每次pop都返回优先级最高的元素
+- 实现优先级队列，以给定优先级对元素排序，且每次 pop 都返回优先级最高的元素
+
 ```python
 import heapq
 class PriorityQueue:
@@ -38,14 +41,15 @@ class PriorityQueue:
         return heapq.heappop(self._queue)[-1]
 ```
 
-- 在dict中将key映射到多个value上(multidict)
+- 在 dict 中将 key 映射到多个 value 上(multidict)
+
 ```python
 d = {
     'a': [1,2,3],
     'b': [4,5]
 }
 
-from collections import defaultdict 
+from collections import defaultdict
 
 d = defaultdict(list)
 d['a'].append(1)
@@ -59,6 +63,7 @@ d['b'].add(3)
 ```
 
 - 让字典保持有序
+
 ```python
 from collections import OrderedDict
 d = OrderedDict
@@ -74,9 +79,11 @@ for key in d:
 import json
 json.dump(d) #  {"foo": 1, "bar": 2, "spam": 3, "grok": 4}
 ```
-OrderedDict内部维护了一个双向链表，根据元素加入的顺序来排列key的位置。第一个新加入的元素被放置在链表的末尾，接下来对已存在的key做重新赋值不会改变key的顺序。OrderedDict的大小是普通dict的2倍。
 
-- dict相关的计算，用zip()，排序用sorted()
+OrderedDict 内部维护了一个双向链表，根据元素加入的顺序来排列 key 的位置。第一个新加入的元素被放置在链表的末尾，接下来对已存在的 key 做重新赋值不会改变 key 的顺序。OrderedDict 的大小是普通 dict 的 2 倍。
+
+- dict 相关的计算，用 zip()，排序用 sorted()
+
 ```python
 prices = {
     'ACME': 45.23,
@@ -97,7 +104,8 @@ print(min(prices_and_names))  # OK
 print(max(prices_and_names))  # ValueError: max() arg is an empty sequence
 ```
 
-- 在两个dict中寻找相同点
+- 在两个 dict 中寻找相同点
+
 ```python
 a = {'x': 1, 'y': 2, 'z': 3}
 b = {'w': 10, 'x': 11, 'y': 2}
@@ -114,6 +122,7 @@ c = {key: a[key] for key in a.keys() - {'z', 'w'}}
 ```
 
 - 从序列中去掉重复元素，且保持顺序不变
+
 ```python
 # if items in sequence is hashable, use set and generator
 def dedupe(items):
@@ -146,6 +155,7 @@ list(dedupe2(a, key=lambda d: d['x']))
 ```
 
 - 找出序列中出现次数最多的元素
+
 ```python
 from collections import Counter
 
@@ -155,6 +165,7 @@ top_three = word_counts.most_common(3)
 ```
 
 - 通过公共键对字典列表排序
+
 ```python
 from operator import itemgetter
 
@@ -166,4 +177,3 @@ rows_by_uid = sorted(rows, key=itemgetter('uid'))
 rows_by_name = sorted(rows, key=lambda r: r['name'])
 rows_by_uid = sorted(rows, key=lambda r: r['uid'])
 ```
-

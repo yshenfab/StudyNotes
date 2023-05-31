@@ -1,137 +1,65 @@
+# How to start a startup
 
-# Table of Contents
+## Idea + Product + Team + Execution
 
-1.  [Idea + Product + Team + Execution](#org3c17f62)
-2.  [5 jobs of CEO in early stage](#orgc814994)
-3.  [where to start](#orgafe2739)
-4.  [what is v1?](#orgfe31af9)
-    1.  [v1 feature creep](#org2c3e5b1)
-5.  [make sth people want](#org562a506)
-6.  [do your things well](#org372b815)
-7.  [stay focused](#org801383e)
-8.  [measure your growth](#org8a85f50)
-9.  [know if you are default alive](#orgbf71c55)
-10. [keep expenses low](#org6b153fb)
-11. [fundraising gets harder](#orgac2ebee)
-12. [MVP minimum viable product 最小可行性产品](#org8669ef6)
-13. [find correct customers](#org31b6e3b)
-14. [start small and expand](#org47c8f64)
-15. [retention, keep your users](#org574a245)
-16. [Viral Marketing](#org36bcb97)
+- 2-3 co-founders
 
+  Are they smart?
 
+  Do they get things done?
 
-<a id="org3c17f62"></a>
+  Do I want to spend a lot of time around them?
 
-# Idea + Product + Team + Execution
+- give 10% to the first 10 employees
 
--   2-3 cofounders: Are they smart? Do they get things done? Do I want to spend a lot of time around them?
--   give 10% to the first 10 employees
+## 5 jobs of CEO in early stage
 
+1. set the vision
+2. raise money
+3. evangelize
+4. hire and manage
+5. **make sure the entire compony executes**
 
-<a id="orgc814994"></a>
+## Where to start
 
-# 5 jobs of CEO in early stage
+- learn a lot, become an expert
+- identify customer segments
+- storyoard ideal user experience
 
--   set the vision
--   raise money
--   evangelize
--   hire and manage
--   **make sure the entire compony executes**
+## What is v1?
 
-
-<a id="orgafe2739"></a>
-
-# where to start
-
--   learn a lot, become an expert
--   identify customer segments
--   storyoard ideal user experience
-
-
-<a id="orgfe31af9"></a>
-
-# what is v1?
-
--   MVP minimum viable product
--   simple product positioning
--   this is not the hard part&#x2026;
-
-
-<a id="org2c3e5b1"></a>
+- MVP (minimum viable product)
+- simple product positioning
+- this is not the hard part
 
 ## v1 feature creep
 
--   build fast, but optimise for now
--   manual before automation
--   temporary brokenness -> permanent paralysis
--   beware of frankenstein
+- build fast, but optimise for now
+- manual before automation
+- temporary brokenness -> permanent paralysis
+- beware of frankenstein
 
+## Find correct customers
 
-<a id="org562a506"></a>
+- talk to users
+- pre-sale
+- low price trail
 
-# make sth people want
+## Viral Marketing
 
+- payload
+- conversion rate
+- frequency
 
-<a id="org372b815"></a>
+## Tips
 
-# do your things well
-
-
-<a id="org801383e"></a>
-
-# stay focused
-
-
-<a id="org8a85f50"></a>
-
-# measure your growth
-
-
-<a id="orgbf71c55"></a>
-
-# know if you are default alive
-
-
-<a id="org6b153fb"></a>
-
-# keep expenses low
-
-
-<a id="orgac2ebee"></a>
-
-# fundraising gets harder
-
-
-<a id="org8669ef6"></a>
-
-# MVP minimum viable product 最小可行性产品
-
-
-<a id="org31b6e3b"></a>
-
-# find correct customers
-
--   talk to users
--   预售
--   低价试用
-
-
-<a id="org47c8f64"></a>
-
-# start small and expand
-
-
-<a id="org574a245"></a>
-
-# retention, keep your users
-
-
-<a id="org36bcb97"></a>
-
-# Viral Marketing
-
--   payload
--   conversion rate
--   frequency
-
+- make sth people want
+- do your things well
+- stay focused
+- measure your growth
+- know if you are default alive
+- keep expenses low
+- fundraising gets harder
+- MVP (minimum viable product)
+- start small and expand
+- retention, keep your users

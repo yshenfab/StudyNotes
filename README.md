@@ -24,7 +24,8 @@ mkdocs gh-deploy # deploy github pages
 
 ## Notice
 
-I have been using Emacs org-mode to take notes for years, many markdown files are converted from org files. So, there might be formatting issues.
+I have been using Emacs org-mode to take notes for years, many markdown files are
+converted from `.org` files, so there might be formatting issues.
 
 If you like this project, welcome to buy me a coffee.
 

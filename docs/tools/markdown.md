@@ -1,32 +1,53 @@
 # Markdown
 
-Heading level 1
-========
+Refer to [Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-Heading level 2
---------
+## Emphasis
 
-## text
+Emphasis, aka italics, with _asterisks_ or _underscores_.
 
-**bold text**
+Strong emphasis, aka bold, with **asterisks**.
 
-*italicized text*
+Combined emphasis with **asterisks and _underscores_**.
 
-> this is a quote
+Strikethrough uses two tildes. ~~Scratch this.~~
 
-## ordered list
+## Lists
+
+### Ordered lists
 
 1. first item
 2. second item
 3. third item
 
-## unordered list
+### Unordered lists
+
+Use `*/-/+`.
 
 - first item
 - second item
 - third item
 
-## code
+## Task lists
+
+- [x] write the press release
+- [ ] update the website
+- [ ] contact the media
+
+## Links
+
+[My study notes](https://yshenfab.github.io/notes/)
+
+## Images
+
+![image name](img.jpg)
+
+## Code and Syntax Highlighting
+
+Inline `code`.
+
+Blocks of code are fenced by lines with ```:
+
 ```python
 for i in range(10):
     print(i)
@@ -37,44 +58,42 @@ for(int i=0; i<3; ++i)
   printf('%d\n', i);
 ```
 
-## fenced code block
-```
+```json
 {
-    "firstName": "John",
-    "lastName": "Smith",
-    "age": 25
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
 }
 ```
 
-## link
-[title](https://www.example.com)
+## Footnotes
 
-## image
-![image name](img.jpg)
+Here's a simple footnote[^1].
 
-## table
-|syntax|description|
-|---|---|
-|header|title|
-|paragraph| text |
+A footnote can also have multiple lines[^2].
 
-## footnote
-Here's a sentence with a footnote. [^1]
+You can also use words, to fit your writing style more closely[^note].
 
 [^1]: This is the footnote.
+[^2]:
+    Every new line should be prefixed with 2 spaces.
+    This allows you to have a footnote with multiple lines.
 
-## heading ID
-### My Great Heading {#custom-id}
+[^note]:
+    Named footnotes will still render with numbers instead of the text but allow easier identification and linking.
+    This footnote also has been made with a different syntax using 4 spaces for new lines.
 
-## definition list
-term
+## Tables
 
-: definition
+| syntax    | description |
+| --------- | ----------- |
+| header    | title       |
+| paragraph | text        |
 
-## strikethrough
-~~The world is flat.~~
+## Blockquotes
 
-## task list
-- [x] write the press release
-- [  ] update the website
-- [  ] contact the media
+> this is a quote.
+
+## Horizontal Rule
+
+---
