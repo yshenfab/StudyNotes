@@ -78,7 +78,7 @@
               </ul>
               <p class="caption"><span class="caption-text">Network</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/">图解网络 (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/">图解网络</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Psychology & Mind</span></p>
@@ -106,7 +106,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../python/python3/">python3</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective Python (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective Python</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../python/data_structure_and_algorithms_in_python/">Data Structures and Algorithms in Python</a>
                   </li>
@@ -127,21 +127,25 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../tools/arch/">Arch Linux</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/neovim/">neovim</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/neovim/">Neovim</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">vim</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">Vim</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">shell</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">Shell</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">git</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">Git</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">markdown</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/docker/">Docker (TODO)</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/docker/">docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/makefile/">Makefile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">Markdown</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/code/">编码 隐匿在计算机软硬件背后的语言</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/history_of_quantum_physics/">上帝掷骰子吗？量子物理史话</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%847%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效能人士的7个习惯</a>
@@ -204,72 +208,79 @@
 <h2 id="_1">深度学习基础</h2>
 <ul>
 <li>相对于传统基于规则的符号主义（输入规则+数据，输出结果），机器学习是一种新的编程范式（输入数据+结果，输出规则）。</li>
-<li>标量=0D张量，向量=1D张量，矩阵=2D张量，多个矩阵组合成一个新的数组=3D张量，多个3D张量组合成一个数组=4D张量，etc.
-    深度学习一般处理0～4D张量，视频数据可能会遇到5D张量</li>
-<li>神经网络的4个方面：1）层，多个层组合成网络or模型；2）输入数据和目标；3）损失函数，用于学习的反馈信号；4）优化器，决定学习过程如何进行。</li>
+<li>标量=0D 张量，向量=1D 张量，矩阵=2D 张量，多个矩阵组合成一个新的数组=3D 张量，多个 3D 张量组合成一个数组=4D 张量，etc.
+  深度学习一般处理 0 ～ 4D 张量，视频数据可能会遇到 5D 张量</li>
+<li>神经网络的 4 个方面：1）层，多个层组合成网络 or 模型；2）输入数据和目标；3）损失函数，用于学习的反馈信号；4）优化器，决定学习过程如何进行。</li>
 <li>损失函数:
-    对于二分类问题，你可以使用二元交叉熵(binary crossentropy)损 失函数;
-    对于多分类问题，可以用分类交叉熵(categorical crossentropy)损失函数;
-    对于回归 问题，可以用均方误差(mean-squared error)损失函数;
-    对于序列学习问题，可以用联结主义 时序分类(CTC，connectionist temporal classification)损失函数</li>
-<li>K-fold validation: 样本数量少时，将数据划分划分为K个分区，对于每个分区i，在剩余的K-1个分区上训练模型，然后在分区i上评估模型，最终分数等于K个分数的平均值。</li>
-<li>iterated K-fold validation with shuffling：类似K-fold，每次划分数据前先将数据打乱，计算代价较大</li>
+  对于二分类问题，你可以使用二元交叉熵(binary crossentropy)损 失函数;
+  对于多分类问题，可以用分类交叉熵(categorical crossentropy)损失函数;
+  对于回归 问题，可以用均方误差(mean-squared error)损失函数;
+  对于序列学习问题，可以用联结主义 时序分类(CTC，connectionist temporal classification)损失函数</li>
+<li>K-fold validation: 样本数量少时，将数据划分划分为 K 个分区，对于每个分区 i，在剩余的 K-1 个分区上训练模型，然后在分区 i 上评估模型，最终分数等于 K 个分数的平均值。</li>
+<li>iterated K-fold validation with shuffling：类似 K-fold，每次划分数据前先将数据打乱，计算代价较大</li>
 <li>降低过拟合：深度学习模型擅长拟合训练数据，挑战在于泛化。
-    1）减小网络/模型大小；
-    2）权重正则化：让模型参数只能取较小的值，从而限制模型复杂度，使得权重值的分布更加规则。实现方法是在损失函数中加入与较大权重值相关的cost，常见的有L1，L2 regularization；<ol>
-<li>dropout正则化：对某一层使用dropout，就是在训练过程中随机将该层的一些输出特征舍弃（设置为0）。dropout比率一般在0.2~0.5。</li>
-</ol>
-</li>
-<li>
-<p>常见问题及最后一层激活函数和损失函数</p>
+  1）减小网络/模型大小；
+  2）权重正则化：让模型参数只能取较小的值，从而限制模型复杂度，使得权重值的分布更加规则。实现方法是在损失函数中加入与较大权重值相关的 cost，常见的有 L1，L2 regularization；</li>
+<li>dropout 正则化：对某一层使用 dropout，就是在训练过程中随机将该层的一些输出特征舍弃（设置为 0）。dropout 比率一般在 0.2~0.5。</li>
+<li>常见问题及最后一层激活函数和损失函数</li>
+</ul>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-<p><colgroup>
-<col  class="org-left" /></p>
-<p><col  class="org-left" /></p>
-<p><col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">问题</th>
-<th scope="col" class="org-left">最后一层激活</th>
-<th scope="col" class="org-left">损失函数</th>
-</tr>
-</thead></p>
-<p><tbody>
-<tr>
-<td class="org-left">二分类问题</td>
-<td class="org-left">sigmoid</td>
-<td class="org-left">binary<sub>crossentropy</sub></td>
-</tr></p>
-<p><tr>
-<td class="org-left">多分类、单标签问题</td>
-<td class="org-left">softmax</td>
-<td class="org-left">categorical<sub>crossentropy</sub></td>
-</tr></p>
-<p><tr>
-<td class="org-left">多分类、多标签问题</td>
-<td class="org-left">sigmoid</td>
-<td class="org-left">binary<sub>crossentropy</sub></td>
-</tr></p>
-<p><tr>
-<td class="org-left">回归到任意值</td>
-<td class="org-left">无</td>
-<td class="org-left">mse</td>
-</tr></p>
-<p><tr>
-<td class="org-left">回归到0-1范围内的值</td>
-<td class="org-left">sigmoid</td>
-<td class="org-left">mse / binary<sub>crossentropy</sub></td>
-</tr>
-</tbody>
-</table>
--   模型正则化与调节超参数（最费时间）
-1）添加dropout；
-2）尝试不同架构：增加or减少层数；
-3）添加L1和/或L2正则化；
-4）尝试不同的超参数（比如每层的单元个数or优化器的学习率）；
-5）（可选）反复做特征工程：添加新特征或删除没有信息量的特征。</p>
-</li>
+
+  <colgroup>
+  <col  class="org-left" />
+
+  <col  class="org-left" />
+
+  <col  class="org-left" />
+  </colgroup>
+  <thead>
+  <tr>
+  <th scope="col" class="org-left">问题</th>
+  <th scope="col" class="org-left">最后一层激活</th>
+  <th scope="col" class="org-left">损失函数</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+  <td class="org-left">二分类问题</td>
+  <td class="org-left">sigmoid</td>
+  <td class="org-left">binary<sub>crossentropy</sub></td>
+  </tr>
+
+  <tr>
+  <td class="org-left">多分类、单标签问题</td>
+  <td class="org-left">softmax</td>
+  <td class="org-left">categorical<sub>crossentropy</sub></td>
+  </tr>
+
+  <tr>
+  <td class="org-left">多分类、多标签问题</td>
+  <td class="org-left">sigmoid</td>
+  <td class="org-left">binary<sub>crossentropy</sub></td>
+  </tr>
+
+  <tr>
+  <td class="org-left">回归到任意值</td>
+  <td class="org-left">无</td>
+  <td class="org-left">mse</td>
+  </tr>
+
+  <tr>
+  <td class="org-left">回归到0-1范围内的值</td>
+  <td class="org-left">sigmoid</td>
+  <td class="org-left">mse / binary<sub>crossentropy</sub></td>
+  </tr>
+  </tbody>
+  </table>
+
+<ul>
+<li>模型正则化与调节超参数（最费时间）
+  1）添加 dropout；
+  2）尝试不同架构：增加 or 减少层数；
+  3）添加 L1 和/或 L2 正则化；
+  4）尝试不同的超参数（比如每层的单元个数 or 优化器的学习率）；
+  5）（可选）反复做特征工程：添加新特征或删除没有信息量的特征。</li>
 </ul>
 <p><a id="orgee9f4b1"></a></p>
 <h2 id="_2">深度学习实践</h2>
@@ -279,13 +290,13 @@
 <li>解决过拟合：数据增强(data augmentation)</li>
 <li>Models: VGG, ResNet, Inception, Inception-ResNet, Xception, etc.</li>
 <li>使用预训练模型有两种方法：特征提取（feature extration）和微调模型（fine-tuning）</li>
-<li>CNN的可视化：中间输出（中间激活）、过滤器、类激活的热力图</li>
+<li>CNN 的可视化：中间输出（中间激活）、过滤器、类激活的热力图</li>
 </ul>
 <p><a id="org4bfd420"></a></p>
 <h3 id="_4">文本和序列</h3>
 <ul>
 <li>文本向量化，分割成的单元叫做标记(token)，分解的过程叫分词(tokenization)。</li>
-<li>向量与token关联的方法：1）one-hot encoding；2）token embedding</li>
+<li>向量与 token 关联的方法：1）one-hot encoding；2）token embedding</li>
 </ul>
 <p><a id="org5d58489"></a></p>
 <h3 id="_5">高级实践</h3>

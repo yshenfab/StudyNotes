@@ -76,7 +76,7 @@
               </ul>
               <p class="caption"><span class="caption-text">Network</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/">图解网络 (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/">图解网络</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Psychology & Mind</span></p>
@@ -104,7 +104,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../python3/">python3</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../effective_python/">Effective Python (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../effective_python/">Effective Python</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../data_structure_and_algorithms_in_python/">Data Structures and Algorithms in Python</a>
                   </li>
@@ -125,21 +125,25 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../tools/arch/">Arch Linux</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/neovim/">neovim</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/neovim/">Neovim</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">vim</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">Vim</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">shell</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">Shell</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">git</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">Git</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">markdown</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/docker/">Docker (TODO)</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/docker/">docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/makefile/">Makefile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">Markdown</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/code/">编码 隐匿在计算机软硬件背后的语言</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/history_of_quantum_physics/">上帝掷骰子吗？量子物理史话</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%847%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效能人士的7个习惯</a>
@@ -183,7 +187,7 @@
 <h2 id="chap-1">Chap 1 数据结构和算法</h2>
 <p>list, set, dict, collections module</p>
 <ul>
-<li>找到最大or最小的n个元素</li>
+<li>找到最大 or 最小的 n 个元素</li>
 </ul>
 <pre><code class="language-python"># nlargest(), nsmallest()
 import heapq
@@ -202,7 +206,7 @@ cheap = heapq.nsmallest(3, portfolio, key=lambda s: s['price'])
 expensive = heapq.nlargest(3, portfolio, key=lambda s: s['price'])
 </code></pre>
 <ul>
-<li>实现优先级队列，以给定优先级对元素排序，且每次pop都返回优先级最高的元素</li>
+<li>实现优先级队列，以给定优先级对元素排序，且每次 pop 都返回优先级最高的元素</li>
 </ul>
 <pre><code class="language-python">import heapq
 class PriorityQueue:
@@ -218,14 +222,14 @@ class PriorityQueue:
         return heapq.heappop(self._queue)[-1]
 </code></pre>
 <ul>
-<li>在dict中将key映射到多个value上(multidict)</li>
+<li>在 dict 中将 key 映射到多个 value 上(multidict)</li>
 </ul>
 <pre><code class="language-python">d = {
     'a': [1,2,3],
     'b': [4,5]
 }
 
-from collections import defaultdict 
+from collections import defaultdict
 
 d = defaultdict(list)
 d['a'].append(1)
@@ -254,9 +258,9 @@ for key in d:
 import json
 json.dump(d) #  {&quot;foo&quot;: 1, &quot;bar&quot;: 2, &quot;spam&quot;: 3, &quot;grok&quot;: 4}
 </code></pre>
-<p>OrderedDict内部维护了一个双向链表，根据元素加入的顺序来排列key的位置。第一个新加入的元素被放置在链表的末尾，接下来对已存在的key做重新赋值不会改变key的顺序。OrderedDict的大小是普通dict的2倍。</p>
+<p>OrderedDict 内部维护了一个双向链表，根据元素加入的顺序来排列 key 的位置。第一个新加入的元素被放置在链表的末尾，接下来对已存在的 key 做重新赋值不会改变 key 的顺序。OrderedDict 的大小是普通 dict 的 2 倍。</p>
 <ul>
-<li>dict相关的计算，用zip()，排序用sorted()</li>
+<li>dict 相关的计算，用 zip()，排序用 sorted()</li>
 </ul>
 <pre><code class="language-python">prices = {
     'ACME': 45.23,
@@ -277,7 +281,7 @@ print(min(prices_and_names))  # OK
 print(max(prices_and_names))  # ValueError: max() arg is an empty sequence
 </code></pre>
 <ul>
-<li>在两个dict中寻找相同点</li>
+<li>在两个 dict 中寻找相同点</li>
 </ul>
 <pre><code class="language-python">a = {'x': 1, 'y': 2, 'z': 3}
 b = {'w': 10, 'x': 11, 'y': 2}

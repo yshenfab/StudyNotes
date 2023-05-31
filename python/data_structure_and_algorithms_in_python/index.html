@@ -76,7 +76,7 @@
               </ul>
               <p class="caption"><span class="caption-text">Network</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/">图解网络 (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/">图解网络</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Psychology & Mind</span></p>
@@ -104,7 +104,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../python3/">python3</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../effective_python/">Effective Python (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../effective_python/">Effective Python</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="./">Data Structures and Algorithms in Python</a>
     <ul class="current">
@@ -173,21 +173,25 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../tools/arch/">Arch Linux</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/neovim/">neovim</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/neovim/">Neovim</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">vim</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">Vim</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">shell</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">Shell</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">git</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">Git</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">markdown</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/docker/">Docker (TODO)</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/docker/">docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/makefile/">Makefile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">Markdown</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/code/">编码 隐匿在计算机软硬件背后的语言</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/history_of_quantum_physics/">上帝掷骰子吗？量子物理史话</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%847%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效能人士的7个习惯</a>
@@ -460,7 +464,7 @@ values. <code>next(iterator)</code> produces a subsequent element with a StopIte
 exception raised to indicate that there are no further elements.</p>
 <p>An iterable is an object, that produces an iterator via the syntax
 iter(obj).</p>
-<p>An instance of a list is an iterable, but not itself an iterator. With 
+<p>An instance of a list is an iterable, but not itself an iterator. With
 <code>data=[1,2,3,4]</code>, it's not legal to call <code>next(data)</code>. However, an iterator
 object can be produced with syntax <code>i=iter(data)</code>, and then each subsequent
 call to <code>next(i)</code> will return an element of that list.</p>
@@ -472,12 +476,12 @@ each element of the series.</p>
 <ul>
 <li>Conditional Expressions <code>expr 1 if condition else expr2</code></li>
 <li>Comprehension Syntax <code>[expression for value in iterable if condition]</code></li>
-<li>Packing and Unpacking of Sequences
-    <code>python
-    data = 2,4,6,8 # same as data = (2,4,6,8)
-    return x,y # returns a tuple (x,y)
-    a,b,c,d = range(7,11) # a=7,b=8,c=9,d=10</code></li>
+<li>Packing and Unpacking of Sequences</li>
 </ul>
+<p><code>python
+  data = 2,4,6,8 # same as data = (2,4,6,8)
+  return x,y # returns a tuple (x,y)
+  a,b,c,d = range(7,11) # a=7,b=8,c=9,d=10</code></p>
 <h2 id="chapter-2-object-oriented-programming">Chapter 2 Object-Oriented Programming</h2>
 <ul>
 <li>OO design goals: robustness, adaptability, and reusability</li>
@@ -492,7 +496,7 @@ Test for base case; 2) Recur.</p>
 <p>Tail recursion: a recursion is a tail recursion if any recursive call that is
 made from one context is the very last operation in that context, with the
 return value of the recursive call (if any) immediately returned by the
-enclosing recursion. A tail recursion must be a linear recursion. </p>
+enclosing recursion. A tail recursion must be a linear recursion.</p>
 <p>若函数在尾位置调用自身（或是一个尾调用本身的其他函数等等），则称这种情况为尾递归。特点：1）在尾部调用的是函数自身 (self-called)；2）可通过优化，使得计算仅占用常量栈空间 (stack space)。</p>
 <pre><code class="language-python">def recsum(x):
     if x == 1:
@@ -569,11 +573,9 @@ class DynamicArray(object):
 </code></pre>
 <h2 id="chapter-6-stacks-queues-and-deques">Chapter 6 Stacks, Queues, and Deques</h2>
 <ul>
-<li>
-<p>Stacks (LIFO)</p>
-<p>ADT</p>
-</li>
+<li>Stacks (LIFO)</li>
 </ul>
+<p>ADT</p>
 <table>
 <thead>
 <tr>
@@ -605,11 +607,9 @@ class DynamicArray(object):
 </tbody>
 </table>
 <ul>
-<li>
-<p>Queues (FIFO)</p>
-<p>ADT</p>
-</li>
+<li>Queues (FIFO)</li>
 </ul>
+<p>ADT</p>
 <table>
 <thead>
 <tr>
@@ -645,11 +645,9 @@ class DynamicArray(object):
 </tbody>
 </table>
 <ul>
-<li>
-<p>Deques (Double-Ended Queues)</p>
-<p>ADT</p>
-</li>
+<li>Deques (Double-Ended Queues)</li>
 </ul>
+<p>ADT</p>
 <table>
 <thead>
 <tr>
@@ -779,7 +777,7 @@ class _Node(object):
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../effective_python/" class="btn btn-neutral float-left" title="Effective Python (TODO)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../effective_python/" class="btn btn-neutral float-left" title="Effective Python"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../../research/%E5%83%8F%E5%A4%96%E8%A1%8C%E4%B8%80%E6%A0%B7%E6%80%9D%E8%80%83%EF%BC%8C%E5%83%8F%E4%B8%93%E5%AE%B6%E4%B8%80%E6%A0%B7%E5%AE%9E%E8%B7%B5/" class="btn btn-neutral float-right" title="像外行一样思考，像专家一样实践">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 

@@ -76,7 +76,7 @@
               </ul>
               <p class="caption"><span class="caption-text">Network</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/">图解网络 (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/">图解网络</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Psychology & Mind</span></p>
@@ -104,7 +104,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../python3/">python3</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../effective_python/">Effective Python (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../effective_python/">Effective Python</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../data_structure_and_algorithms_in_python/">Data Structures and Algorithms in Python</a>
                   </li>
@@ -125,21 +125,25 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../tools/arch/">Arch Linux</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/neovim/">neovim</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/neovim/">Neovim</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">vim</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">Vim</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">shell</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">Shell</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">git</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">Git</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">markdown</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/docker/">Docker (TODO)</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/docker/">docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/makefile/">Makefile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">Markdown</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/code/">编码 隐匿在计算机软硬件背后的语言</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/history_of_quantum_physics/">上帝掷骰子吗？量子物理史话</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%847%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效能人士的7个习惯</a>
@@ -234,33 +238,33 @@ A 3D space point [1,2,1] is an array of rank 1 because it has one axis.
 <li>np.ones( (2,3,4), dtype=np.int16 )</li>
 <li>np.empty( (2,3) )</li>
 <li>np.arange( 10, 30, 5 )</li>
-<li>np.arange( 0, 2, 0.3 ) # 不建议用arange()接收float，用linspace代替</li>
+<li>np.arange( 0, 2, 0.3 ) # 不建议用 arange()接收 float，用 linspace 代替</li>
 <li>np.linspace( 0, 2, 9 ) # 9 numbers from 0 to 2</li>
 <li>a = np.array( [20,30,40,50] )
-    b = np.arange( 4 )
-    c = a-b # array([20, 29, 38, 47])
-    b**2 # array([0, 1, 4, 9])
-    10*np.sin(a) # array([ 9.12945251, -9.88031624,  7.4511316 , -2.62374854])
-    a&lt;35 # array([ True, True, False, False], dtype=bool)</li>
+  b = np.arange( 4 )
+  c = a-b # array([20, 29, 38, 47])
+  b**2 # array([0, 1, 4, 9])
+  10*np.sin(a) # array([ 9.12945251, -9.88031624, 7.4511316 , -2.62374854])
+  a&lt;35 # array([ True, True, False, False], dtype=bool)</li>
 <li>A = np.array( [[1,1],</li>
 </ul>
-<p>&#x2026;             [0,1]] )
-  B = np.array( [[2,0],
+<p>&#x2026; [0,1]] )
+B = np.array( [[2,0],
 &#x2026;             [3,4]] )
-  A*B                         # elementwise product
+A*B # elementwise product
 array([[2, 0],
        [0, 4]])
-  A.dot(B)                    # matrix product
+A.dot(B) # matrix product
 array([[5, 4],
        [3, 4]])
-  np.dot(A, B)                # another matrix product
+np.dot(A, B) # another matrix product
 array([[5, 4],
        [3, 4]])</p>
 <ul>
 <li>a.sum() a.max() a.min()
-    b.sum(axis=0)                            # sum of each column
-    b.min(axis=1)                            # min of each row
-    b.cumsum(axis=1)                         # cumulative sum along each row</li>
+  b.sum(axis=0) # sum of each column
+  b.min(axis=1) # min of each row
+  b.cumsum(axis=1) # cumulative sum along each row</li>
 <li>until: Search "Iterating over multidimensional arrays is done with respect to the first axis:" in <a href="https://docs.scipy.org/doc/numpy-dev/user/quickstart.html">https://docs.scipy.org/doc/numpy-dev/user/quickstart.html</a></li>
 <li><a href="http://cs231n.github.io/python-numpy-tutorial/">http://cs231n.github.io/python-numpy-tutorial/</a></li>
 <li><a href="http://www.scipy-lectures.org/">http://www.scipy-lectures.org/</a></li>
@@ -295,12 +299,12 @@ arr2 = np.array(list2, dtype='float')</p>
 <p>arr2[:2, :2] # array([1, 2], [3, 4])</p>
 <p>b = arr2 &gt; 4
 b # array([[False, False, False, False],[False, False,  True,  True],[ True,  True,  True,  True]], dtype=bool)
-arr2[b] # array([ 5.,  6.,  5.,  6.,  7.,  8.])</p>
+arr2[b] # array([ 5., 6., 5., 6., 7., 8.])</p>
 <ol>
 <li>
 <p>How to reverse the rows and the whole array</p>
-<p>arr2[::-1, ] # array([[ 5.,  6.,  7.,  8.], [ 3.,  4.,  5.,  6.], [ 1.,  2.,  3.,  4.]])</p>
-<p>arr2[::-1, ::-1] # array([[ 8.,  7.,  6.,  5.], [ 6.,  5.,  4.,  3.], [ 4.,  3.,  2.,  1.]])</p>
+<p>arr2[::-1, ] # array([[5.,  6.,  7.,  8.], [ 3.,  4.,  5.,  6.], [ 1.,  2.,  3.,  4.]])</p>
+<p>arr2[::-1, ::-1] # array([[8.,  7.,  6.,  5.], [ 6.,  5.,  4.,  3.], [ 4.,  3.,  2.,  1.]])</p>
 </li>
 <li>
 <p>How to represent missing values and infinite</p>
@@ -312,7 +316,7 @@ arr2[b] # array([ 5.,  6.,  5.,  6.,  7.,  8.])</p>
 arr2[1,2] = np.inf</p>
 <p>missing<sub>bool</sub> = np.isnan(arr2) | np.isinf(arr2)
 arr2[missing<sub>bool</sub>] = -1
-#&gt; array([[ 1.,  2.,  3.,  4.],
+#&gt; array([[1.,  2.,  3.,  4.],
 #&gt;        [ 3., -1., -1.,  6.],
 #&gt;        [ 5.,  6.,  7.,  8.]])</p>
 </li>
@@ -321,23 +325,23 @@ arr2[missing<sub>bool</sub>] = -1
 <p>arr2.mean()
 arr2.min()
 arr2.max()</p>
-<p>np.amin(arr2, axis=0) # [1. -1. -1. 4.] column wise minimum，每一列的min
-np.amin(arr2, axis=1) # [1. -1. 5.] row wise minimum，每一行的min</p>
-<p>np.cumsum(arr2) # array([  1.,   3.,   6.,  10.,  13.,  12.,  11.,  17.,  22.,  28.,  35., 43.])</p>
+<p>np.amin(arr2, axis=0) # [1. -1. -1. 4.] column wise minimum，每一列的 min
+np.amin(arr2, axis=1) # [1. -1. 5.] row wise minimum，每一行的 min</p>
+<p>np.cumsum(arr2) # array([ 1., 3., 6., 10., 13., 12., 11., 17., 22., 28., 35., 43.])</p>
 </li>
 <li>
 <p>How to create a new array from an existing array</p>
-<p>If you just assign a portion of an array to another array, the new array you just created actually refers to 
+<p>If you just assign a portion of an array to another array, the new array you just created actually refers to
 the parent array in memory. That means, if you make any changes to the new array, it will reflect in the parent array as well.
 So to avoid disturbing the parent array, you need to make a copy of it using copy().</p>
 <p>arr2a = arr2[:2,:2]
 arr2a[:1,:1] = 100 # 100 will reflect in arr2
-#&gt; array([[ 100.,    2.,    3.,    4.],
+#&gt; array([[100.,    2.,    3.,    4.],
 #&gt;        [   3.,   -1.,   -1.,    6.],
 #&gt;        [   5.,    6.,    7.,    8.]])</p>
 <p>arr2b = arr2[:2,:2].copy()
 arr2b[:1,:1] = 101 # 101 will not reflect in arr2
-#&gt; array([[ 100.,    2.,    3.,    4.],
+#&gt; array([[100.,    2.,    3.,    4.],
 #&gt;        [   3.,   -1.,   -1.,    6.],
 #&gt;        [   5.,    6.,    7.,    8.]])</p>
 </li>
@@ -349,7 +353,7 @@ arr2b[:1,:1] = 101 # 101 will not reflect in arr2
 <li>Flattening: convert a multi-dimensional array to a flat 1d array, and not any other shape</li>
 </ul>
 <p>arr2.reshape(4,3)
-#&gt; array([[ 100.,    2.,    3.],
+#&gt; array([[100.,    2.,    3.],
 #&gt;        [   4.,    3.,   -1.],
 #&gt;        [  -1.,    6.,    5.],
 #&gt;        [   6.,    7.,    8.]])</p>
@@ -359,7 +363,7 @@ arr2b[:1,:1] = 101 # 101 will not reflect in arr2
 <ul>
 <li>two ways to implement flattening: flatten() and ravel()</li>
 <li>diff: the new array created using ravel is a reference to the parent array, changes to new array will affect the parent,
-    but is memory efficient since it doesn't create a copy</li>
+  but is memory efficient since it doesn't create a copy</li>
 </ul>
 <p>arr2.flatten() # array([100., 2., 3., 4., 3., -1., -1., 6., 5., 6., 7., 8.]) # or use arr2.ravel()</p>
 </li>
@@ -372,27 +376,27 @@ arr2b[:1,:1] = 101 # 101 will not reflect in arr2
 <p>np.arange(5) # [0 1 2 3 4]
 np.arange(0,10) # [0 1 2 3 4 5 6 7 8 9]
 np.arange(0,10,2) # [0 2 4 6 8]
-np.arange(10,0,-1) # [10  9  8  7  6  5  4  3  2  1]</p>
+np.arange(10,0,-1) # [10 9 8 7 6 5 4 3 2 1]</p>
 <ul>
 <li>np.linspace</li>
 </ul>
 <p>np.linspace(start=1,stop=50,num=10,dtype=int)
-#&gt; array([ 1,  6, 11, 17, 22, 28, 33, 39, 44, 50])</p>
+#&gt; array([ 1, 6, 11, 17, 22, 28, 33, 39, 44, 50])</p>
 <ul>
 <li>np.logspace: base<sup>start</sup>, base<sup>stop</sup>, default base 10</li>
 </ul>
 <p>np.set<sub>printoptions</sub>(precision=2)</p>
 <p>np.logspace(start=1,stop=50,num=10,base=10)
-#&gt; array([  1.00e+01,   2.78e+06,   7.74e+11,   2.15e+17,   5.99e+22,
-#&gt;          1.67e+28,   4.64e+33,   1.29e+39,   3.59e+44,   1.00e+50])</p>
+#&gt; array([ 1.00e+01, 2.78e+06, 7.74e+11, 2.15e+17, 5.99e+22,
+#&gt; 1.67e+28, 4.64e+33, 1.29e+39, 3.59e+44, 1.00e+50])</p>
 <ul>
 <li>np.zeros() and np.ones()</li>
 </ul>
 <p>np.zeros([2,2])
-#&gt; array([[ 0.,  0.],
+#&gt; array([[0.,  0.],
 #&gt;        [ 0.,  0.]])
 np.ones([2,2])
-#&gt; array([[ 1.,  1.],
+#&gt; array([[1.,  1.],
 #&gt;        [ 1.,  1.]])</p>
 <ol>
 <li>
@@ -431,8 +435,8 @@ np.repeat(a,2) # [1 1 2 2 3 3]</p>
 arr<sub>rand</sub> = np.random.randint(0,10,size=10)
 #&gt; [8 8 3 7 7 0 4 2 5 2]</p>
 <p>uniqs, counts = np.unique(arr<sub>rand</sub>, return<sub>counts</sub>=True)
-#&gt; Unique items :  [0 2 3 4 5 7 8]
-#&gt; Counts       :  [1 2 1 1 1 2 2]</p>
+#&gt; Unique items : [0 2 3 4 5 7 8]
+#&gt; Counts : [1 2 1 1 1 2 2]</p>
 </li>
 </ol>
 <p><a id="org428f60d"></a></p>
@@ -447,7 +451,7 @@ arr<sub>rand</sub> = np.random.randint(0,10,size=10)
 <p>arr<sub>rand.take</sub>(index<sub>gt5</sub>) # array([ [8,8,7,7]])</p>
 <p>np.where(arr<sub>rand</sub>&gt;5,'gt5','le5')
 #&gt; array(['gt5', 'gt5', 'le5', 'gt5', 'gt5', 'le5', 'le5', 'le5', 'le5', 'le5'],
-      dtype='&lt;U3')</p>
+dtype='&lt;U3')</p>
 <p>np.argmax(arr<sub>rand</sub>) # 0
 np.argmin(arr<sub>rand</sub>) # 5</p>
 <p><a id="org80d44ae"></a></p>
@@ -456,7 +460,7 @@ np.argmin(arr<sub>rand</sub>) # 5</p>
 <li>import: np.genfromtxt() or np.loadtxt(), np.genfromtxt() is more powerful, while np.loadtxt() assumes the dataset has no missing values</li>
 </ul>
 <p>np.set<sub>printoptions</sub>(suppress=True)</p>
-<p>path = 'https://raw.githubusercontent.com/selva86/datasets/master/Auto.csv'</p>
+<p>path = '<a href="https://raw.githubusercontent.com/selva86/datasets/master/Auto.csv">https://raw.githubusercontent.com/selva86/datasets/master/Auto.csv</a>'</p>
 <p>data = np.genfromtxt(path, delimiter=',', skip<sub>header</sub>=1, filling<sub>values</sub>=-999, dtype='float')
 data[:3] # see first 3 rows</p>
 <ol>
@@ -467,7 +471,7 @@ data[:3] # see first 3 rows</p>
 </ul>
 <p>data2 = np.genfromtxt(path, delimiter=',', skip<sub>header</sub>=1, dtype='object')
 data2 = np.genfromtxt(path, delimiter=',', skip<sub>header</sub>=1, dtype=None)
-data2[:3]  # see first 3 rows</p>
+data2[:3] # see first 3 rows</p>
 <p>np.savetxt("out.csv", data, delimiter=",")</p>
 </li>
 </ol>
@@ -484,7 +488,7 @@ data2[:3]  # see first 3 rows</p>
 <p>b = np.load('array.npz')
 print(b.files) # ['arr<sub>0</sub>','arr<sub>1</sub>']
 b['arr<sub>0</sub>']
-#&gt; array([[ 0.,  1.,  2.],
+#&gt; array([[0.,  1.,  2.],
 #&gt;        [ 3.,  4.,  5.],
 #&gt;        [ 6.,  7.,  8.]])</p>
 <p><a id="orgc404802"></a></p>
@@ -502,7 +506,7 @@ b = np.ones([4,4])</p>
 <p>np.concatenate([a,b], axis=0)
 np.vstack([a,b])
 np.r_[a,b]
-#&gt; array([[ 0.,  0.,  0.,  0.],
+#&gt; array([[0.,  0.,  0.,  0.],
 #&gt;        [ 0.,  0.,  0.,  0.],
 #&gt;        [ 0.,  0.,  0.,  0.],
 #&gt;        [ 0.,  0.,  0.,  0.],
@@ -513,7 +517,7 @@ np.r_[a,b]
 <p>np.concatenate([a,b], axis=1)
 np.hstack([a,b])
 np.c_[a,b]
-#&gt; array([[ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  1.],
+#&gt; array([[0.,  0.,  0.,  0.,  1.,  1.,  1.,  1.],
 #&gt;        [ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  1.],
 #&gt;        [ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  1.],
 #&gt;        [ 0.,  0.,  0.,  0.,  1.,  1.,  1.,  1.]])</p>
@@ -547,7 +551,7 @@ np.c_[a,b]
 </ul>
 <p>x = np.array([1,10,5,2,8,9])
 sort<sub>index</sub> = np.argsort(x) # [0 3 2 4 5 1]
-x[sort<sub>index</sub>] # array([ 1,  2,  5,  8,  9, 10])</p>
+x[sort<sub>index</sub>] # array([ 1, 2, 5, 8, 9, 10])</p>
 <p>sorted<sub>index</sub><sub>1stcol</sub> = arr[:,0].argsort()</p>
 <p>arr[sorted<sub>index</sub><sub>1stcol</sub>]
 #&gt; array([[1, 5, 4, 5],
@@ -573,7 +577,7 @@ x[sort<sub>index</sub>] # array([ 1,  2,  5,  8,  9, 10])</p>
 <ul>
 <li>np.lexsort: passing a tuple of columns based on which the array should be sorted</li>
 </ul>
-<p>lexsorted<sub>index</sub> = np.lexsort((arr[:, 1], arr[:, 0])) 
+<p>lexsorted<sub>index</sub> = np.lexsort((arr[:, 1], arr[:, 0]))
 arr[lexsorted<sub>index</sub>]</p>
 </li>
 </ol>
@@ -581,17 +585,17 @@ arr[lexsorted<sub>index</sub>]</p>
 <h3 id="working-with-dates">Working with dates</h3>
 <p>date64 = np.datetime64('2018-02-04 23:10:10') #&gt; numpy.datetime64('2018-02-04T23:10:10')</p>
 <p>dt64 = np.datetime64(date64,'D') #&gt; numpy.datetime64('2018-02-04')</p>
-<p>tenminutes = np.timedelta64(10, 'm')  # 10 minutes
-tenseconds = np.timedelta64(10, 's')  # 10 seconds
-tennanoseconds = np.timedelta64(10, 'ns')  # 10 nanoseconds
+<p>tenminutes = np.timedelta64(10, 'm') # 10 minutes
+tenseconds = np.timedelta64(10, 's') # 10 seconds
+tennanoseconds = np.timedelta64(10, 'ns') # 10 nanoseconds
 print('Add 10 days: ', dt64 + 10)
 print('Add 10 minutes: ', dt64 + tenminutes)
 print('Add 10 seconds: ', dt64 + tenseconds)
 print('Add 10 nanoseconds: ', dt64 + tennanoseconds)
-#&gt; Add 10 days:  2018-02-14
-#&gt; Add 10 minutes:  2018-02-04T00:10
-#&gt; Add 10 seconds:  2018-02-04T00:00:10
-#&gt; Add 10 nanoseconds:  2018-02-04T00:00:00.000000010</p>
+#&gt; Add 10 days: 2018-02-14
+#&gt; Add 10 minutes: 2018-02-04T00:10
+#&gt; Add 10 seconds: 2018-02-04T00:00:10
+#&gt; Add 10 nanoseconds: 2018-02-04T00:00:00.000000010</p>
 <p>np.datetime<sub>as</sub><sub>string</sub>(dt64) #&gt; '2018-02-04'</p>
 <ol>
 <li>
@@ -600,21 +604,21 @@ print('Add 10 nanoseconds: ', dt64 + tennanoseconds)
 print(dates)</p>
 <p>np.is<sub>busday</sub>(dates)
 #&gt; ['2018-02-01' '2018-02-02' '2018-02-03' '2018-02-04' '2018-02-05'
-#&gt;  '2018-02-06' '2018-02-07' '2018-02-08' '2018-02-09']
-array([ True,  True, False, False,  True,  True,  True,  True,  True], dtype=bool)</p>
+#&gt; '2018-02-06' '2018-02-07' '2018-02-08' '2018-02-09']
+array([ True, True, False, False, True, True, True, True, True], dtype=bool)</p>
 </li>
 <li>
 <p>How to convert numpy.datetime64 to datetime.datetime object</p>
 <p>import datetime
 dt = dt64.tolist() #&gt; datetime.date(2018, 2, 4)
-print('Year: ', dt.year)<br />
+print('Year: ', dt.year)
 print('Day of month: ', dt.day)
-print('Month of year: ', dt.month)<br />
-print('Day of Week: ', dt.weekday())  # Sunday
-#&gt; Year:  2018
-#&gt; Day of month:  4
-#&gt; Month of year:  2
-#&gt; Day of Week:  6</p>
+print('Month of year: ', dt.month)
+print('Day of Week: ', dt.weekday()) # Sunday
+#&gt; Year: 2018
+#&gt; Day of month: 4
+#&gt; Month of year: 2
+#&gt; Day of Week: 6</p>
 </li>
 </ol>
 <p><a id="orge1a06f9"></a></p>
@@ -623,17 +627,17 @@ print('Day of Week: ', dt.weekday())  # Sunday
 <li>
 <p>vectorize – Make a scalar function work on vectors</p>
 <p>def foo(x):
-    if x % 2 == 1:
-        return x**2
-    else:
-        return x/2</p>
+if x % 2 == 1:
+return x**2
+else:
+return x/2</p>
 <p>print('x = 10 returns ', foo(10)) # 5.0
 print('x = 11 returns ', foo(11)) # 121</p>
 <p>foo<sub>v</sub> = np.vectorize(foo, otypes=[float])
 print('x = [10, 11, 12] returns ', foo<sub>v</sub>([10, 11, 12]))
 print('x = [[10, 11, 12], [1, 2, 3]] returns ', foo<sub>v</sub>([[10, 11, 12], [1, 2, 3]]))
-#&gt; x = [10, 11, 12] returns  [   5.  121.    6.]
-#&gt; x = [[10, 11, 12], [1, 2, 3]] returns  [[ 5. 121. 6.] [ 1.  1.  9.] ]</p>
+#&gt; x = [10, 11, 12] returns [ 5. 121. 6.]
+#&gt; x = [[10, 11, 12], [1, 2, 3]] returns [[ 5. 121. 6.] [ 1. 1. 9.] ]</p>
 </li>
 <li>
 <p>apply<sub>along</sub><sub>axis</sub> – Apply a function column wise or row wise</p>
@@ -644,11 +648,11 @@ arr<sub>x</sub> = np.random.randint(1,10,size=[4,10])
 #&gt;        [2, 6, 4, 5, 5, 4, 8, 2, 2, 8],
 #&gt;        [8, 1, 3, 4, 3, 6, 9, 2, 1, 8]])</p>
 <p>def max<sub>minus</sub><sub>min</sub>(x):
-    return np.max(x) - np.min(x)</p>
+return np.max(x) - np.min(x)</p>
 <p>print('Row wise: ', np.apply<sub>along</sub><sub>axis</sub>(max<sub>minus</sub><sub>min</sub>, 1, arr=arr<sub>x</sub>))
-#&gt; Row wise:  [8 8 6 8]</p>
+#&gt; Row wise: [8 8 6 8]</p>
 <p>print('Column wise: ', np.apply<sub>along</sub><sub>axis</sub>(max<sub>minus</sub><sub>min</sub>, 0, arr=arr<sub>x</sub>))
-#&gt; Column wise:  [7 8 2 7 6 5 8 5 5 5]</p>
+#&gt; Column wise: [7 8 2 7 6 5 8 5 5 5]</p>
 </li>
 <li>
 <p>searchsorted – Find the location to insert so the array will remain sorted</p>
@@ -657,11 +661,11 @@ arr<sub>x</sub> = np.random.randint(1,10,size=[4,10])
 </ul>
 <p>x = np.arange(10)
 print('Where should 5 be inserted?: ', np.searchsorted(x, 5))
-#&gt; Where should 5 be inserted?:  5
+#&gt; Where should 5 be inserted?: 5
 print('Where should 5 be inserted (right)?: ', np.searchsorted(x, 5, side='right'))
-#&gt; Where should 5 be inserted (right)?:  6</p>
-<p>lst = range(10000)  # the list
-probs = np.random.random(10000); probs /= probs.sum()  # probabilities
+#&gt; Where should 5 be inserted (right)?: 6</p>
+<p>lst = range(10000) # the list
+probs = np.random.random(10000); probs /= probs.sum() # probabilities
 %timeit lst[np.searchsorted(probs.cumsum(), np.random.random())]
 %timeit np.random.choice(lst, p=probs)
 #&gt; 36.6 µs ± 3.93 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
@@ -680,14 +684,14 @@ print(x<sub>col</sub>)</p>
 <p>x<sub>row</sub> = x[np.newaxis, :]
 print('x<sub>row</sub> shape: ', x<sub>row.shape</sub>)
 print(x<sub>row</sub>)
-#&gt; Original array:  [0 1 2 3 4]
-#&gt; x<sub>col</sub> shape:  (5, 1)
+#&gt; Original array: [0 1 2 3 4]
+#&gt; x<sub>col</sub> shape: (5, 1)
 #&gt; [[0]
 #&gt;  [1]
 #&gt;  [2]
 #&gt;  [3]
 #&gt;  [4]]
-#&gt; x<sub>row</sub> shape:  (1, 5)
+#&gt; x<sub>row</sub> shape: (1, 5)
 #&gt; [[0 1 2 3 4] ]</p>
 </li>
 <li>
@@ -703,7 +707,7 @@ bins = np.array([0, 3, 6, 9])</p>
 <ul>
 <li>Clip</li>
 </ul>
-<p>Use np.clip to cap the numbers within a given cutoff range. All number lesser than the lower 
+<p>Use np.clip to cap the numbers within a given cutoff range. All number lesser than the lower
 limit will be replaced by the lower limit. Same applies to the upper limit also.</p>
 <p>np.clip(x, 3, 8)
 #&gt; array([3, 3, 3, 3, 4, 5, 6, 7, 8, 8])</p>
@@ -711,15 +715,15 @@ limit will be replaced by the lower limit. Same applies to the upper limit also.
 <li>Histogram and Bincount</li>
 </ul>
 <p>Both histogram() and bincount() gives the frequency of occurences. But with certain differences.
-While histogram() gives the frequency counts of the bins, bincount() gives the frequency count of all the 
+While histogram() gives the frequency counts of the bins, bincount() gives the frequency count of all the
 elements in the range of the array between the min and max values. Including the values that did not occur.</p>
 <p>x = np.array([1,1,2,2,2,4,4,5,6,6,6]) # doesn't need to be sorted
 np.bincount(x) # 0 occurs 0 times, 1 occurs 2 times, 2 occurs thrice, 3 occurs 0 times, &#x2026;</p>
 <p>counts, bins = np.histogram(x, [0, 2, 4, 6, 8])
 print('Counts: ', counts)
 print('Bins: ', bins)
-#&gt; Counts:  [2 3 3 3]
-#&gt; Bins:  [0 2 4 6 8]</p>
+#&gt; Counts: [2 3 3 3]
+#&gt; Bins: [0 2 4 6 8]</p>
 </li>
 </ol>
               

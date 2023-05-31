@@ -78,7 +78,7 @@
               </ul>
               <p class="caption"><span class="caption-text">Network</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/">图解网络 (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/">图解网络</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Psychology & Mind</span></p>
@@ -106,7 +106,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../python/python3/">python3</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective Python (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective Python</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../python/data_structure_and_algorithms_in_python/">Data Structures and Algorithms in Python</a>
                   </li>
@@ -127,21 +127,25 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../tools/arch/">Arch Linux</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/neovim/">neovim</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/neovim/">Neovim</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">vim</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">Vim</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">shell</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">Shell</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">git</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">Git</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">markdown</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/docker/">Docker (TODO)</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/docker/">docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/makefile/">Makefile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">Markdown</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/code/">编码 隐匿在计算机软硬件背后的语言</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/history_of_quantum_physics/">上帝掷骰子吗？量子物理史话</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%847%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效能人士的7个习惯</a>
@@ -234,7 +238,7 @@
 <h1 id="_4">好样本与坏样本</h1>
 <ul>
 <li>有偏(biased)抽样法，bad</li>
-<li>简单随机样本(simple random sample, SRS)，消除bias</li>
+<li>简单随机样本(simple random sample, SRS)，消除 bias</li>
 </ul>
 <p><a id="orgfa2bd83"></a></p>
 <h1 id="_5">样本告诉我们什么？</h1>
@@ -242,52 +246,46 @@
 <li>样本无法告诉我们总体的准确信息，但会提供一个误差界限(margin of error)</li>
 <li>从样本到总体：用样本的事实，当做真实信息的估计(estimate)</li>
 <li>多次随机抽样，样本的变异状况会遵循某种可预测的形态(pattern) -&gt; 较大样本所得结果的变异会更小</li>
-<li>偏差bias是当我们取很多样本时，统计量一直朝同一个方向偏离总体的参数值
-    变异性variability描述的是当取很多样本时，统计量的值会离散到什么程度（多次随机抽样看结果分布情况）</li>
+<li>偏差 bias 是当我们取很多样本时，统计量一直朝同一个方向偏离总体的参数值
+  变异性 variability 描述的是当取很多样本时，统计量的值会离散到什么程度（多次随机抽样看结果分布情况）</li>
 <li>一个好的抽样应该同时具备偏差小和变异性小</li>
 <li>降低偏差：随机抽样(SRS)即可，得到无偏估计值(unbiased estimate)
-    降低变异性：增大样本</li>
+  降低变异性：增大样本</li>
 <li>误差界限(margin of error)：样本离总体参数有多远
-    例如多次随机抽样，样本中有95%所得的结果在总体真实值的+-3%范围内（即有95%的信心）</li>
-<li>置信叙述(confidence statement)包含2个部分：误差界限和置信水平(level of confidence)
-    置信水平：所有可能样本中有多少百分比满足这样的误差界限
-    较高置信水平的代价是较大的误差界限，相同置信水平下要降低误差界限则取更大的样本</li>
+  例如多次随机抽样，样本中有 95%所得的结果在总体真实值的+-3%范围内（即有 95%的信心）</li>
+<li>置信叙述(confidence statement)包含 2 个部分：误差界限和置信水平(level of confidence)
+  置信水平：所有可能样本中有多少百分比满足这样的误差界限
+  较高置信水平的代价是较大的误差界限，相同置信水平下要降低误差界限则取更大的样本</li>
 </ul>
 <p><a id="org0703a2e"></a></p>
 <h2 id="_6">总结</h2>
 <ul>
-<li>好样本:偏差小 &amp; 变异性小，SRS降低偏差，增大样本降低变异性</li>
+<li>好样本:偏差小 &amp; 变异性小，SRS 降低偏差，增大样本降低变异性</li>
 <li>置信叙述：描述精确程度</li>
 </ul>
 <p><a id="orgc817aa8"></a></p>
 <h1 id="_7">真实世界中的抽样调查</h1>
-<p>现实世界中SRS并不简单，也不一定随机！</p>
+<p>现实世界中 SRS 并不简单，也不一定随机！</p>
 <ul>
-<li>抽样会发生误差
-    1.抽样误差(sampling error)：抽样这个动作所造成的误差，抽样误差使样本结果与普查结果不同。
-    2.随机抽样误差(random sampling error)：样本统计量和总体参数之间的差距，选取样本时造成。置信叙述中的误差界限只包含随机抽样误差。
-    3.非抽样误差(nonsampling error)：和“从总体取样”无关的误差。</li>
+<li>抽样会发生误差 1.抽样误差(sampling error)：抽样这个动作所造成的误差，抽样误差使样本结果与普查结果不同。 2.随机抽样误差(random sampling error)：样本统计量和总体参数之间的差距，选取样本时造成。置信叙述中的误差界限只包含随机抽样误差。 3.非抽样误差(nonsampling error)：和“从总体取样”无关的误差。</li>
 <li>抽样误差来源：涵盖不全(undercoverage)，漏掉了某些群体
-    非抽样误差来源：处理误差(processing error) &amp; 回应误差(response error)
-    无回应(nonresponse)：缺少数据 -&gt; 数据稀疏</li>
+  非抽样误差来源：处理误差(processing error) &amp; 回应误差(response error)
+  无回应(nonresponse)：缺少数据 -&gt; 数据稀疏</li>
 <li>应对非抽样误差：给回应加权，以期导正偏差来源</li>
-<li>真实世界中的抽样设计：分层抽样(stratified sampling)，分层指根据某些性质分类，优于SRS的2点：1.可以得到有关各层的个别信息 2.误差界限通常比SRS小（同层的相似度比总体大，所以可消除样本中某些变异性）</li>
+<li>真实世界中的抽样设计：分层抽样(stratified sampling)，分层指根据某些性质分类，优于 SRS 的 2 点：1.可以得到有关各层的个别信息 2.误差界限通常比 SRS 小（同层的相似度比总体大，所以可消除样本中某些变异性）</li>
 <li>概率样本(probability sample)：利用概率抽取样本。要先知道哪些样本是可能的，以及它们被抽中的概率。</li>
 </ul>
 <p><a id="org1c4c509"></a></p>
 <h1 id="_8">实验面面观</h1>
 <ul>
 <li>反应变量/因变量(dependent variable)：用来度量研究结果的变量
-    解释变量/独立变量/自变量(independent variable)：可以解释or造成反应变量变化的变量
-    潜在变量：对其他变量有重要影响，却未被列为解释变数的变量</li>
+  解释变量/独立变量/自变量(independent variable)：可以解释 or 造成反应变量变化的变量
+  潜在变量：对其他变量有重要影响，却未被列为解释变数的变量</li>
 <li>交叉：当两个变量对反应变数的影响混在一起无法区分时，我们称这两个变量是交叉的
-    交叉变量可以是解释变量，也可以是潜在变量</li>
+  交叉变量可以是解释变量，也可以是潜在变量</li>
 <li>安慰剂效应(placebo effect)</li>
 <li>随机化比较实验</li>
-<li>统计实验设计原则：
-    1.控制潜在变量的影响，最简单的方法是同时比较至少2个处理
-    2.随机化：用非人为的随机方法来指派受试对象到不同的处理组
-    3.每一组的受试对象要足够多，以减低结果中的机遇变异</li>
+<li>统计实验设计原则： 1.控制潜在变量的影响，最简单的方法是同时比较至少 2 个处理 2.随机化：用非人为的随机方法来指派受试对象到不同的处理组 3.每一组的受试对象要足够多，以减低结果中的机遇变异</li>
 <li>统计显著性(statistical significance)：观察到的效果大到某种程度，光靠机遇产生这种结果的概率很小时，我们就称此结果具有统计显著性。</li>
 <li>因果 cause and effect</li>
 </ul>
@@ -340,11 +338,11 @@
 <li>正态曲线（normal curve）</li>
 <li>密度曲线（density curve）</li>
 <li>正态密度曲线</li>
-<li>68-95-99.7规则：
-    在任何正态分布中，大约有
-    68%的观测值，落在距平均数一个标准差的范围内
-    95%的观测值，落在距平均数两个标准差的范围内
-    99.7%的观测值，落在距平均数三个标准差的范围内</li>
+<li>68-95-99.7 规则：
+  在任何正态分布中，大约有
+  68%的观测值，落在距平均数一个标准差的范围内
+  95%的观测值，落在距平均数两个标准差的范围内
+  99.7%的观测值，落在距平均数三个标准差的范围内</li>
 <li>标准计分（standard score）= （观测值-平均值）/标准差</li>
 </ul>
 <p><a id="org68e55f6"></a></p>
@@ -353,8 +351,8 @@
 <li>散布图（scatter plot）</li>
 <li>正相关（positive association）和负相关（negative association）</li>
 <li>相关系数（correlation）：描述两个数值变量之间的直线相关的方向和强度，用于度量相关性。</li>
-<li>相关系数r = 1/(n-1) &sum; (x-\bar{x})/s<sub>x</sub> (y-\bar{y})/s<sub>y</sub></li>
-<li>r的正/负表示正/负相关，值在[-1,1]</li>
+<li>相关系数 r = 1/(n-1) &sum; (x-\bar{x})/s<sub>x</sub> (y-\bar{y})/s<sub>y</sub></li>
+<li>r 的正/负表示正/负相关，值在[-1,1]</li>
 </ul>
 <p><a id="org544d2ba"></a></p>
 <h1 id="_19">描述相关关系：回归、预测及因果关系</h1>
@@ -363,19 +361,14 @@
 <li>回归直线</li>
 <li>最小二乘法（least-squares method）</li>
 <li>回归直线的预测功能，视相关系数强度而定</li>
-<li>统计及因果的几大事实：
-    1.强相关性也不一定代表因果关系
-    2.相关性常常受潜在变量（lurking variable）的影响
-    3.建立因果关系最好的证据，来自随机化比较实验
-    4.两个变量的相互关系，可能来自于直接因果关系（direct causation）、共同反应（common response）或是交叉。也可能是几种因素的组合。
-    5.观察到的相互关系不管是不是因果，都可以拿来做预测，只要从以前的数据找出来的形态仍然适用。</li>
+<li>统计及因果的几大事实： 1.强相关性也不一定代表因果关系 2.相关性常常受潜在变量（lurking variable）的影响 3.建立因果关系最好的证据，来自随机化比较实验 4.两个变量的相互关系，可能来自于直接因果关系（direct causation）、共同反应（common response）或是交叉。也可能是几种因素的组合。 5.观察到的相互关系不管是不是因果，都可以拿来做预测，只要从以前的数据找出来的形态仍然适用。</li>
 </ul>
 <p><a id="org928b3e2"></a></p>
 <h1 id="_20">消费者物价指数和政府统计</h1>
 <ul>
 <li>消费者物价指数（Customer Price Index, CPI）</li>
 <li>指数（index number）：以变量在某个基期的值为标准，该变量对于基期值的比值大小
-    指数 = 变量值/基期值 * 100</li>
+  指数 = 变量值/基期值 * 100</li>
 </ul>
 <p><a id="org3aabd91"></a></p>
 <h1 id="_21">机遇</h1>
@@ -404,7 +397,7 @@
 <h1 id="_25">推论</h1>
 <p><a id="orgce55214"></a></p>
 <h1 id="_26">什么是置信区间</h1>
-<p>置信区间confidence interval</p>
+<p>置信区间 confidence interval</p>
 <ul>
 <li>置信区间估计一个未知参数，可以提供我们该估计的不确定程度</li>
 </ul>
@@ -414,30 +407,29 @@
 <li>检验要判断样本数据是否提供了不利于断言的证据，即检验样本证据强度的数值量度</li>
 <li>要证明总体中有某种特定的效应，统计检验会先假设该效应不存在</li>
 <li>显著性检验：检验是设计来评估，否定原假设的证据有多强
-    第一步，先列出一个断言，即原假设（null hypothesis），设为H<sub>0</sub>
-    取代H<sub>0的备择假设</sub>（alternative hypothesis）H<sub>a</sub>
-    显著性检验会找对H<sub>0不利</sub>，但对H<sub>a有利的证据</sub></li>
-<li>统计检验的P值（P-value）是在H<sub>0为真的假设下</sub>，所得样本结果会像实际观测结果那么极端or更极端的概率。
-    P值越小，则否定H<sub>0的证据就越强</sub></li>
-<li>显著水平（significance level），通常用\alpha表示
-    如果P &lt;= &alpha;，则称该组数据有\alpha的统计显著性水平</li>
-<li>P&lt;0.10代表有一些证据不利于原假设
-    P&lt;0.05代表适度证据
-    O&lt;0.01代表有力证据</li>
+  第一步，先列出一个断言，即原假设（null hypothesis），设为 H<sub>0</sub>
+  取代 H<sub>0 的备择假设</sub>（alternative hypothesis）H<sub>a</sub>
+  显著性检验会找对 H<sub>0 不利</sub>，但对 H<sub>a 有利的证据</sub></li>
+<li>统计检验的 P 值（P-value）是在 H<sub>0 为真的假设下</sub>，所得样本结果会像实际观测结果那么极端 or 更极端的概率。
+  P 值越小，则否定 H<sub>0 的证据就越强</sub></li>
+<li>显著水平（significance level），通常用\alpha 表示
+  如果 P &lt;= &alpha;，则称该组数据有\alpha 的统计显著性水平</li>
+<li>P&lt;0.10 代表有一些证据不利于原假设
+  P&lt;0.05 代表适度证据
+  O&lt;0.01 代表有力证据</li>
 <li>显著在统计上的意义：代表“光靠机遇不容易发生”</li>
 </ul>
 <p><a id="org62c39cc"></a></p>
 <h1 id="_28">统计推论的使用与滥用</h1>
 <ul>
-<li>显著性检验的P值不仅和样本大小相关，也和总体真正值相关</li>
-<li>增大样本对置信区间有直接的影响，通常也会把P值变小</li>
-<li>样本很大时，即使P很小也不见得有实际意义；样本小时，总体的重要真实情况可能达不到统计显著性的标准</li>
+<li>显著性检验的 P 值不仅和样本大小相关，也和总体真正值相关</li>
+<li>增大样本对置信区间有直接的影响，通常也会把 P 值变小</li>
+<li>样本很大时，即使 P 很小也不见得有实际意义；样本小时，总体的重要真实情况可能达不到统计显著性的标准</li>
 </ul>
 <p><a id="orgec5975b"></a></p>
 <h1 id="_29">双向表及卡方检验</h1>
 <p>双向表（two-way table），行列都是类别变量而非数值变量，如：</p>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
 
 <colgroup>
 <col  class="org-left" />
@@ -465,14 +457,12 @@
 <td class="org-right">339</td>
 </tr>
 
-
 <tr>
 <td class="org-left">Associate Prof.</td>
 <td class="org-right">149</td>
 <td class="org-right">411</td>
 <td class="org-right">560</td>
 </tr>
-
 
 <tr>
 <td class="org-left">Professor</td>
@@ -494,7 +484,7 @@
 
 <ul>
 <li>辛普森悖论（Simpson's paradox）：在分组比较中都占优势的一方，在总评（几组数据合并）中有时反而是失势的一方。
-    注意潜在变量！</li>
+  注意潜在变量！</li>
 <li>卡方（chisquare）检验：用来判断双向表里所出现的相关关系是否有统计显著性</li>
 </ul>
 <p><a id="org86ebc54"></a></p>
@@ -504,7 +494,7 @@
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../beauty_of_mathematics/" class="btn btn-neutral float-left" title="数学之美"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/" class="btn btn-neutral float-right" title="图解网络 (TODO)">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/" class="btn btn-neutral float-right" title="图解网络">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>

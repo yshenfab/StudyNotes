@@ -78,7 +78,7 @@
               </ul>
               <p class="caption"><span class="caption-text">Network</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/">图解网络 (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/">图解网络</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Psychology & Mind</span></p>
@@ -106,7 +106,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../python/python3/">python3</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective Python (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective Python</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../python/data_structure_and_algorithms_in_python/">Data Structures and Algorithms in Python</a>
                   </li>
@@ -127,21 +127,25 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../tools/arch/">Arch Linux</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/neovim/">neovim</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/neovim/">Neovim</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">vim</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">Vim</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">shell</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">Shell</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">git</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">Git</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">markdown</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/docker/">Docker (TODO)</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/docker/">docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/makefile/">Makefile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">Markdown</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/code/">编码 隐匿在计算机软硬件背后的语言</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/history_of_quantum_physics/">上帝掷骰子吗？量子物理史话</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%847%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效能人士的7个习惯</a>
@@ -203,13 +207,13 @@
 <li><a href="#org31d0f4b">带约束的一致性</a></li>
 <li><a href="#orgfabb3c5">共识算法</a></li>
 <li><a href="#orgfa8fcf3">拜占庭错误</a></li>
-<li><a href="#orgffae347">FLP不可能性原理</a></li>
-<li><a href="#orgf33240b">CAP原理</a></li>
-<li><a href="#org4bbc7d5">ACID原则：Atomicity（原子性）、Consistency（一致性）、Isolation（隔离性）、Durability（持久性）</a></li>
+<li><a href="#orgffae347">FLP 不可能性原理</a></li>
+<li><a href="#orgf33240b">CAP 原理</a></li>
+<li><a href="#org4bbc7d5">ACID 原则：Atomicity（原子性）、Consistency（一致性）、Isolation（隔离性）、Durability（持久性）</a></li>
 </ol>
 </li>
 <li><a href="#org65da68c">密码学技术</a><ol>
-<li><a href="#orgc60a5a2">Hash算法（Hash又叫做fingerprint、digest）</a><ol>
+<li><a href="#orgc60a5a2">Hash 算法（Hash 又叫做 fingerprint、digest）</a><ol>
 <li><a href="#orgb766786">MD5(Message Digest)</a></li>
 <li><a href="#orgdbdd696">SHA-1(Secure Hash Algorithm)</a></li>
 <li><a href="#org619ddc7">SHA-2</a></li>
@@ -257,11 +261,11 @@
 <ul>
 <li>wiki: A blockchain &#x2013; originally, block chain is a distributed database that maintains a</li>
 </ul>
-<p>continuously growing list of data records hardened against tampering and resivison. It 
-consists of data structure blocks &#x2013; which hold exclusively data in initial blockchain 
-implementations, and both data and programs in some of the more recent 
-implementations &#x2013; with each block holding batches of individual transactions and the 
-results of any blockchain executables. Each block contains a timestamp and information 
+<p>continuously growing list of data records hardened against tampering and resivison. It
+consists of data structure blocks &#x2013; which hold exclusively data in initial blockchain
+implementations, and both data and programs in some of the more recent
+implementations &#x2013; with each block holding batches of individual transactions and the
+results of any blockchain executables. Each block contains a timestamp and information
 linking it to a previous block.</p>
 <p><a id="org5c1769c"></a></p>
 <h2 id="_3">基本原理</h2>
@@ -269,7 +273,7 @@ linking it to a previous block.</p>
 <li>交易（Transaction）：一次操作，导致账本状态的一次改变,如添加一条记录;</li>
 <li>区块(Block):记录一段时间内发生的交易和状态结果,是对当前账本状态的一次共识;</li>
 <li>链(Chain):由一个个区块按照发生顺序串联而成,是整个状态变化的日志记录。</li>
-<li>基于算力的共识机制Proof of Work（PoW）</li>
+<li>基于算力的共识机制 Proof of Work（PoW）</li>
 </ul>
 <p><a id="org197f78d"></a></p>
 <h1 id="_4">应用场景</h1>
@@ -287,7 +291,7 @@ linking it to a previous block.</p>
 <p><a id="org32e60a6"></a></p>
 <h2 id="_7">资源共享</h2>
 <ul>
-<li>降低管理成本（如airbnb）</li>
+<li>降低管理成本（如 airbnb）</li>
 </ul>
 <p><a id="orgb601cc0"></a></p>
 <h2 id="_8">投资管理</h2>
@@ -332,12 +336,12 @@ linking it to a previous block.</p>
 <li>错误（恶意的响应）情况称为“拜占庭错误”，对应节点为拜占庭节点</li>
 </ul>
 <p><a id="orgffae347"></a></p>
-<h2 id="flp">FLP不可能性原理</h2>
+<h2 id="flp">FLP 不可能性原理</h2>
 <ul>
 <li>在网络可靠,存在节点失效(即便只有一个)的最小化异步模型系统中,不存在一个可以解决一致性问题的确定性算法</li>
 </ul>
 <p><a id="orgf33240b"></a></p>
-<h2 id="cap">CAP原理</h2>
+<h2 id="cap">CAP 原理</h2>
 <ul>
 <li>分布式计算系统不可能同时确保一致性（Consistency）、可用性（Availablity）和分区容忍性（Partition），设计中往往要弱化对某个特征的保证。</li>
 <li>一致性：任何操作应该都是原子的，发生在后面的事件能看到前面事件发生导致的结果</li>
@@ -345,29 +349,29 @@ linking it to a previous block.</p>
 <li>分区容忍性：网络可能发生分区，即节点之间的通信不可保障</li>
 </ul>
 <p><a id="org4bbc7d5"></a></p>
-<h2 id="acidatomicityconsistencyisolationdurability">ACID原则：Atomicity（原子性）、Consistency（一致性）、Isolation（隔离性）、Durability（持久性）</h2>
+<h2 id="acid-atomicityconsistencyisolationdurability">ACID 原则：Atomicity（原子性）、Consistency（一致性）、Isolation（隔离性）、Durability（持久性）</h2>
 <p><a id="org65da68c"></a></p>
 <h1 id="_15">密码学技术</h1>
 <p><a id="orgc60a5a2"></a></p>
-<h2 id="hashhashfingerprintdigest">Hash算法（Hash又叫做fingerprint、digest）</h2>
+<h2 id="hash-hash-fingerprintdigest">Hash 算法（Hash 又叫做 fingerprint、digest）</h2>
 <ul>
-<li>将任意长度的二进制值（明文）映射为较短的固定长度的二进制值（Hash值），并且不同的明文很难映射为相同的Hash值。</li>
-<li>流行的Hash算法包括MD5、SHA-1、SHA-2</li>
+<li>将任意长度的二进制值（明文）映射为较短的固定长度的二进制值（Hash 值），并且不同的明文很难映射为相同的 Hash 值。</li>
+<li>流行的 Hash 算法包括 MD5、SHA-1、SHA-2</li>
 </ul>
 <p><a id="orgb766786"></a></p>
 <h3 id="md5message-digest">MD5(Message Digest)</h3>
 <ul>
-<li>输出128位，不具备强抗碰撞性</li>
+<li>输出 128 位，不具备强抗碰撞性</li>
 </ul>
 <p><a id="orgdbdd696"></a></p>
 <h3 id="sha-1secure-hash-algorithm">SHA-1(Secure Hash Algorithm)</h3>
 <ul>
-<li>hash函数族，输出160位hash值，不具备强抗碰撞性</li>
+<li>hash 函数族，输出 160 位 hash 值，不具备强抗碰撞性</li>
 </ul>
 <p><a id="org619ddc7"></a></p>
 <h3 id="sha-2">SHA-2</h3>
 <ul>
-<li>推荐至少使用SHA2-256算法</li>
+<li>推荐至少使用 SHA2-256 算法</li>
 </ul>
 <p><a id="org3368527"></a></p>
 <h2 id="_16">算法体系</h2>
@@ -385,7 +389,7 @@ linking it to a previous block.</p>
 <li>优点：加解密效率高（速度快、空间占用小），加密强度高</li>
 <li>缺点：参与多方都需要持有密钥，一旦泄露则破坏安全性；如何在不安全通道下分发密钥也是问题</li>
 <li>从实现原理上分为两种：分组密码和序列密码。前者将明文切分为定长数据块作为加密单位，应用最广；后者只对一个字节进行加密，且密码不断变化，只用在特定领域。</li>
-<li>代表算法：DES、3DES、AES、IDEA等</li>
+<li>代表算法：DES、3DES、AES、IDEA 等</li>
 <li>适用于大量数据的加解密；不能用于签名场景；需要提前分发密钥</li>
 </ul>
 <p><a id="orgfd4a7ee"></a></p>
@@ -393,16 +397,16 @@ linking it to a previous block.</p>
 <ul>
 <li>公钥公开，私钥个人持有</li>
 <li>优点：公私钥分开，不安全通道也可使用</li>
-<li>缺点：加解密速度慢（一般比对称加解密慢3个数量级）；加密强度比对称加密差</li>
+<li>缺点：加解密速度慢（一般比对称加解密慢 3 个数量级）；加密强度比对称加密差</li>
 <li>安全性通过数学问题保障，主要基于大数质因子分解、离散对数、椭圆曲线等</li>
-<li>代表算法：RSA、EIGamal、ECC等</li>
+<li>代表算法：RSA、EIGamal、ECC 等</li>
 <li>一般适用于签名场景或密钥协商，不适用于大量数据的加解密</li>
 </ul>
 <p><a id="orgc53543a"></a></p>
 <h3 id="_20">混合加密</h3>
 <ul>
 <li>先用计算复杂度高的非对称加密协商一个临时的对称加密密钥（会话密钥，一般内容较短），然后双方通过对称加密传递大量数据进行加解密处理</li>
-<li>典型场景HTTPS</li>
+<li>典型场景 HTTPS</li>
 </ul>
 <p><a id="org06ab916"></a></p>
 <h3 id="_21">数字签名</h3>
@@ -421,7 +425,7 @@ linking it to a previous block.</p>
 </ul>
 <p><a id="orgcfa384e"></a></p>
 <h1 id="_24">比特币项目</h1>
-<p>做设计，很多时候都是在权衡trade-off</p>
+<p>做设计，很多时候都是在权衡 trade-off</p>
 <p><a id="orgdfda0ad"></a></p>
 <h2 id="_25">原理和设计</h2>
 <p><a id="orgb70c390"></a></p>
@@ -432,23 +436,23 @@ linking it to a previous block.</p>
 <h3 id="_28">账户/地址</h3>
 <ul>
 <li>比特币账户采用非对称加密，用户保留私钥，对他发出的交易进行签名确认，并公开公钥</li>
-<li>比特币账户地址是用户公钥经过一系列hash（HASH160，或先SHA256再RIPEMD160）及编码运算后生成的160位的字符串</li>
+<li>比特币账户地址是用户公钥经过一系列 hash（HASH160，或先 SHA256 再 RIPEMD160）及编码运算后生成的 160 位的字符串</li>
 </ul>
 <p><a id="orgade7add"></a></p>
 <h3 id="_29">交易</h3>
 <ul>
-<li>一条交易包括：付款人地址、付款人对交易的签字确认（确保交易内容不被篡改）、付款人资金的来源交易ID（从哪个交易的输出作为本次交易的输入）、交易的金额（多少钱，跟输入的差额为交易服务费）、收款人地址（合法）、收款人公钥、时间戳（交易何时能生效）</li>
+<li>一条交易包括：付款人地址、付款人对交易的签字确认（确保交易内容不被篡改）、付款人资金的来源交易 ID（从哪个交易的输出作为本次交易的输入）、交易的金额（多少钱，跟输入的差额为交易服务费）、收款人地址（合法）、收款人公钥、时间戳（交易何时能生效）</li>
 <li>网络节点收到交易信息后，将进行如下检查：
-    1、交易是否已经处理过
-    2、交易是否合法：包括地址是否合法、发起交易者是输入地址的合法拥有者、是否是UTXO
-    3、交易的输入之和是否大于输出之和
-    检查都通过，则标记为合法的未确认交易，并在网络中广播</li>
+  1、交易是否已经处理过
+  2、交易是否合法：包括地址是否合法、发起交易者是输入地址的合法拥有者、是否是 UTXO
+  3、交易的输入之和是否大于输出之和
+  检查都通过，则标记为合法的未确认交易，并在网络中广播</li>
 </ul>
 <p><a id="org2792b78"></a></p>
 <h3 id="_30">脚本</h3>
 <ul>
 <li>保障交易（主要检验交易是否合法）完成的核心机制，所依附的交易发生时被触发</li>
-<li>一个交易包含2个脚本：输出脚本（scriptPubKey）和认领脚本（scriptSig）</li>
+<li>一个交易包含 2 个脚本：输出脚本（scriptPubKey）和认领脚本（scriptSig）</li>
 <li>输出脚本由付款方对交易设置锁定，用来对能动用这笔交易输出（要花费交易的输出）的对象（收款方）进行权限控制，例如限制必须是某个公钥的拥有者才能花费这笔交易</li>
 <li>认领脚本用来证明自己可以满足交易输出脚本的锁定条件，即对某个交易的输出（比特币）的拥有权</li>
 </ul>
@@ -456,21 +460,21 @@ linking it to a previous block.</p>
 <h3 id="_31">区块</h3>
 <ol>
 <li>
-<p>4字节区块大小信息</p>
+<p>4 字节区块大小信息</p>
 </li>
 <li>
-<p>80字节区块头信息</p>
+<p>80 字节区块头信息</p>
 <ul>
-<li>版本号：4字节</li>
-<li>上一个区块头的SHA256 hash值：链接到一个合法的块上，32字节</li>
-<li>包含的所有验证过的交易的Merkle树根的hash值，32字节</li>
-<li>时间戳：4字节</li>
-<li>难度指标：4字节</li>
-<li>Nonce：4字节，PoW问题的答案</li>
+<li>版本号：4 字节</li>
+<li>上一个区块头的 SHA256 hash 值：链接到一个合法的块上，32 字节</li>
+<li>包含的所有验证过的交易的 Merkle 树根的 hash 值，32 字节</li>
+<li>时间戳：4 字节</li>
+<li>难度指标：4 字节</li>
+<li>Nonce：4 字节，PoW 问题的答案</li>
 </ul>
 </li>
 <li>
-<p>交易个数计数器：1-9字节</p>
+<p>交易个数计数器：1-9 字节</p>
 </li>
 <li>
 <p>所有交易的具体内容可变长</p>
@@ -486,18 +490,18 @@ linking it to a previous block.</p>
 <h3 id="_33">共识机制</h3>
 <ul>
 <li>按照块来进行阶段性的确认，提高网络可用性</li>
-<li>通过进行PoW限制合法提案的个数，提高网络稳定性</li>
+<li>通过进行 PoW 限制合法提案的个数，提高网络稳定性</li>
 </ul>
 <p><a id="org439c571"></a></p>
 <h3 id="_34">挖矿</h3>
 <ul>
-<li>每10min左右生成一个不超过1MB大小的区块（记录10min内发生的验证过的交易内容）</li>
+<li>每 10min 左右生成一个不超过 1MB 大小的区块（记录 10min 内发生的验证过的交易内容）</li>
 </ul>
 <p><a id="org9fb1cea"></a></p>
 <h3 id="_35">闪电网络</h3>
 <ul>
 <li>
-<p>交易性能：全网每秒7笔，同时等待6个块的可信确认导致约1小时的最终确认时间</p>
+<p>交易性能：全网每秒 7 笔，同时等待 6 个块的可信确认导致约 1 小时的最终确认时间</p>
 </li>
 <li>
 <p>RSMC(Recoverable Sequence Maturity Contract) 可撤销的顺序成熟度合同</p>

@@ -78,7 +78,7 @@
               </ul>
               <p class="caption"><span class="caption-text">Network</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/">图解网络 (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/">图解网络</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Psychology & Mind</span></p>
@@ -106,7 +106,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../python/python3/">python3</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective Python (TODO)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective Python</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../python/data_structure_and_algorithms_in_python/">Data Structures and Algorithms in Python</a>
                   </li>
@@ -127,21 +127,25 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../tools/arch/">Arch Linux</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/neovim/">neovim</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/neovim/">Neovim</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">vim</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/practical_vim/">Vim</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">shell</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/shell/">Shell</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">git</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/git/">Git</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">markdown</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/docker/">Docker (TODO)</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/docker/">docker</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/makefile/">Makefile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">Markdown</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/code/">编码 隐匿在计算机软硬件背后的语言</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/history_of_quantum_physics/">上帝掷骰子吗？量子物理史话</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E7%9A%847%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效能人士的7个习惯</a>
@@ -195,12 +199,12 @@
 <li><a href="#org4b5da39">特征组合(Feature Cross)</a></li>
 <li><a href="#org3c29828">简化正则化(Regularization for Simplicity)</a><ol>
 <li><a href="#org5847e37">降低模型的复杂度</a></li>
-<li><a href="#org8935182">L2正则化（L2权重衰减）</a></li>
+<li><a href="#org8935182">L2 正则化（L2 权重衰减）</a></li>
 </ol>
 </li>
 <li><a href="#org1e49989">逻辑回归(Logistic Regression)</a><ol>
 <li><a href="#org402ca0b">逻辑回归的损失函数是对数损失函数</a></li>
-<li><a href="#orgb1a5e45">S型函数</a></li>
+<li><a href="#orgb1a5e45">S 型函数</a></li>
 <li><a href="#orgd8bb3c5">逻辑回归中的正则化</a></li>
 </ol>
 </li>
@@ -210,8 +214,8 @@
 </ol>
 </li>
 <li><a href="#orgf50bc4f">稀疏性正则化(Regularization for Sparsity)</a><ol>
-<li><a href="#orgfc4c483">L1正则化</a></li>
-<li><a href="#org533eaf4">L1和L2正则化比较</a></li>
+<li><a href="#orgfc4c483">L1 正则化</a></li>
+<li><a href="#org533eaf4">L1 和 L2 正则化比较</a></li>
 </ol>
 </li>
 <li><a href="#org5629540">神经网络简介</a></li>
@@ -233,7 +237,7 @@
 <li>steps: 训练迭代总次数，一步计算一批样本产生的损失，然后用该值修改模型的权重一次</li>
 <li>batch size: 单步的样本数量（随机选择）</li>
 <li>total number of trained examples = batch size * steps</li>
-<li>periods: 控制报告的粒度。例如periods=7, steps=70，则每7次（或每10步）输出一次损失值</li>
+<li>periods: 控制报告的粒度。例如 periods=7, steps=70，则每 7 次（或每 10 步）输出一次损失值</li>
 <li>number of training examples in each period = batch size * steps / periods</li>
 </ul>
 <p><a id="org4b0e132"></a></p>
@@ -245,54 +249,52 @@
 <p><a id="org9bab7cf"></a></p>
 <h2 id="_3">表示法：特征工程</h2>
 <ul>
-<li>即从原始数据中提取特征，表示为特征向量（大约花费机器学习75%的时间）</li>
+<li>即从原始数据中提取特征，表示为特征向量（大约花费机器学习 75%的时间）</li>
 <li>理想情况下，特征值取到相同范围</li>
 <li>分箱技术</li>
 <li>映射分类（枚举）值</li>
 </ul>
-<p>例如颜色特征只包含3个可能的值{red, green, blue}
-我们可能会将分类特征编码为枚举类型，例如0表示red，1表示green，2表示blue
-<strong>但是！机器学习模型通常将每个分类特征表示为单独的布尔值，颜色可以表示为3个单独的布尔值特征：</strong>
-x1: 是red吗？x2: 是green吗？x3: 是blue吗？
-采用这种方法编码还可以简化某个值可能属于多个分类的情况，例如“非蓝色”对于red和green来说都是True</p>
+<p>例如颜色特征只包含 3 个可能的值{red, green, blue}
+我们可能会将分类特征编码为枚举类型，例如 0 表示 red，1 表示 green，2 表示 blue
+<strong>但是！机器学习模型通常将每个分类特征表示为单独的布尔值，颜色可以表示为 3 个单独的布尔值特征：</strong>
+x1: 是 red 吗？x2: 是 green 吗？x3: 是 blue 吗？
+采用这种方法编码还可以简化某个值可能属于多个分类的情况，例如“非蓝色”对于 red 和 green 来说都是 True</p>
 <p><a id="orgb4674b1"></a></p>
 <h3 id="_4">良好特征的特点</h3>
 <ul>
 <li>避免很少使用的离散特征值</li>
 </ul>
-<p>良好的特征值应该在数据集中出现大约5次以上
-例如house<sub>type特征可能包含大量样本</sub>，但unique<sub>house</sub><sub>id每个值只使用一次</sub>，就不适合作为特征</p>
+<p>良好的特征值应该在数据集中出现大约 5 次以上
+例如 house<sub>type 特征可能包含大量样本</sub>，但 unique<sub>house</sub><sub>id 每个值只使用一次</sub>，就不适合作为特征</p>
 <ul>
 <li>最好具有清晰明确的含义</li>
 </ul>
-<p>例如house<sub>age</sub>: 27，但如果是house<sub>age</sub>: 851472000那就不便于理解了</p>
+<p>例如 house<sub>age</sub>: 27，但如果是 house<sub>age</sub>: 851472000 那就不便于理解了</p>
 <ul>
 <li>不要将“神奇”的值与实际数据混为一谈</li>
 </ul>
-<p>假设一个特征具有0-1之间的浮点值，例如quality<sub>rating</sub>: 0.82
-不过，如果用户没有输入quality<sub>rating</sub>，则数据集可能使用如下神奇值来表示不存在该值：quality<sub>rating</sub>: -1
-<strong>为了解决遮盖问题，需要将该特征转换为2个特征：</strong>
-一个特征只存储质量评分，不含神奇值；一个特征存布尔值，表示是否提供了quality<sub>rating</sub></p>
+<p>假设一个特征具有 0-1 之间的浮点值，例如 quality<sub>rating</sub>: 0.82
+不过，如果用户没有输入 quality<sub>rating</sub>，则数据集可能使用如下神奇值来表示不存在该值：quality<sub>rating</sub>: -1
+<strong>为了解决遮盖问题，需要将该特征转换为 2 个特征：</strong>
+一个特征只存储质量评分，不含神奇值；一个特征存布尔值，表示是否提供了 quality<sub>rating</sub></p>
 <ul>
 <li>考虑上游不稳定性</li>
 </ul>
-<p>特征的定义不应该随时间发生变化，例如city<sub>id</sub>: "br/sao<sub>paulo</sub>"，但inferred<sub>city</sub><sub>cluster</sub>: "219"在未来运行其他模型时可能轻易发生变化</p>
+<p>特征的定义不应该随时间发生变化，例如 city<sub>id</sub>: "br/sao<sub>paulo</sub>"，但 inferred<sub>city</sub><sub>cluster</sub>: "219"在未来运行其他模型时可能轻易发生变化</p>
 <p><a id="org22b505b"></a></p>
 <h3 id="_5">数据清理</h3>
 <ul>
 <li>缩放特征值</li>
 </ul>
-<p>将多个特征都scale到[0,1]或[-1,1]
+<p>将多个特征都 scale 到[0,1]或[-1,1]
 可以帮助梯度下降法更快收敛
-可以避免NaN错误
+可以避免 NaN 错误
 可以帮助模型为每个特征确定合适的权重，如果没有进行特征缩放，模型会对范围较大的特征投入过多精力
-如果相差范围不大，不用缩放，例如特征A的范围是[-1,1]，特征B的范围是[-3,3]</p>
+如果相差范围不大，不用缩放，例如特征 A 的范围是[-1,1]，特征 B 的范围是[-3,3]</p>
 <ul>
 <li>处理极端离群值</li>
 </ul>
-<p>例如roomsPerPerson，大多值是1或2，但有个别值是40，可行的方法有：
-1.取对数log
-2.将特征值限制到4，即最大取4，这样并不意味着忽略大于4的值，而是大于4的值都取4</p>
+<p>例如 roomsPerPerson，大多值是 1 或 2，但有个别值是 40，可行的方法有： 1.取对数 log 2.将特征值限制到 4，即最大取 4，这样并不意味着忽略大于 4 的值，而是大于 4 的值都取 4</p>
 <ul>
 <li>分箱</li>
 <li>清查</li>
@@ -302,7 +304,7 @@ x1: 是red吗？x2: 是green吗？x3: 是blue吗？
 <h2 id="feature-cross">特征组合(Feature Cross)</h2>
 <ul>
 <li>即特征交叉，用来表示非线性组合信息</li>
-<li>线性学习器如wowpal-wabit, sofia-ml  或  神经网络</li>
+<li>线性学习器如 wowpal-wabit, sofia-ml 或 神经网络</li>
 </ul>
 <p><a id="org3c29828"></a></p>
 <h2 id="regularization-for-simplicity">简化正则化(Regularization for Simplicity)</h2>
@@ -317,7 +319,7 @@ x1: 是red吗？x2: 是green吗？x3: 是blue吗？
 <p>一个是损失项，用于衡量模型与数据的拟合度，另一个是正则化项，用于衡量模型复杂度
 旨在减少训练误差，同时平衡复杂度</p>
 <p><a id="org8935182"></a></p>
-<h3 id="l2l2">L2正则化（L2权重衰减）</h3>
+<h3 id="l2-l2">L2 正则化（L2 权重衰减）</h3>
 <p>定义模型的复杂度： complexity(Model) = 权重的平方和
 <script type="math/tex">L_2 retularization term = ||w||_2^2 = w_1^2 + w_2^2 + ... + w_n^2</script>
 </p>
@@ -326,26 +328,26 @@ x1: 是red吗？x2: 是green吗？x3: 是blue吗？
 <li>偏离将会产生成本</li>
 <li>对于线性模型，首选比较平缓的斜率</li>
 <li>
-<p>贝叶斯先验概率：权重应该以0为中心，权重应该呈正态分布</p>
+<p>贝叶斯先验概率：权重应该以 0 为中心，权重应该呈正态分布</p>
 </li>
 <li>
-<p>L2正则化的损失函数</p>
-<p>正则化项乘以lambda，即
+<p>L2 正则化的损失函数</p>
+<p>正则化项乘以 lambda，即
 <script type="math/tex">L(w, D) + \lambda ||w||_2^2</script>
-执行L2正则化对模型具有以下影响：</p>
+执行 L2 正则化对模型具有以下影响：</p>
 <ul>
-<li>使权重值接近于0（但并非正好为0）</li>
+<li>使权重值接近于 0（但并非正好为 0）</li>
 <li>
-<p>使权重的平均值接近于0，且呈正态分布</p>
+<p>使权重的平均值接近于 0，且呈正态分布</p>
 </li>
 <li>
-<p>lambda值的选择</p>
+<p>lambda 值的选择</p>
 <p>目标是在简单化和训练数据拟合之间达到适当的平衡</p>
 <ul>
-<li>增加lambda值会增强正则化效果，减小lambda值会得出比较平缓的直方图</li>
-<li>lambda值过高，则模型会非常简单，会面临数据欠拟合的风险，模型将无法从训练数据中获得足够的信息来做出有用的预测</li>
-<li>lambda值过低，则模型会比较复杂，会面临数据过拟合的风险，模型将因获得过多训练数据特点方面的信息而无法泛化到新数据</li>
-<li><strong>理想的lambda值取决于数据</strong> 因此需要手动或自动进行调整</li>
+<li>增加 lambda 值会增强正则化效果，减小 lambda 值会得出比较平缓的直方图</li>
+<li>lambda 值过高，则模型会非常简单，会面临数据欠拟合的风险，模型将无法从训练数据中获得足够的信息来做出有用的预测</li>
+<li>lambda 值过低，则模型会比较复杂，会面临数据过拟合的风险，模型将因获得过多训练数据特点方面的信息而无法泛化到新数据</li>
+<li><strong>理想的 lambda 值取决于数据</strong> 因此需要手动或自动进行调整</li>
 </ul>
 </li>
 </ul>
@@ -353,23 +355,23 @@ x1: 是red吗？x2: 是green吗？x3: 是blue吗？
 </ul>
 <p><a id="org1e49989"></a></p>
 <h2 id="logistic-regression">逻辑回归(Logistic Regression)</h2>
-<p>逻辑回归会生成一个介于0到1之间（不包括0和1）的概率值，而不是确切地预测结果是0还是1</p>
+<p>逻辑回归会生成一个介于 0 到 1 之间（不包括 0 和 1）的概率值，而不是确切地预测结果是 0 还是 1</p>
 <p><a id="org402ca0b"></a></p>
 <h3 id="_7">逻辑回归的损失函数是对数损失函数</h3>
 <p>（线性回归的损失函数是平方损失）
 <script type="math/tex">LogLoss = \sum_{(x,y)\in D} -ylog(y^')-(1-y)log(1-y^')</script>
 </p>
 <p><a id="orgb1a5e45"></a></p>
-<h3 id="s">S型函数</h3>
-<p>输出在0和1之间
+<h3 id="s">S 型函数</h3>
+<p>输出在 0 和 1 之间
 <script type="math/tex">y = 1/(1+e^{-z})</script>
 </p>
 <p><a id="orgd8bb3c5"></a></p>
 <h3 id="_8">逻辑回归中的正则化</h3>
-<p>正则化在逻辑回归建模中极其重要。如果没有正则化，逻辑回归的渐近性会不断促使损失在高维度空间内达到0。
+<p>正则化在逻辑回归建模中极其重要。如果没有正则化，逻辑回归的渐近性会不断促使损失在高维度空间内达到 0。
 因此，大多数逻辑回归模型会使用以下两个策略之一来降低模型复杂性：</p>
 <ul>
-<li>L2正则化</li>
+<li>L2 正则化</li>
 <li>早停法，即，限制训练步数或学习速率。</li>
 </ul>
 <p><a id="org2ee83e7"></a></p>
@@ -382,7 +384,6 @@ x1: 是red吗？x2: 是green吗？x3: 是blue吗？
 <p>True Positive, False Positive, False Negative, Ture Negative
 以“狼来了”举例，“狼来了”是正类别，“没有狼”是负类别</p>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
 
 <colgroup>
 <col  class="org-left" />
@@ -418,7 +419,6 @@ x1: 是red吗？x2: 是green吗？x3: 是blue吗？
 <td class="org-left">正确</td>
 </tr>
 
-
 <tr>
 <td class="org-left">FP</td>
 <td class="org-left">没受到狼的威胁</td>
@@ -428,7 +428,6 @@ x1: 是red吗？x2: 是green吗？x3: 是blue吗？
 <td class="org-left">错误</td>
 </tr>
 
-
 <tr>
 <td class="org-left">FN</td>
 <td class="org-left">受到狼的威胁</td>
@@ -437,7 +436,6 @@ x1: 是red吗？x2: 是green吗？x3: 是blue吗？
 <td class="org-left">说没狼，但狼来了</td>
 <td class="org-left">错误</td>
 </tr>
-
 
 <tr>
 <td class="org-left">TN</td>
@@ -458,9 +456,9 @@ x1: 是red吗？x2: 是green吗？x3: 是blue吗？
 </li>
 <li>
 <p>精确率和召回率</p>
-<p>精确率Precision = TP/(TP+FP)
-召回率Recall = TP/(TP+FN)
-提高分类阈值: 假正例FP数量会减少，但假负例FN数量会相应地增加。结果，精确率有所提高，而召回率则有所降低
+<p>精确率 Precision = TP/(TP+FP)
+召回率 Recall = TP/(TP+FN)
+提高分类阈值: 假正例 FP 数量会减少，但假负例 FN 数量会相应地增加。结果，精确率有所提高，而召回率则有所降低
 降低分类阈值：假正例数量会增加，而假负例数量会减少。结果这一次，精确率有所降低，而召回率则有所提高</p>
 </li>
 <li>
@@ -489,33 +487,33 @@ FPR = FP/(FP+TN)</p>
 <li>特征组合可能会大大增加特征空间</li>
 </ul>
 <p><a id="orgfc4c483"></a></p>
-<h3 id="l1">L1正则化</h3>
+<h3 id="l1">L1 正则化</h3>
 <ul>
-<li>会对L0权重的范数进行惩罚，非凸优化，NP-hard</li>
-<li>L1正则化比较放松</li>
+<li>会对 L0 权重的范数进行惩罚，非凸优化，NP-hard</li>
+<li>L1 正则化比较放松</li>
 <li>对绝对值（权重）之和进行惩罚</li>
 <li>凸优化问题</li>
-<li>和L2不同，L1鼓励稀疏性</li>
-<li>使无意义维度的权重正好降至0</li>
+<li>和 L2 不同，L1 鼓励稀疏性</li>
+<li>使无意义维度的权重正好降至 0</li>
 </ul>
 <p><a id="org533eaf4"></a></p>
-<h3 id="l1l2">L1和L2正则化比较</h3>
+<h3 id="l1-l2">L1 和 L2 正则化比较</h3>
 <ol>
 <li>
-<p>L2和L1采用不同的方式降低权重</p>
+<p>L2 和 L1 采用不同的方式降低权重</p>
 <ul>
-<li>L2会降低 权重<sup>2</sup> （平方）</li>
-<li>L1会降低 |权重| （绝对值）</li>
+<li>L2 会降低 权重<sup>2</sup> （平方）</li>
+<li>L1 会降低 |权重| （绝对值）</li>
 </ul>
 </li>
 <li>
-<p>L2和L1具有不同的导数</p>
+<p>L2 和 L1 具有不同的导数</p>
 <ul>
-<li>L2的导数为2×权重</li>
-<li>L1的导数为k（一个常数，其值与权重无关）</li>
-<li>可以将L2的导数作用理解为每次移除权重的x%，即使按每次减去x%执行数十亿次减法计算，最后的值也不会绝对为0（即L2通常不会使权重变为0）</li>
-<li>可以将L1的导数作用理解为每次从权重中减去一个常数，由于减去的是绝对值，L1在0处具有不连续性，这会导致与0相交的减法结果变为0（例如减法使权重从+0.1变为-0.2，L1便会将权重设为0）</li>
-<li>L1正则化——减少所有权重的绝对值——证明对宽度模型非常有效</li>
+<li>L2 的导数为 2× 权重</li>
+<li>L1 的导数为 k（一个常数，其值与权重无关）</li>
+<li>可以将 L2 的导数作用理解为每次移除权重的 x%，即使按每次减去 x%执行数十亿次减法计算，最后的值也不会绝对为 0（即 L2 通常不会使权重变为 0）</li>
+<li>可以将 L1 的导数作用理解为每次从权重中减去一个常数，由于减去的是绝对值，L1 在 0 处具有不连续性，这会导致与 0 相交的减法结果变为 0（例如减法使权重从+0.1 变为-0.2，L1 便会将权重设为 0）</li>
+<li>L1 正则化——减少所有权重的绝对值——证明对宽度模型非常有效</li>
 <li>适用于一维模型</li>
 </ul>
 </li>
@@ -527,11 +525,10 @@ FPR = FP/(FP+TN)</p>
 <p><a id="org3a6241c"></a></p>
 <h2 id="multi-class-neural-networks">多类别神经网络 (Multi-Class Neural Networks)</h2>
 <ul>
-<li>逻辑回归可生成介于0和1.0之间的小数。例如，某电子邮件分类器的逻辑回归输出值为0.8，表明电子邮件是垃圾邮件的概率为80%，不是垃圾邮件的概率为20%。</li>
-<li>Softmax将这一想法延伸到多类别领域。也就是说，在多类别问题中，Softmax会为每个类别分配一个用小数表示的概率。</li>
+<li>逻辑回归可生成介于 0 和 1.0 之间的小数。例如，某电子邮件分类器的逻辑回归输出值为 0.8，表明电子邮件是垃圾邮件的概率为 80%，不是垃圾邮件的概率为 20%。</li>
+<li>Softmax 将这一想法延伸到多类别领域。也就是说，在多类别问题中，Softmax 会为每个类别分配一个用小数表示的概率。</li>
 </ul>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
 
 <colgroup>
 <col  class="org-left" />
@@ -551,24 +548,20 @@ FPR = FP/(FP+TN)</p>
 <td class="org-right">0.001</td>
 </tr>
 
-
 <tr>
 <td class="org-left">熊</td>
 <td class="org-right">0.04</td>
 </tr>
-
 
 <tr>
 <td class="org-left">糖果</td>
 <td class="org-right">0.008</td>
 </tr>
 
-
 <tr>
 <td class="org-left">狗</td>
 <td class="org-right">0.95</td>
 </tr>
-
 
 <tr>
 <td class="org-left">鸡蛋</td>
@@ -578,18 +571,18 @@ FPR = FP/(FP+TN)</p>
 </table>
 
 <ul>
-<li>Softmax层是紧挨着输出层之前的神经网络层。Softmax层必须和输出层拥有一样的节点数。</li>
-<li>Softmax方程：p(y=j|x) = \frac{e^(w_j^T x+b_j)}{&sum;<sub>k &isin; K</sub> e<sup>(w<sub>k</sub><sup>T</sup> x+b<sub>k</sub>)</sup>}</li>
-<li>Softmax变体：
-    完整Softmax是我们一直以来讨论的Softmax；也就是说，Softmax针对每个可能的类别计算概率。
-    候选采样指Softmax针对所有正类别标签计算概率，但仅针对负类别标签的随机样本计算概率。例如，如果我们想要确定某个输入图片是小猎犬还是寻血猎犬图片，则不必针对每个非狗狗样本提供概率。</li>
-<li>类别数量较少时，完整Softmax代价很小，但随着类别数量的增加，它的代价会变得极其高昂。候选采样可以提高处理具有大量类别的问题的效率。</li>
+<li>Softmax 层是紧挨着输出层之前的神经网络层。Softmax 层必须和输出层拥有一样的节点数。</li>
+<li>Softmax 方程：p(y=j|x) = \frac{e^(w_j^T x+b_j)}{&sum;<sub>k &isin; K</sub> e<sup>(w<sub>k</sub><sup>T</sup> x+b<sub>k</sub>)</sup>}</li>
+<li>Softmax 变体：
+  完整 Softmax 是我们一直以来讨论的 Softmax；也就是说，Softmax 针对每个可能的类别计算概率。
+  候选采样指 Softmax 针对所有正类别标签计算概率，但仅针对负类别标签的随机样本计算概率。例如，如果我们想要确定某个输入图片是小猎犬还是寻血猎犬图片，则不必针对每个非狗狗样本提供概率。</li>
+<li>类别数量较少时，完整 Softmax 代价很小，但随着类别数量的增加，它的代价会变得极其高昂。候选采样可以提高处理具有大量类别的问题的效率。</li>
 </ul>
 <p><a id="org3553ebc"></a></p>
 <h3 id="_13">一个标签与多个标签</h3>
-<p>Softmax假设每个样本只是一个类别的成员。但是，一些样本可以同时是多个类别的成员。对于此类示例</p>
+<p>Softmax 假设每个样本只是一个类别的成员。但是，一些样本可以同时是多个类别的成员。对于此类示例</p>
 <ul>
-<li>您不能使用Softmax</li>
+<li>您不能使用 Softmax</li>
 <li>您必须依赖多个逻辑回归</li>
 </ul>
 <p><a id="org827f621"></a></p>
