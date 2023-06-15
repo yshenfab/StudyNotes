@@ -12,20 +12,20 @@ nav:
     - Introduction: "index.md"
     - Algorithm:
           - Alg blog: "algorithm/alg_blog_note.md"
-          - Algorithms (4th Edition): "algorithm/algorithms_4th_edition.md"
+          - Algorithms 4th Edition (unfinished): "algorithm/algorithms_4th_edition.md"
     - Blockchain:
-          - Blockchain: "blockchain/blockchain.md"
-    - Deep Learning:
+          - Blockchain (unfinished): "blockchain/blockchain.md"
+    - ML/DL/RL:
           - Google ML Crash Course: "deep_learning/google-machine-learning-crash-course.md"
           - Python机器学习: "deep_learning/Python机器学习.md"
-          - Dive into Deep Learning: "deep_learning/dive_into_deep_learning.md"
           - DL Notes: "deep_learning/dl_notes.md"
+          - Dive into Deep Learning (TODO): "deep_learning/dive_into_deep_learning.md"
     - Mathematics:
           - 数学之美: "mathematics/beauty_of_mathematics.md"
           - 统计学的世界: "mathematics/statistics_concepts_and_controversies.md"
     - Network:
-          - 图解网络: "network/图解网络.md"
-    - Psychology & Mind:
+          - 图解网络 (unfinished): "network/图解网络.md"
+    - Psychology:
           - 与众不同的心理学: "psychology/与众不同的心理学.md"
           - 决策与判断: "psychology/决策与判断.md"
           - 暗时间: "psychology/暗时间.md"
@@ -47,23 +47,23 @@ nav:
           - 像外行一样思考，像专家一样实践: "research/像外行一样思考，像专家一样实践.md"
     - Startup:
           - How Google Works: "startup/how_google_works.md"
-          - startup: "startup/startup.md"
+          - How to start a startup: "startup/startup.md"
     - Tools:
           - Arch Linux: "tools/arch.md"
           - Neovim: "tools/neovim.md"
-          - Vim: "tools/practical_vim.md"
+          - Practical Vim: "tools/practical_vim.md"
           - Shell: "tools/shell.md"
           - Git: "tools/git.md"
-          - Docker (TODO): "tools/docker.md"
-          - Makefile: "tools/makefile.md"
           - Markdown: "tools/markdown.md"
+          - Docker (unfinished): "tools/docker.md"
+          - 跟我一起写Makefile (unfinished): "tools/makefile.md"
           # - org-mode: "tools/org-mode.org"
     - Other:
-          - 编码 隐匿在计算机软硬件背后的语言: "other/code.md"
           - 上帝掷骰子吗？量子物理史话: "other/history_of_quantum_physics.md"
           - 高效能人士的7个习惯: "other/高效能人士的7个习惯.md"
           - 底层逻辑: "other/底层逻辑.md"
           - 高效程序员的45个习惯: "other/高效程序员的45个习惯.md"
+          - 编码 隐匿在计算机软硬件背后的语言 (unfinished): "other/code.md"
           - Type System: "other/type_system.md"
     - Todo:
           - TODO: "todo/todo.md"

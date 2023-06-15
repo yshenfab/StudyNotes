@@ -1,5 +1,7 @@
 # How to start a startup
 
+By Sam Altman
+
 ## Idea + Product + Team + Execution
 
 - 2-3 co-founders

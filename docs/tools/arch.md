@@ -155,7 +155,7 @@ Make sure to install some nerd fonts (JetBrains Mono NFM, Fira Code, etc.).
 
 ## VPN
 
-Recommend ExpressVPN, check [link](https://github.com/vpncn/vpncn.github.io).
+Recommend ExpressVPN/NordVPN, check this [link](https://github.com/vpncn/vpncn.github.io).
 
 Some cheap options:
 
