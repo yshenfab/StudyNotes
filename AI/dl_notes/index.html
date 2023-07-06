@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Dive into Deep Learning (TODO) - Study Notes</title>
+    <title>DL Notes - Study Notes</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Dive into Deep Learning (TODO)";
-        var mkdocs_page_input_path = "deep_learning/dive_into_deep_learning.md";
+        var mkdocs_page_name = "DL Notes";
+        var mkdocs_page_input_path = "AI/dl_notes.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -46,45 +46,26 @@
               </ul>
               <p class="caption"><span class="caption-text">Algorithm</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/alg_blog_note/">Alg blog</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorithms_4th_edition/">Algorithms 4th Edition (unfinished)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../algorithm/algorithms_4th_edition/">Algorithms 4th Edition</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Blockchain</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../blockchain/blockchain/">Blockchain (unfinished)</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">ML/DL/RL</span></p>
+              <p class="caption"><span class="caption-text">AI</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../google-machine-learning-crash-course/">Google ML Crash Course</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">Python机器学习</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../dl_notes/">DL Notes</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Dive into Deep Learning (TODO)</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">DL Notes</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#preface">Preface</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#_1">监督学习</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#regression">回归 Regression</a>
+    <li class="toctree-l2"><a class="reference internal" href="#neural-network-embedding">Neural Network Embedding</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#classification">分类 Classification</a>
+    <li class="toctree-l2"><a class="reference internal" href="#graph-neural-network-gnn">Graph Neural Network (GNN)</a>
     </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#_2">强化学习</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_3">预备知识</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#_4">线性神经网络</a>
+    <li class="toctree-l2"><a class="reference internal" href="#visualization">Visualization</a>
     </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dive_into_deep_learning/">Dive into Deep Learning (TODO)</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Mathematics</span></p>
@@ -92,11 +73,6 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../mathematics/beauty_of_mathematics/">数学之美</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../mathematics/statistics_concepts_and_controversies/">统计学的世界</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Network</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/">图解网络 (unfinished)</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Psychology</span></p>
@@ -114,19 +90,6 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E5%BD%B1%E5%93%8D%E5%8A%9B/">影响力</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../psychology/%E4%B8%93%E6%B3%A8%E5%8A%9B/">专注力</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Python</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/pythonic/">pythonic</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/python_tips/">python tips</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/python3/">python3</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective Python</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/data_structure_and_algorithms_in_python/">Data Structures and Algorithms in Python</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Research</span></p>
@@ -155,9 +118,28 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../tools/markdown/">Markdown</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/docker/">Docker (unfinished)</a>
+              </ul>
+              <p class="caption"><span class="caption-text">Blockchain</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../blockchain/blockchain/">Blockchain</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tools/makefile/">跟我一起写Makefile (unfinished)</a>
+              </ul>
+              <p class="caption"><span class="caption-text">Network</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../network/%E5%9B%BE%E8%A7%A3%E7%BD%91%E7%BB%9C/">图解网络</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Python</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/pythonic/">pythonic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/python_tips/">python tips</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/python3/">python3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective Python</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../python/data_structure_and_algorithms_in_python/">Data Structures and Algorithms in Python</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Other</span></p>
@@ -170,7 +152,7 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/%E9%AB%98%E6%95%88%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8445%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效程序员的45个习惯</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../other/code/">编码 隐匿在计算机软硬件背后的语言 (unfinished)</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../other/code/">编码 隐匿在计算机软硬件背后的语言</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../other/type_system/">Type System</a>
                   </li>
@@ -194,8 +176,8 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
-          <li>ML/DL/RL &raquo;</li>
-      <li>Dive into Deep Learning (TODO)</li>
+          <li>AI &raquo;</li>
+      <li>DL Notes</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -204,53 +186,52 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="dive-into-deep-learning">Dive into Deep Learning 动手学深度学习</h1>
+                <h1 id="dl-notes">DL Notes</h1>
+<h2 id="neural-network-embedding">Neural Network Embedding</h2>
 <ul>
-<li><a href="https://zh.d2l.ai/">d2l website</a></li>
-<li><a href="https://github.com/d2l-ai/d2l-zh">github</a></li>
-<li><a href="https://space.bilibili.com/1567748478/channel/seriesdetail?sid=358497">online course</a></li>
+<li>传统 DL 方法应用在欧氏空间数据的特征方面，许多实际应用场景的数据是从非欧氏空间生成的。</li>
+<li>Neural Network Embedding: 将离散变量转变为连续向量的方式，减少离散变量的空间维数。</li>
+<li>相对于 one-hot 来说，one-hot 向量维数太大且过于稀疏，one-hot 映射之间完全独立，不能表示不同类别之间的关系。</li>
+<li>Embedding 方便可视化，比如通过降维到 2-3 维，popular 的降维技术是 t-Distributed
+  Stochastic Neighbor Embedding (TSNE)</li>
 </ul>
-<h2 id="preface">Preface</h2>
-<p>Key components: data, model, objective function, algorithm (调整模型参数以优化目标函数)</p>
-<h3 id="_1">监督学习</h3>
-<h4 id="regression">回归 Regression</h4>
+<h2 id="graph-neural-network-gnn">Graph Neural Network (GNN)</h2>
+<p><a href="https://zhuanlan.zhihu.com/p/136521625">GNN Intro</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/75307407">GNN Survey</a></p>
 <ul>
-<li>问题类型的本质是输出决定的，输出是一个实值</li>
-<li>判断回归问题的一个很好的经验法则是，任何有关“多少”的问题很可能就是回归问题</li>
-<li>例：手术需要多少小时？未来 6 小时会有多少降雨量？预测用户对一部电影的评分是多少？</li>
-<li>学习最小化“预测值和实际标签值的差异”的模型，关注最小化平方误差损失函数(MSE)</li>
+<li>Graph Convolution Networks (GCN)</li>
 </ul>
-<h4 id="classification">分类 Classification</h4>
+<p>将卷积从传统数据推广到图数据，核心思想是学习一个函数映射<script type="math/tex">f(.)</script>，通过映射，graph 中的节点<script type="math/tex">v_i</script>可以聚合它自己的特征<script type="math/tex">x_i</script>与它的邻居特征<script type="math/tex">x_j,\ j\in N(v_i)</script>来生成节点<script type="math/tex">v_i</script>的新表示。</p>
+<p>GCN 方法分两大类，基于谱 (spectral-based)和基于空间 (spatial-based)。后者近年来更 popular。</p>
 <ul>
-<li>“哪一个？”的问题叫做分类，模型预测样本属于哪个类别</li>
-<li>分类问题常见的损失函数是交叉熵 cross-entropy</li>
+<li>Graph Attention Networks</li>
 </ul>
-<p>R## 无监督学习
-数据中不含有"目标"的问题为无监督学习</p>
+<p>通过注意力机制，放大数据中最重要的部分的影响。GNN 在聚合过程中使用注意力，整合多个模型的输出，并生成面向重要目标的随机行走。</p>
 <ul>
-<li>聚类 clustering</li>
-<li>主成分分析 principal component analysis
-  (PCA)：找到少量参数准确捕捉数据的线性相关属性</li>
-<li>因果关系 causality</li>
-<li>概率图模型 probabilistic graphical models</li>
-<li>生成对抗网络 GAN</li>
+<li>Graph Autoencoders</li>
 </ul>
-<h3 id="_2">强化学习</h3>
-<h2 id="_3">预备知识</h2>
+<p>图自动编码器是一类 Graph Embedding 方法，目的是利用神经网络结构将图的顶点表示为低维向量。典型解决方案是利用多层感知机作为编码器来获取节点 embedding，
+  其中解码器重建节点的邻域统计信息。目前基于 GCN 的自编码器方法主要有 Graph
+  Autoencoder (GAE)和 Adversarially Regularized Graph Autoencoder (ARGA)。</p>
 <ul>
-<li>范数 norm：一个向量的范数告诉我们一个向量有多大。向量范数是将向量映射到标量的函数。L1 范数表示向量元素的绝对值之和，L2 范数表示向量元素平方和的平方根。深度学习中经常使用 L2 范数的平方。</li>
-<li>optimization 用模型拟合数据 + generalization 运用于训练数据外的数据</li>
+<li>Graph Generative Networks</li>
 </ul>
-<h2 id="_4">线性神经网络</h2>
-<p>回归（regression）是能为一个或多个自变量与因变量之间关系建模的一类方法，回归经常用来表示输入和输出之间的关系。</p>
-<p>梯度下降（gradient descent）通过不断地在损失函数递减的方向上更新参数来降低误差。梯度下降最简单的用法是计算损失函数（数据集中所有样本的损失均值） 关于模型参数的导数（在这里也可以称为梯度）。 但实际中的执行可能会非常慢：因为在每一次更新参数之前，我们必须遍历整个数据集。 因此，我们通常会在每次需要计算更新的时候随机抽取一小批样本， 这种变体叫做小批量随机梯度下降（minibatch stochastic gradient descent）。</p>
-<p>可以调整但不在训练过程中更新的参数称为超参数（hyperparameter），比如 batch size, learning rate 等。</p>
+<p>图生成网络的目标是在给定一组观察到的图的情况下生成新的图。图生成网络的许多方法都是特定于领域的。</p>
+<ul>
+<li>Graph Spatial-temporal Networks</li>
+</ul>
+<p>图时空网络同时捕捉时空图的时空相关性。时空图具有全局图结构，每个节点的输入随时间变化。</p>
+<h2 id="visualization">Visualization</h2>
+<ol>
+<li><a href="https://github.com/HarisIqbal88/PlotNeuralNet">PlotNeuralNet</a></li>
+<li>powerpoint/keynote/google docs，导出成矢量 pdf</li>
+</ol>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../dl_notes/" class="btn btn-neutral float-left" title="DL Notes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../mathematics/beauty_of_mathematics/" class="btn btn-neutral float-right" title="数学之美">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="btn btn-neutral float-left" title="Python机器学习"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../dive_into_deep_learning/" class="btn btn-neutral float-right" title="Dive into Deep Learning (TODO)">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -273,10 +254,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../dl_notes/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../../mathematics/beauty_of_mathematics/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../dive_into_deep_learning/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
