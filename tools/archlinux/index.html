@@ -43,6 +43,17 @@
                 <li class="toctree-l1"><a class="reference internal" href="../..">Introduction</a>
                 </li>
               </ul>
+              <p class="caption"><span class="caption-text">AI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../../deep_learning/google-machine-learning-crash-course.md">Google ML Crash Course</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../deep_learning/Python机器学习.md">Python机器学习</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../deep_learning/dive_into_deep_learning.md">Dive into Deep Learning</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../../deep_learning/dl_notes.md">DL Notes</a>
+                  </li>
+              </ul>
               <p class="caption"><span class="caption-text">Algorithm</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../algorithm/alg_blog_note/">Alg blog</a>
@@ -53,17 +64,6 @@
               <p class="caption"><span class="caption-text">Blockchain</span></p>
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../blockchain/blockchain/">Blockchain</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Deep Learning</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="" href="../../deep_learning/google-machine-learning-crash-course.md">Google ML Crash Course</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../../deep_learning/Python机器学习.md">Python机器学习</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../../deep_learning/dive_into_deep_learning.md">Dive into Deep Learning</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../../deep_learning/dl_notes.md">DL Notes</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Mathematics</span></p>
@@ -103,10 +103,6 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../python/python3/">python3</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/effective_python/">Effective Python (TODO)</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../python/data_structure_and_algorithms_in_python/">Data Structures and Algorithms in Python</a>
-                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Research</span></p>
               <ul>
@@ -117,14 +113,16 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../startup/how_google_works/">How Google Works</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../startup/startup/">startup</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../startup/startup/">YC startup course</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Tools</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="" href="../bash.md">bash</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../practical_vim/">vim</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../shell/">shell</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../neovim/">neovim</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../git/">git</a>
                   </li>
@@ -176,10 +174,11 @@
               
                 <h1 id="arch-linux">Arch Linux</h1>
 <h2 id="installation">Installation</h2>
-<p>先做好启动盘，开机从USB启动</p>
-<pre><code class="language-sh">timedatectl set-ntp true
-</code></pre>
-<p>partition disk</p>
+<p>First, create an Arch Linux installer USB drive,
+refer to <a href="https://wiki.archlinux.org/title/USB_flash_installation_medium">USB flash installation medium</a>.</p>
+<blockquote>
+<p>Partition Disk</p>
+</blockquote>
 <p><code>fdisk -l</code></p>
 <p>/dev/sda 232.89G, Samsung SSD</p>
 <p>/dev/sdb 1.8T</p>
@@ -189,7 +188,7 @@
 <p>/dev/sda1 /boot 200MB (efi_sys_partition /mnt/boot)</p>
 <p>/dev/sda2 swap 32G (swap_partition)</p>
 <p>/dev/sda3 / 200G (root_partition /mnt)</p>
-<pre><code>mkfs.ext4 /dev/sda1
+<pre><code class="language-sh">mkfs.ext4 /dev/sda1
 mkswap /dev/sda2
 mkfs.ext4 /dev/sda3
 
@@ -198,25 +197,32 @@ mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
 swapon /dev/sda2
 </code></pre>
-<pre><code>vim /etc/pacman.d/mirrorlist
-添加Server = http://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
+<blockquote>
+<p>Mirrorlist</p>
+</blockquote>
+<pre><code class="language-sh">vim /etc/pacman.d/mirrorlist
+# add Server = http://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
 pacstrap /mnt base base-devel linux linux-firmware
 genfstab -p /mnt &gt;&gt; /mnt/etc/fstab
 arch-chroot /mnt
 pacman -S dhclient dhcpcd
 </code></pre>
-<p>Settings</p>
-<pre><code>ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+<blockquote>
+<p>Locale Settings</p>
+</blockquote>
+<pre><code class="language-sh">ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock —systohc
 
 vim /etc/locale.gen
-uncomment en_US.UTF-8 and zh_CN.UTF-8
+# uncomment two lines: en_US.UTF-8 and zh_CN.UTF-8
 locale-gen
 echo LANG=en_GB.UTF-8 &gt; /etc/locale.conf
 echo arch &gt; /etc/hostname
 </code></pre>
-<p>Grub</p>
-<pre><code>mkinitcpio -p linux
+<blockquote>
+<p>Install Grub</p>
+</blockquote>
+<pre><code class="language-sh">mkinitcpio -p linux
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
@@ -226,66 +232,166 @@ umount /mnt/boot
 umount /mnt
 reboot
 </code></pre>
+<blockquote>
+<p>System Time</p>
+</blockquote>
+<pre><code class="language-sh"># sync system time with network time
+timedatectl set-ntp true
+</code></pre>
 <h2 id="aur">AUR</h2>
+<blockquote>
 <p>32-bit support &amp; archlinuxcn</p>
-<pre><code>vim /etc/pacman.conf
-uncomment two lines of the [multilib] section
-add the lines below:
+</blockquote>
+<pre><code class="language-sh">vim /etc/pacman.conf
+# uncomment two lines of the [multilib] section
+# add the lines below:
 [archlinuxcn]
-Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 Server = https://mirrors.hit.edu.cn/archlinuxcn/$arch
 Server = https://repo.huaweicloud.com/archlinuxcn/$arch
 
 sudo pacman -S archlinuxcn-keyring
-sudo pacman -Sy yay yaourt
+sudo pacman -Sy yay
 </code></pre>
 <h2 id="software">Software</h2>
-<p>rxvt-unicode tmux zsh zsh-completions oh-my-zsh powerlevel10k neofetch xcompmgr</p>
-<p>xorg xorg-xinit i3-wm lxdm dmenu pcmanfm network-manager-applet pa-applet</p>
-<p>vim emacs git python python-pip miniconda texlive-{most, langchinese} mariadb matlab</p>
-<p>evince poppler-data wps-office thunderbird mutt</p>
-<p>feh imagemagick vlc netease-cloud-music</p>
-<p>chromium google-chrome</p>
-<p>conky albert dunst redshift compton nitrogen ntft-3g proxychains-ng</p>
-<p>input methods:</p>
-<pre><code>sudo pacman -S fcitx fcitx-configtool fcitx-googlepinyin
-vim ~/.xinitrc
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-fcitx &amp;
+<p>Check <a href="https://github.com/yshenfab/dotfiles/blob/master/awesome.md">awesome</a> for more info.</p>
+<table>
+<thead>
+<tr>
+<th>Usage</th>
+<th>Software</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>terminal</td>
+<td>kitty, alacritty, tmux</td>
+</tr>
+<tr>
+<td>zsh</td>
+<td>zsh, zsh-completions, oh-my-zsh, powerlevel10k, neofetch, xcompmgr</td>
+</tr>
+<tr>
+<td>X.org</td>
+<td>xorg, xorg-xinit</td>
+</tr>
+<tr>
+<td>window manager</td>
+<td>i3-wm, lxdm, dmenu</td>
+</tr>
+<tr>
+<td>file manager</td>
+<td>ranger, pcmanfm</td>
+</tr>
+<tr>
+<td>applet</td>
+<td>network-manager-applet, pa-applet</td>
+</tr>
+<tr>
+<td>editor</td>
+<td>neovim, emacs, code</td>
+</tr>
+<tr>
+<td>coding</td>
+<td>git, python, pip, miniconda, matlab</td>
+</tr>
+<tr>
+<td>LaTeX</td>
+<td>texlive-{most, langchinese}</td>
+</tr>
+<tr>
+<td>database</td>
+<td>mariadb</td>
+</tr>
+<tr>
+<td>pdf</td>
+<td>poppler-data, okular, mupdf, evince</td>
+</tr>
+<tr>
+<td>office</td>
+<td>wps-office</td>
+</tr>
+<tr>
+<td>email</td>
+<td>mutt, thunderbird</td>
+</tr>
+<tr>
+<td>image</td>
+<td>feh, imagemagick</td>
+</tr>
+<tr>
+<td>video</td>
+<td>vlc, mpv</td>
+</tr>
+<tr>
+<td>music</td>
+<td>netease-cloud-music</td>
+</tr>
+<tr>
+<td>browser</td>
+<td>chromium, google-chrome</td>
+</tr>
+<tr>
+<td>utils</td>
+<td>conky, albert, dunst, redshift, compton, nitrogen, ntft-3g, proxychains-ng</td>
+</tr>
+<tr>
+<td>input</td>
+<td>fcitx5, fcitx5-{chinese-addons, pinyin-zhwiki, configtool, lua, nord, gtk, qt</td>
+</tr>
+<tr>
+<td>fonts</td>
+<td>jetbrains mono, noto, source-code-pro, font-awesome, meslo-nerd-font</td>
+</tr>
+<tr>
+<td>chinese fonts</td>
+<td>wqy-{microhei,zenhei}, adobe-source-han-serif-cn-fonts</td>
+</tr>
+<tr>
+<td>VPN</td>
+<td>v2ray, v2raya, clash</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>fcitx5 config</p>
+</blockquote>
+<pre><code class="language-sh">nvim ~/.xprofile
+export GTK_IM_MODULE=fcitx5
+export QT_IM_MODULE=fcitx5
+export XMODIFIERS=@im=fcitx5
+export SDL_IM_MODULE=fcitx5
+export GLFW_IM_MODULE=ibus kitty
 </code></pre>
-<p>fonts:</p>
-<pre><code>wqy-microhei wqy-zenhei
+<blockquote>
+<p>Fonts</p>
+</blockquote>
+<pre><code class="language-sh">wqy-{microhei,zenhei}
 adobe-source-han-serif-cn-fonts
 adobe-source-code-pro-fonts
 noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 font-awesome
 ttf-meslo-nerd-font-powerlevel10k
+jetbrains
 </code></pre>
-<p>Other:</p>
-<pre><code>yay -S deepin.com.wechat2
-</code></pre>
+<p>Make sure to install some nerd fonts (JetBrains Mono NFM, Fira Code, etc.).</p>
 <h2 id="vpn">VPN</h2>
-<p><a href="https://linkhub.mobi/">linkhub</a>
-<a href="https://linxing.maoxiong.cloud/">maoxiong</a></p>
-<pre><code>yay -S clash-for-windows-bin
-sudo vim /etc/environment
-add contents below:
-http_proxy=http://127.0.0.1:7890/
-https_proxy=http://127.0.0.1:7890/
-ftp_proxy=http://127.0.0.1:7890/
-HTTP_PROXY=http://127.0.0.1:7890/
-HTTPS_PROXY=https://127.0.0.1:7890/
-FTP_PROXY=http://127.0.0.1:7890/
-</code></pre>
+<p>Recommend ExpressVPN/NordVPN, check this <a href="https://github.com/vpncn/vpncn.github.io">link</a>.</p>
+<p>Some cheap options:</p>
+<ul>
+<li><a href="https://ssrdog111.com/#/">ssrdog</a></li>
+<li><a href="https://linkhub.one/">linkhub</a></li>
+<li><a href="https://一元机场.com/">一元机场</a></li>
+<li><a href="https://linxing.maoxiong.cloud/">maoxiong</a></li>
+</ul>
 <h2 id="nvidia-graphics-drivers-cuda-cudnn">Nvidia Graphics Drivers, Cuda, Cudnn</h2>
-<p>yay -S nvidia nvidia-settings lib32-nvidia-utils</p>
-<h2 id="settings">Settings</h2>
-<p>systemctl enable bluetooth.service</p>
-<p>systemctl enable/start sshd.service</p>
-<p>systemctl enable/start lxdm.service</p>
+<p><code>yay -S nvidia nvidia-settings lib32-nvidia-utils</code></p>
+<h2 id="auto-start-services">Auto start services</h2>
+<pre><code class="language-sh">systemctl enable bluetooth.service
+systemctl enable/start sshd.service
+systemctl enable/start lxdm.service
+</code></pre>
               
             </div>
           </div><footer>
